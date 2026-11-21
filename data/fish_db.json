@@ -1,0 +1,4617 @@
+[
+  {
+    "id": "pink",
+    "name": "Pembe Lapin",
+    "latin": "Symphodus tinca",
+    "spr": "fish_pink",
+    "d": [
+      1,
+      28
+    ],
+    "kg": [
+      0.2,
+      0.7
+    ],
+    "str": 1.0,
+    "val": 18,
+    "r": 0,
+    "sc": 0.42,
+    "spd": [
+      40,
+      70
+    ],
+    "habitat": "Sığ yosunluklar ve kayalık kıyılar",
+    "diet": "Küçük kabuklular ve solucanlar",
+    "fact": "Parlak pembe pullarıyla sığ sularda sürüler halinde gezer. Meraklı yapısı yüzünden oltaya kolayca yaklaşır."
+  },
+  {
+    "id": "clown",
+    "name": "Palyaço Balığı",
+    "latin": "Amphiprion ocellaris",
+    "spr": "fish_clownfish",
+    "d": [
+      2,
+      35
+    ],
+    "kg": [
+      0.1,
+      0.45
+    ],
+    "str": 0.9,
+    "val": 26,
+    "r": 1,
+    "sc": 0.52,
+    "spd": [
+      45,
+      75
+    ],
+    "habitat": "Sığ mercanlar ve deniz şakayıkları",
+    "diet": "Plankton ve küçük algler",
+    "fact": "Zehirli deniz şakayıklarının dokunaçları arasında zarar görmeden yaşayabilir; bu sayede avcılardan korunur."
+  },
+  {
+    "id": "orange",
+    "name": "Turuncu Sazan",
+    "latin": "Cyprinus carpio",
+    "spr": "fish_orange",
+    "d": [
+      4,
+      45
+    ],
+    "kg": [
+      0.6,
+      2.4
+    ],
+    "str": 1.5,
+    "val": 14,
+    "r": 0,
+    "sc": 0.55,
+    "spd": [
+      35,
+      60
+    ],
+    "habitat": "Sakin göl tabanları ve sazlıklar",
+    "diet": "Su bitkileri, böcek larvaları",
+    "fact": "Bıyık benzeri duyu organlarıyla çamurlu diplerde bile yiyecek bulabilir. Çok uzun ömürlü bir göl balığıdır."
+  },
+  {
+    "id": "butterfly",
+    "name": "Kelebek Balığı",
+    "latin": "Chaetodon auriga",
+    "spr": "fish_butterfly",
+    "d": [
+      10,
+      52
+    ],
+    "kg": [
+      0.3,
+      0.9
+    ],
+    "str": 1.4,
+    "val": 24,
+    "r": 1,
+    "sc": 0.55,
+    "spd": [
+      35,
+      60
+    ],
+    "habitat": "Güneşli resifler ve berrak sular",
+    "diet": "Mercan polipleri ve küçük omurgasızlar",
+    "fact": "İnce ve yassı gövdesi sayesinde dar kaya yarıklarına rahatça sığar. Çoğu tür ömür boyu tek eşli yaşar."
+  },
+  {
+    "id": "green",
+    "name": "Yosun Levreği",
+    "latin": "Dicentrarchus labrax",
+    "spr": "fish_green",
+    "d": [
+      14,
+      62
+    ],
+    "kg": [
+      1.0,
+      3.5
+    ],
+    "str": 2.1,
+    "val": 16,
+    "r": 1,
+    "sc": 0.6,
+    "spd": [
+      30,
+      55
+    ],
+    "habitat": "Yosunlu kayalıklar ve orta sular",
+    "diet": "Küçük balıklar ve karidesler",
+    "fact": "Yosunların arasına kusursuz şekilde gizlenip ani bir hamleyle avını yakalar. Balıkçılar arasında direnciyle bilinir."
+  },
+  {
+    "id": "blue",
+    "name": "Mavi Çipura",
+    "latin": "Sparus aurata",
+    "spr": "fish_blue",
+    "d": [
+      28,
+      85
+    ],
+    "kg": [
+      1.2,
+      4.0
+    ],
+    "str": 2.6,
+    "val": 20,
+    "r": 1,
+    "sc": 0.62,
+    "spd": [
+      45,
+      80
+    ],
+    "habitat": "Orta derinlikteki kumlu ve kayalık dipler",
+    "diet": "Midye, yengeç ve kabuklular",
+    "fact": "Güçlü çeneleriyle sert midye kabuklarını bile kolayca kırabilir. Akdeniz ve Ege'nin en değerli türlerindendir."
+  },
+  {
+    "id": "barracuda",
+    "name": "Gümüş Barrakuda",
+    "latin": "Sphyraena barracuda",
+    "spr": "fish_barracuda",
+    "d": [
+      35,
+      95
+    ],
+    "kg": [
+      2.5,
+      7.5
+    ],
+    "str": 3.4,
+    "val": 28,
+    "r": 2,
+    "sc": 0.65,
+    "spd": [
+      75,
+      125
+    ],
+    "habitat": "Açık orta sular ve resif kenarları",
+    "diet": "Hızlı yüzen küçük balıklar",
+    "fact": "Saatlerce hareketsiz bekleyip bir anda saatte 40 km hıza ulaşarak avına saldırır. Parlak cisimlere karşı çok meraklıdır."
+  },
+  {
+    "id": "red",
+    "name": "Kızıl Mercan",
+    "latin": "Pagellus erythrinus",
+    "spr": "fish_red",
+    "d": [
+      48,
+      112
+    ],
+    "kg": [
+      2.0,
+      6.0
+    ],
+    "str": 3.3,
+    "val": 22,
+    "r": 2,
+    "sc": 0.7,
+    "spd": [
+      30,
+      50
+    ],
+    "habitat": "Derin kayalıklar ve mercan yatakları",
+    "diet": "Karides, ahtapot yavruları ve solucanlar",
+    "fact": "Kızıl-pembe rengi derin sularda neredeyse görünmez olmasını sağlar; kırmızı ışık derinlerde emildiği için kamufle olur."
+  },
+  {
+    "id": "stingray",
+    "name": "Mavi Noktalı Vatoz",
+    "latin": "Taeniura lymma",
+    "spr": "fish_stingray",
+    "d": [
+      55,
+      118
+    ],
+    "kg": [
+      3.5,
+      9.0
+    ],
+    "str": 3.8,
+    "val": 32,
+    "r": 2,
+    "sc": 0.65,
+    "spd": [
+      25,
+      45
+    ],
+    "habitat": "Kumlu deniz tabanları ve mağara girişleri",
+    "diet": "Yumuşakçalar, yengeç ve solucanlar",
+    "fact": "Vücudundaki parlak mavi benekler avcılara zehirli kuyruk dikeni konusunda bir uyarı işaretidir."
+  },
+  {
+    "id": "puffer",
+    "name": "Balon Balığı",
+    "latin": "Tetraodon lineatus",
+    "spr": "fish_brown",
+    "d": [
+      36,
+      120
+    ],
+    "kg": [
+      0.8,
+      2.2
+    ],
+    "str": 2.4,
+    "val": 70,
+    "r": 3,
+    "sc": 0.55,
+    "spd": [
+      18,
+      32
+    ],
+    "habitat": "Kayalık dipler ve yosunlu oyuklar",
+    "diet": "Sert kabuklu salyangoz ve midyeler",
+    "fact": "Tehlike hissettiğinde su yutarak kendi boyutunun iki katına kadar şişer."
+  },
+  {
+    "id": "grey",
+    "name": "Gümüş Turna",
+    "latin": "Esox lucius",
+    "spr": "fish_grey",
+    "d": [
+      70,
+      135
+    ],
+    "kg": [
+      3.0,
+      8.5
+    ],
+    "str": 4.0,
+    "val": 24,
+    "r": 2,
+    "sc": 0.72,
+    "spd": [
+      70,
+      110
+    ],
+    "habitat": "Derin su bitkileri ve gölge alanlar",
+    "diet": "Diğer balıklar ve kurbağalar",
+    "fact": "Ok gibi uzun vücuduyla tatlı suların sualtı füzesi olarak anılır. Keskin dişleri avının kaçmasını engeller."
+  },
+  {
+    "id": "ray",
+    "name": "Benekli Kartal Vatoz",
+    "latin": "Aetobatus narinari",
+    "spr": "fish_ray",
+    "d": [
+      80,
+      142
+    ],
+    "kg": [
+      8.0,
+      22.0
+    ],
+    "str": 4.8,
+    "val": 36,
+    "r": 3,
+    "sc": 0.72,
+    "spd": [
+      32,
+      55
+    ],
+    "habitat": "Derin açık sular ve dip akıntıları",
+    "diet": "İstiridye, deniz kestanesi ve yengeçler",
+    "fact": "Geniş yüzgeçlerini tıpkı bir kuşun kanatları gibi çırparak su içinde süzülür."
+  },
+  {
+    "id": "shark",
+    "name": "Resif Köpekbalığı",
+    "latin": "Carcharhinus melanopterus",
+    "spr": "fish_shark",
+    "d": [
+      90,
+      146
+    ],
+    "kg": [
+      15.0,
+      38.0
+    ],
+    "str": 5.2,
+    "val": 45,
+    "r": 3,
+    "sc": 0.75,
+    "spd": [
+      50,
+      85
+    ],
+    "habitat": "Derin resif yamaçları ve karanlık sular",
+    "diet": "Orta boy balıklar ve kafadanbacaklılar",
+    "fact": "Sudaki en ufak titreşimi bile yüzlerce metre öteden algılayabilen hassas elektro-reseptörlere sahiptir."
+  },
+  {
+    "id": "eel",
+    "name": "Gölge Yılanı",
+    "latin": "Anguilla anguilla",
+    "spr": "fish_grey_long_a",
+    "d": [
+      96,
+      148
+    ],
+    "kg": [
+      4.0,
+      11.0
+    ],
+    "str": 4.6,
+    "val": 30,
+    "r": 3,
+    "sc": 0.85,
+    "spd": [
+      40,
+      65
+    ],
+    "tint": "#5d6b8a",
+    "habitat": "Karanlık dip yarıkları ve çamurlu kovuklar",
+    "diet": "Gece avlanan küçük balıklar ve kabuklular",
+    "fact": "Üremek için binlerce kilometrelik okyanus yolculuğu yapan gizemli bir göçmendir. Geceleri çok daha aktiftir."
+  },
+  {
+    "id": "king",
+    "name": "Kadim Yılan Kral",
+    "latin": "Regalecus glesne",
+    "spr": "fish_grey_long_b",
+    "d": [
+      125,
+      149
+    ],
+    "kg": [
+      12.0,
+      30.0
+    ],
+    "str": 5.8,
+    "val": 42,
+    "r": 4,
+    "sc": 1.15,
+    "spd": [
+      28,
+      42
+    ],
+    "tint": "#e0b84a",
+    "night": 2.5,
+    "habitat": "En derin abis çukurları (125m+)",
+    "diet": "Derin deniz krilleri ve küçük balıklar",
+    "fact": "Efsanelere konu olan devasa altın parıltılı derinlik hükümdarı. Özellikle geceleri yüzeye yaklaşır."
+  },
+  {
+    "id": "p_abramis_brama",
+    "name": "Çapak (Brama)",
+    "latin": "Abramis brama",
+    "spr": "fish_px_abramis_brama",
+    "d": [
+      6,
+      55
+    ],
+    "kg": [
+      0.4,
+      2.2
+    ],
+    "str": 1.2,
+    "val": 18,
+    "r": 0,
+    "sc": 0.55,
+    "spd": [
+      32,
+      62
+    ],
+    "habitat": "Sakin göl dipleri",
+    "diet": "Dip kurtçukları ve su bitkileri",
+    "fact": "Yassı ve gümüşi gövdesiyle kalabalık sürüler halinde göl tabanında beslenir."
+  },
+  {
+    "id": "p_abudefduf_saxatilis",
+    "name": "Çavuş Balığı (Saxatilis)",
+    "latin": "Abudefduf saxatilis",
+    "spr": "fish_px_abudefduf_saxatilis",
+    "d": [
+      4,
+      44
+    ],
+    "kg": [
+      0.5,
+      2.4
+    ],
+    "str": 1.65,
+    "val": 28,
+    "r": 1,
+    "sc": 0.55,
+    "spd": [
+      40,
+      72
+    ],
+    "habitat": "Sığ kayalıklar ve mercan kenarları",
+    "diet": "Yosunlar, plankton ve küçük kabuklular",
+    "fact": "Yanlarındaki dikey koyu şeritler askeri rütbe çizgilerine benzediği için Çavuş Balığı adını almıştır."
+  },
+  {
+    "id": "p_abudefduf_sexfasciatus",
+    "name": "Çavuş Balığı (Sexfasciatus)",
+    "latin": "Abudefduf sexfasciatus",
+    "spr": "fish_px_abudefduf_sexfasciatus",
+    "d": [
+      6,
+      46
+    ],
+    "kg": [
+      0.5,
+      2.4
+    ],
+    "str": 1.8,
+    "val": 30,
+    "r": 1,
+    "sc": 0.55,
+    "spd": [
+      48,
+      82
+    ],
+    "habitat": "Sığ kayalıklar ve mercan kenarları",
+    "diet": "Yosunlar, plankton ve küçük kabuklular",
+    "fact": "Yanlarındaki dikey koyu şeritler askeri rütbe çizgilerine benzediği için Çavuş Balığı adını almıştır."
+  },
+  {
+    "id": "p_abudefduf_sordidus",
+    "name": "Çavuş Balığı (Sordidus)",
+    "latin": "Abudefduf sordidus",
+    "spr": "fish_px_abudefduf_sordidus",
+    "d": [
+      8,
+      48
+    ],
+    "kg": [
+      0.5,
+      2.4
+    ],
+    "str": 1.5,
+    "val": 32,
+    "r": 1,
+    "sc": 0.55,
+    "spd": [
+      56,
+      92
+    ],
+    "habitat": "Sığ kayalıklar ve mercan kenarları",
+    "diet": "Yosunlar, plankton ve küçük kabuklular",
+    "fact": "Yanlarındaki dikey koyu şeritler askeri rütbe çizgilerine benzediği için Çavuş Balığı adını almıştır."
+  },
+  {
+    "id": "p_abudefduf_troschelii",
+    "name": "Çavuş Balığı (Troschelii)",
+    "latin": "Abudefduf troschelii",
+    "spr": "fish_px_abudefduf_troschelii",
+    "d": [
+      10,
+      50
+    ],
+    "kg": [
+      0.5,
+      2.4
+    ],
+    "str": 1.65,
+    "val": 26,
+    "r": 1,
+    "sc": 0.55,
+    "spd": [
+      32,
+      62
+    ],
+    "habitat": "Sığ kayalıklar ve mercan kenarları",
+    "diet": "Yosunlar, plankton ve küçük kabuklular",
+    "fact": "Yanlarındaki dikey koyu şeritler askeri rütbe çizgilerine benzediği için Çavuş Balığı adını almıştır."
+  },
+  {
+    "id": "p_abudefduf_vagiensis",
+    "name": "Çavuş Balığı (Vagiensis)",
+    "latin": "Abudefduf vagiensis",
+    "spr": "fish_px_abudefduf_vagiensis",
+    "d": [
+      2,
+      42
+    ],
+    "kg": [
+      0.5,
+      2.4
+    ],
+    "str": 1.8,
+    "val": 28,
+    "r": 1,
+    "sc": 0.55,
+    "spd": [
+      40,
+      72
+    ],
+    "habitat": "Sığ kayalıklar ve mercan kenarları",
+    "diet": "Yosunlar, plankton ve küçük kabuklular",
+    "fact": "Yanlarındaki dikey koyu şeritler askeri rütbe çizgilerine benzediği için Çavuş Balığı adını almıştır."
+  },
+  {
+    "id": "p_acanthurus_coerulus",
+    "name": "Cerrah Balığı (Coerulus)",
+    "latin": "Acanthurus coerulus",
+    "spr": "fish_px_acanthurus_coerulus",
+    "d": [
+      10,
+      60
+    ],
+    "kg": [
+      0.8,
+      3.6
+    ],
+    "str": 1.9,
+    "val": 34,
+    "r": 1,
+    "sc": 0.55,
+    "spd": [
+      48,
+      82
+    ],
+    "habitat": "Mercan resifleri",
+    "diet": "Resif üzerindeki yosunlar",
+    "fact": "Adını kuyruğunun iki yanındaki neşter kadar keskin savunma dikenlerinden alır."
+  },
+  {
+    "id": "p_acanthurus_lineatus",
+    "name": "Cerrah Balığı (Lineatus)",
+    "latin": "Acanthurus lineatus",
+    "spr": "fish_px_acanthurus_lineatus",
+    "d": [
+      12,
+      62
+    ],
+    "kg": [
+      0.8,
+      3.6
+    ],
+    "str": 2.05,
+    "val": 36,
+    "r": 1,
+    "sc": 0.55,
+    "spd": [
+      56,
+      92
+    ],
+    "habitat": "Mercan resifleri",
+    "diet": "Resif üzerindeki yosunlar",
+    "fact": "Adını kuyruğunun iki yanındaki neşter kadar keskin savunma dikenlerinden alır."
+  },
+  {
+    "id": "p_acanthurus_nigrofuscus",
+    "name": "Cerrah Balığı (Nigrofuscus)",
+    "latin": "Acanthurus nigrofuscus",
+    "spr": "fish_px_acanthurus_nigrofuscus",
+    "d": [
+      14,
+      64
+    ],
+    "kg": [
+      0.8,
+      3.6
+    ],
+    "str": 2.2,
+    "val": 30,
+    "r": 1,
+    "sc": 0.55,
+    "spd": [
+      32,
+      62
+    ],
+    "habitat": "Mercan resifleri",
+    "diet": "Resif üzerindeki yosunlar",
+    "fact": "Adını kuyruğunun iki yanındaki neşter kadar keskin savunma dikenlerinden alır."
+  },
+  {
+    "id": "p_acanthurus_olivaceus",
+    "name": "Cerrah Balığı (Olivaceus)",
+    "latin": "Acanthurus olivaceus",
+    "spr": "fish_px_acanthurus_olivaceus",
+    "d": [
+      16,
+      66
+    ],
+    "kg": [
+      0.8,
+      3.6
+    ],
+    "str": 1.9,
+    "val": 32,
+    "r": 1,
+    "sc": 0.55,
+    "spd": [
+      40,
+      72
+    ],
+    "habitat": "Mercan resifleri",
+    "diet": "Resif üzerindeki yosunlar",
+    "fact": "Adını kuyruğunun iki yanındaki neşter kadar keskin savunma dikenlerinden alır."
+  },
+  {
+    "id": "p_acanthurus_sandvicensis",
+    "name": "Cerrah Balığı (Sandvicensis)",
+    "latin": "Acanthurus sandvicensis",
+    "spr": "fish_px_acanthurus_sandvicensis",
+    "d": [
+      8,
+      58
+    ],
+    "kg": [
+      0.8,
+      3.6
+    ],
+    "str": 2.05,
+    "val": 34,
+    "r": 1,
+    "sc": 0.55,
+    "spd": [
+      48,
+      82
+    ],
+    "habitat": "Mercan resifleri",
+    "diet": "Resif üzerindeki yosunlar",
+    "fact": "Adını kuyruğunun iki yanındaki neşter kadar keskin savunma dikenlerinden alır."
+  },
+  {
+    "id": "p_acanthurus_tractus",
+    "name": "Cerrah Balığı (Tractus)",
+    "latin": "Acanthurus tractus",
+    "spr": "fish_px_acanthurus_tractus",
+    "d": [
+      10,
+      60
+    ],
+    "kg": [
+      0.8,
+      3.6
+    ],
+    "str": 2.2,
+    "val": 36,
+    "r": 1,
+    "sc": 0.55,
+    "spd": [
+      56,
+      92
+    ],
+    "habitat": "Mercan resifleri",
+    "diet": "Resif üzerindeki yosunlar",
+    "fact": "Adını kuyruğunun iki yanındaki neşter kadar keskin savunma dikenlerinden alır."
+  },
+  {
+    "id": "p_acanthurus_triostegus",
+    "name": "Cerrah Balığı (Triostegus)",
+    "latin": "Acanthurus triostegus",
+    "spr": "fish_px_acanthurus_triostegus",
+    "d": [
+      12,
+      62
+    ],
+    "kg": [
+      0.8,
+      3.6
+    ],
+    "str": 1.9,
+    "val": 30,
+    "r": 1,
+    "sc": 0.55,
+    "spd": [
+      32,
+      62
+    ],
+    "habitat": "Mercan resifleri",
+    "diet": "Resif üzerindeki yosunlar",
+    "fact": "Adını kuyruğunun iki yanındaki neşter kadar keskin savunma dikenlerinden alır."
+  },
+  {
+    "id": "p_aetobatus_ocellatus",
+    "name": "Kartal Vatozu (Ocellatus)",
+    "latin": "Aetobatus ocellatus",
+    "spr": "fish_px_aetobatus_ocellatus",
+    "d": [
+      71,
+      141
+    ],
+    "kg": [
+      6.0,
+      22.0
+    ],
+    "str": 4.75,
+    "val": 50,
+    "r": 3,
+    "sc": 0.65,
+    "spd": [
+      40,
+      72
+    ],
+    "habitat": "Derin açık sular",
+    "diet": "İstiridye, deniz kestanesi ve yengeçler",
+    "fact": "Geniş yüzgeçlerini kanat gibi çırparak su içinde süzülür; sert kabukları güçlü çenesiyle kırar."
+  },
+  {
+    "id": "p_aluterus_scriptus",
+    "name": "Eğrelti Balığı (Scriptus)",
+    "latin": "Aluterus scriptus",
+    "spr": "fish_px_aluterus_scriptus",
+    "d": [
+      32,
+      86
+    ],
+    "kg": [
+      1.8,
+      7.5
+    ],
+    "str": 3.0,
+    "val": 40,
+    "r": 2,
+    "sc": 0.65,
+    "spd": [
+      48,
+      82
+    ],
+    "habitat": "Mercan bahçeleri ve yosun yatakları",
+    "diet": "Algler, süngerler ve küçük canlılar",
+    "fact": "Baş aşağı yüzerek kendini deniz yosunlarının arasına ustalıkla gizler."
+  },
+  {
+    "id": "p_amboplites_rupestris",
+    "name": "Kaya Levreği (Rupestris)",
+    "latin": "Amboplites rupestris",
+    "spr": "fish_px_amboplites_rupestris",
+    "d": [
+      6,
+      46
+    ],
+    "kg": [
+      0.6,
+      2.5
+    ],
+    "str": 1.6,
+    "val": 34,
+    "r": 1,
+    "sc": 0.55,
+    "spd": [
+      56,
+      92
+    ],
+    "habitat": "Kayalık göl kıyıları",
+    "diet": "Küçük balıklar ve su böcekleri",
+    "fact": "Kırmızı gözleriyle tanınır; kayaların gölgesinde bekleyip yeme aniden atlar."
+  },
+  {
+    "id": "p_ameiurus_melas",
+    "name": "Kedi Balığı (Melas)",
+    "latin": "Ameiurus melas",
+    "spr": "fish_px_ameiurus_melas",
+    "d": [
+      14,
+      64
+    ],
+    "kg": [
+      1.0,
+      4.2
+    ],
+    "str": 2.35,
+    "val": 24,
+    "r": 1,
+    "sc": 0.55,
+    "spd": [
+      32,
+      62
+    ],
+    "habitat": "Derin ve bulanık göl dipleri",
+    "diet": "Solucan, kabuklular ve küçük balıklar",
+    "fact": "Uzun hassas bıyıkları sayesinde zifiri karanlıkta bile tabandaki hareketi hisseder."
+  },
+  {
+    "id": "p_ameiurus_nebulosus",
+    "name": "Kedi Balığı (Nebulosus)",
+    "latin": "Ameiurus nebulosus",
+    "spr": "fish_px_ameiurus_nebulosus",
+    "d": [
+      16,
+      66
+    ],
+    "kg": [
+      1.0,
+      4.2
+    ],
+    "str": 2.5,
+    "val": 26,
+    "r": 1,
+    "sc": 0.55,
+    "spd": [
+      40,
+      72
+    ],
+    "habitat": "Derin ve bulanık göl dipleri",
+    "diet": "Solucan, kabuklular ve küçük balıklar",
+    "fact": "Uzun hassas bıyıkları sayesinde zifiri karanlıkta bile tabandaki hareketi hisseder."
+  },
+  {
+    "id": "p_amphiprion_clarkii",
+    "name": "Palyaço Balığı (Clarkii)",
+    "latin": "Amphiprion clarkii",
+    "spr": "fish_px_amphiprion_clarkii",
+    "d": [
+      9,
+      42
+    ],
+    "kg": [
+      0.15,
+      0.7
+    ],
+    "str": 1.1,
+    "val": 40,
+    "r": 1,
+    "sc": 0.55,
+    "spd": [
+      48,
+      82
+    ],
+    "habitat": "Sığ mercanlar ve deniz şakayıkları",
+    "diet": "Plankton ve küçük algler",
+    "fact": "Zehirli deniz şakayıklarının dokunaçları arasında zarar görmeden yaşar."
+  },
+  {
+    "id": "p_amphiprion_ocellaris",
+    "name": "Palyaço Balığı (Ocellaris)",
+    "latin": "Amphiprion ocellaris",
+    "spr": "fish_px_amphiprion_ocellaris",
+    "d": [
+      11,
+      44
+    ],
+    "kg": [
+      0.15,
+      0.7
+    ],
+    "str": 1.25,
+    "val": 42,
+    "r": 1,
+    "sc": 0.55,
+    "spd": [
+      56,
+      92
+    ],
+    "habitat": "Sığ mercanlar ve deniz şakayıkları",
+    "diet": "Plankton ve küçük algler",
+    "fact": "Zehirli deniz şakayıklarının dokunaçları arasında zarar görmeden yaşar."
+  },
+  {
+    "id": "p_anguilla_anguilla",
+    "name": "Yılan Balığı (Anguilla)",
+    "latin": "Anguilla anguilla",
+    "spr": "fish_px_anguilla_anguilla",
+    "d": [
+      34,
+      118
+    ],
+    "kg": [
+      1.6,
+      7.2
+    ],
+    "str": 3.6,
+    "val": 34,
+    "r": 2,
+    "sc": 0.65,
+    "spd": [
+      32,
+      62
+    ],
+    "habitat": "Derin çamurlu dipler ve yarıklar",
+    "diet": "Küçük balıklar ve solucanlar",
+    "fact": "Kıvrak vücuduyla dar yarıklara sığar; yağmurlu ve karanlık gecelerde avlanır."
+  },
+  {
+    "id": "p_anguilla_rostrata",
+    "name": "Yılan Balığı (Rostrata)",
+    "latin": "Anguilla rostrata",
+    "spr": "fish_px_anguilla_rostrata",
+    "d": [
+      36,
+      120
+    ],
+    "kg": [
+      1.6,
+      7.2
+    ],
+    "str": 3.3,
+    "val": 36,
+    "r": 2,
+    "sc": 0.65,
+    "spd": [
+      40,
+      72
+    ],
+    "habitat": "Derin çamurlu dipler ve yarıklar",
+    "diet": "Küçük balıklar ve solucanlar",
+    "fact": "Kıvrak vücuduyla dar yarıklara sığar; yağmurlu ve karanlık gecelerde avlanır."
+  },
+  {
+    "id": "p_anisotremus_virginicus",
+    "name": "Domuz Balığı (Virginicus)",
+    "latin": "Anisotremus virginicus",
+    "spr": "fish_px_anisotremus_virginicus",
+    "d": [
+      16,
+      70
+    ],
+    "kg": [
+      1.1,
+      3.8
+    ],
+    "str": 2.15,
+    "val": 33,
+    "r": 1,
+    "sc": 0.55,
+    "spd": [
+      48,
+      82
+    ],
+    "habitat": "Kayalık resifler",
+    "diet": "Yengeç, midye ve deniz kestaneleri",
+    "fact": "Sarı-siyah çizgili gövdesiyle tanınır; güçlü dişleriyle sert kabukları kırar."
+  },
+  {
+    "id": "p_anoplarchus_purpurescens",
+    "name": "Tepeli Horozbina (Purpurescens)",
+    "latin": "Anoplarchus purpurescens",
+    "spr": "fish_px_anoplarchus_purpurescens",
+    "d": [
+      8,
+      40
+    ],
+    "kg": [
+      0.3,
+      1.4
+    ],
+    "str": 1.6,
+    "val": 28,
+    "r": 0,
+    "sc": 0.55,
+    "spd": [
+      56,
+      92
+    ],
+    "habitat": "Kayalık sığ kıyılar",
+    "diet": "Küçük kabuklular ve yosunlar",
+    "fact": "Başındaki küçük taç benzeri çıkıntıyla tanınır; kaya yarıklarına gizlenir."
+  },
+  {
+    "id": "p_aplodinotus_grunniens",
+    "name": "Tatlısu Davulcusu (Grunniens)",
+    "latin": "Aplodinotus grunniens",
+    "spr": "fish_px_aplodinotus_grunniens",
+    "d": [
+      26,
+      78
+    ],
+    "kg": [
+      1.5,
+      5.5
+    ],
+    "str": 2.4,
+    "val": 24,
+    "r": 1,
+    "sc": 0.55,
+    "spd": [
+      32,
+      62
+    ],
+    "habitat": "Büyük göllerin orta ve derin suları",
+    "diet": "Midye, kerevit ve böcek larvaları",
+    "fact": "Hava kesesini titreştirerek su altında davul sesi gibi yankılanan sesler çıkarır."
+  },
+  {
+    "id": "p_archosargus_probatocephalus",
+    "name": "Koyunbaşı Balığı (Probatocephalus)",
+    "latin": "Archosargus probatocephalus",
+    "spr": "fish_px_archosargus_probatocephalus",
+    "d": [
+      22,
+      76
+    ],
+    "kg": [
+      1.6,
+      6.4
+    ],
+    "str": 3.05,
+    "val": 36,
+    "r": 2,
+    "sc": 0.65,
+    "spd": [
+      40,
+      72
+    ],
+    "habitat": "İskele ayakları ve kayalık kıyılar",
+    "diet": "Midye, istiridye ve yengeçler",
+    "fact": "İnsan dişine şaşırtıcı derecede benzeyen azı dişleriyle sert kabukları kırar."
+  },
+  {
+    "id": "p_arothron_hispidus",
+    "name": "Kirpi Balığı (Hispidus)",
+    "latin": "Arothron hispidus",
+    "spr": "fish_px_arothron_hispidus",
+    "d": [
+      30,
+      96
+    ],
+    "kg": [
+      1.6,
+      7.6
+    ],
+    "str": 3.1,
+    "val": 48,
+    "r": 2,
+    "sc": 0.65,
+    "spd": [
+      48,
+      82
+    ],
+    "habitat": "Mercan yarıkları ve derin resifler",
+    "diet": "Sert kabuklu yumuşakçalar",
+    "fact": "Tehlike anında su yutarak yuvarlak bir top gibi şişer ve avcıları caydırır."
+  },
+  {
+    "id": "p_arothron_meleagris",
+    "name": "Kirpi Balığı (Meleagris)",
+    "latin": "Arothron meleagris",
+    "spr": "fish_px_arothron_meleagris",
+    "d": [
+      32,
+      98
+    ],
+    "kg": [
+      1.6,
+      7.6
+    ],
+    "str": 2.8,
+    "val": 50,
+    "r": 2,
+    "sc": 0.65,
+    "spd": [
+      56,
+      92
+    ],
+    "habitat": "Mercan yarıkları ve derin resifler",
+    "diet": "Sert kabuklu yumuşakçalar",
+    "fact": "Tehlike anında su yutarak yuvarlak bir top gibi şişer ve avcıları caydırır."
+  },
+  {
+    "id": "p_arothron_nigropunctatus",
+    "name": "Kirpi Balığı (Nigropunctatus)",
+    "latin": "Arothron nigropunctatus",
+    "spr": "fish_px_arothron_nigropunctatus",
+    "d": [
+      34,
+      100
+    ],
+    "kg": [
+      1.6,
+      7.6
+    ],
+    "str": 2.95,
+    "val": 44,
+    "r": 2,
+    "sc": 0.65,
+    "spd": [
+      32,
+      62
+    ],
+    "habitat": "Mercan yarıkları ve derin resifler",
+    "diet": "Sert kabuklu yumuşakçalar",
+    "fact": "Tehlike anında su yutarak yuvarlak bir top gibi şişer ve avcıları caydırır."
+  },
+  {
+    "id": "p_aulostomus_chinensis",
+    "name": "Trompet Balığı (Chinensis)",
+    "latin": "Aulostomus chinensis",
+    "spr": "fish_px_aulostomus_chinensis",
+    "d": [
+      18,
+      86
+    ],
+    "kg": [
+      1.2,
+      5.4
+    ],
+    "str": 2.2,
+    "val": 34,
+    "r": 2,
+    "sc": 0.65,
+    "spd": [
+      40,
+      72
+    ],
+    "habitat": "Mercan resifleri ve dikey duvarlar",
+    "diet": "Küçük resif balıkları",
+    "fact": "Avına yaklaşırken büyük balıkların arkasına saklanarak kusursuzca kamufle olur."
+  },
+  {
+    "id": "p_aulostomus_maculatus",
+    "name": "Trompet Balığı (Maculatus)",
+    "latin": "Aulostomus maculatus",
+    "spr": "fish_px_aulostomus_maculatus",
+    "d": [
+      10,
+      78
+    ],
+    "kg": [
+      1.2,
+      5.4
+    ],
+    "str": 1.9,
+    "val": 36,
+    "r": 2,
+    "sc": 0.65,
+    "spd": [
+      48,
+      82
+    ],
+    "habitat": "Mercan resifleri ve dikey duvarlar",
+    "diet": "Küçük resif balıkları",
+    "fact": "Avına yaklaşırken büyük balıkların arkasına saklanarak kusursuzca kamufle olur."
+  },
+  {
+    "id": "p_balistapus_undulatus",
+    "name": "Çizgili Tetik Balığı (Undulatus)",
+    "latin": "Balistapus undulatus",
+    "spr": "fish_px_balistapus_undulatus",
+    "d": [
+      27,
+      94
+    ],
+    "kg": [
+      2.2,
+      10.5
+    ],
+    "str": 3.25,
+    "val": 46,
+    "r": 3,
+    "sc": 0.65,
+    "spd": [
+      56,
+      92
+    ],
+    "habitat": "Derin resif yamaçları",
+    "diet": "Deniz kestanesi ve yengeçler",
+    "fact": "Sırtındaki dikeni kilitleyerek kaya yarıklarından çekilmesini imkansız hale getirir."
+  },
+  {
+    "id": "p_balistoides_conspicillum",
+    "name": "Tetik Balığı (Conspicillum)",
+    "latin": "Balistoides conspicillum",
+    "spr": "fish_px_balistoides_conspicillum",
+    "d": [
+      34,
+      108
+    ],
+    "kg": [
+      2.0,
+      8.6
+    ],
+    "str": 3.5,
+    "val": 39,
+    "r": 2,
+    "sc": 0.65,
+    "spd": [
+      32,
+      62
+    ],
+    "habitat": "Mercan resifleri ve derin kayalıklar",
+    "diet": "Deniz kestanesi, yengeç ve mercanlar",
+    "fact": "Sırtındaki birinci dikeni ikinci dikenle kilitleyebilir; adını bu mekanizmadan alır."
+  },
+  {
+    "id": "p_balistoides_viridescens",
+    "name": "Tetik Balığı (Viridescens)",
+    "latin": "Balistoides viridescens",
+    "spr": "fish_px_balistoides_viridescens",
+    "d": [
+      36,
+      110
+    ],
+    "kg": [
+      2.0,
+      8.6
+    ],
+    "str": 3.2,
+    "val": 41,
+    "r": 2,
+    "sc": 0.65,
+    "spd": [
+      40,
+      72
+    ],
+    "habitat": "Mercan resifleri ve derin kayalıklar",
+    "diet": "Deniz kestanesi, yengeç ve mercanlar",
+    "fact": "Sırtındaki birinci dikeni ikinci dikenle kilitleyebilir; adını bu mekanizmadan alır."
+  },
+  {
+    "id": "p_bodianus_diplotaenia",
+    "name": "Kaya Lapini (Diplotaenia)",
+    "latin": "Bodianus diplotaenia",
+    "spr": "fish_px_bodianus_diplotaenia",
+    "d": [
+      26,
+      82
+    ],
+    "kg": [
+      1.4,
+      5.0
+    ],
+    "str": 2.35,
+    "val": 34,
+    "r": 1,
+    "sc": 0.55,
+    "spd": [
+      48,
+      82
+    ],
+    "habitat": "Kayalık orta sular",
+    "diet": "Kabuklular ve küçük deniz canlıları",
+    "fact": "Büyüdükçe renk ve desen değiştirebilen dirençli bir lapin türüdür."
+  },
+  {
+    "id": "p_bothus_podus",
+    "name": "Pisi Balığı (Podus)",
+    "latin": "Bothus podus",
+    "spr": "fish_px_bothus_podus",
+    "d": [
+      12,
+      86
+    ],
+    "kg": [
+      1.8,
+      8.5
+    ],
+    "str": 2.6,
+    "val": 44,
+    "r": 2,
+    "sc": 0.65,
+    "spd": [
+      56,
+      92
+    ],
+    "habitat": "Kumlu ve çakıllı dipler",
+    "diet": "Dip kabukluları ve küçük balıklar",
+    "fact": "İki gözü de vücudunun aynı tarafındadır; saniyeler içinde zeminin rengini taklit eder."
+  },
+  {
+    "id": "p_brevoortia_tyrannus",
+    "name": "Gümüş Tirsi (Tyrannus)",
+    "latin": "Brevoortia tyrannus",
+    "spr": "fish_px_brevoortia_tyrannus",
+    "d": [
+      10,
+      67
+    ],
+    "kg": [
+      0.3,
+      1.1
+    ],
+    "str": 1.4,
+    "val": 20,
+    "r": 0,
+    "sc": 0.55,
+    "spd": [
+      32,
+      62
+    ],
+    "habitat": "Açık kıyı suları",
+    "diet": "Fitoplankton ve mikroskobik canlılar",
+    "fact": "Büyük sürüler halinde yüzerek suyu süzgeç gibi filtreler."
+  },
+  {
+    "id": "p_campostoma_anomalum",
+    "name": "Taş Kazıyan (Anomalum)",
+    "latin": "Campostoma anomalum",
+    "spr": "fish_px_campostoma_anomalum",
+    "d": [
+      6,
+      39
+    ],
+    "kg": [
+      0.2,
+      0.8
+    ],
+    "str": 1.25,
+    "val": 20,
+    "r": 0,
+    "sc": 0.55,
+    "spd": [
+      40,
+      72
+    ],
+    "habitat": "Akıntılı taşlık dereler",
+    "diet": "Taş üzerindeki algler",
+    "fact": "Alt çenesindeki sert kenarla kayaların üzerindeki yosunları kazıyarak beslenir."
+  },
+  {
+    "id": "p_canthigaster_valentini",
+    "name": "Eyerli Balon Balığı (Valentini)",
+    "latin": "Canthigaster valentini",
+    "spr": "fish_px_canthigaster_valentini",
+    "d": [
+      20,
+      76
+    ],
+    "kg": [
+      0.5,
+      2.2
+    ],
+    "str": 2.1,
+    "val": 46,
+    "r": 2,
+    "sc": 0.65,
+    "spd": [
+      48,
+      82
+    ],
+    "habitat": "Mercan bahçeleri ve lagünler",
+    "diet": "Yosunlar ve küçük kabuklular",
+    "fact": "Zehirli derisi sayesinde diğer zararsız balıklar bile ona benzeyerek korunur."
+  },
+  {
+    "id": "p_caranx_ignobilis",
+    "name": "Akya (Ignobilis)",
+    "latin": "Caranx ignobilis",
+    "spr": "fish_px_caranx_ignobilis",
+    "d": [
+      43,
+      133
+    ],
+    "kg": [
+      4.5,
+      24.0
+    ],
+    "str": 4.2,
+    "val": 48,
+    "r": 3,
+    "sc": 0.65,
+    "spd": [
+      56,
+      92
+    ],
+    "habitat": "Açık derin sular ve resif kenarları",
+    "diet": "Sürü halindeki küçük balıklar",
+    "fact": "Güçlü kas yapısıyla oltaya vurduğunda uzun ve zorlu bir mücadele verir."
+  },
+  {
+    "id": "p_caranx_melampygus",
+    "name": "Akya (Melampygus)",
+    "latin": "Caranx melampygus",
+    "spr": "fish_px_caranx_melampygus",
+    "d": [
+      35,
+      125
+    ],
+    "kg": [
+      4.5,
+      24.0
+    ],
+    "str": 4.35,
+    "val": 42,
+    "r": 3,
+    "sc": 0.65,
+    "spd": [
+      32,
+      62
+    ],
+    "habitat": "Açık derin sular ve resif kenarları",
+    "diet": "Sürü halindeki küçük balıklar",
+    "fact": "Güçlü kas yapısıyla oltaya vurduğunda uzun ve zorlu bir mücadele verir."
+  },
+  {
+    "id": "p_caranx_ruber",
+    "name": "Akya (Ruber)",
+    "latin": "Caranx ruber",
+    "spr": "fish_px_caranx_ruber",
+    "d": [
+      37,
+      127
+    ],
+    "kg": [
+      4.5,
+      24.0
+    ],
+    "str": 4.5,
+    "val": 44,
+    "r": 3,
+    "sc": 0.65,
+    "spd": [
+      40,
+      72
+    ],
+    "habitat": "Açık derin sular ve resif kenarları",
+    "diet": "Sürü halindeki küçük balıklar",
+    "fact": "Güçlü kas yapısıyla oltaya vurduğunda uzun ve zorlu bir mücadele verir."
+  },
+  {
+    "id": "p_carassius_auratus",
+    "name": "Altın Sazan (Auratus)",
+    "latin": "Carassius auratus",
+    "spr": "fish_px_carassius_auratus",
+    "d": [
+      6,
+      46
+    ],
+    "kg": [
+      0.4,
+      2.6
+    ],
+    "str": 1.4,
+    "val": 26,
+    "r": 0,
+    "sc": 0.55,
+    "spd": [
+      48,
+      82
+    ],
+    "habitat": "Sakin göletler ve sazlıklar",
+    "diet": "Bitkiler ve böcek larvaları",
+    "fact": "Oksijenin çok düşük olduğu sulara bile dayanabilen son derece dirençli bir türdür."
+  },
+  {
+    "id": "p_carassius_gibelio",
+    "name": "Altın Sazan (Gibelio)",
+    "latin": "Carassius gibelio",
+    "spr": "fish_px_carassius_gibelio",
+    "d": [
+      8,
+      48
+    ],
+    "kg": [
+      0.4,
+      2.6
+    ],
+    "str": 1.55,
+    "val": 28,
+    "r": 0,
+    "sc": 0.55,
+    "spd": [
+      56,
+      92
+    ],
+    "habitat": "Sakin göletler ve sazlıklar",
+    "diet": "Bitkiler ve böcek larvaları",
+    "fact": "Oksijenin çok düşük olduğu sulara bile dayanabilen son derece dirençli bir türdür."
+  },
+  {
+    "id": "p_carcharhinus_melanopterus",
+    "name": "Resif Köpekbalığı (Melanopterus)",
+    "latin": "Carcharhinus melanopterus",
+    "spr": "fish_px_carcharhinus_melanopterus",
+    "d": [
+      83,
+      155
+    ],
+    "kg": [
+      14.0,
+      42.0
+    ],
+    "str": 5.4,
+    "val": 46,
+    "r": 3,
+    "sc": 0.65,
+    "spd": [
+      32,
+      62
+    ],
+    "habitat": "Derin resif yamaçları",
+    "diet": "Orta boy balıklar ve kafadanbacaklılar",
+    "fact": "Siyah uçlu yüzgeçleriyle tanınır; sudaki en ufak titreşimi bile algılar."
+  },
+  {
+    "id": "p_carcharias_taurus",
+    "name": "Kum Kaplanı Köpekbalığı (Taurus)",
+    "latin": "Carcharias taurus",
+    "spr": "fish_px_carcharias_taurus",
+    "d": [
+      82,
+      152
+    ],
+    "kg": [
+      18.0,
+      55.0
+    ],
+    "str": 5.3,
+    "val": 52,
+    "r": 3,
+    "sc": 0.65,
+    "spd": [
+      40,
+      72
+    ],
+    "habitat": "Derin kumlu yamaçlar",
+    "diet": "Orta boy balıklar ve vatozlar",
+    "fact": "Hava yutarak su içinde hiç çaba harcamadan askıda kalabilen tek köpekbalığı türüdür."
+  },
+  {
+    "id": "p_catostomus_commersonii",
+    "name": "Dip Sazanı (Commersonii)",
+    "latin": "Catostomus commersonii",
+    "spr": "fish_px_catostomus_commersonii",
+    "d": [
+      16,
+      70
+    ],
+    "kg": [
+      1.0,
+      4.4
+    ],
+    "str": 2.05,
+    "val": 29,
+    "r": 1,
+    "sc": 0.55,
+    "spd": [
+      48,
+      82
+    ],
+    "habitat": "Serin göl dipleri ve nehir yatakları",
+    "diet": "Dip böcekleri ve yumuşakçalar",
+    "fact": "Aşağıya bakan emici ağzıyla tabandaki çakılların arasından yiyecek toplar."
+  },
+  {
+    "id": "p_centropyge_bicolor",
+    "name": "Cüce Melek Balığı (Bicolor)",
+    "latin": "Centropyge bicolor",
+    "spr": "fish_px_centropyge_bicolor",
+    "d": [
+      20,
+      72
+    ],
+    "kg": [
+      0.3,
+      1.4
+    ],
+    "str": 1.9,
+    "val": 50,
+    "r": 2,
+    "sc": 0.65,
+    "spd": [
+      56,
+      92
+    ],
+    "habitat": "Mercan resiflerinin gölgeli oyukları",
+    "diet": "İnce algler ve küçük kabuklular",
+    "fact": "Parlak sarı ve lacivert kontrastıyla resiflerin en göz alıcı sakinlerindendir."
+  },
+  {
+    "id": "p_cephalopholis_argus",
+    "name": "Kızıldeniz Hanisi (Argus)",
+    "latin": "Cephalopholis argus",
+    "spr": "fish_px_cephalopholis_argus",
+    "d": [
+      34,
+      102
+    ],
+    "kg": [
+      1.8,
+      7.2
+    ],
+    "str": 3.1,
+    "val": 38,
+    "r": 2,
+    "sc": 0.65,
+    "spd": [
+      32,
+      62
+    ],
+    "habitat": "Mercan mağaraları ve derin kovuklar",
+    "diet": "Küçük resif balıkları ve karidesler",
+    "fact": "Kırmızı gövdesi üzerindeki mavi benekler derin sularda büyüleyici görünür."
+  },
+  {
+    "id": "p_cephalopholis_miniata",
+    "name": "Kızıldeniz Hanisi (Miniata)",
+    "latin": "Cephalopholis miniata",
+    "spr": "fish_px_cephalopholis_miniata",
+    "d": [
+      36,
+      104
+    ],
+    "kg": [
+      1.8,
+      7.2
+    ],
+    "str": 3.25,
+    "val": 40,
+    "r": 2,
+    "sc": 0.65,
+    "spd": [
+      40,
+      72
+    ],
+    "habitat": "Mercan mağaraları ve derin kovuklar",
+    "diet": "Küçük resif balıkları ve karidesler",
+    "fact": "Kırmızı gövdesi üzerindeki mavi benekler derin sularda büyüleyici görünür."
+  },
+  {
+    "id": "p_chaetodon_auriga",
+    "name": "Kelebek Balığı (Auriga)",
+    "latin": "Chaetodon auriga",
+    "spr": "fish_px_chaetodon_auriga",
+    "d": [
+      6,
+      54
+    ],
+    "kg": [
+      0.4,
+      2.2
+    ],
+    "str": 1.8,
+    "val": 34,
+    "r": 1,
+    "sc": 0.55,
+    "spd": [
+      48,
+      82
+    ],
+    "habitat": "Güneşli mercan resifleri",
+    "diet": "Mercan polipleri ve deniz solucanları",
+    "fact": "Kuyruğundaki göz benzeri siyah benek, avcıları başının nerede olduğu konusunda şaşırtır."
+  },
+  {
+    "id": "p_chaetodon_kleinii",
+    "name": "Kelebek Balığı (Kleinii)",
+    "latin": "Chaetodon kleinii",
+    "spr": "fish_px_chaetodon_kleinii",
+    "d": [
+      8,
+      56
+    ],
+    "kg": [
+      0.4,
+      2.2
+    ],
+    "str": 1.5,
+    "val": 36,
+    "r": 1,
+    "sc": 0.55,
+    "spd": [
+      56,
+      92
+    ],
+    "habitat": "Güneşli mercan resifleri",
+    "diet": "Mercan polipleri ve deniz solucanları",
+    "fact": "Kuyruğundaki göz benzeri siyah benek, avcıları başının nerede olduğu konusunda şaşırtır."
+  },
+  {
+    "id": "p_chaetodon_lunula",
+    "name": "Kelebek Balığı (Lunula)",
+    "latin": "Chaetodon lunula",
+    "spr": "fish_px_chaetodon_lunula",
+    "d": [
+      10,
+      58
+    ],
+    "kg": [
+      0.4,
+      2.2
+    ],
+    "str": 1.65,
+    "val": 30,
+    "r": 1,
+    "sc": 0.55,
+    "spd": [
+      32,
+      62
+    ],
+    "habitat": "Güneşli mercan resifleri",
+    "diet": "Mercan polipleri ve deniz solucanları",
+    "fact": "Kuyruğundaki göz benzeri siyah benek, avcıları başının nerede olduğu konusunda şaşırtır."
+  },
+  {
+    "id": "p_chaetodon_lunulatus",
+    "name": "Kelebek Balığı (Lunulatus)",
+    "latin": "Chaetodon lunulatus",
+    "spr": "fish_px_chaetodon_lunulatus",
+    "d": [
+      12,
+      60
+    ],
+    "kg": [
+      0.4,
+      2.2
+    ],
+    "str": 1.8,
+    "val": 32,
+    "r": 1,
+    "sc": 0.55,
+    "spd": [
+      40,
+      72
+    ],
+    "habitat": "Güneşli mercan resifleri",
+    "diet": "Mercan polipleri ve deniz solucanları",
+    "fact": "Kuyruğundaki göz benzeri siyah benek, avcıları başının nerede olduğu konusunda şaşırtır."
+  },
+  {
+    "id": "p_chaetodon_ornatissimus",
+    "name": "Kelebek Balığı (Ornatissimus)",
+    "latin": "Chaetodon ornatissimus",
+    "spr": "fish_px_chaetodon_ornatissimus",
+    "d": [
+      14,
+      62
+    ],
+    "kg": [
+      0.4,
+      2.2
+    ],
+    "str": 1.5,
+    "val": 34,
+    "r": 1,
+    "sc": 0.55,
+    "spd": [
+      48,
+      82
+    ],
+    "habitat": "Güneşli mercan resifleri",
+    "diet": "Mercan polipleri ve deniz solucanları",
+    "fact": "Kuyruğundaki göz benzeri siyah benek, avcıları başının nerede olduğu konusunda şaşırtır."
+  },
+  {
+    "id": "p_chaetodon_striatus",
+    "name": "Kelebek Balığı (Striatus)",
+    "latin": "Chaetodon striatus",
+    "spr": "fish_px_chaetodon_striatus",
+    "d": [
+      6,
+      54
+    ],
+    "kg": [
+      0.4,
+      2.2
+    ],
+    "str": 1.65,
+    "val": 36,
+    "r": 1,
+    "sc": 0.55,
+    "spd": [
+      56,
+      92
+    ],
+    "habitat": "Güneşli mercan resifleri",
+    "diet": "Mercan polipleri ve deniz solucanları",
+    "fact": "Kuyruğundaki göz benzeri siyah benek, avcıları başının nerede olduğu konusunda şaşırtır."
+  },
+  {
+    "id": "p_chaetodon_vagabundus",
+    "name": "Kelebek Balığı (Vagabundus)",
+    "latin": "Chaetodon vagabundus",
+    "spr": "fish_px_chaetodon_vagabundus",
+    "d": [
+      8,
+      56
+    ],
+    "kg": [
+      0.4,
+      2.2
+    ],
+    "str": 1.8,
+    "val": 30,
+    "r": 1,
+    "sc": 0.55,
+    "spd": [
+      32,
+      62
+    ],
+    "habitat": "Güneşli mercan resifleri",
+    "diet": "Mercan polipleri ve deniz solucanları",
+    "fact": "Kuyruğundaki göz benzeri siyah benek, avcıları başının nerede olduğu konusunda şaşırtır."
+  },
+  {
+    "id": "p_cheilinus_undulatus",
+    "name": "Napolyon Balığı (Undulatus)",
+    "latin": "Cheilinus undulatus",
+    "spr": "fish_px_cheilinus_undulatus",
+    "d": [
+      59,
+      142
+    ],
+    "kg": [
+      10.0,
+      38.0
+    ],
+    "str": 4.7,
+    "val": 50,
+    "r": 3,
+    "sc": 0.65,
+    "spd": [
+      40,
+      72
+    ],
+    "habitat": "Derin resif duvarları",
+    "diet": "Sert kabuklu yumuşakçalar ve deniz yıldızları",
+    "fact": "Alnındaki belirgin çıkıntısı ve 2 metreyi bulabilen boyuyla resiflerin nazik devidir."
+  },
+  {
+    "id": "p_chlorurus_sordidus",
+    "name": "Papağan Balığı (Sordidus)",
+    "latin": "Chlorurus sordidus",
+    "spr": "fish_px_chlorurus_sordidus",
+    "d": [
+      20,
+      74
+    ],
+    "kg": [
+      1.4,
+      5.8
+    ],
+    "str": 2.65,
+    "val": 38,
+    "r": 2,
+    "sc": 0.65,
+    "spd": [
+      48,
+      82
+    ],
+    "habitat": "Mercan resifleri",
+    "diet": "Mercan üzerindeki yosunlar",
+    "fact": "Papağan gagasına benzeyen dişleriyle yosun kazır; ürettiği kum tropikal kumsalları oluşturur!"
+  },
+  {
+    "id": "p_chlorurus_spilurus",
+    "name": "Papağan Balığı (Spilurus)",
+    "latin": "Chlorurus spilurus",
+    "spr": "fish_px_chlorurus_spilurus",
+    "d": [
+      22,
+      76
+    ],
+    "kg": [
+      1.4,
+      5.8
+    ],
+    "str": 2.8,
+    "val": 40,
+    "r": 2,
+    "sc": 0.65,
+    "spd": [
+      56,
+      92
+    ],
+    "habitat": "Mercan resifleri",
+    "diet": "Mercan üzerindeki yosunlar",
+    "fact": "Papağan gagasına benzeyen dişleriyle yosun kazır; ürettiği kum tropikal kumsalları oluşturur!"
+  },
+  {
+    "id": "p_chromis_chromis",
+    "name": "Kromis (Chromis)",
+    "latin": "Chromis chromis",
+    "spr": "fish_px_chromis_chromis",
+    "d": [
+      2,
+      36
+    ],
+    "kg": [
+      0.15,
+      0.6
+    ],
+    "str": 1.1,
+    "val": 22,
+    "r": 0,
+    "sc": 0.55,
+    "spd": [
+      32,
+      62
+    ],
+    "habitat": "Berrak sığ resifler",
+    "diet": "Zooplankton",
+    "fact": "Parlak mavi-yeşil sürüler halinde yüzerek resiflere canlılık katar."
+  },
+  {
+    "id": "p_chromis_viridis",
+    "name": "Kromis (Viridis)",
+    "latin": "Chromis viridis",
+    "spr": "fish_px_chromis_viridis",
+    "d": [
+      4,
+      38
+    ],
+    "kg": [
+      0.15,
+      0.6
+    ],
+    "str": 1.25,
+    "val": 24,
+    "r": 0,
+    "sc": 0.55,
+    "spd": [
+      40,
+      72
+    ],
+    "habitat": "Berrak sığ resifler",
+    "diet": "Zooplankton",
+    "fact": "Parlak mavi-yeşil sürüler halinde yüzerek resiflere canlılık katar."
+  },
+  {
+    "id": "p_clinocottus_analis",
+    "name": "Kaya İskorpitçiği (Analis)",
+    "latin": "Clinocottus analis",
+    "spr": "fish_px_clinocottus_analis",
+    "d": [
+      5,
+      32
+    ],
+    "kg": [
+      0.2,
+      0.9
+    ],
+    "str": 1.5,
+    "val": 24,
+    "r": 0,
+    "sc": 0.55,
+    "spd": [
+      48,
+      82
+    ],
+    "habitat": "Gelgit havuzları ve kayalık kıyılar",
+    "diet": "Küçük karidesler ve kıyı böcekleri",
+    "fact": "Su çekildiğinde kayaların arasındaki küçük su birikintilerinde saatlerce yaşayabilir."
+  },
+  {
+    "id": "p_clupea_pallasii",
+    "name": "Gümüş Ringa (Pallasii)",
+    "latin": "Clupea pallasii",
+    "spr": "fish_px_clupea_pallasii",
+    "d": [
+      16,
+      68
+    ],
+    "kg": [
+      0.3,
+      1.3
+    ],
+    "str": 1.4,
+    "val": 28,
+    "r": 0,
+    "sc": 0.55,
+    "spd": [
+      56,
+      92
+    ],
+    "habitat": "Serin açık sular",
+    "diet": "Zooplankton ve küçük kabuklular",
+    "fact": "Milyonlarca balıktan oluşan gümüşi sürüler halinde senkronize hareket eder."
+  },
+  {
+    "id": "p_coris_julis",
+    "name": "Gelin Balığı (Julis)",
+    "latin": "Coris julis",
+    "spr": "fish_px_coris_julis",
+    "d": [
+      14,
+      56
+    ],
+    "kg": [
+      0.3,
+      1.6
+    ],
+    "str": 1.65,
+    "val": 32,
+    "r": 1,
+    "sc": 0.55,
+    "spd": [
+      32,
+      62
+    ],
+    "habitat": "Kumlu ve kayalık kıyılar",
+    "diet": "Küçük deniz salyangozları ve karidesler",
+    "fact": "Geceleri tehlikelerden korunmak için kendini tamamen kumun içine gömerek uyur!"
+  },
+  {
+    "id": "p_ctenochaetus_striatus",
+    "name": "Tarakdiş Cerrah (Striatus)",
+    "latin": "Ctenochaetus striatus",
+    "spr": "fish_px_ctenochaetus_striatus",
+    "d": [
+      12,
+      58
+    ],
+    "kg": [
+      0.7,
+      2.8
+    ],
+    "str": 2.1,
+    "val": 32,
+    "r": 1,
+    "sc": 0.55,
+    "spd": [
+      40,
+      72
+    ],
+    "habitat": "Mercan resifleri",
+    "diet": "İnce algler",
+    "fact": "Özel esnek dişleriyle mercanları çizmeden üzerindeki zararlı yosunları temizler."
+  },
+  {
+    "id": "p_ctenopharyngodon_idella",
+    "name": "Ot Sazanı (Idella)",
+    "latin": "Ctenopharyngodon idella",
+    "spr": "fish_px_ctenopharyngodon_idella",
+    "d": [
+      10,
+      58
+    ],
+    "kg": [
+      2.5,
+      12.0
+    ],
+    "str": 2.8,
+    "val": 28,
+    "r": 1,
+    "sc": 0.55,
+    "spd": [
+      48,
+      82
+    ],
+    "habitat": "Bitki örtüsü yoğun tatlı sular",
+    "diet": "Su bitkileri",
+    "fact": "Günde kendi ağırlığının yarısı kadar su bitkisi tüketebilen iştahlı bir otçuldur."
+  },
+  {
+    "id": "p_culaea_inconstans",
+    "name": "Dikenli Dere Balığı (Inconstans)",
+    "latin": "Culaea inconstans",
+    "spr": "fish_px_culaea_inconstans",
+    "d": [
+      5,
+      32
+    ],
+    "kg": [
+      0.1,
+      0.4
+    ],
+    "str": 1.15,
+    "val": 26,
+    "r": 0,
+    "sc": 0.55,
+    "spd": [
+      56,
+      92
+    ],
+    "habitat": "Sığ sazlıklar ve serin göletler",
+    "diet": "Sivrisinek larvaları ve su pireleri",
+    "fact": "Sırtındaki keskin dikenlerle kendini korur; erkekleri su bitkilerinden yuva örer."
+  },
+  {
+    "id": "p_cyprinella_venusta",
+    "name": "Gümüş Sazancık (Venusta)",
+    "latin": "Cyprinella venusta",
+    "spr": "fish_px_cyprinella_venusta",
+    "d": [
+      8,
+      40
+    ],
+    "kg": [
+      0.15,
+      0.6
+    ],
+    "str": 1.4,
+    "val": 19,
+    "r": 0,
+    "sc": 0.55,
+    "spd": [
+      32,
+      62
+    ],
+    "habitat": "Berrak akarsular ve göl kıyıları",
+    "diet": "Su böcekleri ve larvalar",
+    "fact": "Kuyruğunun dibindeki siyah lekeyle tanınır; hızlı ve çevik bir yüzücüdür."
+  },
+  {
+    "id": "p_cyprinus_carpio",
+    "name": "Sazan (Carpio)",
+    "latin": "Cyprinus carpio",
+    "spr": "fish_px_cyprinus_carpio",
+    "d": [
+      14,
+      66
+    ],
+    "kg": [
+      1.8,
+      11.0
+    ],
+    "str": 2.6,
+    "val": 25,
+    "r": 1,
+    "sc": 0.55,
+    "spd": [
+      40,
+      72
+    ],
+    "habitat": "Sakin göller ve sazlıklar",
+    "diet": "Su bitkileri, böcekler ve tohumlar",
+    "fact": "Zeki ve temkinli bir balıktır; büyük bireyler oltaya geldiğinde güçlü direnir."
+  },
+  {
+    "id": "p_cyprinus_rubrofuscus",
+    "name": "Sazan (Rubrofuscus)",
+    "latin": "Cyprinus rubrofuscus",
+    "spr": "fish_px_cyprinus_rubrofuscus",
+    "d": [
+      6,
+      58
+    ],
+    "kg": [
+      1.8,
+      11.0
+    ],
+    "str": 2.75,
+    "val": 27,
+    "r": 1,
+    "sc": 0.55,
+    "spd": [
+      48,
+      82
+    ],
+    "habitat": "Sakin göller ve sazlıklar",
+    "diet": "Su bitkileri, böcekler ve tohumlar",
+    "fact": "Zeki ve temkinli bir balıktır; büyük bireyler oltaya geldiğinde güçlü direnir."
+  },
+  {
+    "id": "p_dascyllus_trimaculatus",
+    "name": "Karasinek Balığı (Trimaculatus)",
+    "latin": "Dascyllus trimaculatus",
+    "spr": "fish_px_dascyllus_trimaculatus",
+    "d": [
+      5,
+      40
+    ],
+    "kg": [
+      0.2,
+      0.8
+    ],
+    "str": 1.5,
+    "val": 30,
+    "r": 0,
+    "sc": 0.55,
+    "spd": [
+      56,
+      92
+    ],
+    "habitat": "Mercan resiflerinin sığ kesimleri",
+    "diet": "Plankton ve küçük kabuklular",
+    "fact": "Tehlike anında mercan dallarının arasına ok gibi saklanan çevik bir balıktır."
+  },
+  {
+    "id": "p_diodon_holocanthus",
+    "name": "Dikenli Balon Balığı (Holocanthus)",
+    "latin": "Diodon holocanthus",
+    "spr": "fish_px_diodon_holocanthus",
+    "d": [
+      28,
+      96
+    ],
+    "kg": [
+      1.4,
+      5.6
+    ],
+    "str": 2.7,
+    "val": 44,
+    "r": 2,
+    "sc": 0.65,
+    "spd": [
+      32,
+      62
+    ],
+    "habitat": "Orta ve derin resif oyukları",
+    "diet": "Deniz kestaneleri ve yengeçler",
+    "fact": "Şiştiğinde vücudundaki tüm dikenler dikleşerek onu bir sualtı kirpisine dönüştürür."
+  },
+  {
+    "id": "p_diodon_hystrix",
+    "name": "Dikenli Balon Balığı (Hystrix)",
+    "latin": "Diodon hystrix",
+    "spr": "fish_px_diodon_hystrix",
+    "d": [
+      30,
+      98
+    ],
+    "kg": [
+      1.4,
+      5.6
+    ],
+    "str": 2.85,
+    "val": 46,
+    "r": 2,
+    "sc": 0.65,
+    "spd": [
+      40,
+      72
+    ],
+    "habitat": "Orta ve derin resif oyukları",
+    "diet": "Deniz kestaneleri ve yengeçler",
+    "fact": "Şiştiğinde vücudundaki tüm dikenler dikleşerek onu bir sualtı kirpisine dönüştürür."
+  },
+  {
+    "id": "p_diplodus_sargus",
+    "name": "Sargoz (Sargus)",
+    "latin": "Diplodus sargus",
+    "spr": "fish_px_diplodus_sargus",
+    "d": [
+      18,
+      72
+    ],
+    "kg": [
+      0.6,
+      3.2
+    ],
+    "str": 2.4,
+    "val": 34,
+    "r": 1,
+    "sc": 0.55,
+    "spd": [
+      48,
+      82
+    ],
+    "habitat": "Kayalık kıyılar ve orta derinlikler",
+    "diet": "Midye, yengeç ve deniz kestaneleri",
+    "fact": "Kesici ön dişleriyle sert midye ve istiridye kabuklarını kolayca kırar."
+  },
+  {
+    "id": "p_diplodus_vulgaris",
+    "name": "Sargoz (Vulgaris)",
+    "latin": "Diplodus vulgaris",
+    "spr": "fish_px_diplodus_vulgaris",
+    "d": [
+      10,
+      64
+    ],
+    "kg": [
+      0.6,
+      3.2
+    ],
+    "str": 2.1,
+    "val": 36,
+    "r": 1,
+    "sc": 0.55,
+    "spd": [
+      56,
+      92
+    ],
+    "habitat": "Kayalık kıyılar ve orta derinlikler",
+    "diet": "Midye, yengeç ve deniz kestaneleri",
+    "fact": "Kesici ön dişleriyle sert midye ve istiridye kabuklarını kolayca kırar."
+  },
+  {
+    "id": "p_dorosoma_cepedianum",
+    "name": "Göl Ringası (Cepedianum)",
+    "latin": "Dorosoma cepedianum",
+    "spr": "fish_px_dorosoma_cepedianum",
+    "d": [
+      8,
+      54
+    ],
+    "kg": [
+      0.3,
+      1.2
+    ],
+    "str": 1.45,
+    "val": 19,
+    "r": 0,
+    "sc": 0.55,
+    "spd": [
+      32,
+      62
+    ],
+    "habitat": "Açık göl suları",
+    "diet": "Plankton ve mikroskobik algler",
+    "fact": "Gümüşi pulları güneş ışığını yansıtarak büyük sürüler halinde parıldar."
+  },
+  {
+    "id": "p_echeneis_naucrates",
+    "name": "Vantuz Balığı (Naucrates)",
+    "latin": "Echeneis naucrates",
+    "spr": "fish_px_echeneis_naucrates",
+    "d": [
+      24,
+      92
+    ],
+    "kg": [
+      1.2,
+      5.2
+    ],
+    "str": 2.8,
+    "val": 38,
+    "r": 2,
+    "sc": 0.65,
+    "spd": [
+      40,
+      72
+    ],
+    "habitat": "Açık denizler ve büyük balıkların çevresi",
+    "diet": "Büyük balıkların artıkları ve parazitler",
+    "fact": "Başının üstündeki özel vantuzla köpekbalıklarına yapışıp bedava yolculuk yapar!"
+  },
+  {
+    "id": "p_echidna_nebulosa",
+    "name": "Kar Tanesi Müreni (Nebulosa)",
+    "latin": "Echidna nebulosa",
+    "spr": "fish_px_echidna_nebulosa",
+    "d": [
+      40,
+      114
+    ],
+    "kg": [
+      2.2,
+      9.0
+    ],
+    "str": 3.4,
+    "val": 44,
+    "r": 2,
+    "sc": 0.65,
+    "spd": [
+      48,
+      82
+    ],
+    "habitat": "Mercan oyukları ve karanlık yarıklar",
+    "diet": "Yengeç, karides ve küçük ahtapotlar",
+    "fact": "Keskin koku alma duyusu sayesinde zifiri karanlıkta bile avının yerini bulur."
+  },
+  {
+    "id": "p_epinephelus_marginatus",
+    "name": "Orfoz (Marginatus)",
+    "latin": "Epinephelus marginatus",
+    "spr": "fish_px_epinephelus_marginatus",
+    "d": [
+      56,
+      146
+    ],
+    "kg": [
+      5.5,
+      26.0
+    ],
+    "str": 4.55,
+    "val": 48,
+    "r": 3,
+    "sc": 0.65,
+    "spd": [
+      56,
+      92
+    ],
+    "habitat": "Derin kayalıklar ve batık çevreleri",
+    "diet": "Ahtapot, yengeç ve orta boy balıklar",
+    "fact": "Kendi kayalık bölgesine çok sadıktır ve 50 yıla kadar yaşayabilen görkemli bir türdür."
+  },
+  {
+    "id": "p_esox_lucius",
+    "name": "Turna Balığı (Lucius)",
+    "latin": "Esox lucius",
+    "spr": "fish_px_esox_lucius",
+    "d": [
+      14,
+      82
+    ],
+    "kg": [
+      2.2,
+      12.5
+    ],
+    "str": 3.7,
+    "val": 30,
+    "r": 2,
+    "sc": 0.65,
+    "spd": [
+      32,
+      62
+    ],
+    "habitat": "Sazlık kenarları ve derin gölgelikler",
+    "diet": "Küçük balıklar ve su canlıları",
+    "fact": "Ok gibi uzun gövdesiyle hareketsiz bekleyip şimşek hızıyla avına saldırır."
+  },
+  {
+    "id": "p_esox_niger",
+    "name": "Turna Balığı (Niger)",
+    "latin": "Esox niger",
+    "spr": "fish_px_esox_niger",
+    "d": [
+      16,
+      84
+    ],
+    "kg": [
+      2.2,
+      12.5
+    ],
+    "str": 3.4,
+    "val": 32,
+    "r": 2,
+    "sc": 0.65,
+    "spd": [
+      40,
+      72
+    ],
+    "habitat": "Sazlık kenarları ve derin gölgelikler",
+    "diet": "Küçük balıklar ve su canlıları",
+    "fact": "Ok gibi uzun gövdesiyle hareketsiz bekleyip şimşek hızıyla avına saldırır."
+  },
+  {
+    "id": "p_etheostoma_caerulum",
+    "name": "Gökkuşağı Dip Balığı (Caerulum)",
+    "latin": "Etheostoma caerulum",
+    "spr": "fish_px_etheostoma_caerulum",
+    "d": [
+      6,
+      36
+    ],
+    "kg": [
+      0.1,
+      0.45
+    ],
+    "str": 1.25,
+    "val": 36,
+    "r": 1,
+    "sc": 0.55,
+    "spd": [
+      48,
+      82
+    ],
+    "habitat": "Temiz, çakıllı ve oksijenli sular",
+    "diet": "Küçük su böcekleri ve larvalar",
+    "fact": "Gökkuşağı gibi canlı renkleriyle bilinen küçük ama çok çevik bir dip balığıdır."
+  },
+  {
+    "id": "p_fistularia_commersonii",
+    "name": "Külah Balığı (Commersonii)",
+    "latin": "Fistularia commersonii",
+    "spr": "fish_px_fistularia_commersonii",
+    "d": [
+      24,
+      86
+    ],
+    "kg": [
+      1.5,
+      6.2
+    ],
+    "str": 2.7,
+    "val": 40,
+    "r": 2,
+    "sc": 0.65,
+    "spd": [
+      56,
+      92
+    ],
+    "habitat": "Resif kenarları ve deniz çayırları",
+    "diet": "Küçük balık sürüleri",
+    "fact": "Uzun boru şeklindeki ağzıyla avını vakum gibi içine çeker."
+  },
+  {
+    "id": "p_fundulus_heteroclitus",
+    "name": "Dişli Sazancık (Heteroclitus)",
+    "latin": "Fundulus heteroclitus",
+    "spr": "fish_px_fundulus_heteroclitus",
+    "d": [
+      9,
+      36
+    ],
+    "kg": [
+      0.1,
+      0.5
+    ],
+    "str": 1.0,
+    "val": 18,
+    "r": 0,
+    "sc": 0.55,
+    "spd": [
+      32,
+      62
+    ],
+    "habitat": "Sığ kıyılar ve tuzlu bataklıklar",
+    "diet": "Böcek larvaları ve yosunlar",
+    "fact": "Hem tatlı hem de tuzlu suya kolayca uyum sağlayabilen dayanıklı bir kıyı balığıdır."
+  },
+  {
+    "id": "p_gadus_morhua",
+    "name": "Mezgit (Morhua)",
+    "latin": "Gadus morhua",
+    "spr": "fish_px_gadus_morhua",
+    "d": [
+      32,
+      112
+    ],
+    "kg": [
+      1.8,
+      9.0
+    ],
+    "str": 2.95,
+    "val": 30,
+    "r": 1,
+    "sc": 0.55,
+    "spd": [
+      40,
+      72
+    ],
+    "habitat": "Serin orta ve derin sular",
+    "diet": "Küçük balıklar ve karidesler",
+    "fact": "Soğuk suların sevilen balığıdır; çenesinin altındaki küçük bıyıkla tabanı tarar."
+  },
+  {
+    "id": "p_gambusia_affinis",
+    "name": "Sivrisinek Balığı (Affinis)",
+    "latin": "Gambusia affinis",
+    "spr": "fish_px_gambusia_affinis",
+    "d": [
+      3,
+      26
+    ],
+    "kg": [
+      0.08,
+      0.3
+    ],
+    "str": 1.2,
+    "val": 21,
+    "r": 0,
+    "sc": 0.55,
+    "spd": [
+      48,
+      82
+    ],
+    "habitat": "Sığ ve durgun göl kıyıları",
+    "diet": "Sivrisinek larvaları",
+    "fact": "Günde kendi ağırlığı kadar sivrisinek larvası yiyerek doğayı korur."
+  },
+  {
+    "id": "p_gambusia_holbrooki",
+    "name": "Sivrisinek Balığı (Holbrooki)",
+    "latin": "Gambusia holbrooki",
+    "spr": "fish_px_gambusia_holbrooki",
+    "d": [
+      5,
+      28
+    ],
+    "kg": [
+      0.08,
+      0.3
+    ],
+    "str": 0.9,
+    "val": 23,
+    "r": 0,
+    "sc": 0.55,
+    "spd": [
+      56,
+      92
+    ],
+    "habitat": "Sığ ve durgun göl kıyıları",
+    "diet": "Sivrisinek larvaları",
+    "fact": "Günde kendi ağırlığı kadar sivrisinek larvası yiyerek doğayı korur."
+  },
+  {
+    "id": "p_gastrostereus_aculeatus",
+    "name": "Üç Dikenli Balık (Aculeatus)",
+    "latin": "Gastrostereus aculeatus",
+    "spr": "fish_px_gastrostereus_aculeatus",
+    "d": [
+      8,
+      36
+    ],
+    "kg": [
+      0.1,
+      0.4
+    ],
+    "str": 1.15,
+    "val": 20,
+    "r": 0,
+    "sc": 0.55,
+    "spd": [
+      32,
+      62
+    ],
+    "habitat": "Kıyı yosunlukları ve göletler",
+    "diet": "Küçük kabuklular ve kurtçuklar",
+    "fact": "Yumurtalarını korumak için kendinden büyük balıklara bile kafa tutar."
+  },
+  {
+    "id": "p_ginglymostoma_cirratum",
+    "name": "Hemşire Köpekbalığı (Cirratum)",
+    "latin": "Ginglymostoma cirratum",
+    "spr": "fish_px_ginglymostoma_cirratum",
+    "d": [
+      76,
+      154
+    ],
+    "kg": [
+      15.0,
+      48.0
+    ],
+    "str": 5.2,
+    "val": 48,
+    "r": 3,
+    "sc": 0.65,
+    "spd": [
+      40,
+      72
+    ],
+    "habitat": "Derin kumlu dipler ve mağaralar",
+    "diet": "Istakoz, yengeç ve dip balıkları",
+    "fact": "Yüzmeden dipte dinlenirken bile solungaçlarına su pompalayabilen nadir köpekbalığıdır."
+  },
+  {
+    "id": "p_gobiesox_meandricus",
+    "name": "Kaya Vantuzu (Meandricus)",
+    "latin": "Gobiesox meandricus",
+    "spr": "fish_px_gobiesox_meandricus",
+    "d": [
+      2,
+      30
+    ],
+    "kg": [
+      0.15,
+      0.6
+    ],
+    "str": 1.2,
+    "val": 26,
+    "r": 0,
+    "sc": 0.55,
+    "spd": [
+      48,
+      82
+    ],
+    "habitat": "Dalgalı kayalık kıyılar",
+    "diet": "Küçük kıyı kabukluları",
+    "fact": "Karın yüzgeçleri güçlü bir vantuz görevi görür; en sert dalgalarda bile kayaya tutunur."
+  },
+  {
+    "id": "p_gomphosus_varius",
+    "name": "Kuş Burunlu Lapin (Varius)",
+    "latin": "Gomphosus varius",
+    "spr": "fish_px_gomphosus_varius",
+    "d": [
+      14,
+      64
+    ],
+    "kg": [
+      0.5,
+      2.2
+    ],
+    "str": 2.05,
+    "val": 42,
+    "r": 2,
+    "sc": 0.65,
+    "spd": [
+      56,
+      92
+    ],
+    "habitat": "Mercan resifleri",
+    "diet": "Mercan aralarındaki küçük yengeçler",
+    "fact": "Uzun gagamsı ağzıyla dar mercan çatlaklarından ustalıkla av çıkarır."
+  },
+  {
+    "id": "p_gymnothorax_funebris",
+    "name": "Dev Müren (Funebris)",
+    "latin": "Gymnothorax funebris",
+    "spr": "fish_px_gymnothorax_funebris",
+    "d": [
+      56,
+      146
+    ],
+    "kg": [
+      4.5,
+      18.0
+    ],
+    "str": 4.6,
+    "val": 42,
+    "r": 3,
+    "sc": 0.65,
+    "spd": [
+      32,
+      62
+    ],
+    "habitat": "Derin kayalık kovuklar ve mağaralar",
+    "diet": "Ahtapot, yengeç ve küçük balıklar",
+    "fact": "Boğazının içinde ikinci bir çenesi vardır! Avını yakaladığında bu iç çene öne fırlar."
+  },
+  {
+    "id": "p_gymnothorax_javanicus",
+    "name": "Dev Müren (Javanicus)",
+    "latin": "Gymnothorax javanicus",
+    "spr": "fish_px_gymnothorax_javanicus",
+    "d": [
+      58,
+      148
+    ],
+    "kg": [
+      4.5,
+      18.0
+    ],
+    "str": 4.3,
+    "val": 44,
+    "r": 3,
+    "sc": 0.65,
+    "spd": [
+      40,
+      72
+    ],
+    "habitat": "Derin kayalık kovuklar ve mağaralar",
+    "diet": "Ahtapot, yengeç ve küçük balıklar",
+    "fact": "Boğazının içinde ikinci bir çenesi vardır! Avını yakaladığında bu iç çene öne fırlar."
+  },
+  {
+    "id": "p_haemulon_flavolineatum",
+    "name": "Hırıldayan Balık (Flavolineatum)",
+    "latin": "Haemulon flavolineatum",
+    "spr": "fish_px_haemulon_flavolineatum",
+    "d": [
+      16,
+      64
+    ],
+    "kg": [
+      0.6,
+      2.8
+    ],
+    "str": 1.95,
+    "val": 32,
+    "r": 1,
+    "sc": 0.55,
+    "spd": [
+      48,
+      82
+    ],
+    "habitat": "Sığ mercan resifleri",
+    "diet": "Gece çıkan karidesler ve yengeçler",
+    "fact": "Yutak dişlerini birbirine sürterek su altında duyulabilen homurtu sesleri çıkarır!"
+  },
+  {
+    "id": "p_haemulon_parra",
+    "name": "Hırıldayan Balık (Parra)",
+    "latin": "Haemulon parra",
+    "spr": "fish_px_haemulon_parra",
+    "d": [
+      8,
+      56
+    ],
+    "kg": [
+      0.6,
+      2.8
+    ],
+    "str": 2.1,
+    "val": 34,
+    "r": 1,
+    "sc": 0.55,
+    "spd": [
+      56,
+      92
+    ],
+    "habitat": "Sığ mercan resifleri",
+    "diet": "Gece çıkan karidesler ve yengeçler",
+    "fact": "Yutak dişlerini birbirine sürterek su altında duyulabilen homurtu sesleri çıkarır!"
+  },
+  {
+    "id": "p_haemulon_sciurus",
+    "name": "Hırıldayan Balık (Sciurus)",
+    "latin": "Haemulon sciurus",
+    "spr": "fish_px_haemulon_sciurus",
+    "d": [
+      10,
+      58
+    ],
+    "kg": [
+      0.6,
+      2.8
+    ],
+    "str": 1.8,
+    "val": 28,
+    "r": 1,
+    "sc": 0.55,
+    "spd": [
+      32,
+      62
+    ],
+    "habitat": "Sığ mercan resifleri",
+    "diet": "Gece çıkan karidesler ve yengeçler",
+    "fact": "Yutak dişlerini birbirine sürterek su altında duyulabilen homurtu sesleri çıkarır!"
+  },
+  {
+    "id": "p_halichoeres_bivittatus",
+    "name": "Renkli Lapin (Bivittatus)",
+    "latin": "Halichoeres bivittatus",
+    "spr": "fish_px_halichoeres_bivittatus",
+    "d": [
+      9,
+      52
+    ],
+    "kg": [
+      0.3,
+      1.5
+    ],
+    "str": 1.65,
+    "val": 29,
+    "r": 1,
+    "sc": 0.55,
+    "spd": [
+      40,
+      72
+    ],
+    "habitat": "Kıyı yosunlukları ve kayalıklar",
+    "diet": "Küçük kabuklular ve salyangozlar",
+    "fact": "Renkli pullarıyla tanınır; bazı türleri büyük balıkların parazitlerini temizler."
+  },
+  {
+    "id": "p_halichoeres_hortulanus",
+    "name": "Renkli Lapin (Hortulanus)",
+    "latin": "Halichoeres hortulanus",
+    "spr": "fish_px_halichoeres_hortulanus",
+    "d": [
+      11,
+      54
+    ],
+    "kg": [
+      0.3,
+      1.5
+    ],
+    "str": 1.8,
+    "val": 31,
+    "r": 1,
+    "sc": 0.55,
+    "spd": [
+      48,
+      82
+    ],
+    "habitat": "Kıyı yosunlukları ve kayalıklar",
+    "diet": "Küçük kabuklular ve salyangozlar",
+    "fact": "Renkli pullarıyla tanınır; bazı türleri büyük balıkların parazitlerini temizler."
+  },
+  {
+    "id": "p_hemigymnus_melapterus",
+    "name": "Kum Eleyen Lapin (Melapterus)",
+    "latin": "Hemigymnus melapterus",
+    "spr": "fish_px_hemigymnus_melapterus",
+    "d": [
+      18,
+      64
+    ],
+    "kg": [
+      0.8,
+      3.2
+    ],
+    "str": 1.9,
+    "val": 36,
+    "r": 1,
+    "sc": 0.55,
+    "spd": [
+      56,
+      92
+    ],
+    "habitat": "Kumlu resif dipleri",
+    "diet": "Kumun içindeki küçük kabuklular",
+    "fact": "Ağzına kum alıp içindeki yiyecekleri ayıkladıktan sonra kumu solungaçlarından püskürtür."
+  },
+  {
+    "id": "p_hericthys_cyanoguttatus",
+    "name": "İnci Çiklit (Cyanoguttatus)",
+    "latin": "Hericthys cyanoguttatus",
+    "spr": "fish_px_hericthys_cyanoguttatus",
+    "d": [
+      6,
+      48
+    ],
+    "kg": [
+      0.5,
+      2.2
+    ],
+    "str": 1.85,
+    "val": 30,
+    "r": 1,
+    "sc": 0.55,
+    "spd": [
+      32,
+      62
+    ],
+    "habitat": "Sıcak tatlı su gölleri",
+    "diet": "Böcekler ve küçük omurgasızlar",
+    "fact": "İnci gibi parlayan turkuaz benekleriyle tanınan, yavrularını özenle koruyan bir türdür."
+  },
+  {
+    "id": "p_heterandria_formosa",
+    "name": "Cüce Canlıdoğuran (Formosa)",
+    "latin": "Heterandria formosa",
+    "spr": "fish_px_heterandria_formosa",
+    "d": [
+      3,
+      24
+    ],
+    "kg": [
+      0.08,
+      0.25
+    ],
+    "str": 1.15,
+    "val": 22,
+    "r": 0,
+    "sc": 0.55,
+    "spd": [
+      40,
+      72
+    ],
+    "habitat": "Yoğun su bitkilerinin arası",
+    "diet": "Mikroskobik kabuklular ve algler",
+    "fact": "Dünyanın en küçük canlı doğuran balıklarından biridir."
+  },
+  {
+    "id": "p_holacanthus_ciliaris",
+    "name": "Kraliçe Melek Balığı (Ciliaris)",
+    "latin": "Holacanthus ciliaris",
+    "spr": "fish_px_holacanthus_ciliaris",
+    "d": [
+      36,
+      112
+    ],
+    "kg": [
+      1.6,
+      6.2
+    ],
+    "str": 3.0,
+    "val": 56,
+    "r": 3,
+    "sc": 0.65,
+    "spd": [
+      48,
+      82
+    ],
+    "habitat": "Derin mercan duvarları",
+    "diet": "Süngerler ve deniz algleri",
+    "fact": "Başındaki taç benzeri mavi halka ve elektrik mavisi kenarlarıyla büyüleyicidir."
+  },
+  {
+    "id": "p_holacanthus_passer",
+    "name": "Kraliçe Melek Balığı (Passer)",
+    "latin": "Holacanthus passer",
+    "spr": "fish_px_holacanthus_passer",
+    "d": [
+      38,
+      114
+    ],
+    "kg": [
+      1.6,
+      6.2
+    ],
+    "str": 3.15,
+    "val": 58,
+    "r": 3,
+    "sc": 0.65,
+    "spd": [
+      56,
+      92
+    ],
+    "habitat": "Derin mercan duvarları",
+    "diet": "Süngerler ve deniz algleri",
+    "fact": "Başındaki taç benzeri mavi halka ve elektrik mavisi kenarlarıyla büyüleyicidir."
+  },
+  {
+    "id": "p_hypanus_americanus",
+    "name": "Dikenli Vatoz (Americanus)",
+    "latin": "Hypanus americanus",
+    "spr": "fish_px_hypanus_americanus",
+    "d": [
+      46,
+      126
+    ],
+    "kg": [
+      4.0,
+      16.0
+    ],
+    "str": 4.0,
+    "val": 36,
+    "r": 2,
+    "sc": 0.65,
+    "spd": [
+      32,
+      62
+    ],
+    "habitat": "Kumlu ve çamurlu dipler",
+    "diet": "Midye, karides ve dip balıkları",
+    "fact": "Kendini tamamen kumun altına gizleyip sadece gözlerini dışarıda bırakarak pusu kurar."
+  },
+  {
+    "id": "p_hypanus_sabinus",
+    "name": "Dikenli Vatoz (Sabinus)",
+    "latin": "Hypanus sabinus",
+    "spr": "fish_px_hypanus_sabinus",
+    "d": [
+      38,
+      118
+    ],
+    "kg": [
+      4.0,
+      16.0
+    ],
+    "str": 3.7,
+    "val": 38,
+    "r": 2,
+    "sc": 0.65,
+    "spd": [
+      40,
+      72
+    ],
+    "habitat": "Kumlu ve çamurlu dipler",
+    "diet": "Midye, karides ve dip balıkları",
+    "fact": "Kendini tamamen kumun altına gizleyip sadece gözlerini dışarıda bırakarak pusu kurar."
+  },
+  {
+    "id": "p_hypsypops_rubicundus",
+    "name": "Garibaldi Balığı (Rubicundus)",
+    "latin": "Hypsypops rubicundus",
+    "spr": "fish_px_hypsypops_rubicundus",
+    "d": [
+      12,
+      60
+    ],
+    "kg": [
+      0.7,
+      2.8
+    ],
+    "str": 2.15,
+    "val": 42,
+    "r": 2,
+    "sc": 0.65,
+    "spd": [
+      48,
+      82
+    ],
+    "habitat": "Kayalık kıyılar ve kelp ormanları",
+    "diet": "Süngerler ve küçük omurgasızlar",
+    "fact": "Parlak turuncu rengiyle kendi bölgesini korur ve yabancıları ses çıkararak uyarır."
+  },
+  {
+    "id": "p_ictalurus_punctatus",
+    "name": "Kanal Yayın Balığı (Punctatus)",
+    "latin": "Ictalurus punctatus",
+    "spr": "fish_px_ictalurus_punctatus",
+    "d": [
+      28,
+      102
+    ],
+    "kg": [
+      3.0,
+      16.0
+    ],
+    "str": 3.8,
+    "val": 36,
+    "r": 2,
+    "sc": 0.65,
+    "spd": [
+      56,
+      92
+    ],
+    "habitat": "Derin göl dipleri ve çamurlu yataklar",
+    "diet": "Küçük balıklar ve kerevit",
+    "fact": "Tüm vücudu tat alma tomurcuklarıyla kaplıdır; adeta yüzen bir tat dedektörüdür!"
+  },
+  {
+    "id": "p_istiblennius_zebra",
+    "name": "Istiblennius Balığı (Zebra)",
+    "latin": "Istiblennius zebra",
+    "spr": "fish_px_istiblennius_zebra",
+    "d": [
+      9,
+      44
+    ],
+    "kg": [
+      0.3,
+      1.8
+    ],
+    "str": 1.3,
+    "val": 22,
+    "r": 0,
+    "sc": 0.55,
+    "spd": [
+      32,
+      62
+    ],
+    "habitat": "Berrak sığ kıyılar ve yosun yatakları",
+    "diet": "Plankton, yosun ve küçük kabuklular",
+    "fact": "Istiblennius zebra, çevik hareketleri ve parlak pullarıyla sığ sularda sürüler halinde beslenen nadir bir türdür."
+  },
+  {
+    "id": "p_kyphosus_vagiensis",
+    "name": "Kyphosus Balığı (Vagiensis)",
+    "latin": "Kyphosus vagiensis",
+    "spr": "fish_px_kyphosus_vagiensis",
+    "d": [
+      24,
+      76
+    ],
+    "kg": [
+      1.0,
+      4.5
+    ],
+    "str": 2.5,
+    "val": 33,
+    "r": 1,
+    "sc": 0.55,
+    "spd": [
+      40,
+      72
+    ],
+    "habitat": "Orta derinlikteki kayalık resifler",
+    "diet": "Karides, küçük yumuşakçalar ve böcekler",
+    "fact": "Kyphosus vagiensis, kayalık oyukları ustalıkla kullanarak avcılardan saklanır ve yeme hızla hamle yapar."
+  },
+  {
+    "id": "p_labroides_dimidatus",
+    "name": "Temizlikçi Lapin (Dimidatus)",
+    "latin": "Labroides dimidatus",
+    "spr": "fish_px_labroides_dimidatus",
+    "d": [
+      6,
+      46
+    ],
+    "kg": [
+      0.1,
+      0.4
+    ],
+    "str": 1.4,
+    "val": 39,
+    "r": 1,
+    "sc": 0.55,
+    "spd": [
+      48,
+      82
+    ],
+    "habitat": "Mercan temizlik istasyonları",
+    "diet": "Büyük balıkların parazitleri",
+    "fact": "Büyük yırtıcı balıkların ağzının içine bile güvenle girip dişlerini temizler!"
+  },
+  {
+    "id": "p_lactophrys_triqueter",
+    "name": "Lactophrys Balığı (Triqueter)",
+    "latin": "Lactophrys triqueter",
+    "spr": "fish_px_lactophrys_triqueter",
+    "d": [
+      70,
+      150
+    ],
+    "kg": [
+      5.0,
+      22.0
+    ],
+    "str": 4.45,
+    "val": 55,
+    "r": 3,
+    "sc": 0.65,
+    "spd": [
+      56,
+      92
+    ],
+    "habitat": "Derin göl ve abis kayalıkları",
+    "diet": "Derin su balıkları ve kafadanbacaklılar",
+    "fact": "Lactophrys triqueter, karanlık derinliklerde hassas yan çizgi organıyla avının titreşimini metrelerce öteden algılar."
+  },
+  {
+    "id": "p_lagodon_rhomboides",
+    "name": "Lagodon Balığı (Rhomboides)",
+    "latin": "Lagodon rhomboides",
+    "spr": "fish_px_lagodon_rhomboides",
+    "d": [
+      7,
+      42
+    ],
+    "kg": [
+      0.3,
+      1.8
+    ],
+    "str": 1.45,
+    "val": 22,
+    "r": 0,
+    "sc": 0.55,
+    "spd": [
+      32,
+      62
+    ],
+    "habitat": "Berrak sığ kıyılar ve yosun yatakları",
+    "diet": "Plankton, yosun ve küçük kabuklular",
+    "fact": "Lagodon rhomboides, çevik hareketleri ve parlak pullarıyla sığ sularda sürüler halinde beslenen nadir bir türdür."
+  },
+  {
+    "id": "p_lepisosteus_oculatus",
+    "name": "Lepisosteus Balığı (Oculatus)",
+    "latin": "Lepisosteus oculatus",
+    "spr": "fish_px_lepisosteus_oculatus",
+    "d": [
+      22,
+      74
+    ],
+    "kg": [
+      1.0,
+      4.5
+    ],
+    "str": 2.65,
+    "val": 33,
+    "r": 1,
+    "sc": 0.55,
+    "spd": [
+      40,
+      72
+    ],
+    "habitat": "Orta derinlikteki kayalık resifler",
+    "diet": "Karides, küçük yumuşakçalar ve böcekler",
+    "fact": "Lepisosteus oculatus, kayalık oyukları ustalıkla kullanarak avcılardan saklanır ve yeme hızla hamle yapar."
+  },
+  {
+    "id": "p_lepisosteus_osseus",
+    "name": "Lepisosteus Balığı (Osseus)",
+    "latin": "Lepisosteus osseus",
+    "spr": "fish_px_lepisosteus_osseus",
+    "d": [
+      46,
+      120
+    ],
+    "kg": [
+      2.4,
+      9.8
+    ],
+    "str": 3.4,
+    "val": 44,
+    "r": 2,
+    "sc": 0.65,
+    "spd": [
+      48,
+      82
+    ],
+    "habitat": "Alacakaranlık derin resif yamaçları",
+    "diet": "Küçük sürü balıkları ve yengeçler",
+    "fact": "Lepisosteus osseus, orta ve derin sular arasındaki geçiş kuşağında yaşayan güçlü yüzücü bir avcıdır."
+  },
+  {
+    "id": "p_lepisosteus_platyrhincus",
+    "name": "Lepisosteus Balığı (Platyrhincus)",
+    "latin": "Lepisosteus platyrhincus",
+    "spr": "fish_px_lepisosteus_platyrhincus",
+    "d": [
+      68,
+      148
+    ],
+    "kg": [
+      5.0,
+      22.0
+    ],
+    "str": 4.6,
+    "val": 55,
+    "r": 3,
+    "sc": 0.65,
+    "spd": [
+      56,
+      92
+    ],
+    "habitat": "Derin göl ve abis kayalıkları",
+    "diet": "Derin su balıkları ve kafadanbacaklılar",
+    "fact": "Lepisosteus platyrhincus, karanlık derinliklerde hassas yan çizgi organıyla avının titreşimini metrelerce öteden algılar."
+  },
+  {
+    "id": "p_lepomis_aquilensis",
+    "name": "Güneş Levreği (Aquilensis)",
+    "latin": "Lepomis aquilensis",
+    "spr": "fish_px_lepomis_aquilensis",
+    "d": [
+      4,
+      40
+    ],
+    "kg": [
+      0.25,
+      1.3
+    ],
+    "str": 1.6,
+    "val": 22,
+    "r": 0,
+    "sc": 0.55,
+    "spd": [
+      32,
+      62
+    ],
+    "habitat": "Sığ ve güneşli göl kıyıları",
+    "diet": "Su böcekleri ve küçük kabuklular",
+    "fact": "Yanındaki parlak renkli kulak beneğiyle tanınır; güneşli sığ suların neşesidir."
+  },
+  {
+    "id": "p_lepomis_auritus",
+    "name": "Güneş Levreği (Auritus)",
+    "latin": "Lepomis auritus",
+    "spr": "fish_px_lepomis_auritus",
+    "d": [
+      6,
+      42
+    ],
+    "kg": [
+      0.25,
+      1.3
+    ],
+    "str": 1.3,
+    "val": 24,
+    "r": 0,
+    "sc": 0.55,
+    "spd": [
+      40,
+      72
+    ],
+    "habitat": "Sığ ve güneşli göl kıyıları",
+    "diet": "Su böcekleri ve küçük kabuklular",
+    "fact": "Yanındaki parlak renkli kulak beneğiyle tanınır; güneşli sığ suların neşesidir."
+  },
+  {
+    "id": "p_lepomis_cyanellus",
+    "name": "Güneş Levreği (Cyanellus)",
+    "latin": "Lepomis cyanellus",
+    "spr": "fish_px_lepomis_cyanellus",
+    "d": [
+      8,
+      44
+    ],
+    "kg": [
+      0.25,
+      1.3
+    ],
+    "str": 1.45,
+    "val": 26,
+    "r": 0,
+    "sc": 0.55,
+    "spd": [
+      48,
+      82
+    ],
+    "habitat": "Sığ ve güneşli göl kıyıları",
+    "diet": "Su böcekleri ve küçük kabuklular",
+    "fact": "Yanındaki parlak renkli kulak beneğiyle tanınır; güneşli sığ suların neşesidir."
+  },
+  {
+    "id": "p_lepomis_gibbosus",
+    "name": "Güneş Levreği (Gibbosus)",
+    "latin": "Lepomis gibbosus",
+    "spr": "fish_px_lepomis_gibbosus",
+    "d": [
+      10,
+      46
+    ],
+    "kg": [
+      0.25,
+      1.3
+    ],
+    "str": 1.6,
+    "val": 28,
+    "r": 0,
+    "sc": 0.55,
+    "spd": [
+      56,
+      92
+    ],
+    "habitat": "Sığ ve güneşli göl kıyıları",
+    "diet": "Su böcekleri ve küçük kabuklular",
+    "fact": "Yanındaki parlak renkli kulak beneğiyle tanınır; güneşli sığ suların neşesidir."
+  },
+  {
+    "id": "p_lepomis_gulosus",
+    "name": "Güneş Levreği (Gulosus)",
+    "latin": "Lepomis gulosus",
+    "spr": "fish_px_lepomis_gulosus",
+    "d": [
+      2,
+      38
+    ],
+    "kg": [
+      0.25,
+      1.3
+    ],
+    "str": 1.3,
+    "val": 22,
+    "r": 0,
+    "sc": 0.55,
+    "spd": [
+      32,
+      62
+    ],
+    "habitat": "Sığ ve güneşli göl kıyıları",
+    "diet": "Su böcekleri ve küçük kabuklular",
+    "fact": "Yanındaki parlak renkli kulak beneğiyle tanınır; güneşli sığ suların neşesidir."
+  },
+  {
+    "id": "p_lepomis_macrochirus",
+    "name": "Güneş Levreği (Macrochirus)",
+    "latin": "Lepomis macrochirus",
+    "spr": "fish_px_lepomis_macrochirus",
+    "d": [
+      4,
+      40
+    ],
+    "kg": [
+      0.25,
+      1.3
+    ],
+    "str": 1.45,
+    "val": 24,
+    "r": 0,
+    "sc": 0.55,
+    "spd": [
+      40,
+      72
+    ],
+    "habitat": "Sığ ve güneşli göl kıyıları",
+    "diet": "Su böcekleri ve küçük kabuklular",
+    "fact": "Yanındaki parlak renkli kulak beneğiyle tanınır; güneşli sığ suların neşesidir."
+  },
+  {
+    "id": "p_lepomis_macrochirus_x_cyanellus",
+    "name": "Güneş Levreği (Macrochirus)",
+    "latin": "Lepomis macrochirus",
+    "spr": "fish_px_lepomis_macrochirus_x_cyanellus",
+    "d": [
+      6,
+      42
+    ],
+    "kg": [
+      0.25,
+      1.3
+    ],
+    "str": 1.6,
+    "val": 26,
+    "r": 0,
+    "sc": 0.55,
+    "spd": [
+      48,
+      82
+    ],
+    "habitat": "Sığ ve güneşli göl kıyıları",
+    "diet": "Su böcekleri ve küçük kabuklular",
+    "fact": "Yanındaki parlak renkli kulak beneğiyle tanınır; güneşli sığ suların neşesidir."
+  },
+  {
+    "id": "p_lepomis_microlophus",
+    "name": "Güneş Levreği (Microlophus)",
+    "latin": "Lepomis microlophus",
+    "spr": "fish_px_lepomis_microlophus",
+    "d": [
+      8,
+      44
+    ],
+    "kg": [
+      0.25,
+      1.3
+    ],
+    "str": 1.3,
+    "val": 28,
+    "r": 0,
+    "sc": 0.55,
+    "spd": [
+      56,
+      92
+    ],
+    "habitat": "Sığ ve güneşli göl kıyıları",
+    "diet": "Su böcekleri ve küçük kabuklular",
+    "fact": "Yanındaki parlak renkli kulak beneğiyle tanınır; güneşli sığ suların neşesidir."
+  },
+  {
+    "id": "p_lepomis_punctatus",
+    "name": "Güneş Levreği (Punctatus)",
+    "latin": "Lepomis punctatus",
+    "spr": "fish_px_lepomis_punctatus",
+    "d": [
+      10,
+      46
+    ],
+    "kg": [
+      0.25,
+      1.3
+    ],
+    "str": 1.45,
+    "val": 22,
+    "r": 0,
+    "sc": 0.55,
+    "spd": [
+      32,
+      62
+    ],
+    "habitat": "Sığ ve güneşli göl kıyıları",
+    "diet": "Su böcekleri ve küçük kabuklular",
+    "fact": "Yanındaki parlak renkli kulak beneğiyle tanınır; güneşli sığ suların neşesidir."
+  },
+  {
+    "id": "p_lipophrys_pholis",
+    "name": "Kaya Horozbinası (Pholis)",
+    "latin": "Lipophrys pholis",
+    "spr": "fish_px_lipophrys_pholis",
+    "d": [
+      1,
+      28
+    ],
+    "kg": [
+      0.15,
+      0.6
+    ],
+    "str": 1.4,
+    "val": 23,
+    "r": 0,
+    "sc": 0.55,
+    "spd": [
+      40,
+      72
+    ],
+    "habitat": "Kayalık kıyı oyukları",
+    "diet": "Yosunlar ve küçük kabuklular",
+    "fact": "Kaya deliklerinden kafasını uzatıp çevreyi gözetleyen meraklı bir kıyı balığıdır."
+  },
+  {
+    "id": "p_lutjanus_apodus",
+    "name": "Kızıl Mercan Levreği (Apodus)",
+    "latin": "Lutjanus apodus",
+    "spr": "fish_px_lutjanus_apodus",
+    "d": [
+      24,
+      94
+    ],
+    "kg": [
+      1.8,
+      8.5
+    ],
+    "str": 3.0,
+    "val": 40,
+    "r": 2,
+    "sc": 0.65,
+    "spd": [
+      48,
+      82
+    ],
+    "habitat": "Mercan resifleri ve derin kayalıklar",
+    "diet": "Karides, yengeç ve küçük balıklar",
+    "fact": "Sürüler halinde gezen güçlü avcılardır; özellikle alacakaranlıkta çok aktiftir."
+  },
+  {
+    "id": "p_lutjanus_bohar",
+    "name": "Kızıl Mercan Levreği (Bohar)",
+    "latin": "Lutjanus bohar",
+    "spr": "fish_px_lutjanus_bohar",
+    "d": [
+      26,
+      96
+    ],
+    "kg": [
+      1.8,
+      8.5
+    ],
+    "str": 3.15,
+    "val": 42,
+    "r": 2,
+    "sc": 0.65,
+    "spd": [
+      56,
+      92
+    ],
+    "habitat": "Mercan resifleri ve derin kayalıklar",
+    "diet": "Karides, yengeç ve küçük balıklar",
+    "fact": "Sürüler halinde gezen güçlü avcılardır; özellikle alacakaranlıkta çok aktiftir."
+  },
+  {
+    "id": "p_lutjanus_griseus",
+    "name": "Kızıl Mercan Levreği (Griseus)",
+    "latin": "Lutjanus griseus",
+    "spr": "fish_px_lutjanus_griseus",
+    "d": [
+      28,
+      98
+    ],
+    "kg": [
+      1.8,
+      8.5
+    ],
+    "str": 3.3,
+    "val": 36,
+    "r": 2,
+    "sc": 0.65,
+    "spd": [
+      32,
+      62
+    ],
+    "habitat": "Mercan resifleri ve derin kayalıklar",
+    "diet": "Karides, yengeç ve küçük balıklar",
+    "fact": "Sürüler halinde gezen güçlü avcılardır; özellikle alacakaranlıkta çok aktiftir."
+  },
+  {
+    "id": "p_luxilus_cornutus",
+    "name": "Luxilus Balığı (Cornutus)",
+    "latin": "Luxilus cornutus",
+    "spr": "fish_px_luxilus_cornutus",
+    "d": [
+      24,
+      76
+    ],
+    "kg": [
+      1.0,
+      4.5
+    ],
+    "str": 2.35,
+    "val": 33,
+    "r": 1,
+    "sc": 0.55,
+    "spd": [
+      40,
+      72
+    ],
+    "habitat": "Orta derinlikteki kayalık resifler",
+    "diet": "Karides, küçük yumuşakçalar ve böcekler",
+    "fact": "Luxilus cornutus, kayalık oyukları ustalıkla kullanarak avcılardan saklanır ve yeme hızla hamle yapar."
+  },
+  {
+    "id": "p_mayaheros_uropthalmus",
+    "name": "Mayaheros Balığı (Uropthalmus)",
+    "latin": "Mayaheros uropthalmus",
+    "spr": "fish_px_mayaheros_uropthalmus",
+    "d": [
+      38,
+      112
+    ],
+    "kg": [
+      2.4,
+      9.8
+    ],
+    "str": 3.55,
+    "val": 44,
+    "r": 2,
+    "sc": 0.65,
+    "spd": [
+      48,
+      82
+    ],
+    "habitat": "Alacakaranlık derin resif yamaçları",
+    "diet": "Küçük sürü balıkları ve yengeçler",
+    "fact": "Mayaheros uropthalmus, orta ve derin sular arasındaki geçiş kuşağında yaşayan güçlü yüzücü bir avcıdır."
+  },
+  {
+    "id": "p_megalops_atlanticus",
+    "name": "Megalops Balığı (Atlanticus)",
+    "latin": "Megalops atlanticus",
+    "spr": "fish_px_megalops_atlanticus",
+    "d": [
+      70,
+      150
+    ],
+    "kg": [
+      5.0,
+      22.0
+    ],
+    "str": 4.75,
+    "val": 55,
+    "r": 3,
+    "sc": 0.65,
+    "spd": [
+      56,
+      92
+    ],
+    "habitat": "Derin göl ve abis kayalıkları",
+    "diet": "Derin su balıkları ve kafadanbacaklılar",
+    "fact": "Megalops atlanticus, karanlık derinliklerde hassas yan çizgi organıyla avının titreşimini metrelerce öteden algılar."
+  },
+  {
+    "id": "p_melichthys_niger",
+    "name": "Melichthys Balığı (Niger)",
+    "latin": "Melichthys niger",
+    "spr": "fish_px_melichthys_niger",
+    "d": [
+      7,
+      42
+    ],
+    "kg": [
+      0.3,
+      1.8
+    ],
+    "str": 1.3,
+    "val": 22,
+    "r": 0,
+    "sc": 0.55,
+    "spd": [
+      32,
+      62
+    ],
+    "habitat": "Berrak sığ kıyılar ve yosun yatakları",
+    "diet": "Plankton, yosun ve küçük kabuklular",
+    "fact": "Melichthys niger, çevik hareketleri ve parlak pullarıyla sığ sularda sürüler halinde beslenen nadir bir türdür."
+  },
+  {
+    "id": "p_melichthys_vidua",
+    "name": "Melichthys Balığı (Vidua)",
+    "latin": "Melichthys vidua",
+    "spr": "fish_px_melichthys_vidua",
+    "d": [
+      22,
+      74
+    ],
+    "kg": [
+      1.0,
+      4.5
+    ],
+    "str": 2.5,
+    "val": 33,
+    "r": 1,
+    "sc": 0.55,
+    "spd": [
+      40,
+      72
+    ],
+    "habitat": "Orta derinlikteki kayalık resifler",
+    "diet": "Karides, küçük yumuşakçalar ve böcekler",
+    "fact": "Melichthys vidua, kayalık oyukları ustalıkla kullanarak avcılardan saklanır ve yeme hızla hamle yapar."
+  },
+  {
+    "id": "p_micropterus_dolomieu",
+    "name": "Büyük Ağızlı Levrek (Dolomieu)",
+    "latin": "Micropterus dolomieu",
+    "spr": "fish_px_micropterus_dolomieu",
+    "d": [
+      16,
+      70
+    ],
+    "kg": [
+      1.5,
+      8.2
+    ],
+    "str": 3.4,
+    "val": 36,
+    "r": 2,
+    "sc": 0.65,
+    "spd": [
+      48,
+      82
+    ],
+    "habitat": "Sazlıklar ve batık ağaç kökleri",
+    "diet": "Küçük balıklar, kurbağalar ve böcekler",
+    "fact": "Spor balıkçılığının en ünlü yıldızıdır; yakalandığında sudan dışarı sıçrar!"
+  },
+  {
+    "id": "p_micropterus_nigricans",
+    "name": "Büyük Ağızlı Levrek (Nigricans)",
+    "latin": "Micropterus nigricans",
+    "spr": "fish_px_micropterus_nigricans",
+    "d": [
+      8,
+      62
+    ],
+    "kg": [
+      1.5,
+      8.2
+    ],
+    "str": 3.1,
+    "val": 38,
+    "r": 2,
+    "sc": 0.65,
+    "spd": [
+      56,
+      92
+    ],
+    "habitat": "Sazlıklar ve batık ağaç kökleri",
+    "diet": "Küçük balıklar, kurbağalar ve böcekler",
+    "fact": "Spor balıkçılığının en ünlü yıldızıdır; yakalandığında sudan dışarı sıçrar!"
+  },
+  {
+    "id": "p_micropterus_salmoides",
+    "name": "Büyük Ağızlı Levrek (Salmoides)",
+    "latin": "Micropterus salmoides",
+    "spr": "fish_px_micropterus_salmoides",
+    "d": [
+      10,
+      64
+    ],
+    "kg": [
+      1.5,
+      8.2
+    ],
+    "str": 3.25,
+    "val": 32,
+    "r": 2,
+    "sc": 0.65,
+    "spd": [
+      32,
+      62
+    ],
+    "habitat": "Sazlıklar ve batık ağaç kökleri",
+    "diet": "Küçük balıklar, kurbağalar ve böcekler",
+    "fact": "Spor balıkçılığının en ünlü yıldızıdır; yakalandığında sudan dışarı sıçrar!"
+  },
+  {
+    "id": "p_micropterus_treculii",
+    "name": "Büyük Ağızlı Levrek (Treculii)",
+    "latin": "Micropterus treculii",
+    "spr": "fish_px_micropterus_treculii",
+    "d": [
+      12,
+      66
+    ],
+    "kg": [
+      1.5,
+      8.2
+    ],
+    "str": 3.4,
+    "val": 34,
+    "r": 2,
+    "sc": 0.65,
+    "spd": [
+      40,
+      72
+    ],
+    "habitat": "Sazlıklar ve batık ağaç kökleri",
+    "diet": "Küçük balıklar, kurbağalar ve böcekler",
+    "fact": "Spor balıkçılığının en ünlü yıldızıdır; yakalandığında sudan dışarı sıçrar!"
+  },
+  {
+    "id": "p_microspathodon_chrysurus",
+    "name": "Microspathodon Balığı (Chrysurus)",
+    "latin": "Microspathodon chrysurus",
+    "spr": "fish_px_microspathodon_chrysurus",
+    "d": [
+      44,
+      118
+    ],
+    "kg": [
+      2.4,
+      9.8
+    ],
+    "str": 3.4,
+    "val": 44,
+    "r": 2,
+    "sc": 0.65,
+    "spd": [
+      48,
+      82
+    ],
+    "habitat": "Alacakaranlık derin resif yamaçları",
+    "diet": "Küçük sürü balıkları ve yengeçler",
+    "fact": "Microspathodon chrysurus, orta ve derin sular arasındaki geçiş kuşağında yaşayan güçlü yüzücü bir avcıdır."
+  },
+  {
+    "id": "p_microspathodon_dorsalis",
+    "name": "Microspathodon Balığı (Dorsalis)",
+    "latin": "Microspathodon dorsalis",
+    "spr": "fish_px_microspathodon_dorsalis",
+    "d": [
+      76,
+      155
+    ],
+    "kg": [
+      5.0,
+      22.0
+    ],
+    "str": 4.6,
+    "val": 55,
+    "r": 3,
+    "sc": 0.65,
+    "spd": [
+      56,
+      92
+    ],
+    "habitat": "Derin göl ve abis kayalıkları",
+    "diet": "Derin su balıkları ve kafadanbacaklılar",
+    "fact": "Microspathodon dorsalis, karanlık derinliklerde hassas yan çizgi organıyla avının titreşimini metrelerce öteden algılar."
+  },
+  {
+    "id": "p_mobula_alfredi",
+    "name": "Mobula Balığı (Alfredi)",
+    "latin": "Mobula alfredi",
+    "spr": "fish_px_mobula_alfredi",
+    "d": [
+      3,
+      38
+    ],
+    "kg": [
+      0.3,
+      1.8
+    ],
+    "str": 1.6,
+    "val": 22,
+    "r": 0,
+    "sc": 0.55,
+    "spd": [
+      32,
+      62
+    ],
+    "habitat": "Berrak sığ kıyılar ve yosun yatakları",
+    "diet": "Plankton, yosun ve küçük kabuklular",
+    "fact": "Mobula alfredi, çevik hareketleri ve parlak pullarıyla sığ sularda sürüler halinde beslenen nadir bir türdür."
+  },
+  {
+    "id": "p_mola_mola",
+    "name": "Ay Balığı (Mola)",
+    "latin": "Mola mola",
+    "spr": "fish_px_mola_mola",
+    "d": [
+      87,
+      155
+    ],
+    "kg": [
+      22.0,
+      68.0
+    ],
+    "str": 5.2,
+    "val": 56,
+    "r": 4,
+    "sc": 0.65,
+    "spd": [
+      40,
+      72
+    ],
+    "habitat": "Derin açık sular",
+    "diet": "Deniz anaları",
+    "fact": "Dünyanın en ağır kemikli balığıdır; güneşlenmek için bazen yan yatıp yüzeyde yüzer!"
+  },
+  {
+    "id": "p_monotaxis_grandoculis",
+    "name": "Monotaxis Balığı (Grandoculis)",
+    "latin": "Monotaxis grandoculis",
+    "spr": "fish_px_monotaxis_grandoculis",
+    "d": [
+      42,
+      116
+    ],
+    "kg": [
+      2.4,
+      9.8
+    ],
+    "str": 3.55,
+    "val": 44,
+    "r": 2,
+    "sc": 0.65,
+    "spd": [
+      48,
+      82
+    ],
+    "habitat": "Alacakaranlık derin resif yamaçları",
+    "diet": "Küçük sürü balıkları ve yengeçler",
+    "fact": "Monotaxis grandoculis, orta ve derin sular arasındaki geçiş kuşağında yaşayan güçlü yüzücü bir avcıdır."
+  },
+  {
+    "id": "p_morone_saxatilis",
+    "name": "Çizgili Levrek (Saxatilis)",
+    "latin": "Morone saxatilis",
+    "spr": "fish_px_morone_saxatilis",
+    "d": [
+      24,
+      90
+    ],
+    "kg": [
+      2.2,
+      11.0
+    ],
+    "str": 3.6,
+    "val": 39,
+    "r": 2,
+    "sc": 0.65,
+    "spd": [
+      56,
+      92
+    ],
+    "habitat": "Orta ve derin açık sular",
+    "diet": "Küçük balık sürüleri",
+    "fact": "Gümüşi gövdesindeki koyu yatay şeritlerle tanınan güçlü ve hızlı bir göçmendir."
+  },
+  {
+    "id": "p_mugil_cephalus",
+    "name": "Kefal (Cephalus)",
+    "latin": "Mugil cephalus",
+    "spr": "fish_px_mugil_cephalus",
+    "d": [
+      10,
+      46
+    ],
+    "kg": [
+      0.6,
+      3.2
+    ],
+    "str": 1.6,
+    "val": 20,
+    "r": 0,
+    "sc": 0.55,
+    "spd": [
+      32,
+      62
+    ],
+    "habitat": "Sığ kıyılar ve dere ağızları",
+    "diet": "Yosunlar ve organik dip parçacıkları",
+    "fact": "Sık sık su yüzeyinden havaya sıçrayarak sürü halinde hareket eder."
+  },
+  {
+    "id": "p_mulloidichthys_vanicolensis",
+    "name": "Mulloidichthys Balığı (Vanicolensis)",
+    "latin": "Mulloidichthys vanicolensis",
+    "spr": "fish_px_mulloidichthys_vanicolensis",
+    "d": [
+      16,
+      68
+    ],
+    "kg": [
+      1.0,
+      4.5
+    ],
+    "str": 2.5,
+    "val": 33,
+    "r": 1,
+    "sc": 0.55,
+    "spd": [
+      40,
+      72
+    ],
+    "habitat": "Orta derinlikteki kayalık resifler",
+    "diet": "Karides, küçük yumuşakçalar ve böcekler",
+    "fact": "Mulloidichthys vanicolensis, kayalık oyukları ustalıkla kullanarak avcılardan saklanır ve yeme hızla hamle yapar."
+  },
+  {
+    "id": "p_mulloidicthys_flavolineatus",
+    "name": "Mulloidicthys Balığı (Flavolineatus)",
+    "latin": "Mulloidicthys flavolineatus",
+    "spr": "fish_px_mulloidicthys_flavolineatus",
+    "d": [
+      40,
+      114
+    ],
+    "kg": [
+      2.4,
+      9.8
+    ],
+    "str": 3.7,
+    "val": 44,
+    "r": 2,
+    "sc": 0.65,
+    "spd": [
+      48,
+      82
+    ],
+    "habitat": "Alacakaranlık derin resif yamaçları",
+    "diet": "Küçük sürü balıkları ve yengeçler",
+    "fact": "Mulloidicthys flavolineatus, orta ve derin sular arasındaki geçiş kuşağında yaşayan güçlü yüzücü bir avcıdır."
+  },
+  {
+    "id": "p_myliobatis_californica",
+    "name": "Myliobatis Balığı (Californica)",
+    "latin": "Myliobatis californica",
+    "spr": "fish_px_myliobatis_californica",
+    "d": [
+      72,
+      152
+    ],
+    "kg": [
+      5.0,
+      22.0
+    ],
+    "str": 4.45,
+    "val": 55,
+    "r": 3,
+    "sc": 0.65,
+    "spd": [
+      56,
+      92
+    ],
+    "habitat": "Derin göl ve abis kayalıkları",
+    "diet": "Derin su balıkları ve kafadanbacaklılar",
+    "fact": "Myliobatis californica, karanlık derinliklerde hassas yan çizgi organıyla avının titreşimini metrelerce öteden algılar."
+  },
+  {
+    "id": "p_myripristis_jacobus",
+    "name": "Myripristis Balığı (Jacobus)",
+    "latin": "Myripristis jacobus",
+    "spr": "fish_px_myripristis_jacobus",
+    "d": [
+      9,
+      44
+    ],
+    "kg": [
+      0.3,
+      1.8
+    ],
+    "str": 1.45,
+    "val": 22,
+    "r": 0,
+    "sc": 0.55,
+    "spd": [
+      32,
+      62
+    ],
+    "habitat": "Berrak sığ kıyılar ve yosun yatakları",
+    "diet": "Plankton, yosun ve küçük kabuklular",
+    "fact": "Myripristis jacobus, çevik hareketleri ve parlak pullarıyla sığ sularda sürüler halinde beslenen nadir bir türdür."
+  },
+  {
+    "id": "p_naso_lituratus",
+    "name": "Boynuzlu Cerrah (Lituratus)",
+    "latin": "Naso lituratus",
+    "spr": "fish_px_naso_lituratus",
+    "d": [
+      30,
+      94
+    ],
+    "kg": [
+      1.5,
+      6.5
+    ],
+    "str": 3.1,
+    "val": 40,
+    "r": 2,
+    "sc": 0.65,
+    "spd": [
+      40,
+      72
+    ],
+    "habitat": "Mercan yamaçları",
+    "diet": "Kahverengi deniz yosunları",
+    "fact": "Alnındaki tek boynuz benzeri çıkıntı nedeniyle 'Tekboynuz Balığı' olarak da bilinir."
+  },
+  {
+    "id": "p_naso_unicornis",
+    "name": "Boynuzlu Cerrah (Unicornis)",
+    "latin": "Naso unicornis",
+    "spr": "fish_px_naso_unicornis",
+    "d": [
+      22,
+      86
+    ],
+    "kg": [
+      1.5,
+      6.5
+    ],
+    "str": 2.8,
+    "val": 42,
+    "r": 2,
+    "sc": 0.65,
+    "spd": [
+      48,
+      82
+    ],
+    "habitat": "Mercan yamaçları",
+    "diet": "Kahverengi deniz yosunları",
+    "fact": "Alnındaki tek boynuz benzeri çıkıntı nedeniyle 'Tekboynuz Balığı' olarak da bilinir."
+  },
+  {
+    "id": "p_notemigonus_crysoleucas",
+    "name": "Notemigonus Balığı (Crysoleucas)",
+    "latin": "Notemigonus crysoleucas",
+    "spr": "fish_px_notemigonus_crysoleucas",
+    "d": [
+      70,
+      150
+    ],
+    "kg": [
+      5.0,
+      22.0
+    ],
+    "str": 4.6,
+    "val": 55,
+    "r": 3,
+    "sc": 0.65,
+    "spd": [
+      56,
+      92
+    ],
+    "habitat": "Derin göl ve abis kayalıkları",
+    "diet": "Derin su balıkları ve kafadanbacaklılar",
+    "fact": "Notemigonus crysoleucas, karanlık derinliklerde hassas yan çizgi organıyla avının titreşimini metrelerce öteden algılar."
+  },
+  {
+    "id": "p_oblada_melanurus",
+    "name": "Oblada Balığı (Melanurus)",
+    "latin": "Oblada melanurus",
+    "spr": "fish_px_oblada_melanurus",
+    "d": [
+      7,
+      42
+    ],
+    "kg": [
+      0.3,
+      1.8
+    ],
+    "str": 1.6,
+    "val": 22,
+    "r": 0,
+    "sc": 0.55,
+    "spd": [
+      32,
+      62
+    ],
+    "habitat": "Berrak sığ kıyılar ve yosun yatakları",
+    "diet": "Plankton, yosun ve küçük kabuklular",
+    "fact": "Oblada melanurus, çevik hareketleri ve parlak pullarıyla sığ sularda sürüler halinde beslenen nadir bir türdür."
+  },
+  {
+    "id": "p_ocyurus_chrysurus",
+    "name": "Sarı Kuyruk (Chrysurus)",
+    "latin": "Ocyurus chrysurus",
+    "spr": "fish_px_ocyurus_chrysurus",
+    "d": [
+      18,
+      68
+    ],
+    "kg": [
+      0.9,
+      3.8
+    ],
+    "str": 2.1,
+    "val": 34,
+    "r": 1,
+    "sc": 0.55,
+    "spd": [
+      40,
+      72
+    ],
+    "habitat": "Berrak resif üstleri",
+    "diet": "Karides ve küçük balıklar",
+    "fact": "Gövdesinden kuyruğuna uzanan parlak altın şeridiyle su içinde ışık gibi parlar."
+  },
+  {
+    "id": "p_odonus_niger",
+    "name": "Odonus Balığı (Niger)",
+    "latin": "Odonus niger",
+    "spr": "fish_px_odonus_niger",
+    "d": [
+      46,
+      120
+    ],
+    "kg": [
+      2.4,
+      9.8
+    ],
+    "str": 3.55,
+    "val": 44,
+    "r": 2,
+    "sc": 0.65,
+    "spd": [
+      48,
+      82
+    ],
+    "habitat": "Alacakaranlık derin resif yamaçları",
+    "diet": "Küçük sürü balıkları ve yengeçler",
+    "fact": "Odonus niger, orta ve derin sular arasındaki geçiş kuşağında yaşayan güçlü yüzücü bir avcıdır."
+  },
+  {
+    "id": "p_oligocottus_maculosus",
+    "name": "Gelgit İskorpitçiği (Maculosus)",
+    "latin": "Oligocottus maculosus",
+    "spr": "fish_px_oligocottus_maculosus",
+    "d": [
+      1,
+      26
+    ],
+    "kg": [
+      0.15,
+      0.5
+    ],
+    "str": 1.4,
+    "val": 27,
+    "r": 0,
+    "sc": 0.55,
+    "spd": [
+      56,
+      92
+    ],
+    "habitat": "Kayalık gelgit havuzları",
+    "diet": "Küçük kabuklular",
+    "fact": "Kendi gelgit havuzunu kilometrelerce uzaktan bile geri bulabilen şaşırtıcı bir yön duygusu vardır."
+  },
+  {
+    "id": "p_oncorhynchus_gorbuscha",
+    "name": "Alabalık / Somon (Gorbuscha)",
+    "latin": "Oncorhynchus gorbuscha",
+    "spr": "fish_px_oncorhynchus_gorbuscha",
+    "d": [
+      22,
+      97
+    ],
+    "kg": [
+      2.0,
+      14.0
+    ],
+    "str": 3.5,
+    "val": 38,
+    "r": 2,
+    "sc": 0.65,
+    "spd": [
+      32,
+      62
+    ],
+    "habitat": "Serin ve oksijenli derin sular",
+    "diet": "Böcekler ve küçük balıklar",
+    "fact": "Üremek için doğduğu akarsuya binlerce kilometre yüzüp şelalelerden atlayarak geri döner!"
+  },
+  {
+    "id": "p_oncorhynchus_kisutch",
+    "name": "Alabalık / Somon (Kisutch)",
+    "latin": "Oncorhynchus kisutch",
+    "spr": "fish_px_oncorhynchus_kisutch",
+    "d": [
+      24,
+      99
+    ],
+    "kg": [
+      2.0,
+      14.0
+    ],
+    "str": 3.65,
+    "val": 40,
+    "r": 2,
+    "sc": 0.65,
+    "spd": [
+      40,
+      72
+    ],
+    "habitat": "Serin ve oksijenli derin sular",
+    "diet": "Böcekler ve küçük balıklar",
+    "fact": "Üremek için doğduğu akarsuya binlerce kilometre yüzüp şelalelerden atlayarak geri döner!"
+  },
+  {
+    "id": "p_oncorhynchus_mykiss",
+    "name": "Alabalık / Somon (Mykiss)",
+    "latin": "Oncorhynchus mykiss",
+    "spr": "fish_px_oncorhynchus_mykiss",
+    "d": [
+      26,
+      101
+    ],
+    "kg": [
+      2.0,
+      14.0
+    ],
+    "str": 3.8,
+    "val": 42,
+    "r": 2,
+    "sc": 0.65,
+    "spd": [
+      48,
+      82
+    ],
+    "habitat": "Serin ve oksijenli derin sular",
+    "diet": "Böcekler ve küçük balıklar",
+    "fact": "Üremek için doğduğu akarsuya binlerce kilometre yüzüp şelalelerden atlayarak geri döner!"
+  },
+  {
+    "id": "p_oncorhynchus_nerka",
+    "name": "Alabalık / Somon (Nerka)",
+    "latin": "Oncorhynchus nerka",
+    "spr": "fish_px_oncorhynchus_nerka",
+    "d": [
+      28,
+      103
+    ],
+    "kg": [
+      2.0,
+      14.0
+    ],
+    "str": 3.5,
+    "val": 44,
+    "r": 2,
+    "sc": 0.65,
+    "spd": [
+      56,
+      92
+    ],
+    "habitat": "Serin ve oksijenli derin sular",
+    "diet": "Böcekler ve küçük balıklar",
+    "fact": "Üremek için doğduğu akarsuya binlerce kilometre yüzüp şelalelerden atlayarak geri döner!"
+  },
+  {
+    "id": "p_oncorhynchus_tshawytscha",
+    "name": "Alabalık / Somon (Tshawytscha)",
+    "latin": "Oncorhynchus tshawytscha",
+    "spr": "fish_px_oncorhynchus_tshawytscha",
+    "d": [
+      20,
+      95
+    ],
+    "kg": [
+      2.0,
+      14.0
+    ],
+    "str": 3.65,
+    "val": 38,
+    "r": 2,
+    "sc": 0.65,
+    "spd": [
+      32,
+      62
+    ],
+    "habitat": "Serin ve oksijenli derin sular",
+    "diet": "Böcekler ve küçük balıklar",
+    "fact": "Üremek için doğduğu akarsuya binlerce kilometre yüzüp şelalelerden atlayarak geri döner!"
+  },
+  {
+    "id": "p_oreochromis_mossambicus",
+    "name": "Oreochromis Balığı (Mossambicus)",
+    "latin": "Oreochromis mossambicus",
+    "spr": "fish_px_oreochromis_mossambicus",
+    "d": [
+      18,
+      70
+    ],
+    "kg": [
+      1.0,
+      4.5
+    ],
+    "str": 2.65,
+    "val": 33,
+    "r": 1,
+    "sc": 0.55,
+    "spd": [
+      40,
+      72
+    ],
+    "habitat": "Orta derinlikteki kayalık resifler",
+    "diet": "Karides, küçük yumuşakçalar ve böcekler",
+    "fact": "Oreochromis mossambicus, kayalık oyukları ustalıkla kullanarak avcılardan saklanır ve yeme hızla hamle yapar."
+  },
+  {
+    "id": "p_oreochromis_niloticus",
+    "name": "Oreochromis Balığı (Niloticus)",
+    "latin": "Oreochromis niloticus",
+    "spr": "fish_px_oreochromis_niloticus",
+    "d": [
+      42,
+      116
+    ],
+    "kg": [
+      2.4,
+      9.8
+    ],
+    "str": 3.4,
+    "val": 44,
+    "r": 2,
+    "sc": 0.65,
+    "spd": [
+      48,
+      82
+    ],
+    "habitat": "Alacakaranlık derin resif yamaçları",
+    "diet": "Küçük sürü balıkları ve yengeçler",
+    "fact": "Oreochromis niloticus, orta ve derin sular arasındaki geçiş kuşağında yaşayan güçlü yüzücü bir avcıdır."
+  },
+  {
+    "id": "p_ostracion_cubicum",
+    "name": "Sandık Balığı (Cubicum)",
+    "latin": "Ostracion cubicum",
+    "spr": "fish_px_ostracion_cubicum",
+    "d": [
+      16,
+      64
+    ],
+    "kg": [
+      0.5,
+      2.4
+    ],
+    "str": 1.95,
+    "val": 52,
+    "r": 2,
+    "sc": 0.65,
+    "spd": [
+      56,
+      92
+    ],
+    "habitat": "Sığ mercan resifleri",
+    "diet": "Süngerler ve küçük omurgasızlar",
+    "fact": "Vücudu kemikten altıgen bir zırhla kaplıdır; kutu gibi görünmesine rağmen çok çeviktir!"
+  },
+  {
+    "id": "p_ostracion_meleagris",
+    "name": "Sandık Balığı (Meleagris)",
+    "latin": "Ostracion meleagris",
+    "spr": "fish_px_ostracion_meleagris",
+    "d": [
+      18,
+      66
+    ],
+    "kg": [
+      0.5,
+      2.4
+    ],
+    "str": 2.1,
+    "val": 46,
+    "r": 2,
+    "sc": 0.65,
+    "spd": [
+      32,
+      62
+    ],
+    "habitat": "Sığ mercan resifleri",
+    "diet": "Süngerler ve küçük omurgasızlar",
+    "fact": "Vücudu kemikten altıgen bir zırhla kaplıdır; kutu gibi görünmesine rağmen çok çeviktir!"
+  },
+  {
+    "id": "boss_lake",
+    "biome": "lake",
+    "name": "👑 Gölün Efendisi (Dev Altın Yayın)",
+    "latin": "Silurus aureus",
+    "spr": "fish_px_ictalurus_punctatus",
+    "d": [
+      25,
+      130
+    ],
+    "kg": [
+      38.0,
+      72.0
+    ],
+    "str": 4.8,
+    "val": 26,
+    "r": 4,
+    "sc": 1.55,
+    "spd": [
+      26,
+      42
+    ],
+    "tint": "#ffd54f",
+    "boss": true,
+    "habitat": "Huzur Gölü'nün en derin kovukları",
+    "diet": "Büyük göl balıkları",
+    "fact": "Yüzyıllardır Huzur Gölü'nde yaşadığı söylenen altın pullu efsanevi yayın balığı. Oltaya vurduğunda tüm göl sarsılır!"
+  },
+  {
+    "id": "boss_coral",
+    "biome": "coral",
+    "name": "👑 Mercan Kralı (Büyük Resif Avcısı)",
+    "latin": "Carcharodon corallium",
+    "spr": "fish_shark",
+    "d": [
+      35,
+      150
+    ],
+    "kg": [
+      65.0,
+      125.0
+    ],
+    "str": 5.4,
+    "val": 28,
+    "r": 4,
+    "sc": 1.35,
+    "spd": [
+      38,
+      60
+    ],
+    "tint": "#72efdd",
+    "boss": true,
+    "habitat": "Mercan Koyu'nun dış resif duvarı",
+    "diet": "Büyük resif avları",
+    "fact": "Turkuaz parıltılı yüzgeçleriyle Mercan Koyu'nun tartışmasız hükümdarı. Sadece en cesur balıkçılar onu yüzeye çekebilir."
+  },
+  {
+    "id": "boss_fjord",
+    "biome": "fjord",
+    "name": "👑 Fiyort Leviathanı (Buzul Yılanı)",
+    "latin": "Leviathanus borealis",
+    "spr": "fish_grey_long_b",
+    "d": [
+      55,
+      175
+    ],
+    "kg": [
+      85.0,
+      155.0
+    ],
+    "str": 5.8,
+    "val": 30,
+    "r": 4,
+    "sc": 1.45,
+    "spd": [
+      32,
+      50
+    ],
+    "tint": "#90e0ef",
+    "boss": true,
+    "habitat": "Karanlık Fiyort'un buzlu dipleri",
+    "diet": "Derin kuzey balıkları",
+    "fact": "Kuzey ışıklarının altında beliren buz mavisi dev yılan. Pulları buzul kristalleri gibi parlar."
+  },
+  {
+    "id": "boss_volcano",
+    "biome": "volcano",
+    "name": "👑 Magma Ejderi (Abis Hükümdarı)",
+    "latin": "Draco abyssalis",
+    "spr": "fish_px_gymnothorax_javanicus",
+    "d": [
+      80,
+      210
+    ],
+    "kg": [
+      120.0,
+      220.0
+    ],
+    "str": 6.2,
+    "val": 34,
+    "r": 4,
+    "sc": 1.65,
+    "spd": [
+      34,
+      54
+    ],
+    "tint": "#ff5d38",
+    "boss": true,
+    "habitat": "Volkanik Çukur'un lav yarıkları",
+    "diet": "Derin deniz canavarları",
+    "fact": "Lav yarıklarının ısısıyla beslenen kızıl abis ejderi. Olta Gölü evrenindeki en büyük ve en değerli avdır!"
+  }
+]
