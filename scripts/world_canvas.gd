@@ -556,6 +556,7 @@ func _process(delta: float) -> void:
 	t += dt
 	if state != "menu":
 		SaveManager.tick_aquarium_income(dt)
+		SaveManager.tick_play_time(dt)
 
 	if state in ["idle", "charging", "sinking", "rising", "fight"]:
 		_update_gameplay(dt)

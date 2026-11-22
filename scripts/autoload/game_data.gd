@@ -208,7 +208,25 @@ const ACHIEVEMENTS: Array[Dictionary] = [
 	{"id": "boss_1",      "ic": "🐉", "name": "Efsane Avcısı",      "desc": "Bir Bölge Boss balığını yakala",         "reward": 1200},
 	{"id": "tourney_1",   "ic": "🏆", "name": "Turnuva Şampiyonu",  "desc": "Bir Balıkçılık Turnuvası kazan",         "reward": 450},
 	{"id": "market_haggle","ic": "🤝", "name": "Pazarlık Ustası",   "desc": "Balık Pazarı'nda başarılı pazarlık yap", "reward": 250},
+	{"id": "catch_100",   "ic": "🪣", "name": "Yüzlük Balıkçı",     "desc": "Toplam 100 balık yakala",                "reward": 600},
+	{"id": "streak_7",    "ic": "📅", "name": "Sadık Balıkçı",      "desc": "7 gün üst üste giriş ödülü topla",       "reward": 700},
 ]
+
+## 7 günlük giriş ödülü serisi. 7. günden sonra seri başa döner ama sayaç artmaya devam eder.
+const DAILY_REWARDS: Array[Dictionary] = [
+	{"gold": 60},
+	{"gold": 100, "bait": "shrimp", "n": 3},
+	{"gold": 150},
+	{"gold": 200, "bait": "glow", "n": 2},
+	{"gold": 280},
+	{"gold": 350, "bait": "magnet", "n": 2},
+	{"gold": 600, "bait": "golden", "n": 3},
+]
+
+## Çevrimdışı akvaryum geliri: en fazla 8 saat, normal hızın %50'si.
+const OFFLINE_MAX_MIN: float = 480.0
+const OFFLINE_RATE: float = 0.5
+const OFFLINE_MIN_SECS: int = 120
 
 const MISSION_POOL: Array[Dictionary] = [
 	{"type": "catch_any",   "targets": [3, 5, 8, 12],          "gold": [80, 150, 280, 460],  "xp": [40, 75, 130, 200]},

@@ -7,12 +7,33 @@ extends SceneTree
 var passed: int = 0
 var failed: int = 0
 
+var _save_backup: String = ""
+var _had_save: bool = false
+const _SAVE := "user://olta_golu_save.json"
+
 func _initialize() -> void:
+	# Oyuncunun gerçek kaydını yedekle; testler bitince geri yüklenir.
+	_had_save = FileAccess.file_exists(_SAVE)
+	if _had_save:
+		_save_backup = FileAccess.get_file_as_string(_SAVE)
 	await _run_all()
+	_restore_save()
 	print("==========================================")
 	print("OLTA GÖLÜ TEST SONUCU: %d geçti, %d başarısız" % [passed, failed])
 	print("==========================================")
 	quit(1 if failed > 0 else 0)
+
+func _restore_save() -> void:
+	if _had_save:
+		var f := FileAccess.open(_SAVE, FileAccess.WRITE)
+		if f != null:
+			f.store_string(_save_backup)
+			f.close()
+		var sm := root.get_node_or_null("SaveManager")
+		if sm != null:
+			sm.load_save()
+	elif FileAccess.file_exists(_SAVE):
+		DirAccess.remove_absolute(ProjectSettings.globalize_path(_SAVE))
 
 func check(cond: bool, label: String, detail: String = "") -> void:
 	if cond:
@@ -100,6 +121,52 @@ func _run_all() -> void:
 	var collected: int = sm.collect_aqua_bank()
 	check(collected > 0, "aqua_collect_bank_positive")
 
+	# Kasa tavanı aşıldığında oyun içi tik kasayı geri kırpmamalı
+	sm.data["aqua_bank"] = 99999.0
+	sm.tick_aquarium_income(1.0)
+	check(float(sm.data["aqua_bank"]) >= 99999.0, "aqua_tick_does_not_shrink_bank")
+	sm.data["aqua_bank"] = 0.0
+
+	# Çevrimdışı akvaryum geliri
+	var now := int(Time.get_unix_time_from_system())
+	sm.data["last_seen"] = now - 3600
+	var off: Dictionary = sm.apply_offline_income(now)
+	check(not off.is_empty() and int(off["gold"]) > 0, "offline_income_after_1h")
+	var base_rate := 0
+	for it in sm.data["aquarium"]:
+		base_rate += sm.aqua_fish_income(it)
+	check(int(off.get("gold", 0)) == int(floor(base_rate * 60.0 * 0.5)), "offline_income_amount", str(off))
+	sm.data["last_seen"] = now - 86400 * 3
+	var off_cap: Dictionary = sm.apply_offline_income(now)
+	check(int(off_cap.get("gold", 0)) == int(floor(base_rate * 480.0 * 0.5)), "offline_income_capped_8h")
+	sm.data["last_seen"] = now - 30
+	check(sm.apply_offline_income(now).is_empty(), "offline_income_ignores_short_gap")
+	sm.data["aqua_bank"] = 0.0
+
+	# Günlük giriş ödülü serisi
+	sm.data["daily"] = {"last_date": "", "streak": 0}
+	var m0 := int(sm.data["money"])
+	var c1: Dictionary = sm.claim_daily("2026-03-01")
+	check(not c1.is_empty() and int(c1["day_idx"]) == 0, "daily_claim_day1")
+	check(int(sm.data["money"]) == m0 + int(c1["gold"]), "daily_gold_added")
+	check(sm.claim_daily("2026-03-01").is_empty(), "daily_no_double_claim")
+	var c2: Dictionary = sm.claim_daily("2026-03-02")
+	check(int(c2.get("streak", 0)) == 2 and str(c2.get("bait", "")) == "shrimp", "daily_streak_2_with_bait")
+	var c3: Dictionary = sm.claim_daily("2026-03-05")
+	check(int(c3.get("streak", 0)) == 1, "daily_streak_resets_after_gap")
+	sm.data["daily"] = {"last_date": "2026-02-28", "streak": 6}
+	var c7: Dictionary = sm.claim_daily("2026-03-01")
+	check(int(c7.get("day_idx", -1)) == 6, "daily_day7_across_month")
+	check(sm.data["achievements"].has("streak_7"), "ach_streak_7_unlocked")
+	var c8: Dictionary = sm.claim_daily("2026-03-02")
+	check(int(c8.get("day_idx", -1)) == 0 and int(c8.get("streak", 0)) == 8, "daily_cycle_wraps")
+
+	# 100 av başarımı
+	sm.data["book"]["test_sp"] = {"n": 100, "max": 1.0, "deep": 5}
+	sm.check_achievements()
+	check(sm.data["achievements"].has("catch_100"), "ach_catch_100_unlocked")
+	sm.data["book"].erase("test_sp")
+
 	# 3. Main sahnesi kurulumu & canlı simülasyon testi
 	var packed := load("res://scenes/main.tscn") as PackedScene
 	check(packed != null, "load_main_tscn")
@@ -107,8 +174,11 @@ func _run_all() -> void:
 	root.add_child(main_node)
 	await process_frame
 
+	check(main_node._menu_box.get_child_count() >= 2, "menu_continue_shown_with_progress")
 	main_node.start_game()
 	var world = main_node.world
+	check(main_node._current_panel == "daily", "daily_panel_auto_opens_on_start")
+	main_node.close_panels()
 	check(world.state == "idle", "state_idle_after_start")
 
 	# Mükemmel atış
@@ -150,10 +220,16 @@ func _run_all() -> void:
 	check(not world.boss_ref.is_empty(), "boss_spawned")
 
 	# Tüm 6 paneli sırayla açıp hatasız render edildiğini doğrula
-	for p_id in ["shop", "aquarium", "tournament", "basket", "missions", "book"]:
+	for p_id in ["shop", "aquarium", "tournament", "basket", "missions", "book", "daily"]:
 		main_node.open_panel(p_id)
 		await process_frame
 		check(main_node._current_panel == p_id, "panel_render_" + p_id)
+	main_node._book_filter = "stats"
+	main_node.open_panel("book")
+	await process_frame
+	check(main_node._panel_body.get_child_count() >= 2, "book_stats_tab_render")
+	main_node._book_filter = "all"
+	check(float(sm.data["stats"]["play_secs"]) > 0.0, "play_time_tracked")
 	# Ansiklopedi detay kartını aç
 	var caught_id := str((sm.data["book"] as Dictionary).keys()[0])
 	main_node._open_fish_detail(caught_id)

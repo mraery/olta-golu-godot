@@ -11,9 +11,12 @@ signal achievement_unlocked(ach: Dictionary)
 
 var data: Dictionary = {}
 var aqua_fed_until_msec: int = 0
+## Oyun açılışında hesaplanan çevrimdışı gelir: {"secs": int, "gold": int}
+var offline_report: Dictionary = {}
 
 func _ready() -> void:
 	load_save()
+	offline_report = apply_offline_income(int(Time.get_unix_time_from_system()))
 	ensure_missions()
 	ensure_market()
 
@@ -38,7 +41,7 @@ func default_save() -> Dictionary:
 		"stats": {
 			"max_combo": 0, "perfect_casts": 0, "heaviest": 0.0, "treasures": 0,
 			"night_catches": 0, "rain_catches": 0, "deepest": 0, "legendaries": 0,
-			"bosses": 0, "tourney_wins": 0, "haggles": 0
+			"bosses": 0, "tourney_wins": 0, "haggles": 0, "play_secs": 0.0, "best_streak": 0
 		},
 		"tourney_best": {},
 		"market_day": -1,
@@ -47,6 +50,8 @@ func default_save() -> Dictionary:
 		"casts": 0,
 		"total": 0,
 		"sound": true,
+		"last_seen": 0,
+		"daily": {"last_date": "", "streak": 0},
 	}
 
 func load_save() -> void:
@@ -57,7 +62,7 @@ func load_save() -> void:
 			var parsed = JSON.parse_string(f.get_as_text())
 			if typeof(parsed) == TYPE_DICTIONARY:
 				for k in parsed.keys():
-					if k in ["lv", "baits", "stats"] and typeof(parsed[k]) == TYPE_DICTIONARY:
+					if k in ["lv", "baits", "stats", "daily"] and typeof(parsed[k]) == TYPE_DICTIONARY:
 						for sub_k in parsed[k].keys():
 							def[k][sub_k] = parsed[k][sub_k]
 					else:
@@ -65,6 +70,7 @@ func load_save() -> void:
 	data = def
 
 func save_game() -> void:
+	data["last_seen"] = int(Time.get_unix_time_from_system())
 	var f := FileAccess.open(SAVE_PATH, FileAccess.WRITE)
 	if f != null:
 		f.store_string(JSON.stringify(data))
@@ -218,7 +224,96 @@ func tick_aquarium_income(dt: float) -> void:
 	if rate <= 0:
 		return
 	var max_bank := maxf(250.0, float(rate * 12))
-	data["aqua_bank"] = minf(max_bank, float(data["aqua_bank"]) + (float(rate) / 60.0) * dt)
+	var bank := float(data["aqua_bank"])
+	# Çevrimdışı gelirle tavanı aşmış bir kasa oyunda geri kırpılmasın.
+	if bank >= max_bank:
+		return
+	data["aqua_bank"] = minf(max_bank, bank + (float(rate) / 60.0) * dt)
+
+func tick_play_time(dt: float) -> void:
+	var st: Dictionary = data["stats"]
+	st["play_secs"] = float(st.get("play_secs", 0.0)) + dt
+
+## Oyun kapalıyken akvaryum ziyaretçilerinden gelen gelir (en fazla 8 saat, %50 hız).
+func apply_offline_income(now_unix: int) -> Dictionary:
+	var last := int(data.get("last_seen", 0))
+	if last <= 0 or now_unix <= last:
+		return {}
+	var secs := now_unix - last
+	if secs < GameData.OFFLINE_MIN_SECS:
+		return {}
+	var aq: Array = data["aquarium"]
+	if aq.is_empty():
+		return {}
+	var base := 0
+	for item in aq:
+		base += aqua_fish_income(item)
+	var mins := minf(float(secs) / 60.0, GameData.OFFLINE_MAX_MIN)
+	var gold := int(floor(float(base) * mins * GameData.OFFLINE_RATE))
+	if gold <= 0:
+		return {}
+	data["aqua_bank"] = float(data["aqua_bank"]) + float(gold)
+	data["last_seen"] = now_unix
+	return {"secs": secs, "gold": gold}
+
+func total_catches() -> int:
+	var n := 0
+	for rec in (data["book"] as Dictionary).values():
+		n += int(rec.get("n", 0))
+	return n
+
+func has_progress() -> bool:
+	return int(data["casts"]) > 0 or not (data["book"] as Dictionary).is_empty() or int(data["money"]) > 0
+
+# ---------------- Günlük Giriş Ödülü ----------------
+static func _day_number(date_str: String) -> int:
+	if date_str.is_empty():
+		return -999999
+	return int(Time.get_unix_time_from_datetime_string(date_str + "T12:00:00") / 86400)
+
+func today_str() -> String:
+	return Time.get_date_string_from_system()
+
+## {"available": bool, "day_idx": 0-6 (alınacak/son alınan gün), "streak": int}
+func daily_status(today: String = "") -> Dictionary:
+	if today.is_empty():
+		today = today_str()
+	var dl: Dictionary = data["daily"]
+	var last := str(dl.get("last_date", ""))
+	var streak := int(dl.get("streak", 0))
+	if last == today:
+		return {"available": false, "day_idx": (maxi(1, streak) - 1) % 7, "streak": streak}
+	var gap := _day_number(today) - _day_number(last)
+	var next_streak := streak + 1 if gap == 1 else 1
+	return {"available": true, "day_idx": (next_streak - 1) % 7, "streak": next_streak}
+
+func daily_gold(day_idx: int) -> int:
+	var rw: Dictionary = GameData.DAILY_REWARDS[clampi(day_idx, 0, 6)]
+	var lv := int(get_rank_info()["cur"]["lv"])
+	return int(round(float(rw["gold"]) * (1.0 + float(lv - 1) * 0.15)))
+
+func claim_daily(today: String = "") -> Dictionary:
+	if today.is_empty():
+		today = today_str()
+	var st := daily_status(today)
+	if not bool(st["available"]):
+		return {}
+	var idx := int(st["day_idx"])
+	var rw: Dictionary = GameData.DAILY_REWARDS[idx]
+	var gold := daily_gold(idx)
+	data["money"] = int(data["money"]) + gold
+	data["total"] = int(data["total"]) + gold
+	if rw.has("bait"):
+		var bid := str(rw["bait"])
+		data["baits"][bid] = int(data["baits"].get(bid, 0)) + int(rw["n"])
+	data["daily"] = {"last_date": today, "streak": int(st["streak"])}
+	var stats: Dictionary = data["stats"]
+	stats["best_streak"] = maxi(int(stats.get("best_streak", 0)), int(st["streak"]))
+	add_xp(15 + idx * 5)
+	check_achievements()
+	save_game()
+	data_changed.emit()
+	return {"gold": gold, "bait": str(rw.get("bait", "")), "n": int(rw.get("n", 0)), "day_idx": idx, "streak": int(st["streak"])}
 
 func collect_aqua_bank() -> int:
 	var amt := int(floor(float(data["aqua_bank"])))
@@ -326,6 +421,8 @@ func _check_ach_condition(ach_id: String) -> bool:
 		"boss_1":        return int(st.get("bosses", 0)) >= 1
 		"tourney_1":     return int(st.get("tourney_wins", 0)) >= 1
 		"market_haggle": return int(st.get("haggles", 0)) >= 1
+		"catch_100":     return total_catches() >= 100
+		"streak_7":      return int(st.get("best_streak", 0)) >= 7
 	return false
 
 func check_achievements() -> Array[Dictionary]:

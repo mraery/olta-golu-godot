@@ -18,7 +18,11 @@
 - **🐉 4 Bölge Bossu**: Her bölgenin kendine özgü efsanevi dev boss balığı (`Gölün Efendisi`, `Mercan Kralı`, `Fiyort Leviathanı`, `Magma Ejderi`).
 - **🏆 90 Saniyelik Turnuvalar (`T`)**: Bronz, Gümüş ve Altın liglerinde zamana karşı yarışıp kupa, altın ve özel yem paketleri kazan.
 - **🧺 Sepet & Günlük Balık Pazarı (`B`)**: Her oyun günü belirli türler **+%50 talep** görür.
-- **📜 Görevler (`G`), 10 Rütbe & 21 Başarım (`K`)**: Dinamik görevler, kalıcı rütbe bonusu, kupa rafı ve ödüllü başarımlar.
+- **📜 Görevler (`G`), 10 Rütbe & 24 Başarım (`K`)**: Dinamik görevler, kalıcı rütbe bonusu, kupa rafı ve ödüllü başarımlar.
+- **🎁 Günlük Giriş Ödülü (`O`)**: 7 günlük seri takvimi; her gün altın + özel yem. Gün atlarsan seri sıfırlanır, ödüller rütbeyle artar.
+- **🌙 Çevrimdışı Akvaryum Geliri**: Oyun kapalıyken akvaryum ziyaretçileri %50 hızla (en fazla 8 saat) altın bırakır.
+- **📊 İstatistik Sekmesi**: Oyun süresi, isabet oranı, toplam kazanç, nadirlik bazında av dağılımı ve daha fazlası (`K` → İstatistik).
+- **▶️ Devam Et / Yeni Oyun**: Ana menüde kayıt özeti; otomatik kayıt (20 sn) ve pencere kapanırken kayıt.
 - **🔊 Prosedürel WebAudio-Tarzı Ses Sentezi**: Harici ses dosyasına ihtiyaç duymadan 16-bit PCM sentezli 18 farklı ses efekti.
 
 ## 🎮 Kontroller
@@ -34,6 +38,7 @@
 | `B` | Balık Sepeti & Günlük Pazar |
 | `G` | Görevler & Rütbe |
 | `K` | Balıkçı Günlüğü, Kupa Rafı & Başarımlar |
+| `O` | Günlük Giriş Ödülü |
 | `S` | Ses Aç / Kapa |
 | `Esc` | Açık paneli kapat |
 
@@ -43,7 +48,7 @@
 # Godot 4.7 ile çalıştır
 godot --path .
 
-# Headless otomatik test paketini çalıştır (58/58 test)
+# Headless otomatik test paketini çalıştır (85/85 test — oyuncu kaydı yedeklenip geri yüklenir)
 godot --headless --path . --import
 godot --headless --path . --script res://tests/test_runner.gd
 ```

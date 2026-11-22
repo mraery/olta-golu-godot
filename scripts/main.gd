@@ -19,6 +19,10 @@ var _btn_basket: Button
 var _btn_missions: Button
 var _btn_aqua: Button
 var _btn_sound: Button
+var _btn_daily: Button
+var _menu_box: VBoxContainer
+var _reset_armed: bool = false
+var _autosave_t: float = 0.0
 
 var _lbl_zone: Label
 var _lbl_frenzy: Label
@@ -67,7 +71,21 @@ func _ready() -> void:
 	_connect_signals()
 	_refresh_bait_bar()
 	_refresh_hud()
+	_rebuild_menu()
 	_menu_overlay.visible = true
+
+func _process(delta: float) -> void:
+	if world.state == "menu":
+		return
+	_autosave_t += delta
+	if _autosave_t >= 20.0:
+		_autosave_t = 0.0
+		SaveManager.save_game()
+
+func _notification(what: int) -> void:
+	if what == NOTIFICATION_WM_CLOSE_REQUEST or what == NOTIFICATION_APPLICATION_PAUSED:
+		if SaveManager.data.size() > 0:
+			SaveManager.save_game()
 
 func _connect_signals() -> void:
 	world.hint_changed.connect(func(txt: String):
@@ -223,10 +241,12 @@ func _build_ui() -> void:
 	_btn_missions.pressed.connect(func(): toggle_panel("missions"))
 	var btn_book := _make_icon_btn("📖", "Balıkçı Günlüğü (K)")
 	btn_book.pressed.connect(func(): toggle_panel("book"))
+	_btn_daily = _make_icon_btn("🎁", "Günlük Ödül (O)")
+	_btn_daily.pressed.connect(func(): toggle_panel("daily"))
 	_btn_sound = _make_icon_btn("🔊", "Ses (S)")
 	_btn_sound.pressed.connect(_on_toggle_sound)
 
-	for c in [_lbl_money, _lbl_depth, _lbl_clock, _lbl_weather, _btn_biome, lv_box, _lbl_combo, spacer, btn_shop, _btn_aqua, btn_tourney, _btn_basket, _btn_missions, btn_book, _btn_sound]:
+	for c in [_lbl_money, _lbl_depth, _lbl_clock, _lbl_weather, _btn_biome, lv_box, _lbl_combo, spacer, btn_shop, _btn_aqua, btn_tourney, _btn_basket, _btn_missions, btn_book, _btn_daily, _btn_sound]:
 		_hud_bar.add_child(c)
 
 	# Derinlik Bölgesi Etiketi
@@ -405,16 +425,14 @@ func _build_overlays() -> void:
 	sub.text = "261 balık türü (hepsinin kısa hikayesiyle!), 6 tatlı 2D göl,\n2D Balık Pazarı, canlı akvaryum, tekne sistemi ve 6 bölge bossu!"
 	sub.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	sub.add_theme_color_override("font_color", Color("#5b4320"))
-	var btn_play := _make_btn("🎣 Oyna", true, 200)
-	btn_play.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
-	btn_play.add_theme_font_size_override("font_size", 22)
-	btn_play.pressed.connect(start_game)
+	_menu_box = VBoxContainer.new()
+	_menu_box.add_theme_constant_override("separation", 8)
 	var keys := Label.new()
-	keys.text = "Boşluk / Sol Tık: basılı tut & bırak (Mükemmel Atış) • ← → / A D: yönlendir & tekne sür\n1–5: yem seç • M: mağaza • Q: akvaryum • T: turnuva • B: sepet • G: görevler • K: günlük"
+	keys.text = "Boşluk / Sol Tık: basılı tut & bırak (Mükemmel Atış) • ← → / A D: yönlendir & tekne sür\n1–5: yem seç • M: mağaza • Q: akvaryum • T: turnuva • B: sepet • G: görevler • K: günlük • O: günlük ödül"
 	keys.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	keys.add_theme_font_size_override("font_size", 12)
 	keys.add_theme_color_override("font_color", Color("#7a623f"))
-	for c in [title, sub, btn_play, keys]:
+	for c in [title, sub, _menu_box, keys]:
 		mvb.add_child(c)
 	mcard.add_child(mvb)
 
@@ -448,6 +466,51 @@ func _build_overlays() -> void:
 	pcard.add_child(pvb)
 
 # ---------------- Oyun Başlatma & HUD ----------------
+func _rebuild_menu() -> void:
+	for c in _menu_box.get_children():
+		c.queue_free()
+	_reset_armed = false
+	if SaveManager.has_progress():
+		var d := SaveManager.data
+		var rank := SaveManager.get_rank_info()
+		var summary := Label.new()
+		summary.text = "🏅 Sv.%d %s   •   🪙 %d   •   📖 %d/%d tür   •   🐟 %d av" % [
+			int(rank["cur"]["lv"]), str(rank["cur"]["title"]), int(d["money"]),
+			(d["book"] as Dictionary).size(), GameData.species.size(), SaveManager.total_catches()
+		]
+		summary.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+		summary.add_theme_font_size_override("font_size", 13)
+		summary.add_theme_color_override("font_color", Color("#124c78"))
+		summary.add_theme_stylebox_override("normal", _style_box(Color("#e8f5ff"), Color("#b5daf5"), 10, 2, 8))
+		_menu_box.add_child(summary)
+		var row := HBoxContainer.new()
+		row.alignment = BoxContainer.ALIGNMENT_CENTER
+		row.add_theme_constant_override("separation", 10)
+		var btn_cont := _make_btn("▶️ Devam Et", true, 200)
+		btn_cont.add_theme_font_size_override("font_size", 22)
+		btn_cont.pressed.connect(start_game)
+		var btn_new := _make_btn("🆕 Yeni Oyun", false, 150)
+		btn_new.pressed.connect(func():
+			if not _reset_armed:
+				_reset_armed = true
+				btn_new.text = "⚠️ Emin misin? Tekrar bas"
+				return
+			SaveManager.reset_save()
+			world.rebuild_world()
+			_refresh_bait_bar()
+			_refresh_hud()
+			start_game()
+		)
+		row.add_child(btn_cont)
+		row.add_child(btn_new)
+		_menu_box.add_child(row)
+	else:
+		var btn_play := _make_btn("🎣 Oyna", true, 200)
+		btn_play.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
+		btn_play.add_theme_font_size_override("font_size", 22)
+		btn_play.pressed.connect(start_game)
+		_menu_box.add_child(btn_play)
+
 func start_game() -> void:
 	_menu_overlay.visible = false
 	_hud_bar.visible = true
@@ -456,6 +519,14 @@ func start_game() -> void:
 	_refresh_bait_bar()
 	_refresh_hud()
 	world.hint_changed.emit("İlk atış! Boşluk'a basılı tut ve yeşil bölgede bırak 🎣")
+	var off := SaveManager.offline_report
+	if not off.is_empty():
+		SaveManager.offline_report = {}
+		var hrs := float(off["secs"]) / 3600.0
+		var away := ("%.1f saat" % hrs) if hrs >= 1.0 else ("%d dakika" % int(float(off["secs"]) / 60.0))
+		_show_toast("🐠 Sen yokken (%s) akvaryum ziyaretçileri %d altın bıraktı! (Q)" % [away, int(off["gold"])])
+	if bool(SaveManager.daily_status()["available"]):
+		open_panel("daily")
 
 func _refresh_hud() -> void:
 	var d := SaveManager.data
@@ -492,6 +563,7 @@ func _refresh_hud() -> void:
 	_btn_missions.text = "📜!" if ready_m else "📜"
 	_btn_aqua.text = "🐠🪙" if int(floor(float(d["aqua_bank"]))) >= 20 else "🐠"
 	_btn_sound.text = "🔊" if AudioManager.sound_on else "🔇"
+	_btn_daily.text = "🎁!" if bool(SaveManager.daily_status()["available"]) else "🎁"
 
 func _refresh_bait_bar() -> void:
 	for c in _bait_bar.get_children():
@@ -762,6 +834,7 @@ func _render_current_panel() -> void:
 		"basket":     _render_basket()
 		"missions":   _render_missions()
 		"book":       _render_book()
+		"daily":      _render_daily()
 
 func _make_scroll_grid(cols: int) -> Array:
 	var sc := ScrollContainer.new()
@@ -1180,14 +1253,16 @@ func _render_book() -> void:
 
 	var tabs := HBoxContainer.new()
 	tabs.add_theme_constant_override("separation", 4)
-	for pair in [["all", "Tümü"], ["caught", "Yakalanan (%d)" % got], ["shallow", "Sığ"], ["mid", "Orta"], ["deep", "Derin"], ["rare", "Nadir+"], ["trophies", "🏆 Kupa"], ["ach", "🎖️ Başarım"]]:
+	for pair in [["all", "Tümü"], ["caught", "Yakalanan (%d)" % got], ["shallow", "Sığ"], ["mid", "Orta"], ["deep", "Derin"], ["rare", "Nadir+"], ["trophies", "🏆 Kupa"], ["ach", "🎖️ Başarım"], ["stats", "📊 İstatistik"]]:
 		var tb := _make_btn(pair[1], _book_filter == pair[0])
 		tb.add_theme_font_size_override("font_size", 12)
 		tb.pressed.connect(func(): _book_filter = pair[0]; _render_current_panel())
 		tabs.add_child(tb)
 	_panel_body.add_child(tabs)
 
-	if _book_filter == "ach":
+	if _book_filter == "stats":
+		_render_stats_tab()
+	elif _book_filter == "ach":
 		var grid: GridContainer = _make_scroll_grid(2)[1]
 		for a in GameData.ACHIEVEMENTS:
 			var done := (SaveManager.data["achievements"] as Dictionary).has(str(a["id"]))
@@ -1265,6 +1340,132 @@ func _render_book() -> void:
 				vb.add_child(ib)
 			card.add_child(vb)
 			grid.add_child(card)
+
+func _render_daily() -> void:
+	var st := SaveManager.daily_status()
+	var avail := bool(st["available"])
+	var cur_idx := int(st["day_idx"])
+	_panel_title.text = "🎁 Günlük Giriş Ödülü"
+	_panel_extra.text = "📅 Seri: %d gün • En iyi: %d" % [
+		int(SaveManager.data["daily"].get("streak", 0)), int(SaveManager.data["stats"].get("best_streak", 0))
+	]
+	var info := Label.new()
+	info.text = "Her gün oyuna gir, ödülünü topla! Bir gün atlarsan seri 1. güne döner. Ödüller rütben yükseldikçe artar."
+	info.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	info.add_theme_font_size_override("font_size", 12)
+	info.add_theme_color_override("font_color", Color("#5b4320"))
+	_panel_body.add_child(info)
+
+	var row := HBoxContainer.new()
+	row.add_theme_constant_override("separation", 6)
+	row.alignment = BoxContainer.ALIGNMENT_CENTER
+	for i in range(GameData.DAILY_REWARDS.size()):
+		var rw: Dictionary = GameData.DAILY_REWARDS[i]
+		var done := i < cur_idx or (i == cur_idx and not avail)
+		var today := i == cur_idx and avail
+		var bg := Color("#f2fff6") if done else (Color("#fff2c6") if today else Color.WHITE)
+		var bc := Color("#2eb872") if done else (Color("#e6a400") if today else Color("#ead7a6"))
+		var card := PanelContainer.new()
+		card.custom_minimum_size = Vector2(98, 120)
+		card.add_theme_stylebox_override("panel", _style_box(bg, bc, 12, 3 if today else 2, 6))
+		var vb := VBoxContainer.new()
+		vb.alignment = BoxContainer.ALIGNMENT_CENTER
+		var dl := Label.new()
+		dl.text = "%d. Gün" % (i + 1)
+		dl.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+		dl.add_theme_color_override("font_color", Color("#0d5c8f"))
+		var gl := Label.new()
+		gl.text = "🪙 %d" % SaveManager.daily_gold(i)
+		gl.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+		gl.add_theme_color_override("font_color", Color("#9e6500"))
+		var bl := Label.new()
+		if rw.has("bait"):
+			var b := GameData.get_bait(str(rw["bait"]))
+			bl.text = "%s +%d" % [str(b["icon"]), int(rw["n"])]
+		else:
+			bl.text = " "
+		bl.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+		bl.add_theme_color_override("font_color", Color("#3b2a12"))
+		var sl := Label.new()
+		sl.text = "✔ Alındı" if done else ("⭐ Bugün" if today else "")
+		sl.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+		sl.add_theme_font_size_override("font_size", 11)
+		sl.add_theme_color_override("font_color", Color("#217a43") if done else Color("#b86e00"))
+		for c in [dl, gl, bl, sl]: vb.add_child(c)
+		card.add_child(vb)
+		row.add_child(card)
+	_panel_body.add_child(row)
+
+	var btn := _make_btn("🎁 Ödülü Topla" if avail else "✔ Bugünün ödülü alındı — yarın tekrar gel!", avail, 320)
+	btn.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
+	btn.disabled = not avail
+	btn.pressed.connect(func():
+		var got := SaveManager.claim_daily()
+		if got.is_empty():
+			return
+		AudioManager.play("level_up")
+		world.spawn_confetti(GameData.W * 0.5, GameData.H * 0.45, 40)
+		var txt := "🎁 %d. gün ödülü: +%d altın" % [int(got["day_idx"]) + 1, int(got["gold"])]
+		if not str(got["bait"]).is_empty():
+			var b := GameData.get_bait(str(got["bait"]))
+			txt += ", %s +%d %s" % [str(b["icon"]), int(got["n"]), str(b["name"])]
+		_show_toast(txt + "!")
+		_render_current_panel()
+	)
+	_panel_body.add_child(btn)
+
+static func _fmt_duration(secs: float) -> String:
+	var s := int(secs)
+	if s >= 3600:
+		return "%d sa %d dk" % [s / 3600, (s % 3600) / 60]
+	return "%d dk %d sn" % [s / 60, s % 60]
+
+func _render_stats_tab() -> void:
+	var d := SaveManager.data
+	var st: Dictionary = d["stats"]
+	var rarity_counts := [0, 0, 0, 0, 0]
+	for sid in (d["book"] as Dictionary).keys():
+		var sp := GameData.get_species(str(sid))
+		rarity_counts[clampi(int(sp.get("r", 0)), 0, 4)] += int(d["book"][sid].get("n", 0))
+	var casts := int(d.get("casts", 0))
+	var caught := SaveManager.total_catches()
+	var rows: Array = [
+		["⏱️ Oyun süresi", _fmt_duration(float(st.get("play_secs", 0.0)))],
+		["🎣 Toplam atış", str(casts)],
+		["🐟 Yakalanan balık", str(caught)],
+		["🎯 İsabet oranı", ("%%%d" % int(round(float(caught) / float(casts) * 100.0))) if casts > 0 else "—"],
+		["💰 Toplam kazanç", "%d altın" % int(d["total"])],
+		["⚖️ En ağır balık", "%.2f kg" % float(st.get("heaviest", 0.0))],
+		["🌊 En derin av", "%d m" % int(st.get("deepest", 0))],
+		["🔥 En uzun kombo", "x%d" % int(st.get("max_combo", 0))],
+		["🎯 Mükemmel atış", str(int(st.get("perfect_casts", 0)))],
+		["💎 Çıkarılan hazine", str(int(st.get("treasures", 0)))],
+		["🐉 Yakalanan boss", "%d / %d" % [int(st.get("bosses", 0)), GameData.boss_species.size()]],
+		["🏆 Turnuva zaferi", str(int(st.get("tourney_wins", 0)))],
+		["🌙 Gece avı", str(int(st.get("night_catches", 0)))],
+		["📅 En uzun giriş serisi", "%d gün" % int(st.get("best_streak", 0))],
+	]
+	for i in range(5):
+		rows.append(["%s av" % str(GameData.RARITIES[i]["name"]), str(rarity_counts[i])])
+	var grid: GridContainer = _make_scroll_grid(3)[1]
+	for r in rows:
+		var card := PanelContainer.new()
+		card.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		card.add_theme_stylebox_override("panel", _style_box(Color.WHITE, Color("#ead7a6"), 12, 2, 8))
+		var hb := HBoxContainer.new()
+		var k := Label.new()
+		k.text = str(r[0])
+		k.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		k.add_theme_font_size_override("font_size", 12)
+		k.add_theme_color_override("font_color", Color("#5b4320"))
+		var v := Label.new()
+		v.text = str(r[1])
+		v.add_theme_font_size_override("font_size", 13)
+		v.add_theme_color_override("font_color", Color("#0d5c8f"))
+		hb.add_child(k)
+		hb.add_child(v)
+		card.add_child(hb)
+		grid.add_child(card)
 
 func _open_fish_detail(sp_id: String) -> void:
 	var sp := GameData.get_species(sp_id)
@@ -1374,6 +1575,7 @@ func _unhandled_input(event: InputEvent) -> void:
 				KEY_B: toggle_panel("basket")
 				KEY_G: toggle_panel("missions")
 				KEY_K: toggle_panel("book")
+				KEY_O: toggle_panel("daily")
 				KEY_S: if world.state != "menu": _on_toggle_sound()
 				KEY_ESCAPE:
 					if _detail_overlay.visible: _detail_overlay.visible = false
