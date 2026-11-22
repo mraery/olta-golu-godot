@@ -58,6 +58,9 @@ var _book_filter: String = "all"
 var _last_catch: Dictionary = {}
 var _last_treasure: Dictionary = {}
 var _aqua_view: AquariumView = null
+var _market_view: MarketView = null
+var _haggle_mul: float = 1.0
+var _haggle_used: bool = false
 
 func _ready() -> void:
 	_build_ui()
@@ -399,7 +402,7 @@ func _build_overlays() -> void:
 	title.add_theme_font_size_override("font_size", 44)
 	title.add_theme_color_override("font_color", Color("#0d5c8f"))
 	var sub := Label.new()
-	sub.text = "184 balık türü, 4 benzersiz bölge, canlı akvaryum, tekne sistemi,\n4 bölge bossu, 90 sn turnuvalar ve tam balık ansiklopedisi!"
+	sub.text = "261 balık türü (hepsinin kısa hikayesiyle!), 6 tatlı 2D göl,\n2D Balık Pazarı, canlı akvaryum, tekne sistemi ve 6 bölge bossu!"
 	sub.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	sub.add_theme_color_override("font_color", Color("#5b4320"))
 	var btn_play := _make_btn("🎣 Oyna", true, 200)
@@ -580,12 +583,12 @@ func _show_catch_modal(info: Dictionary) -> void:
 	stats_lbl.add_theme_font_size_override("font_size", 16)
 	stats_lbl.add_theme_color_override("font_color", Color("#3b2a12"))
 
-	# Balık Ansiklopedisi Bilgi Kutusu
+	# Balık Ansiklopedisi & Kısa Hikaye Kutusu
 	var stars := GameData.fish_difficulty_stars(sp)
 	var star_txt := "★".repeat(stars) + "☆".repeat(5 - stars)
 	var bio_box := Label.new()
-	bio_box.text = "📖 %s\n🌊 Yaşam Alanı: %s\n🍽️ Beslenme: %s   •   ⚡ Zorluk: %s" % [
-		str(sp.get("fact", "")), str(sp.get("habitat", "")), str(sp.get("diet", "")), star_txt
+	bio_box.text = "📖 %s\n💬 Hikaye: %s\n🌊 %s • 🍽️ %s • ⚡ %s" % [
+		str(sp.get("fact", "")), str(sp.get("story", "")), str(sp.get("habitat", "")), str(sp.get("diet", "")), star_txt
 	]
 	bio_box.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	bio_box.add_theme_font_size_override("font_size", 12)
@@ -738,11 +741,15 @@ func close_panels() -> void:
 	_detail_overlay.visible = false
 	_current_panel = ""
 	_aqua_view = null
+	_market_view = null
+	_haggle_mul = 1.0
+	_haggle_used = false
 	world.set_game_state("idle")
 	world.hint_changed.emit(world._idle_hint())
 
 func _clear_panel_body() -> void:
 	_aqua_view = null
+	_market_view = null
 	for c in _panel_body.get_children():
 		c.queue_free()
 
@@ -991,48 +998,63 @@ func _render_tournament() -> void:
 func _render_basket() -> void:
 	SaveManager.ensure_market()
 	var basket: Array = SaveManager.data["basket"]
-	_panel_title.text = "🧺 Balık Sepeti & Pazar (%d/%d)" % [basket.size(), int(SaveManager.up("basket"))]
+	var cust := SaveManager.get_market_customer()
+	_panel_title.text = "🏪 2D Balık Pazarı (%d/%d)" % [basket.size(), int(SaveManager.up("basket"))]
+
+	# Tatlı 2D Pazar Tezgahı Sahnesi
+	_market_view = MarketView.new()
+	_panel_body.add_child(_market_view)
+
 	var hot_names: Array[String] = []
 	for h in SaveManager.data["market_hot"]:
 		hot_names.append(str(h["label"]))
 	var banner := Label.new()
-	banner.text = "📈 Günün Balık Pazarı (+%50 Fiyat!): " + " • ".join(hot_names)
+	banner.text = "📈 Günlük Talep (+%50): " + " • ".join(hot_names) + ("   |   🤝 Pazarlık Bonusu: +%%%d!" % int(round((_haggle_mul - 1.0) * 100.0)) if _haggle_mul > 1.0 else "")
+	banner.add_theme_font_size_override("font_size", 12)
 	banner.add_theme_color_override("font_color", Color("#6e4500"))
-	banner.add_theme_stylebox_override("normal", _style_box(Color("#fff2c6"), Color("#e6bc53"), 12, 2, 8))
+	banner.add_theme_stylebox_override("normal", _style_box(Color("#fff2c6"), Color("#e6bc53"), 10, 2, 6))
 	_panel_body.add_child(banner)
 
 	var grid: GridContainer = _make_scroll_grid(3)[1]
 	var total_val := 0
 	if basket.is_empty():
 		var emp := Label.new()
-		emp.text = "Sepetin boş. Balık yakaladığında 'Sepet' diyerek saklayıp pazarda +%50 fazlaya satabilirsin!"
+		emp.text = "Tezgahın boş! Balık yakaladığında '🧺 Sepet' diyerek buraya getir; müşteriler özel siparişlere +%90'a varan bonus öder!"
+		emp.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 		emp.add_theme_color_override("font_color", Color("#7a623f"))
 		grid.add_child(emp)
 	else:
 		for item in basket:
 			var sp := GameData.get_species(str(item["sp_id"]))
 			var hot := SaveManager.is_hot_demand(sp)
-			var val := int(round(float(item["base_val"]) * (1.5 if hot else 1.0)))
+			var match_c := SaveManager.matches_customer_order(item, cust)
+			var val := SaveManager.calc_market_price(item, _haggle_mul)
 			total_val += val
 			var card := PanelContainer.new()
 			card.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-			card.add_theme_stylebox_override("panel", _style_box(Color("#fff5f8") if hot else Color.WHITE, Color("#f06595") if hot else Color("#ead7a6"), 12, 2, 8))
+			var bg_c := Color("#fff5f8") if (hot or match_c) else Color.WHITE
+			var bd_c := Color("#f06595") if match_c else (Color("#e6bc53") if hot else Color("#ead7a6"))
+			card.add_theme_stylebox_override("panel", _style_box(bg_c, bd_c, 12, 2, 6))
 			var vb := VBoxContainer.new()
 			var tr := TextureRect.new()
 			tr.texture = GameData.get_fish_texture(str(sp["spr"]))
-			tr.custom_minimum_size = Vector2(88, 42)
+			tr.custom_minimum_size = Vector2(76, 34)
 			tr.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
 			var nl := Label.new()
 			nl.text = str(sp["name"])
 			nl.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-			nl.add_theme_font_size_override("font_size", 12)
+			nl.add_theme_font_size_override("font_size", 11)
 			nl.add_theme_color_override("font_color", Color("#3b2a12"))
+			var tag_s := ""
+			if match_c: tag_s += " %s%s" % [str(cust["icon"]), str(cust["bonus_lbl"])]
+			if hot: tag_s += " 🔥+%50"
 			var sl := Label.new()
-			sl.text = "%.2f kg • %dm %s" % [float(item["kg"]), int(item["depth_m"]), "🔥+%50" if hot else ""]
+			sl.text = "%.2f kg • %dm%s" % [float(item["kg"]), int(item["depth_m"]), tag_s]
 			sl.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-			sl.add_theme_font_size_override("font_size", 11)
+			sl.add_theme_font_size_override("font_size", 10)
 			sl.add_theme_color_override("font_color", Color("#8a7350"))
 			var sb := _make_btn("Sat (+%d)" % val, true)
+			sb.add_theme_font_size_override("font_size", 12)
 			sb.pressed.connect(func():
 				var idx := basket.find(item)
 				if idx >= 0:
@@ -1043,6 +1065,7 @@ func _render_basket() -> void:
 					SaveManager.check_achievements()
 					SaveManager.save_game()
 					AudioManager.play("coin")
+					if _market_view: _market_view.trigger_sale_celebration("Harika bir balık! +%d altın!" % val)
 					_render_current_panel()
 			)
 			for c in [tr, nl, sl, sb]: vb.add_child(c)
@@ -1050,8 +1073,31 @@ func _render_basket() -> void:
 			grid.add_child(card)
 
 	_panel_extra.text = "Toplam: %d altın" % total_val
+	var foot := HBoxContainer.new()
+	foot.add_theme_constant_override("separation", 8)
+	var btn_haggle := _make_btn("🤝 Pazarlık Et" if not _haggle_used else "✔ Pazarlık Yapıldı", false)
+	btn_haggle.disabled = basket.is_empty() or _haggle_used
+	btn_haggle.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	btn_haggle.pressed.connect(func():
+		_haggle_used = true
+		if randf() < 0.72:
+			_haggle_mul = 1.25
+			SaveManager.data["stats"]["haggles"] = int(SaveManager.data["stats"].get("haggles", 0)) + 1
+			SaveManager.check_achievements()
+			SaveManager.save_game()
+			AudioManager.play("perfect")
+			_show_toast("🤝 Pazarlık tuttu! Tüm fiyatlar +%25 arttı!")
+			if _market_view: _market_view.trigger_sale_celebration("Pekala anlaştık! +%25 fazladan veriyorum!")
+		else:
+			_haggle_mul = 1.05
+			AudioManager.play("click")
+			_show_toast("😅 Zorlu müşteri! Yine de +%5 kopardın!")
+			if _market_view: _market_view.trigger_sale_celebration("Sıkı pazarlıkçısın! Sadece +%5 ekleyebilirim.")
+		_render_current_panel()
+	)
 	var btn_all := _make_btn("💰 Tümünü Sat (+%d altın)" % total_val, true)
 	btn_all.disabled = basket.is_empty()
+	btn_all.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	btn_all.pressed.connect(func():
 		if basket.is_empty(): return
 		basket.clear()
@@ -1060,12 +1106,16 @@ func _render_basket() -> void:
 		SaveManager.progress_missions("earn_gold", float(total_val))
 		SaveManager.check_achievements()
 		SaveManager.save_game()
+		_haggle_mul = 1.0
+		_haggle_used = false
 		AudioManager.play("catch")
-		world.spawn_confetti(GameData.W * 0.5, GameData.H * 0.5, 24)
-		_show_toast("💰 Sepet satıldı: +%d altın!" % total_val)
+		world.spawn_confetti(GameData.W * 0.5, GameData.H * 0.5, 28)
+		_show_toast("💰 Balık Pazarı satışı: +%d altın!" % total_val)
 		_render_current_panel()
 	)
-	_panel_body.add_child(btn_all)
+	foot.add_child(btn_haggle)
+	foot.add_child(btn_all)
+	_panel_body.add_child(foot)
 
 func _render_missions() -> void:
 	SaveManager.ensure_missions()
@@ -1263,7 +1313,14 @@ func _open_fish_detail(sp_id: String) -> void:
 	fact.text = "📖 " + str(sp.get("fact", ""))
 	fact.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	fact.add_theme_color_override("font_color", Color("#3b2a12"))
-	fact.add_theme_stylebox_override("normal", _style_box(Color.WHITE, Color("#ead7a6"), 12, 2, 10))
+	fact.add_theme_stylebox_override("normal", _style_box(Color.WHITE, Color("#ead7a6"), 12, 2, 8))
+
+	var story := Label.new()
+	story.text = "💬 Balıkçı Hikayesi: " + str(sp.get("story", ""))
+	story.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	story.add_theme_font_size_override("font_size", 12)
+	story.add_theme_color_override("font_color", Color("#6e3b10"))
+	story.add_theme_stylebox_override("normal", _style_box(Color("#fff4d6"), Color("#e6bc53"), 12, 2, 8))
 
 	var stars := GameData.fish_difficulty_stars(sp)
 	var meta := Label.new()
@@ -1283,7 +1340,7 @@ func _open_fish_detail(sp_id: String) -> void:
 	rec_lbl.add_theme_color_override("font_color", Color("#124c78"))
 	rec_lbl.add_theme_stylebox_override("normal", _style_box(Color("#e8f5ff"), Color("#b5daf5"), 10, 2, 6))
 
-	for c in [hdr, tr, nm, lat, fact, meta, rec_lbl]:
+	for c in [hdr, tr, nm, lat, fact, story, meta, rec_lbl]:
 		vb.add_child(c)
 	card.add_child(vb)
 	_detail_overlay.visible = true

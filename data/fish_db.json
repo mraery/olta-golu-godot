@@ -22,7 +22,8 @@
     ],
     "habitat": "Sığ yosunluklar ve kayalık kıyılar",
     "diet": "Küçük kabuklular ve solucanlar",
-    "fact": "Parlak pembe pullarıyla sığ sularda sürüler halinde gezer. Meraklı yapısı yüzünden oltaya kolayca yaklaşır."
+    "fact": "Parlak pembe pullarıyla sığ sularda sürüler halinde gezer. Meraklı yapısı yüzünden oltaya kolayca yaklaşır.",
+    "story": "Köyün küçük çocukları iskeleden ekmek kırıntısı attığında ilk koşan hep bu utangaç pembe lapin olurmuş."
   },
   {
     "id": "clown",
@@ -47,7 +48,8 @@
     ],
     "habitat": "Sığ mercanlar ve deniz şakayıkları",
     "diet": "Plankton ve küçük algler",
-    "fact": "Zehirli deniz şakayıklarının dokunaçları arasında zarar görmeden yaşayabilir; bu sayede avcılardan korunur."
+    "fact": "Zehirli deniz şakayıklarının dokunaçları arasında zarar görmeden yaşayabilir; bu sayede avcılardan korunur.",
+    "story": "Bir zamanlar fırtınada yolunu kaybeden minik bir palyaço balığı, deniz şakayığının sıcak kollarında ömürlük yuvasını bulmuş."
   },
   {
     "id": "orange",
@@ -72,7 +74,8 @@
     ],
     "habitat": "Sakin göl tabanları ve sazlıklar",
     "diet": "Su bitkileri, böcek larvaları",
-    "fact": "Bıyık benzeri duyu organlarıyla çamurlu diplerde bile yiyecek bulabilir. Çok uzun ömürlü bir göl balığıdır."
+    "fact": "Bıyık benzeri duyu organlarıyla çamurlu diplerde bile yiyecek bulabilir. Çok uzun ömürlü bir göl balığıdır.",
+    "story": "İskelenin yaşlı bekçisi her sabah çayını yudumlarken bu turuncu sazanla göz göze gelir, ona 'Gölün Güneşi' dermiş."
   },
   {
     "id": "butterfly",
@@ -97,7 +100,8 @@
     ],
     "habitat": "Güneşli resifler ve berrak sular",
     "diet": "Mercan polipleri ve küçük omurgasızlar",
-    "fact": "İnce ve yassı gövdesi sayesinde dar kaya yarıklarına rahatça sığar. Çoğu tür ömür boyu tek eşli yaşar."
+    "fact": "İnce ve yassı gövdesi sayesinde dar kaya yarıklarına rahatça sığar. Çoğu tür ömür boyu tek eşli yaşar.",
+    "story": "Mercanların arasında kelebek gibi süzülürken gören şairler, sualtının da bir baharı olduğunu bu balık sayesinde yazmış."
   },
   {
     "id": "green",
@@ -122,7 +126,8 @@
     ],
     "habitat": "Yosunlu kayalıklar ve orta sular",
     "diet": "Küçük balıklar ve karidesler",
-    "fact": "Yosunların arasına kusursuz şekilde gizlenip ani bir hamleyle avını yakalar. Balıkçılar arasında direnciyle bilinir."
+    "fact": "Yosunların arasına kusursuz şekilde gizlenip ani bir hamleyle avını yakalar. Balıkçılar arasında direnciyle bilinir.",
+    "story": "Yosunların arasına saklanıp geçen balıkçıları izlemeyi o kadar severmiş ki, köylüler ona 'Gölün Meraklı Gözcüsü' adını takmış."
   },
   {
     "id": "blue",
@@ -147,7 +152,8 @@
     ],
     "habitat": "Orta derinlikteki kumlu ve kayalık dipler",
     "diet": "Midye, yengeç ve kabuklular",
-    "fact": "Güçlü çeneleriyle sert midye kabuklarını bile kolayca kırabilir. Akdeniz ve Ege'nin en değerli türlerindendir."
+    "fact": "Güçlü çeneleriyle sert midye kabuklarını bile kolayca kırabilir. Akdeniz ve Ege'nin en değerli türlerindendir.",
+    "story": "Güneş ışığı vurduğunda sırtı gökyüzü gibi parladığı için eski kaptanlar onu yakaladıkları gün rüzgarın uğurlu eseceğine inanırmış."
   },
   {
     "id": "barracuda",
@@ -172,7 +178,8 @@
     ],
     "habitat": "Açık orta sular ve resif kenarları",
     "diet": "Hızlı yüzen küçük balıklar",
-    "fact": "Saatlerce hareketsiz bekleyip bir anda saatte 40 km hıza ulaşarak avına saldırır. Parlak cisimlere karşı çok meraklıdır."
+    "fact": "Saatlerce hareketsiz bekleyip bir anda saatte 40 km hıza ulaşarak avına saldırır. Parlak cisimlere karşı çok meraklıdır.",
+    "story": "Bir balıkçının suya düşen gümüş kaşığını kapıp ok gibi kaybolduğu günden beri herkes parlayan eşyalarını sıkı tutarmış."
   },
   {
     "id": "red",
@@ -197,7 +204,8 @@
     ],
     "habitat": "Derin kayalıklar ve mercan yatakları",
     "diet": "Karides, ahtapot yavruları ve solucanlar",
-    "fact": "Kızıl-pembe rengi derin sularda neredeyse görünmez olmasını sağlar; kırmızı ışık derinlerde emildiği için kamufle olur."
+    "fact": "Kızıl-pembe rengi derin sularda neredeyse görünmez olmasını sağlar; kırmızı ışık derinlerde emildiği için kamufle olur.",
+    "story": "Gün batımının son kızıllığı suya değdiğinde bu balığın pulları alev gibi parlar, gölün altında saklı bir fener gibi yol gösterirmiş."
   },
   {
     "id": "stingray",
@@ -222,7 +230,8 @@
     ],
     "habitat": "Kumlu deniz tabanları ve mağara girişleri",
     "diet": "Yumuşakçalar, yengeç ve solucanlar",
-    "fact": "Vücudundaki parlak mavi benekler avcılara zehirli kuyruk dikeni konusunda bir uyarı işaretidir."
+    "fact": "Vücudundaki parlak mavi benekler avcılara zehirli kuyruk dikeni konusunda bir uyarı işaretidir.",
+    "story": "Mavi benekleri gece gökyüzündeki yıldız haritasına benzediği için eski denizciler ona 'Kumlu Diplerin Yıldızı' dermiş."
   },
   {
     "id": "puffer",
@@ -247,7 +256,8 @@
     ],
     "habitat": "Kayalık dipler ve yosunlu oyuklar",
     "diet": "Sert kabuklu salyangoz ve midyeler",
-    "fact": "Tehlike hissettiğinde su yutarak kendi boyutunun iki katına kadar şişer."
+    "fact": "Tehlike hissettiğinde su yutarak kendi boyutunun iki katına kadar şişer.",
+    "story": "Ne zaman biri ona şaka yapsa yanaklarını şişirip tombul bir topa döner, herkesi kahkahaya boğarmış."
   },
   {
     "id": "grey",
@@ -272,7 +282,8 @@
     ],
     "habitat": "Derin su bitkileri ve gölge alanlar",
     "diet": "Diğer balıklar ve kurbağalar",
-    "fact": "Ok gibi uzun vücuduyla tatlı suların sualtı füzesi olarak anılır. Keskin dişleri avının kaçmasını engeller."
+    "fact": "Ok gibi uzun vücuduyla tatlı suların sualtı füzesi olarak anılır. Keskin dişleri avının kaçmasını engeller.",
+    "story": "Sazlıkların gölgesinde saatlerce kıpırdamadan duruşu yüzünden genç balıkçılar onu sık sık batık bir dal parçası sanırmış."
   },
   {
     "id": "ray",
@@ -297,7 +308,8 @@
     ],
     "habitat": "Derin açık sular ve dip akıntıları",
     "diet": "İstiridye, deniz kestanesi ve yengeçler",
-    "fact": "Geniş yüzgeçlerini tıpkı bir kuşun kanatları gibi çırparak su içinde süzülür."
+    "fact": "Geniş yüzgeçlerini tıpkı bir kuşun kanatları gibi çırparak su içinde süzülür.",
+    "story": "Dolunaylı gecelerde sudan sıçrayıp havada süzüldüğünü görenler, gölde uçan bir hayalet gördüklerini anlatırmış."
   },
   {
     "id": "shark",
@@ -322,7 +334,8 @@
     ],
     "habitat": "Derin resif yamaçları ve karanlık sular",
     "diet": "Orta boy balıklar ve kafadanbacaklılar",
-    "fact": "Sudaki en ufak titreşimi bile yüzlerce metre öteden algılayabilen hassas elektro-reseptörlere sahiptir."
+    "fact": "Sudaki en ufak titreşimi bile yüzlerce metre öteden algılayabilen hassas elektro-reseptörlere sahiptir.",
+    "story": "Resifin sessiz koruyucusu olarak bilinir; onun geçtiği yerde kavga eden tüm balıklar bir anda uslanırmış."
   },
   {
     "id": "eel",
@@ -348,7 +361,8 @@
     "tint": "#5d6b8a",
     "habitat": "Karanlık dip yarıkları ve çamurlu kovuklar",
     "diet": "Gece avlanan küçük balıklar ve kabuklular",
-    "fact": "Üremek için binlerce kilometrelik okyanus yolculuğu yapan gizemli bir göçmendir. Geceleri çok daha aktiftir."
+    "fact": "Üremek için binlerce kilometrelik okyanus yolculuğu yapan gizemli bir göçmendir. Geceleri çok daha aktiftir.",
+    "story": "Yağmurlu gecelerde gölün en derin taşlarının altından çıkıp eski bir ninni gibi süzülerek göç yolunu ararmış."
   },
   {
     "id": "king",
@@ -375,7 +389,8 @@
     "night": 2.5,
     "habitat": "En derin abis çukurları (125m+)",
     "diet": "Derin deniz krilleri ve küçük balıklar",
-    "fact": "Efsanelere konu olan devasa altın parıltılı derinlik hükümdarı. Özellikle geceleri yüzeye yaklaşır."
+    "fact": "Efsanelere konu olan devasa altın parıltılı derinlik hükümdarı. Özellikle geceleri yüzeye yaklaşır.",
+    "story": "Yüzyılda bir gece yarısı altın parıltısıyla yüzeye yaklaştığında, onu gören balıkçının hayat boyu şansının açık olacağına inanılırmış."
   },
   {
     "id": "p_abramis_brama",
@@ -400,7 +415,8 @@
     ],
     "habitat": "Sakin göl dipleri",
     "diet": "Dip kurtçukları ve su bitkileri",
-    "fact": "Yassı ve gümüşi gövdesiyle kalabalık sürüler halinde göl tabanında beslenir."
+    "fact": "Yassı ve gümüşi gövdesiyle kalabalık sürüler halinde göl tabanında beslenir.",
+    "story": "Koleksiyoncu Leyla'nın eski defterinde Çapak için 'suyun altındaki saklı mücevher' diye not düşülmüş."
   },
   {
     "id": "p_abudefduf_saxatilis",
@@ -425,7 +441,8 @@
     ],
     "habitat": "Sığ kayalıklar ve mercan kenarları",
     "diet": "Yosunlar, plankton ve küçük kabuklular",
-    "fact": "Yanlarındaki dikey koyu şeritler askeri rütbe çizgilerine benzediği için Çavuş Balığı adını almıştır."
+    "fact": "Yanlarındaki dikey koyu şeritler askeri rütbe çizgilerine benzediği için Çavuş Balığı adını almıştır.",
+    "story": "Fırtınadan sonra göl durulduğunda Çavuş Balığı ilk kez su üstüne göz kırpar, balıkçılara havanın açtığını müjdelermiş."
   },
   {
     "id": "p_abudefduf_sexfasciatus",
@@ -450,7 +467,8 @@
     ],
     "habitat": "Sığ kayalıklar ve mercan kenarları",
     "diet": "Yosunlar, plankton ve küçük kabuklular",
-    "fact": "Yanlarındaki dikey koyu şeritler askeri rütbe çizgilerine benzediği için Çavuş Balığı adını almıştır."
+    "fact": "Yanlarındaki dikey koyu şeritler askeri rütbe çizgilerine benzediği için Çavuş Balığı adını almıştır.",
+    "story": "Eski bir göl masalına göre Çavuş Balığı, batık hazine sandıklarının yerini bilen en zeki rehberlerden biriymiş."
   },
   {
     "id": "p_abudefduf_sordidus",
@@ -475,7 +493,8 @@
     ],
     "habitat": "Sığ kayalıklar ve mercan kenarları",
     "diet": "Yosunlar, plankton ve küçük kabuklular",
-    "fact": "Yanlarındaki dikey koyu şeritler askeri rütbe çizgilerine benzediği için Çavuş Balığı adını almıştır."
+    "fact": "Yanlarındaki dikey koyu şeritler askeri rütbe çizgilerine benzediği için Çavuş Balığı adını almıştır.",
+    "story": "Kaptan Osman gençliğinde Çavuş Balığı peşinde tam üç gün kürek çekmiş ama sonunda ona hayran kalıp serbest bırakmış."
   },
   {
     "id": "p_abudefduf_troschelii",
@@ -500,7 +519,8 @@
     ],
     "habitat": "Sığ kayalıklar ve mercan kenarları",
     "diet": "Yosunlar, plankton ve küçük kabuklular",
-    "fact": "Yanlarındaki dikey koyu şeritler askeri rütbe çizgilerine benzediği için Çavuş Balığı adını almıştır."
+    "fact": "Yanlarındaki dikey koyu şeritler askeri rütbe çizgilerine benzediği için Çavuş Balığı adını almıştır.",
+    "story": "Ay ışığı suya vurduğunda Çavuş Balığı pullarıyla gümüş izler bırakır, gölün sessizliğini masalsı bir tabloya çevirirmiş."
   },
   {
     "id": "p_abudefduf_vagiensis",
@@ -525,7 +545,8 @@
     ],
     "habitat": "Sığ kayalıklar ve mercan kenarları",
     "diet": "Yosunlar, plankton ve küçük kabuklular",
-    "fact": "Yanlarındaki dikey koyu şeritler askeri rütbe çizgilerine benzediği için Çavuş Balığı adını almıştır."
+    "fact": "Yanlarındaki dikey koyu şeritler askeri rütbe çizgilerine benzediği için Çavuş Balığı adını almıştır.",
+    "story": "Yaşlı balıkçılar Çavuş Balığı yakalandığı gün gölde huzurun ve bereketin hiç eksik olmayacağına inanırmış."
   },
   {
     "id": "p_acanthurus_coerulus",
@@ -550,7 +571,8 @@
     ],
     "habitat": "Mercan resifleri",
     "diet": "Resif üzerindeki yosunlar",
-    "fact": "Adını kuyruğunun iki yanındaki neşter kadar keskin savunma dikenlerinden alır."
+    "fact": "Adını kuyruğunun iki yanındaki neşter kadar keskin savunma dikenlerinden alır.",
+    "story": "Bir zamanlar mercan resifleri boyunca yolunu arayan bir kaşif, parıltısı sayesinde yolunu Cerrah Balığı ile bulmuş."
   },
   {
     "id": "p_acanthurus_lineatus",
@@ -575,7 +597,8 @@
     ],
     "habitat": "Mercan resifleri",
     "diet": "Resif üzerindeki yosunlar",
-    "fact": "Adını kuyruğunun iki yanındaki neşter kadar keskin savunma dikenlerinden alır."
+    "fact": "Adını kuyruğunun iki yanındaki neşter kadar keskin savunma dikenlerinden alır.",
+    "story": "Pazar tezgahındaki Şef Hüseyin, Cerrah Balığı gördüğünde gözleri parlar ve hemen en gizli baharat kutusunu çıkarırmış."
   },
   {
     "id": "p_acanthurus_nigrofuscus",
@@ -600,7 +623,8 @@
     ],
     "habitat": "Mercan resifleri",
     "diet": "Resif üzerindeki yosunlar",
-    "fact": "Adını kuyruğunun iki yanındaki neşter kadar keskin savunma dikenlerinden alır."
+    "fact": "Adını kuyruğunun iki yanındaki neşter kadar keskin savunma dikenlerinden alır.",
+    "story": "Kedi Minnoş iskelenin ucunda patisini suya uzatıp saatlerce Cerrah Balığı ile saklambaç oynamaya bayılırmış."
   },
   {
     "id": "p_acanthurus_olivaceus",
@@ -625,7 +649,8 @@
     ],
     "habitat": "Mercan resifleri",
     "diet": "Resif üzerindeki yosunlar",
-    "fact": "Adını kuyruğunun iki yanındaki neşter kadar keskin savunma dikenlerinden alır."
+    "fact": "Adını kuyruğunun iki yanındaki neşter kadar keskin savunma dikenlerinden alır.",
+    "story": "Rivayete göre şafak vakti su yüzeyinde halka gören herkes, altında Cerrah Balığı dans ettiğini bilirmiş."
   },
   {
     "id": "p_acanthurus_sandvicensis",
@@ -650,7 +675,8 @@
     ],
     "habitat": "Mercan resifleri",
     "diet": "Resif üzerindeki yosunlar",
-    "fact": "Adını kuyruğunun iki yanındaki neşter kadar keskin savunma dikenlerinden alır."
+    "fact": "Adını kuyruğunun iki yanındaki neşter kadar keskin savunma dikenlerinden alır.",
+    "story": "Koleksiyoncu Leyla'nın eski defterinde Cerrah Balığı için 'suyun altındaki saklı mücevher' diye not düşülmüş."
   },
   {
     "id": "p_acanthurus_tractus",
@@ -675,7 +701,8 @@
     ],
     "habitat": "Mercan resifleri",
     "diet": "Resif üzerindeki yosunlar",
-    "fact": "Adını kuyruğunun iki yanındaki neşter kadar keskin savunma dikenlerinden alır."
+    "fact": "Adını kuyruğunun iki yanındaki neşter kadar keskin savunma dikenlerinden alır.",
+    "story": "Fırtınadan sonra göl durulduğunda Cerrah Balığı ilk kez su üstüne göz kırpar, balıkçılara havanın açtığını müjdelermiş."
   },
   {
     "id": "p_acanthurus_triostegus",
@@ -700,7 +727,8 @@
     ],
     "habitat": "Mercan resifleri",
     "diet": "Resif üzerindeki yosunlar",
-    "fact": "Adını kuyruğunun iki yanındaki neşter kadar keskin savunma dikenlerinden alır."
+    "fact": "Adını kuyruğunun iki yanındaki neşter kadar keskin savunma dikenlerinden alır.",
+    "story": "Eski bir göl masalına göre Cerrah Balığı, batık hazine sandıklarının yerini bilen en zeki rehberlerden biriymiş."
   },
   {
     "id": "p_aetobatus_ocellatus",
@@ -725,7 +753,8 @@
     ],
     "habitat": "Derin açık sular",
     "diet": "İstiridye, deniz kestanesi ve yengeçler",
-    "fact": "Geniş yüzgeçlerini kanat gibi çırparak su içinde süzülür; sert kabukları güçlü çenesiyle kırar."
+    "fact": "Geniş yüzgeçlerini kanat gibi çırparak su içinde süzülür; sert kabukları güçlü çenesiyle kırar.",
+    "story": "Kaptan Osman gençliğinde Kartal Vatozu peşinde tam üç gün kürek çekmiş ama sonunda ona hayran kalıp serbest bırakmış."
   },
   {
     "id": "p_aluterus_scriptus",
@@ -750,7 +779,8 @@
     ],
     "habitat": "Mercan bahçeleri ve yosun yatakları",
     "diet": "Algler, süngerler ve küçük canlılar",
-    "fact": "Baş aşağı yüzerek kendini deniz yosunlarının arasına ustalıkla gizler."
+    "fact": "Baş aşağı yüzerek kendini deniz yosunlarının arasına ustalıkla gizler.",
+    "story": "Ay ışığı suya vurduğunda Eğrelti Balığı pullarıyla gümüş izler bırakır, gölün sessizliğini masalsı bir tabloya çevirirmiş."
   },
   {
     "id": "p_amboplites_rupestris",
@@ -775,7 +805,8 @@
     ],
     "habitat": "Kayalık göl kıyıları",
     "diet": "Küçük balıklar ve su böcekleri",
-    "fact": "Kırmızı gözleriyle tanınır; kayaların gölgesinde bekleyip yeme aniden atlar."
+    "fact": "Kırmızı gözleriyle tanınır; kayaların gölgesinde bekleyip yeme aniden atlar.",
+    "story": "Yaşlı balıkçılar Kaya Levreği yakalandığı gün gölde huzurun ve bereketin hiç eksik olmayacağına inanırmış."
   },
   {
     "id": "p_ameiurus_melas",
@@ -800,7 +831,8 @@
     ],
     "habitat": "Derin ve bulanık göl dipleri",
     "diet": "Solucan, kabuklular ve küçük balıklar",
-    "fact": "Uzun hassas bıyıkları sayesinde zifiri karanlıkta bile tabandaki hareketi hisseder."
+    "fact": "Uzun hassas bıyıkları sayesinde zifiri karanlıkta bile tabandaki hareketi hisseder.",
+    "story": "Bir zamanlar derin ve bulanık göl dipleri boyunca yolunu arayan bir kaşif, parıltısı sayesinde yolunu Kedi Balığı ile bulmuş."
   },
   {
     "id": "p_ameiurus_nebulosus",
@@ -825,7 +857,8 @@
     ],
     "habitat": "Derin ve bulanık göl dipleri",
     "diet": "Solucan, kabuklular ve küçük balıklar",
-    "fact": "Uzun hassas bıyıkları sayesinde zifiri karanlıkta bile tabandaki hareketi hisseder."
+    "fact": "Uzun hassas bıyıkları sayesinde zifiri karanlıkta bile tabandaki hareketi hisseder.",
+    "story": "Pazar tezgahındaki Şef Hüseyin, Kedi Balığı gördüğünde gözleri parlar ve hemen en gizli baharat kutusunu çıkarırmış."
   },
   {
     "id": "p_amphiprion_clarkii",
@@ -850,7 +883,8 @@
     ],
     "habitat": "Sığ mercanlar ve deniz şakayıkları",
     "diet": "Plankton ve küçük algler",
-    "fact": "Zehirli deniz şakayıklarının dokunaçları arasında zarar görmeden yaşar."
+    "fact": "Zehirli deniz şakayıklarının dokunaçları arasında zarar görmeden yaşar.",
+    "story": "Kedi Minnoş iskelenin ucunda patisini suya uzatıp saatlerce Palyaço Balığı ile saklambaç oynamaya bayılırmış."
   },
   {
     "id": "p_amphiprion_ocellaris",
@@ -875,7 +909,8 @@
     ],
     "habitat": "Sığ mercanlar ve deniz şakayıkları",
     "diet": "Plankton ve küçük algler",
-    "fact": "Zehirli deniz şakayıklarının dokunaçları arasında zarar görmeden yaşar."
+    "fact": "Zehirli deniz şakayıklarının dokunaçları arasında zarar görmeden yaşar.",
+    "story": "Rivayete göre şafak vakti su yüzeyinde halka gören herkes, altında Palyaço Balığı dans ettiğini bilirmiş."
   },
   {
     "id": "p_anguilla_anguilla",
@@ -900,7 +935,8 @@
     ],
     "habitat": "Derin çamurlu dipler ve yarıklar",
     "diet": "Küçük balıklar ve solucanlar",
-    "fact": "Kıvrak vücuduyla dar yarıklara sığar; yağmurlu ve karanlık gecelerde avlanır."
+    "fact": "Kıvrak vücuduyla dar yarıklara sığar; yağmurlu ve karanlık gecelerde avlanır.",
+    "story": "Koleksiyoncu Leyla'nın eski defterinde Yılan Balığı için 'suyun altındaki saklı mücevher' diye not düşülmüş."
   },
   {
     "id": "p_anguilla_rostrata",
@@ -925,7 +961,8 @@
     ],
     "habitat": "Derin çamurlu dipler ve yarıklar",
     "diet": "Küçük balıklar ve solucanlar",
-    "fact": "Kıvrak vücuduyla dar yarıklara sığar; yağmurlu ve karanlık gecelerde avlanır."
+    "fact": "Kıvrak vücuduyla dar yarıklara sığar; yağmurlu ve karanlık gecelerde avlanır.",
+    "story": "Fırtınadan sonra göl durulduğunda Yılan Balığı ilk kez su üstüne göz kırpar, balıkçılara havanın açtığını müjdelermiş."
   },
   {
     "id": "p_anisotremus_virginicus",
@@ -950,7 +987,8 @@
     ],
     "habitat": "Kayalık resifler",
     "diet": "Yengeç, midye ve deniz kestaneleri",
-    "fact": "Sarı-siyah çizgili gövdesiyle tanınır; güçlü dişleriyle sert kabukları kırar."
+    "fact": "Sarı-siyah çizgili gövdesiyle tanınır; güçlü dişleriyle sert kabukları kırar.",
+    "story": "Eski bir göl masalına göre Domuz Balığı, batık hazine sandıklarının yerini bilen en zeki rehberlerden biriymiş."
   },
   {
     "id": "p_anoplarchus_purpurescens",
@@ -975,7 +1013,8 @@
     ],
     "habitat": "Kayalık sığ kıyılar",
     "diet": "Küçük kabuklular ve yosunlar",
-    "fact": "Başındaki küçük taç benzeri çıkıntıyla tanınır; kaya yarıklarına gizlenir."
+    "fact": "Başındaki küçük taç benzeri çıkıntıyla tanınır; kaya yarıklarına gizlenir.",
+    "story": "Kaptan Osman gençliğinde Tepeli Horozbina peşinde tam üç gün kürek çekmiş ama sonunda ona hayran kalıp serbest bırakmış."
   },
   {
     "id": "p_aplodinotus_grunniens",
@@ -1000,7 +1039,8 @@
     ],
     "habitat": "Büyük göllerin orta ve derin suları",
     "diet": "Midye, kerevit ve böcek larvaları",
-    "fact": "Hava kesesini titreştirerek su altında davul sesi gibi yankılanan sesler çıkarır."
+    "fact": "Hava kesesini titreştirerek su altında davul sesi gibi yankılanan sesler çıkarır.",
+    "story": "Ay ışığı suya vurduğunda Tatlısu Davulcusu pullarıyla gümüş izler bırakır, gölün sessizliğini masalsı bir tabloya çevirirmiş."
   },
   {
     "id": "p_archosargus_probatocephalus",
@@ -1025,7 +1065,8 @@
     ],
     "habitat": "İskele ayakları ve kayalık kıyılar",
     "diet": "Midye, istiridye ve yengeçler",
-    "fact": "İnsan dişine şaşırtıcı derecede benzeyen azı dişleriyle sert kabukları kırar."
+    "fact": "İnsan dişine şaşırtıcı derecede benzeyen azı dişleriyle sert kabukları kırar.",
+    "story": "Yaşlı balıkçılar Koyunbaşı Balığı yakalandığı gün gölde huzurun ve bereketin hiç eksik olmayacağına inanırmış."
   },
   {
     "id": "p_arothron_hispidus",
@@ -1050,7 +1091,8 @@
     ],
     "habitat": "Mercan yarıkları ve derin resifler",
     "diet": "Sert kabuklu yumuşakçalar",
-    "fact": "Tehlike anında su yutarak yuvarlak bir top gibi şişer ve avcıları caydırır."
+    "fact": "Tehlike anında su yutarak yuvarlak bir top gibi şişer ve avcıları caydırır.",
+    "story": "Bir zamanlar mercan yarıkları ve derin resifler boyunca yolunu arayan bir kaşif, parıltısı sayesinde yolunu Kirpi Balığı ile bulmuş."
   },
   {
     "id": "p_arothron_meleagris",
@@ -1075,7 +1117,8 @@
     ],
     "habitat": "Mercan yarıkları ve derin resifler",
     "diet": "Sert kabuklu yumuşakçalar",
-    "fact": "Tehlike anında su yutarak yuvarlak bir top gibi şişer ve avcıları caydırır."
+    "fact": "Tehlike anında su yutarak yuvarlak bir top gibi şişer ve avcıları caydırır.",
+    "story": "Pazar tezgahındaki Şef Hüseyin, Kirpi Balığı gördüğünde gözleri parlar ve hemen en gizli baharat kutusunu çıkarırmış."
   },
   {
     "id": "p_arothron_nigropunctatus",
@@ -1100,7 +1143,8 @@
     ],
     "habitat": "Mercan yarıkları ve derin resifler",
     "diet": "Sert kabuklu yumuşakçalar",
-    "fact": "Tehlike anında su yutarak yuvarlak bir top gibi şişer ve avcıları caydırır."
+    "fact": "Tehlike anında su yutarak yuvarlak bir top gibi şişer ve avcıları caydırır.",
+    "story": "Kedi Minnoş iskelenin ucunda patisini suya uzatıp saatlerce Kirpi Balığı ile saklambaç oynamaya bayılırmış."
   },
   {
     "id": "p_aulostomus_chinensis",
@@ -1125,7 +1169,8 @@
     ],
     "habitat": "Mercan resifleri ve dikey duvarlar",
     "diet": "Küçük resif balıkları",
-    "fact": "Avına yaklaşırken büyük balıkların arkasına saklanarak kusursuzca kamufle olur."
+    "fact": "Avına yaklaşırken büyük balıkların arkasına saklanarak kusursuzca kamufle olur.",
+    "story": "Rivayete göre şafak vakti su yüzeyinde halka gören herkes, altında Trompet Balığı dans ettiğini bilirmiş."
   },
   {
     "id": "p_aulostomus_maculatus",
@@ -1150,7 +1195,8 @@
     ],
     "habitat": "Mercan resifleri ve dikey duvarlar",
     "diet": "Küçük resif balıkları",
-    "fact": "Avına yaklaşırken büyük balıkların arkasına saklanarak kusursuzca kamufle olur."
+    "fact": "Avına yaklaşırken büyük balıkların arkasına saklanarak kusursuzca kamufle olur.",
+    "story": "Koleksiyoncu Leyla'nın eski defterinde Trompet Balığı için 'suyun altındaki saklı mücevher' diye not düşülmüş."
   },
   {
     "id": "p_balistapus_undulatus",
@@ -1175,7 +1221,8 @@
     ],
     "habitat": "Derin resif yamaçları",
     "diet": "Deniz kestanesi ve yengeçler",
-    "fact": "Sırtındaki dikeni kilitleyerek kaya yarıklarından çekilmesini imkansız hale getirir."
+    "fact": "Sırtındaki dikeni kilitleyerek kaya yarıklarından çekilmesini imkansız hale getirir.",
+    "story": "Fırtınadan sonra göl durulduğunda Çizgili Tetik Balığı ilk kez su üstüne göz kırpar, balıkçılara havanın açtığını müjdelermiş."
   },
   {
     "id": "p_balistoides_conspicillum",
@@ -1200,7 +1247,8 @@
     ],
     "habitat": "Mercan resifleri ve derin kayalıklar",
     "diet": "Deniz kestanesi, yengeç ve mercanlar",
-    "fact": "Sırtındaki birinci dikeni ikinci dikenle kilitleyebilir; adını bu mekanizmadan alır."
+    "fact": "Sırtındaki birinci dikeni ikinci dikenle kilitleyebilir; adını bu mekanizmadan alır.",
+    "story": "Eski bir göl masalına göre Tetik Balığı, batık hazine sandıklarının yerini bilen en zeki rehberlerden biriymiş."
   },
   {
     "id": "p_balistoides_viridescens",
@@ -1225,7 +1273,8 @@
     ],
     "habitat": "Mercan resifleri ve derin kayalıklar",
     "diet": "Deniz kestanesi, yengeç ve mercanlar",
-    "fact": "Sırtındaki birinci dikeni ikinci dikenle kilitleyebilir; adını bu mekanizmadan alır."
+    "fact": "Sırtındaki birinci dikeni ikinci dikenle kilitleyebilir; adını bu mekanizmadan alır.",
+    "story": "Kaptan Osman gençliğinde Tetik Balığı peşinde tam üç gün kürek çekmiş ama sonunda ona hayran kalıp serbest bırakmış."
   },
   {
     "id": "p_bodianus_diplotaenia",
@@ -1250,7 +1299,8 @@
     ],
     "habitat": "Kayalık orta sular",
     "diet": "Kabuklular ve küçük deniz canlıları",
-    "fact": "Büyüdükçe renk ve desen değiştirebilen dirençli bir lapin türüdür."
+    "fact": "Büyüdükçe renk ve desen değiştirebilen dirençli bir lapin türüdür.",
+    "story": "Ay ışığı suya vurduğunda Kaya Lapini pullarıyla gümüş izler bırakır, gölün sessizliğini masalsı bir tabloya çevirirmiş."
   },
   {
     "id": "p_bothus_podus",
@@ -1275,7 +1325,8 @@
     ],
     "habitat": "Kumlu ve çakıllı dipler",
     "diet": "Dip kabukluları ve küçük balıklar",
-    "fact": "İki gözü de vücudunun aynı tarafındadır; saniyeler içinde zeminin rengini taklit eder."
+    "fact": "İki gözü de vücudunun aynı tarafındadır; saniyeler içinde zeminin rengini taklit eder.",
+    "story": "Yaşlı balıkçılar Pisi Balığı yakalandığı gün gölde huzurun ve bereketin hiç eksik olmayacağına inanırmış."
   },
   {
     "id": "p_brevoortia_tyrannus",
@@ -1300,7 +1351,8 @@
     ],
     "habitat": "Açık kıyı suları",
     "diet": "Fitoplankton ve mikroskobik canlılar",
-    "fact": "Büyük sürüler halinde yüzerek suyu süzgeç gibi filtreler."
+    "fact": "Büyük sürüler halinde yüzerek suyu süzgeç gibi filtreler.",
+    "story": "Bir zamanlar açık kıyı suları boyunca yolunu arayan bir kaşif, parıltısı sayesinde yolunu Gümüş Tirsi ile bulmuş."
   },
   {
     "id": "p_campostoma_anomalum",
@@ -1325,7 +1377,8 @@
     ],
     "habitat": "Akıntılı taşlık dereler",
     "diet": "Taş üzerindeki algler",
-    "fact": "Alt çenesindeki sert kenarla kayaların üzerindeki yosunları kazıyarak beslenir."
+    "fact": "Alt çenesindeki sert kenarla kayaların üzerindeki yosunları kazıyarak beslenir.",
+    "story": "Pazar tezgahındaki Şef Hüseyin, Taş Kazıyan gördüğünde gözleri parlar ve hemen en gizli baharat kutusunu çıkarırmış."
   },
   {
     "id": "p_canthigaster_valentini",
@@ -1350,7 +1403,8 @@
     ],
     "habitat": "Mercan bahçeleri ve lagünler",
     "diet": "Yosunlar ve küçük kabuklular",
-    "fact": "Zehirli derisi sayesinde diğer zararsız balıklar bile ona benzeyerek korunur."
+    "fact": "Zehirli derisi sayesinde diğer zararsız balıklar bile ona benzeyerek korunur.",
+    "story": "Kedi Minnoş iskelenin ucunda patisini suya uzatıp saatlerce Eyerli Balon Balığı ile saklambaç oynamaya bayılırmış."
   },
   {
     "id": "p_caranx_ignobilis",
@@ -1375,7 +1429,8 @@
     ],
     "habitat": "Açık derin sular ve resif kenarları",
     "diet": "Sürü halindeki küçük balıklar",
-    "fact": "Güçlü kas yapısıyla oltaya vurduğunda uzun ve zorlu bir mücadele verir."
+    "fact": "Güçlü kas yapısıyla oltaya vurduğunda uzun ve zorlu bir mücadele verir.",
+    "story": "Rivayete göre şafak vakti su yüzeyinde halka gören herkes, altında Akya dans ettiğini bilirmiş."
   },
   {
     "id": "p_caranx_melampygus",
@@ -1400,7 +1455,8 @@
     ],
     "habitat": "Açık derin sular ve resif kenarları",
     "diet": "Sürü halindeki küçük balıklar",
-    "fact": "Güçlü kas yapısıyla oltaya vurduğunda uzun ve zorlu bir mücadele verir."
+    "fact": "Güçlü kas yapısıyla oltaya vurduğunda uzun ve zorlu bir mücadele verir.",
+    "story": "Koleksiyoncu Leyla'nın eski defterinde Akya için 'suyun altındaki saklı mücevher' diye not düşülmüş."
   },
   {
     "id": "p_caranx_ruber",
@@ -1425,7 +1481,8 @@
     ],
     "habitat": "Açık derin sular ve resif kenarları",
     "diet": "Sürü halindeki küçük balıklar",
-    "fact": "Güçlü kas yapısıyla oltaya vurduğunda uzun ve zorlu bir mücadele verir."
+    "fact": "Güçlü kas yapısıyla oltaya vurduğunda uzun ve zorlu bir mücadele verir.",
+    "story": "Fırtınadan sonra göl durulduğunda Akya ilk kez su üstüne göz kırpar, balıkçılara havanın açtığını müjdelermiş."
   },
   {
     "id": "p_carassius_auratus",
@@ -1450,7 +1507,8 @@
     ],
     "habitat": "Sakin göletler ve sazlıklar",
     "diet": "Bitkiler ve böcek larvaları",
-    "fact": "Oksijenin çok düşük olduğu sulara bile dayanabilen son derece dirençli bir türdür."
+    "fact": "Oksijenin çok düşük olduğu sulara bile dayanabilen son derece dirençli bir türdür.",
+    "story": "Eski bir göl masalına göre Altın Sazan, batık hazine sandıklarının yerini bilen en zeki rehberlerden biriymiş."
   },
   {
     "id": "p_carassius_gibelio",
@@ -1475,7 +1533,8 @@
     ],
     "habitat": "Sakin göletler ve sazlıklar",
     "diet": "Bitkiler ve böcek larvaları",
-    "fact": "Oksijenin çok düşük olduğu sulara bile dayanabilen son derece dirençli bir türdür."
+    "fact": "Oksijenin çok düşük olduğu sulara bile dayanabilen son derece dirençli bir türdür.",
+    "story": "Kaptan Osman gençliğinde Altın Sazan peşinde tam üç gün kürek çekmiş ama sonunda ona hayran kalıp serbest bırakmış."
   },
   {
     "id": "p_carcharhinus_melanopterus",
@@ -1500,7 +1559,8 @@
     ],
     "habitat": "Derin resif yamaçları",
     "diet": "Orta boy balıklar ve kafadanbacaklılar",
-    "fact": "Siyah uçlu yüzgeçleriyle tanınır; sudaki en ufak titreşimi bile algılar."
+    "fact": "Siyah uçlu yüzgeçleriyle tanınır; sudaki en ufak titreşimi bile algılar.",
+    "story": "Ay ışığı suya vurduğunda Resif Köpekbalığı pullarıyla gümüş izler bırakır, gölün sessizliğini masalsı bir tabloya çevirirmiş."
   },
   {
     "id": "p_carcharias_taurus",
@@ -1525,7 +1585,8 @@
     ],
     "habitat": "Derin kumlu yamaçlar",
     "diet": "Orta boy balıklar ve vatozlar",
-    "fact": "Hava yutarak su içinde hiç çaba harcamadan askıda kalabilen tek köpekbalığı türüdür."
+    "fact": "Hava yutarak su içinde hiç çaba harcamadan askıda kalabilen tek köpekbalığı türüdür.",
+    "story": "Yaşlı balıkçılar Kum Kaplanı Köpekbalığı yakalandığı gün gölde huzurun ve bereketin hiç eksik olmayacağına inanırmış."
   },
   {
     "id": "p_catostomus_commersonii",
@@ -1550,7 +1611,8 @@
     ],
     "habitat": "Serin göl dipleri ve nehir yatakları",
     "diet": "Dip böcekleri ve yumuşakçalar",
-    "fact": "Aşağıya bakan emici ağzıyla tabandaki çakılların arasından yiyecek toplar."
+    "fact": "Aşağıya bakan emici ağzıyla tabandaki çakılların arasından yiyecek toplar.",
+    "story": "Bir zamanlar serin göl dipleri ve nehir yatakları boyunca yolunu arayan bir kaşif, parıltısı sayesinde yolunu Dip Sazanı ile bulmuş."
   },
   {
     "id": "p_centropyge_bicolor",
@@ -1575,7 +1637,8 @@
     ],
     "habitat": "Mercan resiflerinin gölgeli oyukları",
     "diet": "İnce algler ve küçük kabuklular",
-    "fact": "Parlak sarı ve lacivert kontrastıyla resiflerin en göz alıcı sakinlerindendir."
+    "fact": "Parlak sarı ve lacivert kontrastıyla resiflerin en göz alıcı sakinlerindendir.",
+    "story": "Pazar tezgahındaki Şef Hüseyin, Cüce Melek Balığı gördüğünde gözleri parlar ve hemen en gizli baharat kutusunu çıkarırmış."
   },
   {
     "id": "p_cephalopholis_argus",
@@ -1600,7 +1663,8 @@
     ],
     "habitat": "Mercan mağaraları ve derin kovuklar",
     "diet": "Küçük resif balıkları ve karidesler",
-    "fact": "Kırmızı gövdesi üzerindeki mavi benekler derin sularda büyüleyici görünür."
+    "fact": "Kırmızı gövdesi üzerindeki mavi benekler derin sularda büyüleyici görünür.",
+    "story": "Kedi Minnoş iskelenin ucunda patisini suya uzatıp saatlerce Kızıldeniz Hanisi ile saklambaç oynamaya bayılırmış."
   },
   {
     "id": "p_cephalopholis_miniata",
@@ -1625,7 +1689,8 @@
     ],
     "habitat": "Mercan mağaraları ve derin kovuklar",
     "diet": "Küçük resif balıkları ve karidesler",
-    "fact": "Kırmızı gövdesi üzerindeki mavi benekler derin sularda büyüleyici görünür."
+    "fact": "Kırmızı gövdesi üzerindeki mavi benekler derin sularda büyüleyici görünür.",
+    "story": "Rivayete göre şafak vakti su yüzeyinde halka gören herkes, altında Kızıldeniz Hanisi dans ettiğini bilirmiş."
   },
   {
     "id": "p_chaetodon_auriga",
@@ -1650,7 +1715,8 @@
     ],
     "habitat": "Güneşli mercan resifleri",
     "diet": "Mercan polipleri ve deniz solucanları",
-    "fact": "Kuyruğundaki göz benzeri siyah benek, avcıları başının nerede olduğu konusunda şaşırtır."
+    "fact": "Kuyruğundaki göz benzeri siyah benek, avcıları başının nerede olduğu konusunda şaşırtır.",
+    "story": "Koleksiyoncu Leyla'nın eski defterinde Kelebek Balığı için 'suyun altındaki saklı mücevher' diye not düşülmüş."
   },
   {
     "id": "p_chaetodon_kleinii",
@@ -1675,7 +1741,8 @@
     ],
     "habitat": "Güneşli mercan resifleri",
     "diet": "Mercan polipleri ve deniz solucanları",
-    "fact": "Kuyruğundaki göz benzeri siyah benek, avcıları başının nerede olduğu konusunda şaşırtır."
+    "fact": "Kuyruğundaki göz benzeri siyah benek, avcıları başının nerede olduğu konusunda şaşırtır.",
+    "story": "Fırtınadan sonra göl durulduğunda Kelebek Balığı ilk kez su üstüne göz kırpar, balıkçılara havanın açtığını müjdelermiş."
   },
   {
     "id": "p_chaetodon_lunula",
@@ -1700,7 +1767,8 @@
     ],
     "habitat": "Güneşli mercan resifleri",
     "diet": "Mercan polipleri ve deniz solucanları",
-    "fact": "Kuyruğundaki göz benzeri siyah benek, avcıları başının nerede olduğu konusunda şaşırtır."
+    "fact": "Kuyruğundaki göz benzeri siyah benek, avcıları başının nerede olduğu konusunda şaşırtır.",
+    "story": "Eski bir göl masalına göre Kelebek Balığı, batık hazine sandıklarının yerini bilen en zeki rehberlerden biriymiş."
   },
   {
     "id": "p_chaetodon_lunulatus",
@@ -1725,7 +1793,8 @@
     ],
     "habitat": "Güneşli mercan resifleri",
     "diet": "Mercan polipleri ve deniz solucanları",
-    "fact": "Kuyruğundaki göz benzeri siyah benek, avcıları başının nerede olduğu konusunda şaşırtır."
+    "fact": "Kuyruğundaki göz benzeri siyah benek, avcıları başının nerede olduğu konusunda şaşırtır.",
+    "story": "Kaptan Osman gençliğinde Kelebek Balığı peşinde tam üç gün kürek çekmiş ama sonunda ona hayran kalıp serbest bırakmış."
   },
   {
     "id": "p_chaetodon_ornatissimus",
@@ -1750,7 +1819,8 @@
     ],
     "habitat": "Güneşli mercan resifleri",
     "diet": "Mercan polipleri ve deniz solucanları",
-    "fact": "Kuyruğundaki göz benzeri siyah benek, avcıları başının nerede olduğu konusunda şaşırtır."
+    "fact": "Kuyruğundaki göz benzeri siyah benek, avcıları başının nerede olduğu konusunda şaşırtır.",
+    "story": "Ay ışığı suya vurduğunda Kelebek Balığı pullarıyla gümüş izler bırakır, gölün sessizliğini masalsı bir tabloya çevirirmiş."
   },
   {
     "id": "p_chaetodon_striatus",
@@ -1775,7 +1845,8 @@
     ],
     "habitat": "Güneşli mercan resifleri",
     "diet": "Mercan polipleri ve deniz solucanları",
-    "fact": "Kuyruğundaki göz benzeri siyah benek, avcıları başının nerede olduğu konusunda şaşırtır."
+    "fact": "Kuyruğundaki göz benzeri siyah benek, avcıları başının nerede olduğu konusunda şaşırtır.",
+    "story": "Yaşlı balıkçılar Kelebek Balığı yakalandığı gün gölde huzurun ve bereketin hiç eksik olmayacağına inanırmış."
   },
   {
     "id": "p_chaetodon_vagabundus",
@@ -1800,7 +1871,8 @@
     ],
     "habitat": "Güneşli mercan resifleri",
     "diet": "Mercan polipleri ve deniz solucanları",
-    "fact": "Kuyruğundaki göz benzeri siyah benek, avcıları başının nerede olduğu konusunda şaşırtır."
+    "fact": "Kuyruğundaki göz benzeri siyah benek, avcıları başının nerede olduğu konusunda şaşırtır.",
+    "story": "Bir zamanlar güneşli mercan resifleri boyunca yolunu arayan bir kaşif, parıltısı sayesinde yolunu Kelebek Balığı ile bulmuş."
   },
   {
     "id": "p_cheilinus_undulatus",
@@ -1825,7 +1897,8 @@
     ],
     "habitat": "Derin resif duvarları",
     "diet": "Sert kabuklu yumuşakçalar ve deniz yıldızları",
-    "fact": "Alnındaki belirgin çıkıntısı ve 2 metreyi bulabilen boyuyla resiflerin nazik devidir."
+    "fact": "Alnındaki belirgin çıkıntısı ve 2 metreyi bulabilen boyuyla resiflerin nazik devidir.",
+    "story": "Pazar tezgahındaki Şef Hüseyin, Napolyon Balığı gördüğünde gözleri parlar ve hemen en gizli baharat kutusunu çıkarırmış."
   },
   {
     "id": "p_chlorurus_sordidus",
@@ -1850,7 +1923,8 @@
     ],
     "habitat": "Mercan resifleri",
     "diet": "Mercan üzerindeki yosunlar",
-    "fact": "Papağan gagasına benzeyen dişleriyle yosun kazır; ürettiği kum tropikal kumsalları oluşturur!"
+    "fact": "Papağan gagasına benzeyen dişleriyle yosun kazır; ürettiği kum tropikal kumsalları oluşturur!",
+    "story": "Kedi Minnoş iskelenin ucunda patisini suya uzatıp saatlerce Papağan Balığı ile saklambaç oynamaya bayılırmış."
   },
   {
     "id": "p_chlorurus_spilurus",
@@ -1875,7 +1949,8 @@
     ],
     "habitat": "Mercan resifleri",
     "diet": "Mercan üzerindeki yosunlar",
-    "fact": "Papağan gagasına benzeyen dişleriyle yosun kazır; ürettiği kum tropikal kumsalları oluşturur!"
+    "fact": "Papağan gagasına benzeyen dişleriyle yosun kazır; ürettiği kum tropikal kumsalları oluşturur!",
+    "story": "Rivayete göre şafak vakti su yüzeyinde halka gören herkes, altında Papağan Balığı dans ettiğini bilirmiş."
   },
   {
     "id": "p_chromis_chromis",
@@ -1900,7 +1975,8 @@
     ],
     "habitat": "Berrak sığ resifler",
     "diet": "Zooplankton",
-    "fact": "Parlak mavi-yeşil sürüler halinde yüzerek resiflere canlılık katar."
+    "fact": "Parlak mavi-yeşil sürüler halinde yüzerek resiflere canlılık katar.",
+    "story": "Koleksiyoncu Leyla'nın eski defterinde Kromis için 'suyun altındaki saklı mücevher' diye not düşülmüş."
   },
   {
     "id": "p_chromis_viridis",
@@ -1925,7 +2001,8 @@
     ],
     "habitat": "Berrak sığ resifler",
     "diet": "Zooplankton",
-    "fact": "Parlak mavi-yeşil sürüler halinde yüzerek resiflere canlılık katar."
+    "fact": "Parlak mavi-yeşil sürüler halinde yüzerek resiflere canlılık katar.",
+    "story": "Fırtınadan sonra göl durulduğunda Kromis ilk kez su üstüne göz kırpar, balıkçılara havanın açtığını müjdelermiş."
   },
   {
     "id": "p_clinocottus_analis",
@@ -1950,7 +2027,8 @@
     ],
     "habitat": "Gelgit havuzları ve kayalık kıyılar",
     "diet": "Küçük karidesler ve kıyı böcekleri",
-    "fact": "Su çekildiğinde kayaların arasındaki küçük su birikintilerinde saatlerce yaşayabilir."
+    "fact": "Su çekildiğinde kayaların arasındaki küçük su birikintilerinde saatlerce yaşayabilir.",
+    "story": "Eski bir göl masalına göre Kaya İskorpitçiği, batık hazine sandıklarının yerini bilen en zeki rehberlerden biriymiş."
   },
   {
     "id": "p_clupea_pallasii",
@@ -1975,7 +2053,8 @@
     ],
     "habitat": "Serin açık sular",
     "diet": "Zooplankton ve küçük kabuklular",
-    "fact": "Milyonlarca balıktan oluşan gümüşi sürüler halinde senkronize hareket eder."
+    "fact": "Milyonlarca balıktan oluşan gümüşi sürüler halinde senkronize hareket eder.",
+    "story": "Kaptan Osman gençliğinde Gümüş Ringa peşinde tam üç gün kürek çekmiş ama sonunda ona hayran kalıp serbest bırakmış."
   },
   {
     "id": "p_coris_julis",
@@ -2000,7 +2079,8 @@
     ],
     "habitat": "Kumlu ve kayalık kıyılar",
     "diet": "Küçük deniz salyangozları ve karidesler",
-    "fact": "Geceleri tehlikelerden korunmak için kendini tamamen kumun içine gömerek uyur!"
+    "fact": "Geceleri tehlikelerden korunmak için kendini tamamen kumun içine gömerek uyur!",
+    "story": "Ay ışığı suya vurduğunda Gelin Balığı pullarıyla gümüş izler bırakır, gölün sessizliğini masalsı bir tabloya çevirirmiş."
   },
   {
     "id": "p_ctenochaetus_striatus",
@@ -2025,7 +2105,8 @@
     ],
     "habitat": "Mercan resifleri",
     "diet": "İnce algler",
-    "fact": "Özel esnek dişleriyle mercanları çizmeden üzerindeki zararlı yosunları temizler."
+    "fact": "Özel esnek dişleriyle mercanları çizmeden üzerindeki zararlı yosunları temizler.",
+    "story": "Yaşlı balıkçılar Tarakdiş Cerrah yakalandığı gün gölde huzurun ve bereketin hiç eksik olmayacağına inanırmış."
   },
   {
     "id": "p_ctenopharyngodon_idella",
@@ -2050,7 +2131,8 @@
     ],
     "habitat": "Bitki örtüsü yoğun tatlı sular",
     "diet": "Su bitkileri",
-    "fact": "Günde kendi ağırlığının yarısı kadar su bitkisi tüketebilen iştahlı bir otçuldur."
+    "fact": "Günde kendi ağırlığının yarısı kadar su bitkisi tüketebilen iştahlı bir otçuldur.",
+    "story": "Bir zamanlar bitki örtüsü yoğun tatlı sular boyunca yolunu arayan bir kaşif, parıltısı sayesinde yolunu Ot Sazanı ile bulmuş."
   },
   {
     "id": "p_culaea_inconstans",
@@ -2075,7 +2157,8 @@
     ],
     "habitat": "Sığ sazlıklar ve serin göletler",
     "diet": "Sivrisinek larvaları ve su pireleri",
-    "fact": "Sırtındaki keskin dikenlerle kendini korur; erkekleri su bitkilerinden yuva örer."
+    "fact": "Sırtındaki keskin dikenlerle kendini korur; erkekleri su bitkilerinden yuva örer.",
+    "story": "Pazar tezgahındaki Şef Hüseyin, Dikenli Dere Balığı gördüğünde gözleri parlar ve hemen en gizli baharat kutusunu çıkarırmış."
   },
   {
     "id": "p_cyprinella_venusta",
@@ -2100,7 +2183,8 @@
     ],
     "habitat": "Berrak akarsular ve göl kıyıları",
     "diet": "Su böcekleri ve larvalar",
-    "fact": "Kuyruğunun dibindeki siyah lekeyle tanınır; hızlı ve çevik bir yüzücüdür."
+    "fact": "Kuyruğunun dibindeki siyah lekeyle tanınır; hızlı ve çevik bir yüzücüdür.",
+    "story": "Kedi Minnoş iskelenin ucunda patisini suya uzatıp saatlerce Gümüş Sazancık ile saklambaç oynamaya bayılırmış."
   },
   {
     "id": "p_cyprinus_carpio",
@@ -2125,7 +2209,8 @@
     ],
     "habitat": "Sakin göller ve sazlıklar",
     "diet": "Su bitkileri, böcekler ve tohumlar",
-    "fact": "Zeki ve temkinli bir balıktır; büyük bireyler oltaya geldiğinde güçlü direnir."
+    "fact": "Zeki ve temkinli bir balıktır; büyük bireyler oltaya geldiğinde güçlü direnir.",
+    "story": "Rivayete göre şafak vakti su yüzeyinde halka gören herkes, altında Sazan dans ettiğini bilirmiş."
   },
   {
     "id": "p_cyprinus_rubrofuscus",
@@ -2150,7 +2235,8 @@
     ],
     "habitat": "Sakin göller ve sazlıklar",
     "diet": "Su bitkileri, böcekler ve tohumlar",
-    "fact": "Zeki ve temkinli bir balıktır; büyük bireyler oltaya geldiğinde güçlü direnir."
+    "fact": "Zeki ve temkinli bir balıktır; büyük bireyler oltaya geldiğinde güçlü direnir.",
+    "story": "Koleksiyoncu Leyla'nın eski defterinde Sazan için 'suyun altındaki saklı mücevher' diye not düşülmüş."
   },
   {
     "id": "p_dascyllus_trimaculatus",
@@ -2175,7 +2261,8 @@
     ],
     "habitat": "Mercan resiflerinin sığ kesimleri",
     "diet": "Plankton ve küçük kabuklular",
-    "fact": "Tehlike anında mercan dallarının arasına ok gibi saklanan çevik bir balıktır."
+    "fact": "Tehlike anında mercan dallarının arasına ok gibi saklanan çevik bir balıktır.",
+    "story": "Fırtınadan sonra göl durulduğunda Karasinek Balığı ilk kez su üstüne göz kırpar, balıkçılara havanın açtığını müjdelermiş."
   },
   {
     "id": "p_diodon_holocanthus",
@@ -2200,7 +2287,8 @@
     ],
     "habitat": "Orta ve derin resif oyukları",
     "diet": "Deniz kestaneleri ve yengeçler",
-    "fact": "Şiştiğinde vücudundaki tüm dikenler dikleşerek onu bir sualtı kirpisine dönüştürür."
+    "fact": "Şiştiğinde vücudundaki tüm dikenler dikleşerek onu bir sualtı kirpisine dönüştürür.",
+    "story": "Eski bir göl masalına göre Dikenli Balon Balığı, batık hazine sandıklarının yerini bilen en zeki rehberlerden biriymiş."
   },
   {
     "id": "p_diodon_hystrix",
@@ -2225,7 +2313,8 @@
     ],
     "habitat": "Orta ve derin resif oyukları",
     "diet": "Deniz kestaneleri ve yengeçler",
-    "fact": "Şiştiğinde vücudundaki tüm dikenler dikleşerek onu bir sualtı kirpisine dönüştürür."
+    "fact": "Şiştiğinde vücudundaki tüm dikenler dikleşerek onu bir sualtı kirpisine dönüştürür.",
+    "story": "Kaptan Osman gençliğinde Dikenli Balon Balığı peşinde tam üç gün kürek çekmiş ama sonunda ona hayran kalıp serbest bırakmış."
   },
   {
     "id": "p_diplodus_sargus",
@@ -2250,7 +2339,8 @@
     ],
     "habitat": "Kayalık kıyılar ve orta derinlikler",
     "diet": "Midye, yengeç ve deniz kestaneleri",
-    "fact": "Kesici ön dişleriyle sert midye ve istiridye kabuklarını kolayca kırar."
+    "fact": "Kesici ön dişleriyle sert midye ve istiridye kabuklarını kolayca kırar.",
+    "story": "Ay ışığı suya vurduğunda Sargoz pullarıyla gümüş izler bırakır, gölün sessizliğini masalsı bir tabloya çevirirmiş."
   },
   {
     "id": "p_diplodus_vulgaris",
@@ -2275,7 +2365,8 @@
     ],
     "habitat": "Kayalık kıyılar ve orta derinlikler",
     "diet": "Midye, yengeç ve deniz kestaneleri",
-    "fact": "Kesici ön dişleriyle sert midye ve istiridye kabuklarını kolayca kırar."
+    "fact": "Kesici ön dişleriyle sert midye ve istiridye kabuklarını kolayca kırar.",
+    "story": "Yaşlı balıkçılar Sargoz yakalandığı gün gölde huzurun ve bereketin hiç eksik olmayacağına inanırmış."
   },
   {
     "id": "p_dorosoma_cepedianum",
@@ -2300,7 +2391,8 @@
     ],
     "habitat": "Açık göl suları",
     "diet": "Plankton ve mikroskobik algler",
-    "fact": "Gümüşi pulları güneş ışığını yansıtarak büyük sürüler halinde parıldar."
+    "fact": "Gümüşi pulları güneş ışığını yansıtarak büyük sürüler halinde parıldar.",
+    "story": "Bir zamanlar açık göl suları boyunca yolunu arayan bir kaşif, parıltısı sayesinde yolunu Göl Ringası ile bulmuş."
   },
   {
     "id": "p_echeneis_naucrates",
@@ -2325,7 +2417,8 @@
     ],
     "habitat": "Açık denizler ve büyük balıkların çevresi",
     "diet": "Büyük balıkların artıkları ve parazitler",
-    "fact": "Başının üstündeki özel vantuzla köpekbalıklarına yapışıp bedava yolculuk yapar!"
+    "fact": "Başının üstündeki özel vantuzla köpekbalıklarına yapışıp bedava yolculuk yapar!",
+    "story": "Pazar tezgahındaki Şef Hüseyin, Vantuz Balığı gördüğünde gözleri parlar ve hemen en gizli baharat kutusunu çıkarırmış."
   },
   {
     "id": "p_echidna_nebulosa",
@@ -2350,7 +2443,8 @@
     ],
     "habitat": "Mercan oyukları ve karanlık yarıklar",
     "diet": "Yengeç, karides ve küçük ahtapotlar",
-    "fact": "Keskin koku alma duyusu sayesinde zifiri karanlıkta bile avının yerini bulur."
+    "fact": "Keskin koku alma duyusu sayesinde zifiri karanlıkta bile avının yerini bulur.",
+    "story": "Kedi Minnoş iskelenin ucunda patisini suya uzatıp saatlerce Kar Tanesi Müreni ile saklambaç oynamaya bayılırmış."
   },
   {
     "id": "p_epinephelus_marginatus",
@@ -2375,7 +2469,8 @@
     ],
     "habitat": "Derin kayalıklar ve batık çevreleri",
     "diet": "Ahtapot, yengeç ve orta boy balıklar",
-    "fact": "Kendi kayalık bölgesine çok sadıktır ve 50 yıla kadar yaşayabilen görkemli bir türdür."
+    "fact": "Kendi kayalık bölgesine çok sadıktır ve 50 yıla kadar yaşayabilen görkemli bir türdür.",
+    "story": "Rivayete göre şafak vakti su yüzeyinde halka gören herkes, altında Orfoz dans ettiğini bilirmiş."
   },
   {
     "id": "p_esox_lucius",
@@ -2400,7 +2495,8 @@
     ],
     "habitat": "Sazlık kenarları ve derin gölgelikler",
     "diet": "Küçük balıklar ve su canlıları",
-    "fact": "Ok gibi uzun gövdesiyle hareketsiz bekleyip şimşek hızıyla avına saldırır."
+    "fact": "Ok gibi uzun gövdesiyle hareketsiz bekleyip şimşek hızıyla avına saldırır.",
+    "story": "Koleksiyoncu Leyla'nın eski defterinde Turna Balığı için 'suyun altındaki saklı mücevher' diye not düşülmüş."
   },
   {
     "id": "p_esox_niger",
@@ -2425,7 +2521,8 @@
     ],
     "habitat": "Sazlık kenarları ve derin gölgelikler",
     "diet": "Küçük balıklar ve su canlıları",
-    "fact": "Ok gibi uzun gövdesiyle hareketsiz bekleyip şimşek hızıyla avına saldırır."
+    "fact": "Ok gibi uzun gövdesiyle hareketsiz bekleyip şimşek hızıyla avına saldırır.",
+    "story": "Fırtınadan sonra göl durulduğunda Turna Balığı ilk kez su üstüne göz kırpar, balıkçılara havanın açtığını müjdelermiş."
   },
   {
     "id": "p_etheostoma_caerulum",
@@ -2450,7 +2547,8 @@
     ],
     "habitat": "Temiz, çakıllı ve oksijenli sular",
     "diet": "Küçük su böcekleri ve larvalar",
-    "fact": "Gökkuşağı gibi canlı renkleriyle bilinen küçük ama çok çevik bir dip balığıdır."
+    "fact": "Gökkuşağı gibi canlı renkleriyle bilinen küçük ama çok çevik bir dip balığıdır.",
+    "story": "Eski bir göl masalına göre Gökkuşağı Dip Balığı, batık hazine sandıklarının yerini bilen en zeki rehberlerden biriymiş."
   },
   {
     "id": "p_fistularia_commersonii",
@@ -2475,7 +2573,8 @@
     ],
     "habitat": "Resif kenarları ve deniz çayırları",
     "diet": "Küçük balık sürüleri",
-    "fact": "Uzun boru şeklindeki ağzıyla avını vakum gibi içine çeker."
+    "fact": "Uzun boru şeklindeki ağzıyla avını vakum gibi içine çeker.",
+    "story": "Kaptan Osman gençliğinde Külah Balığı peşinde tam üç gün kürek çekmiş ama sonunda ona hayran kalıp serbest bırakmış."
   },
   {
     "id": "p_fundulus_heteroclitus",
@@ -2500,7 +2599,8 @@
     ],
     "habitat": "Sığ kıyılar ve tuzlu bataklıklar",
     "diet": "Böcek larvaları ve yosunlar",
-    "fact": "Hem tatlı hem de tuzlu suya kolayca uyum sağlayabilen dayanıklı bir kıyı balığıdır."
+    "fact": "Hem tatlı hem de tuzlu suya kolayca uyum sağlayabilen dayanıklı bir kıyı balığıdır.",
+    "story": "Ay ışığı suya vurduğunda Dişli Sazancık pullarıyla gümüş izler bırakır, gölün sessizliğini masalsı bir tabloya çevirirmiş."
   },
   {
     "id": "p_gadus_morhua",
@@ -2525,7 +2625,8 @@
     ],
     "habitat": "Serin orta ve derin sular",
     "diet": "Küçük balıklar ve karidesler",
-    "fact": "Soğuk suların sevilen balığıdır; çenesinin altındaki küçük bıyıkla tabanı tarar."
+    "fact": "Soğuk suların sevilen balığıdır; çenesinin altındaki küçük bıyıkla tabanı tarar.",
+    "story": "Yaşlı balıkçılar Mezgit yakalandığı gün gölde huzurun ve bereketin hiç eksik olmayacağına inanırmış."
   },
   {
     "id": "p_gambusia_affinis",
@@ -2550,7 +2651,8 @@
     ],
     "habitat": "Sığ ve durgun göl kıyıları",
     "diet": "Sivrisinek larvaları",
-    "fact": "Günde kendi ağırlığı kadar sivrisinek larvası yiyerek doğayı korur."
+    "fact": "Günde kendi ağırlığı kadar sivrisinek larvası yiyerek doğayı korur.",
+    "story": "Bir zamanlar sığ ve durgun göl kıyıları boyunca yolunu arayan bir kaşif, parıltısı sayesinde yolunu Sivrisinek Balığı ile bulmuş."
   },
   {
     "id": "p_gambusia_holbrooki",
@@ -2575,7 +2677,8 @@
     ],
     "habitat": "Sığ ve durgun göl kıyıları",
     "diet": "Sivrisinek larvaları",
-    "fact": "Günde kendi ağırlığı kadar sivrisinek larvası yiyerek doğayı korur."
+    "fact": "Günde kendi ağırlığı kadar sivrisinek larvası yiyerek doğayı korur.",
+    "story": "Pazar tezgahındaki Şef Hüseyin, Sivrisinek Balığı gördüğünde gözleri parlar ve hemen en gizli baharat kutusunu çıkarırmış."
   },
   {
     "id": "p_gastrostereus_aculeatus",
@@ -2600,7 +2703,8 @@
     ],
     "habitat": "Kıyı yosunlukları ve göletler",
     "diet": "Küçük kabuklular ve kurtçuklar",
-    "fact": "Yumurtalarını korumak için kendinden büyük balıklara bile kafa tutar."
+    "fact": "Yumurtalarını korumak için kendinden büyük balıklara bile kafa tutar.",
+    "story": "Kedi Minnoş iskelenin ucunda patisini suya uzatıp saatlerce Üç Dikenli Balık ile saklambaç oynamaya bayılırmış."
   },
   {
     "id": "p_ginglymostoma_cirratum",
@@ -2625,7 +2729,8 @@
     ],
     "habitat": "Derin kumlu dipler ve mağaralar",
     "diet": "Istakoz, yengeç ve dip balıkları",
-    "fact": "Yüzmeden dipte dinlenirken bile solungaçlarına su pompalayabilen nadir köpekbalığıdır."
+    "fact": "Yüzmeden dipte dinlenirken bile solungaçlarına su pompalayabilen nadir köpekbalığıdır.",
+    "story": "Rivayete göre şafak vakti su yüzeyinde halka gören herkes, altında Hemşire Köpekbalığı dans ettiğini bilirmiş."
   },
   {
     "id": "p_gobiesox_meandricus",
@@ -2650,7 +2755,8 @@
     ],
     "habitat": "Dalgalı kayalık kıyılar",
     "diet": "Küçük kıyı kabukluları",
-    "fact": "Karın yüzgeçleri güçlü bir vantuz görevi görür; en sert dalgalarda bile kayaya tutunur."
+    "fact": "Karın yüzgeçleri güçlü bir vantuz görevi görür; en sert dalgalarda bile kayaya tutunur.",
+    "story": "Koleksiyoncu Leyla'nın eski defterinde Kaya Vantuzu için 'suyun altındaki saklı mücevher' diye not düşülmüş."
   },
   {
     "id": "p_gomphosus_varius",
@@ -2675,7 +2781,8 @@
     ],
     "habitat": "Mercan resifleri",
     "diet": "Mercan aralarındaki küçük yengeçler",
-    "fact": "Uzun gagamsı ağzıyla dar mercan çatlaklarından ustalıkla av çıkarır."
+    "fact": "Uzun gagamsı ağzıyla dar mercan çatlaklarından ustalıkla av çıkarır.",
+    "story": "Fırtınadan sonra göl durulduğunda Kuş Burunlu Lapin ilk kez su üstüne göz kırpar, balıkçılara havanın açtığını müjdelermiş."
   },
   {
     "id": "p_gymnothorax_funebris",
@@ -2700,7 +2807,8 @@
     ],
     "habitat": "Derin kayalık kovuklar ve mağaralar",
     "diet": "Ahtapot, yengeç ve küçük balıklar",
-    "fact": "Boğazının içinde ikinci bir çenesi vardır! Avını yakaladığında bu iç çene öne fırlar."
+    "fact": "Boğazının içinde ikinci bir çenesi vardır! Avını yakaladığında bu iç çene öne fırlar.",
+    "story": "Eski bir göl masalına göre Dev Müren, batık hazine sandıklarının yerini bilen en zeki rehberlerden biriymiş."
   },
   {
     "id": "p_gymnothorax_javanicus",
@@ -2725,7 +2833,8 @@
     ],
     "habitat": "Derin kayalık kovuklar ve mağaralar",
     "diet": "Ahtapot, yengeç ve küçük balıklar",
-    "fact": "Boğazının içinde ikinci bir çenesi vardır! Avını yakaladığında bu iç çene öne fırlar."
+    "fact": "Boğazının içinde ikinci bir çenesi vardır! Avını yakaladığında bu iç çene öne fırlar.",
+    "story": "Kaptan Osman gençliğinde Dev Müren peşinde tam üç gün kürek çekmiş ama sonunda ona hayran kalıp serbest bırakmış."
   },
   {
     "id": "p_haemulon_flavolineatum",
@@ -2750,7 +2859,8 @@
     ],
     "habitat": "Sığ mercan resifleri",
     "diet": "Gece çıkan karidesler ve yengeçler",
-    "fact": "Yutak dişlerini birbirine sürterek su altında duyulabilen homurtu sesleri çıkarır!"
+    "fact": "Yutak dişlerini birbirine sürterek su altında duyulabilen homurtu sesleri çıkarır!",
+    "story": "Ay ışığı suya vurduğunda Hırıldayan Balık pullarıyla gümüş izler bırakır, gölün sessizliğini masalsı bir tabloya çevirirmiş."
   },
   {
     "id": "p_haemulon_parra",
@@ -2775,7 +2885,8 @@
     ],
     "habitat": "Sığ mercan resifleri",
     "diet": "Gece çıkan karidesler ve yengeçler",
-    "fact": "Yutak dişlerini birbirine sürterek su altında duyulabilen homurtu sesleri çıkarır!"
+    "fact": "Yutak dişlerini birbirine sürterek su altında duyulabilen homurtu sesleri çıkarır!",
+    "story": "Yaşlı balıkçılar Hırıldayan Balık yakalandığı gün gölde huzurun ve bereketin hiç eksik olmayacağına inanırmış."
   },
   {
     "id": "p_haemulon_sciurus",
@@ -2800,7 +2911,8 @@
     ],
     "habitat": "Sığ mercan resifleri",
     "diet": "Gece çıkan karidesler ve yengeçler",
-    "fact": "Yutak dişlerini birbirine sürterek su altında duyulabilen homurtu sesleri çıkarır!"
+    "fact": "Yutak dişlerini birbirine sürterek su altında duyulabilen homurtu sesleri çıkarır!",
+    "story": "Bir zamanlar sığ mercan resifleri boyunca yolunu arayan bir kaşif, parıltısı sayesinde yolunu Hırıldayan Balık ile bulmuş."
   },
   {
     "id": "p_halichoeres_bivittatus",
@@ -2825,7 +2937,8 @@
     ],
     "habitat": "Kıyı yosunlukları ve kayalıklar",
     "diet": "Küçük kabuklular ve salyangozlar",
-    "fact": "Renkli pullarıyla tanınır; bazı türleri büyük balıkların parazitlerini temizler."
+    "fact": "Renkli pullarıyla tanınır; bazı türleri büyük balıkların parazitlerini temizler.",
+    "story": "Pazar tezgahındaki Şef Hüseyin, Renkli Lapin gördüğünde gözleri parlar ve hemen en gizli baharat kutusunu çıkarırmış."
   },
   {
     "id": "p_halichoeres_hortulanus",
@@ -2850,7 +2963,8 @@
     ],
     "habitat": "Kıyı yosunlukları ve kayalıklar",
     "diet": "Küçük kabuklular ve salyangozlar",
-    "fact": "Renkli pullarıyla tanınır; bazı türleri büyük balıkların parazitlerini temizler."
+    "fact": "Renkli pullarıyla tanınır; bazı türleri büyük balıkların parazitlerini temizler.",
+    "story": "Kedi Minnoş iskelenin ucunda patisini suya uzatıp saatlerce Renkli Lapin ile saklambaç oynamaya bayılırmış."
   },
   {
     "id": "p_hemigymnus_melapterus",
@@ -2875,7 +2989,8 @@
     ],
     "habitat": "Kumlu resif dipleri",
     "diet": "Kumun içindeki küçük kabuklular",
-    "fact": "Ağzına kum alıp içindeki yiyecekleri ayıkladıktan sonra kumu solungaçlarından püskürtür."
+    "fact": "Ağzına kum alıp içindeki yiyecekleri ayıkladıktan sonra kumu solungaçlarından püskürtür.",
+    "story": "Rivayete göre şafak vakti su yüzeyinde halka gören herkes, altında Kum Eleyen Lapin dans ettiğini bilirmiş."
   },
   {
     "id": "p_hericthys_cyanoguttatus",
@@ -2900,7 +3015,8 @@
     ],
     "habitat": "Sıcak tatlı su gölleri",
     "diet": "Böcekler ve küçük omurgasızlar",
-    "fact": "İnci gibi parlayan turkuaz benekleriyle tanınan, yavrularını özenle koruyan bir türdür."
+    "fact": "İnci gibi parlayan turkuaz benekleriyle tanınan, yavrularını özenle koruyan bir türdür.",
+    "story": "Koleksiyoncu Leyla'nın eski defterinde İnci Çiklit için 'suyun altındaki saklı mücevher' diye not düşülmüş."
   },
   {
     "id": "p_heterandria_formosa",
@@ -2925,7 +3041,8 @@
     ],
     "habitat": "Yoğun su bitkilerinin arası",
     "diet": "Mikroskobik kabuklular ve algler",
-    "fact": "Dünyanın en küçük canlı doğuran balıklarından biridir."
+    "fact": "Dünyanın en küçük canlı doğuran balıklarından biridir.",
+    "story": "Fırtınadan sonra göl durulduğunda Cüce Canlıdoğuran ilk kez su üstüne göz kırpar, balıkçılara havanın açtığını müjdelermiş."
   },
   {
     "id": "p_holacanthus_ciliaris",
@@ -2950,7 +3067,8 @@
     ],
     "habitat": "Derin mercan duvarları",
     "diet": "Süngerler ve deniz algleri",
-    "fact": "Başındaki taç benzeri mavi halka ve elektrik mavisi kenarlarıyla büyüleyicidir."
+    "fact": "Başındaki taç benzeri mavi halka ve elektrik mavisi kenarlarıyla büyüleyicidir.",
+    "story": "Eski bir göl masalına göre Kraliçe Melek Balığı, batık hazine sandıklarının yerini bilen en zeki rehberlerden biriymiş."
   },
   {
     "id": "p_holacanthus_passer",
@@ -2975,7 +3093,8 @@
     ],
     "habitat": "Derin mercan duvarları",
     "diet": "Süngerler ve deniz algleri",
-    "fact": "Başındaki taç benzeri mavi halka ve elektrik mavisi kenarlarıyla büyüleyicidir."
+    "fact": "Başındaki taç benzeri mavi halka ve elektrik mavisi kenarlarıyla büyüleyicidir.",
+    "story": "Kaptan Osman gençliğinde Kraliçe Melek Balığı peşinde tam üç gün kürek çekmiş ama sonunda ona hayran kalıp serbest bırakmış."
   },
   {
     "id": "p_hypanus_americanus",
@@ -3000,7 +3119,8 @@
     ],
     "habitat": "Kumlu ve çamurlu dipler",
     "diet": "Midye, karides ve dip balıkları",
-    "fact": "Kendini tamamen kumun altına gizleyip sadece gözlerini dışarıda bırakarak pusu kurar."
+    "fact": "Kendini tamamen kumun altına gizleyip sadece gözlerini dışarıda bırakarak pusu kurar.",
+    "story": "Ay ışığı suya vurduğunda Dikenli Vatoz pullarıyla gümüş izler bırakır, gölün sessizliğini masalsı bir tabloya çevirirmiş."
   },
   {
     "id": "p_hypanus_sabinus",
@@ -3025,7 +3145,8 @@
     ],
     "habitat": "Kumlu ve çamurlu dipler",
     "diet": "Midye, karides ve dip balıkları",
-    "fact": "Kendini tamamen kumun altına gizleyip sadece gözlerini dışarıda bırakarak pusu kurar."
+    "fact": "Kendini tamamen kumun altına gizleyip sadece gözlerini dışarıda bırakarak pusu kurar.",
+    "story": "Yaşlı balıkçılar Dikenli Vatoz yakalandığı gün gölde huzurun ve bereketin hiç eksik olmayacağına inanırmış."
   },
   {
     "id": "p_hypsypops_rubicundus",
@@ -3050,7 +3171,8 @@
     ],
     "habitat": "Kayalık kıyılar ve kelp ormanları",
     "diet": "Süngerler ve küçük omurgasızlar",
-    "fact": "Parlak turuncu rengiyle kendi bölgesini korur ve yabancıları ses çıkararak uyarır."
+    "fact": "Parlak turuncu rengiyle kendi bölgesini korur ve yabancıları ses çıkararak uyarır.",
+    "story": "Bir zamanlar kayalık kıyılar ve kelp ormanları boyunca yolunu arayan bir kaşif, parıltısı sayesinde yolunu Garibaldi Balığı ile bulmuş."
   },
   {
     "id": "p_ictalurus_punctatus",
@@ -3075,7 +3197,8 @@
     ],
     "habitat": "Derin göl dipleri ve çamurlu yataklar",
     "diet": "Küçük balıklar ve kerevit",
-    "fact": "Tüm vücudu tat alma tomurcuklarıyla kaplıdır; adeta yüzen bir tat dedektörüdür!"
+    "fact": "Tüm vücudu tat alma tomurcuklarıyla kaplıdır; adeta yüzen bir tat dedektörüdür!",
+    "story": "Pazar tezgahındaki Şef Hüseyin, Kanal Yayın Balığı gördüğünde gözleri parlar ve hemen en gizli baharat kutusunu çıkarırmış."
   },
   {
     "id": "p_istiblennius_zebra",
@@ -3100,7 +3223,8 @@
     ],
     "habitat": "Berrak sığ kıyılar ve yosun yatakları",
     "diet": "Plankton, yosun ve küçük kabuklular",
-    "fact": "Istiblennius zebra, çevik hareketleri ve parlak pullarıyla sığ sularda sürüler halinde beslenen nadir bir türdür."
+    "fact": "Istiblennius zebra, çevik hareketleri ve parlak pullarıyla sığ sularda sürüler halinde beslenen nadir bir türdür.",
+    "story": "Kedi Minnoş iskelenin ucunda patisini suya uzatıp saatlerce Istiblennius Balığı ile saklambaç oynamaya bayılırmış."
   },
   {
     "id": "p_kyphosus_vagiensis",
@@ -3125,7 +3249,8 @@
     ],
     "habitat": "Orta derinlikteki kayalık resifler",
     "diet": "Karides, küçük yumuşakçalar ve böcekler",
-    "fact": "Kyphosus vagiensis, kayalık oyukları ustalıkla kullanarak avcılardan saklanır ve yeme hızla hamle yapar."
+    "fact": "Kyphosus vagiensis, kayalık oyukları ustalıkla kullanarak avcılardan saklanır ve yeme hızla hamle yapar.",
+    "story": "Rivayete göre şafak vakti su yüzeyinde halka gören herkes, altında Kyphosus Balığı dans ettiğini bilirmiş."
   },
   {
     "id": "p_labroides_dimidatus",
@@ -3150,7 +3275,8 @@
     ],
     "habitat": "Mercan temizlik istasyonları",
     "diet": "Büyük balıkların parazitleri",
-    "fact": "Büyük yırtıcı balıkların ağzının içine bile güvenle girip dişlerini temizler!"
+    "fact": "Büyük yırtıcı balıkların ağzının içine bile güvenle girip dişlerini temizler!",
+    "story": "Koleksiyoncu Leyla'nın eski defterinde Temizlikçi Lapin için 'suyun altındaki saklı mücevher' diye not düşülmüş."
   },
   {
     "id": "p_lactophrys_triqueter",
@@ -3175,7 +3301,8 @@
     ],
     "habitat": "Derin göl ve abis kayalıkları",
     "diet": "Derin su balıkları ve kafadanbacaklılar",
-    "fact": "Lactophrys triqueter, karanlık derinliklerde hassas yan çizgi organıyla avının titreşimini metrelerce öteden algılar."
+    "fact": "Lactophrys triqueter, karanlık derinliklerde hassas yan çizgi organıyla avının titreşimini metrelerce öteden algılar.",
+    "story": "Fırtınadan sonra göl durulduğunda Lactophrys Balığı ilk kez su üstüne göz kırpar, balıkçılara havanın açtığını müjdelermiş."
   },
   {
     "id": "p_lagodon_rhomboides",
@@ -3200,7 +3327,8 @@
     ],
     "habitat": "Berrak sığ kıyılar ve yosun yatakları",
     "diet": "Plankton, yosun ve küçük kabuklular",
-    "fact": "Lagodon rhomboides, çevik hareketleri ve parlak pullarıyla sığ sularda sürüler halinde beslenen nadir bir türdür."
+    "fact": "Lagodon rhomboides, çevik hareketleri ve parlak pullarıyla sığ sularda sürüler halinde beslenen nadir bir türdür.",
+    "story": "Eski bir göl masalına göre Lagodon Balığı, batık hazine sandıklarının yerini bilen en zeki rehberlerden biriymiş."
   },
   {
     "id": "p_lepisosteus_oculatus",
@@ -3225,7 +3353,8 @@
     ],
     "habitat": "Orta derinlikteki kayalık resifler",
     "diet": "Karides, küçük yumuşakçalar ve böcekler",
-    "fact": "Lepisosteus oculatus, kayalık oyukları ustalıkla kullanarak avcılardan saklanır ve yeme hızla hamle yapar."
+    "fact": "Lepisosteus oculatus, kayalık oyukları ustalıkla kullanarak avcılardan saklanır ve yeme hızla hamle yapar.",
+    "story": "Kaptan Osman gençliğinde Lepisosteus Balığı peşinde tam üç gün kürek çekmiş ama sonunda ona hayran kalıp serbest bırakmış."
   },
   {
     "id": "p_lepisosteus_osseus",
@@ -3250,7 +3379,8 @@
     ],
     "habitat": "Alacakaranlık derin resif yamaçları",
     "diet": "Küçük sürü balıkları ve yengeçler",
-    "fact": "Lepisosteus osseus, orta ve derin sular arasındaki geçiş kuşağında yaşayan güçlü yüzücü bir avcıdır."
+    "fact": "Lepisosteus osseus, orta ve derin sular arasındaki geçiş kuşağında yaşayan güçlü yüzücü bir avcıdır.",
+    "story": "Ay ışığı suya vurduğunda Lepisosteus Balığı pullarıyla gümüş izler bırakır, gölün sessizliğini masalsı bir tabloya çevirirmiş."
   },
   {
     "id": "p_lepisosteus_platyrhincus",
@@ -3275,7 +3405,8 @@
     ],
     "habitat": "Derin göl ve abis kayalıkları",
     "diet": "Derin su balıkları ve kafadanbacaklılar",
-    "fact": "Lepisosteus platyrhincus, karanlık derinliklerde hassas yan çizgi organıyla avının titreşimini metrelerce öteden algılar."
+    "fact": "Lepisosteus platyrhincus, karanlık derinliklerde hassas yan çizgi organıyla avının titreşimini metrelerce öteden algılar.",
+    "story": "Yaşlı balıkçılar Lepisosteus Balığı yakalandığı gün gölde huzurun ve bereketin hiç eksik olmayacağına inanırmış."
   },
   {
     "id": "p_lepomis_aquilensis",
@@ -3300,7 +3431,8 @@
     ],
     "habitat": "Sığ ve güneşli göl kıyıları",
     "diet": "Su böcekleri ve küçük kabuklular",
-    "fact": "Yanındaki parlak renkli kulak beneğiyle tanınır; güneşli sığ suların neşesidir."
+    "fact": "Yanındaki parlak renkli kulak beneğiyle tanınır; güneşli sığ suların neşesidir.",
+    "story": "Bir zamanlar sığ ve güneşli göl kıyıları boyunca yolunu arayan bir kaşif, parıltısı sayesinde yolunu Güneş Levreği ile bulmuş."
   },
   {
     "id": "p_lepomis_auritus",
@@ -3325,7 +3457,8 @@
     ],
     "habitat": "Sığ ve güneşli göl kıyıları",
     "diet": "Su böcekleri ve küçük kabuklular",
-    "fact": "Yanındaki parlak renkli kulak beneğiyle tanınır; güneşli sığ suların neşesidir."
+    "fact": "Yanındaki parlak renkli kulak beneğiyle tanınır; güneşli sığ suların neşesidir.",
+    "story": "Pazar tezgahındaki Şef Hüseyin, Güneş Levreği gördüğünde gözleri parlar ve hemen en gizli baharat kutusunu çıkarırmış."
   },
   {
     "id": "p_lepomis_cyanellus",
@@ -3350,7 +3483,8 @@
     ],
     "habitat": "Sığ ve güneşli göl kıyıları",
     "diet": "Su böcekleri ve küçük kabuklular",
-    "fact": "Yanındaki parlak renkli kulak beneğiyle tanınır; güneşli sığ suların neşesidir."
+    "fact": "Yanındaki parlak renkli kulak beneğiyle tanınır; güneşli sığ suların neşesidir.",
+    "story": "Kedi Minnoş iskelenin ucunda patisini suya uzatıp saatlerce Güneş Levreği ile saklambaç oynamaya bayılırmış."
   },
   {
     "id": "p_lepomis_gibbosus",
@@ -3375,7 +3509,8 @@
     ],
     "habitat": "Sığ ve güneşli göl kıyıları",
     "diet": "Su böcekleri ve küçük kabuklular",
-    "fact": "Yanındaki parlak renkli kulak beneğiyle tanınır; güneşli sığ suların neşesidir."
+    "fact": "Yanındaki parlak renkli kulak beneğiyle tanınır; güneşli sığ suların neşesidir.",
+    "story": "Rivayete göre şafak vakti su yüzeyinde halka gören herkes, altında Güneş Levreği dans ettiğini bilirmiş."
   },
   {
     "id": "p_lepomis_gulosus",
@@ -3400,7 +3535,8 @@
     ],
     "habitat": "Sığ ve güneşli göl kıyıları",
     "diet": "Su böcekleri ve küçük kabuklular",
-    "fact": "Yanındaki parlak renkli kulak beneğiyle tanınır; güneşli sığ suların neşesidir."
+    "fact": "Yanındaki parlak renkli kulak beneğiyle tanınır; güneşli sığ suların neşesidir.",
+    "story": "Koleksiyoncu Leyla'nın eski defterinde Güneş Levreği için 'suyun altındaki saklı mücevher' diye not düşülmüş."
   },
   {
     "id": "p_lepomis_macrochirus",
@@ -3425,7 +3561,8 @@
     ],
     "habitat": "Sığ ve güneşli göl kıyıları",
     "diet": "Su böcekleri ve küçük kabuklular",
-    "fact": "Yanındaki parlak renkli kulak beneğiyle tanınır; güneşli sığ suların neşesidir."
+    "fact": "Yanındaki parlak renkli kulak beneğiyle tanınır; güneşli sığ suların neşesidir.",
+    "story": "Fırtınadan sonra göl durulduğunda Güneş Levreği ilk kez su üstüne göz kırpar, balıkçılara havanın açtığını müjdelermiş."
   },
   {
     "id": "p_lepomis_macrochirus_x_cyanellus",
@@ -3450,7 +3587,8 @@
     ],
     "habitat": "Sığ ve güneşli göl kıyıları",
     "diet": "Su böcekleri ve küçük kabuklular",
-    "fact": "Yanındaki parlak renkli kulak beneğiyle tanınır; güneşli sığ suların neşesidir."
+    "fact": "Yanındaki parlak renkli kulak beneğiyle tanınır; güneşli sığ suların neşesidir.",
+    "story": "Eski bir göl masalına göre Güneş Levreği, batık hazine sandıklarının yerini bilen en zeki rehberlerden biriymiş."
   },
   {
     "id": "p_lepomis_microlophus",
@@ -3475,7 +3613,8 @@
     ],
     "habitat": "Sığ ve güneşli göl kıyıları",
     "diet": "Su böcekleri ve küçük kabuklular",
-    "fact": "Yanındaki parlak renkli kulak beneğiyle tanınır; güneşli sığ suların neşesidir."
+    "fact": "Yanındaki parlak renkli kulak beneğiyle tanınır; güneşli sığ suların neşesidir.",
+    "story": "Kaptan Osman gençliğinde Güneş Levreği peşinde tam üç gün kürek çekmiş ama sonunda ona hayran kalıp serbest bırakmış."
   },
   {
     "id": "p_lepomis_punctatus",
@@ -3500,7 +3639,8 @@
     ],
     "habitat": "Sığ ve güneşli göl kıyıları",
     "diet": "Su böcekleri ve küçük kabuklular",
-    "fact": "Yanındaki parlak renkli kulak beneğiyle tanınır; güneşli sığ suların neşesidir."
+    "fact": "Yanındaki parlak renkli kulak beneğiyle tanınır; güneşli sığ suların neşesidir.",
+    "story": "Ay ışığı suya vurduğunda Güneş Levreği pullarıyla gümüş izler bırakır, gölün sessizliğini masalsı bir tabloya çevirirmiş."
   },
   {
     "id": "p_lipophrys_pholis",
@@ -3525,7 +3665,8 @@
     ],
     "habitat": "Kayalık kıyı oyukları",
     "diet": "Yosunlar ve küçük kabuklular",
-    "fact": "Kaya deliklerinden kafasını uzatıp çevreyi gözetleyen meraklı bir kıyı balığıdır."
+    "fact": "Kaya deliklerinden kafasını uzatıp çevreyi gözetleyen meraklı bir kıyı balığıdır.",
+    "story": "Yaşlı balıkçılar Kaya Horozbinası yakalandığı gün gölde huzurun ve bereketin hiç eksik olmayacağına inanırmış."
   },
   {
     "id": "p_lutjanus_apodus",
@@ -3550,7 +3691,8 @@
     ],
     "habitat": "Mercan resifleri ve derin kayalıklar",
     "diet": "Karides, yengeç ve küçük balıklar",
-    "fact": "Sürüler halinde gezen güçlü avcılardır; özellikle alacakaranlıkta çok aktiftir."
+    "fact": "Sürüler halinde gezen güçlü avcılardır; özellikle alacakaranlıkta çok aktiftir.",
+    "story": "Bir zamanlar mercan resifleri ve derin kayalıklar boyunca yolunu arayan bir kaşif, parıltısı sayesinde yolunu Kızıl Mercan Levreği ile bulmuş."
   },
   {
     "id": "p_lutjanus_bohar",
@@ -3575,7 +3717,8 @@
     ],
     "habitat": "Mercan resifleri ve derin kayalıklar",
     "diet": "Karides, yengeç ve küçük balıklar",
-    "fact": "Sürüler halinde gezen güçlü avcılardır; özellikle alacakaranlıkta çok aktiftir."
+    "fact": "Sürüler halinde gezen güçlü avcılardır; özellikle alacakaranlıkta çok aktiftir.",
+    "story": "Pazar tezgahındaki Şef Hüseyin, Kızıl Mercan Levreği gördüğünde gözleri parlar ve hemen en gizli baharat kutusunu çıkarırmış."
   },
   {
     "id": "p_lutjanus_griseus",
@@ -3600,7 +3743,8 @@
     ],
     "habitat": "Mercan resifleri ve derin kayalıklar",
     "diet": "Karides, yengeç ve küçük balıklar",
-    "fact": "Sürüler halinde gezen güçlü avcılardır; özellikle alacakaranlıkta çok aktiftir."
+    "fact": "Sürüler halinde gezen güçlü avcılardır; özellikle alacakaranlıkta çok aktiftir.",
+    "story": "Kedi Minnoş iskelenin ucunda patisini suya uzatıp saatlerce Kızıl Mercan Levreği ile saklambaç oynamaya bayılırmış."
   },
   {
     "id": "p_luxilus_cornutus",
@@ -3625,7 +3769,8 @@
     ],
     "habitat": "Orta derinlikteki kayalık resifler",
     "diet": "Karides, küçük yumuşakçalar ve böcekler",
-    "fact": "Luxilus cornutus, kayalık oyukları ustalıkla kullanarak avcılardan saklanır ve yeme hızla hamle yapar."
+    "fact": "Luxilus cornutus, kayalık oyukları ustalıkla kullanarak avcılardan saklanır ve yeme hızla hamle yapar.",
+    "story": "Rivayete göre şafak vakti su yüzeyinde halka gören herkes, altında Luxilus Balığı dans ettiğini bilirmiş."
   },
   {
     "id": "p_mayaheros_uropthalmus",
@@ -3650,7 +3795,8 @@
     ],
     "habitat": "Alacakaranlık derin resif yamaçları",
     "diet": "Küçük sürü balıkları ve yengeçler",
-    "fact": "Mayaheros uropthalmus, orta ve derin sular arasındaki geçiş kuşağında yaşayan güçlü yüzücü bir avcıdır."
+    "fact": "Mayaheros uropthalmus, orta ve derin sular arasındaki geçiş kuşağında yaşayan güçlü yüzücü bir avcıdır.",
+    "story": "Koleksiyoncu Leyla'nın eski defterinde Mayaheros Balığı için 'suyun altındaki saklı mücevher' diye not düşülmüş."
   },
   {
     "id": "p_megalops_atlanticus",
@@ -3675,7 +3821,8 @@
     ],
     "habitat": "Derin göl ve abis kayalıkları",
     "diet": "Derin su balıkları ve kafadanbacaklılar",
-    "fact": "Megalops atlanticus, karanlık derinliklerde hassas yan çizgi organıyla avının titreşimini metrelerce öteden algılar."
+    "fact": "Megalops atlanticus, karanlık derinliklerde hassas yan çizgi organıyla avının titreşimini metrelerce öteden algılar.",
+    "story": "Fırtınadan sonra göl durulduğunda Megalops Balığı ilk kez su üstüne göz kırpar, balıkçılara havanın açtığını müjdelermiş."
   },
   {
     "id": "p_melichthys_niger",
@@ -3700,7 +3847,8 @@
     ],
     "habitat": "Berrak sığ kıyılar ve yosun yatakları",
     "diet": "Plankton, yosun ve küçük kabuklular",
-    "fact": "Melichthys niger, çevik hareketleri ve parlak pullarıyla sığ sularda sürüler halinde beslenen nadir bir türdür."
+    "fact": "Melichthys niger, çevik hareketleri ve parlak pullarıyla sığ sularda sürüler halinde beslenen nadir bir türdür.",
+    "story": "Eski bir göl masalına göre Melichthys Balığı, batık hazine sandıklarının yerini bilen en zeki rehberlerden biriymiş."
   },
   {
     "id": "p_melichthys_vidua",
@@ -3725,7 +3873,8 @@
     ],
     "habitat": "Orta derinlikteki kayalık resifler",
     "diet": "Karides, küçük yumuşakçalar ve böcekler",
-    "fact": "Melichthys vidua, kayalık oyukları ustalıkla kullanarak avcılardan saklanır ve yeme hızla hamle yapar."
+    "fact": "Melichthys vidua, kayalık oyukları ustalıkla kullanarak avcılardan saklanır ve yeme hızla hamle yapar.",
+    "story": "Kaptan Osman gençliğinde Melichthys Balığı peşinde tam üç gün kürek çekmiş ama sonunda ona hayran kalıp serbest bırakmış."
   },
   {
     "id": "p_micropterus_dolomieu",
@@ -3750,7 +3899,8 @@
     ],
     "habitat": "Sazlıklar ve batık ağaç kökleri",
     "diet": "Küçük balıklar, kurbağalar ve böcekler",
-    "fact": "Spor balıkçılığının en ünlü yıldızıdır; yakalandığında sudan dışarı sıçrar!"
+    "fact": "Spor balıkçılığının en ünlü yıldızıdır; yakalandığında sudan dışarı sıçrar!",
+    "story": "Ay ışığı suya vurduğunda Büyük Ağızlı Levrek pullarıyla gümüş izler bırakır, gölün sessizliğini masalsı bir tabloya çevirirmiş."
   },
   {
     "id": "p_micropterus_nigricans",
@@ -3775,7 +3925,8 @@
     ],
     "habitat": "Sazlıklar ve batık ağaç kökleri",
     "diet": "Küçük balıklar, kurbağalar ve böcekler",
-    "fact": "Spor balıkçılığının en ünlü yıldızıdır; yakalandığında sudan dışarı sıçrar!"
+    "fact": "Spor balıkçılığının en ünlü yıldızıdır; yakalandığında sudan dışarı sıçrar!",
+    "story": "Yaşlı balıkçılar Büyük Ağızlı Levrek yakalandığı gün gölde huzurun ve bereketin hiç eksik olmayacağına inanırmış."
   },
   {
     "id": "p_micropterus_salmoides",
@@ -3800,7 +3951,8 @@
     ],
     "habitat": "Sazlıklar ve batık ağaç kökleri",
     "diet": "Küçük balıklar, kurbağalar ve böcekler",
-    "fact": "Spor balıkçılığının en ünlü yıldızıdır; yakalandığında sudan dışarı sıçrar!"
+    "fact": "Spor balıkçılığının en ünlü yıldızıdır; yakalandığında sudan dışarı sıçrar!",
+    "story": "Bir zamanlar sazlıklar ve batık ağaç kökleri boyunca yolunu arayan bir kaşif, parıltısı sayesinde yolunu Büyük Ağızlı Levrek ile bulmuş."
   },
   {
     "id": "p_micropterus_treculii",
@@ -3825,7 +3977,8 @@
     ],
     "habitat": "Sazlıklar ve batık ağaç kökleri",
     "diet": "Küçük balıklar, kurbağalar ve böcekler",
-    "fact": "Spor balıkçılığının en ünlü yıldızıdır; yakalandığında sudan dışarı sıçrar!"
+    "fact": "Spor balıkçılığının en ünlü yıldızıdır; yakalandığında sudan dışarı sıçrar!",
+    "story": "Pazar tezgahındaki Şef Hüseyin, Büyük Ağızlı Levrek gördüğünde gözleri parlar ve hemen en gizli baharat kutusunu çıkarırmış."
   },
   {
     "id": "p_microspathodon_chrysurus",
@@ -3850,7 +4003,8 @@
     ],
     "habitat": "Alacakaranlık derin resif yamaçları",
     "diet": "Küçük sürü balıkları ve yengeçler",
-    "fact": "Microspathodon chrysurus, orta ve derin sular arasındaki geçiş kuşağında yaşayan güçlü yüzücü bir avcıdır."
+    "fact": "Microspathodon chrysurus, orta ve derin sular arasındaki geçiş kuşağında yaşayan güçlü yüzücü bir avcıdır.",
+    "story": "Kedi Minnoş iskelenin ucunda patisini suya uzatıp saatlerce Microspathodon Balığı ile saklambaç oynamaya bayılırmış."
   },
   {
     "id": "p_microspathodon_dorsalis",
@@ -3875,7 +4029,8 @@
     ],
     "habitat": "Derin göl ve abis kayalıkları",
     "diet": "Derin su balıkları ve kafadanbacaklılar",
-    "fact": "Microspathodon dorsalis, karanlık derinliklerde hassas yan çizgi organıyla avının titreşimini metrelerce öteden algılar."
+    "fact": "Microspathodon dorsalis, karanlık derinliklerde hassas yan çizgi organıyla avının titreşimini metrelerce öteden algılar.",
+    "story": "Rivayete göre şafak vakti su yüzeyinde halka gören herkes, altında Microspathodon Balığı dans ettiğini bilirmiş."
   },
   {
     "id": "p_mobula_alfredi",
@@ -3900,7 +4055,8 @@
     ],
     "habitat": "Berrak sığ kıyılar ve yosun yatakları",
     "diet": "Plankton, yosun ve küçük kabuklular",
-    "fact": "Mobula alfredi, çevik hareketleri ve parlak pullarıyla sığ sularda sürüler halinde beslenen nadir bir türdür."
+    "fact": "Mobula alfredi, çevik hareketleri ve parlak pullarıyla sığ sularda sürüler halinde beslenen nadir bir türdür.",
+    "story": "Koleksiyoncu Leyla'nın eski defterinde Mobula Balığı için 'suyun altındaki saklı mücevher' diye not düşülmüş."
   },
   {
     "id": "p_mola_mola",
@@ -3925,7 +4081,8 @@
     ],
     "habitat": "Derin açık sular",
     "diet": "Deniz anaları",
-    "fact": "Dünyanın en ağır kemikli balığıdır; güneşlenmek için bazen yan yatıp yüzeyde yüzer!"
+    "fact": "Dünyanın en ağır kemikli balığıdır; güneşlenmek için bazen yan yatıp yüzeyde yüzer!",
+    "story": "Fırtınadan sonra göl durulduğunda Ay Balığı ilk kez su üstüne göz kırpar, balıkçılara havanın açtığını müjdelermiş."
   },
   {
     "id": "p_monotaxis_grandoculis",
@@ -3950,7 +4107,8 @@
     ],
     "habitat": "Alacakaranlık derin resif yamaçları",
     "diet": "Küçük sürü balıkları ve yengeçler",
-    "fact": "Monotaxis grandoculis, orta ve derin sular arasındaki geçiş kuşağında yaşayan güçlü yüzücü bir avcıdır."
+    "fact": "Monotaxis grandoculis, orta ve derin sular arasındaki geçiş kuşağında yaşayan güçlü yüzücü bir avcıdır.",
+    "story": "Eski bir göl masalına göre Monotaxis Balığı, batık hazine sandıklarının yerini bilen en zeki rehberlerden biriymiş."
   },
   {
     "id": "p_morone_saxatilis",
@@ -3975,7 +4133,8 @@
     ],
     "habitat": "Orta ve derin açık sular",
     "diet": "Küçük balık sürüleri",
-    "fact": "Gümüşi gövdesindeki koyu yatay şeritlerle tanınan güçlü ve hızlı bir göçmendir."
+    "fact": "Gümüşi gövdesindeki koyu yatay şeritlerle tanınan güçlü ve hızlı bir göçmendir.",
+    "story": "Kaptan Osman gençliğinde Çizgili Levrek peşinde tam üç gün kürek çekmiş ama sonunda ona hayran kalıp serbest bırakmış."
   },
   {
     "id": "p_mugil_cephalus",
@@ -4000,7 +4159,8 @@
     ],
     "habitat": "Sığ kıyılar ve dere ağızları",
     "diet": "Yosunlar ve organik dip parçacıkları",
-    "fact": "Sık sık su yüzeyinden havaya sıçrayarak sürü halinde hareket eder."
+    "fact": "Sık sık su yüzeyinden havaya sıçrayarak sürü halinde hareket eder.",
+    "story": "Ay ışığı suya vurduğunda Kefal pullarıyla gümüş izler bırakır, gölün sessizliğini masalsı bir tabloya çevirirmiş."
   },
   {
     "id": "p_mulloidichthys_vanicolensis",
@@ -4025,7 +4185,8 @@
     ],
     "habitat": "Orta derinlikteki kayalık resifler",
     "diet": "Karides, küçük yumuşakçalar ve böcekler",
-    "fact": "Mulloidichthys vanicolensis, kayalık oyukları ustalıkla kullanarak avcılardan saklanır ve yeme hızla hamle yapar."
+    "fact": "Mulloidichthys vanicolensis, kayalık oyukları ustalıkla kullanarak avcılardan saklanır ve yeme hızla hamle yapar.",
+    "story": "Yaşlı balıkçılar Mulloidichthys Balığı yakalandığı gün gölde huzurun ve bereketin hiç eksik olmayacağına inanırmış."
   },
   {
     "id": "p_mulloidicthys_flavolineatus",
@@ -4050,7 +4211,8 @@
     ],
     "habitat": "Alacakaranlık derin resif yamaçları",
     "diet": "Küçük sürü balıkları ve yengeçler",
-    "fact": "Mulloidicthys flavolineatus, orta ve derin sular arasındaki geçiş kuşağında yaşayan güçlü yüzücü bir avcıdır."
+    "fact": "Mulloidicthys flavolineatus, orta ve derin sular arasındaki geçiş kuşağında yaşayan güçlü yüzücü bir avcıdır.",
+    "story": "Bir zamanlar alacakaranlık derin resif yamaçları boyunca yolunu arayan bir kaşif, parıltısı sayesinde yolunu Mulloidicthys Balığı ile bulmuş."
   },
   {
     "id": "p_myliobatis_californica",
@@ -4075,7 +4237,8 @@
     ],
     "habitat": "Derin göl ve abis kayalıkları",
     "diet": "Derin su balıkları ve kafadanbacaklılar",
-    "fact": "Myliobatis californica, karanlık derinliklerde hassas yan çizgi organıyla avının titreşimini metrelerce öteden algılar."
+    "fact": "Myliobatis californica, karanlık derinliklerde hassas yan çizgi organıyla avının titreşimini metrelerce öteden algılar.",
+    "story": "Pazar tezgahındaki Şef Hüseyin, Myliobatis Balığı gördüğünde gözleri parlar ve hemen en gizli baharat kutusunu çıkarırmış."
   },
   {
     "id": "p_myripristis_jacobus",
@@ -4100,7 +4263,8 @@
     ],
     "habitat": "Berrak sığ kıyılar ve yosun yatakları",
     "diet": "Plankton, yosun ve küçük kabuklular",
-    "fact": "Myripristis jacobus, çevik hareketleri ve parlak pullarıyla sığ sularda sürüler halinde beslenen nadir bir türdür."
+    "fact": "Myripristis jacobus, çevik hareketleri ve parlak pullarıyla sığ sularda sürüler halinde beslenen nadir bir türdür.",
+    "story": "Kedi Minnoş iskelenin ucunda patisini suya uzatıp saatlerce Myripristis Balığı ile saklambaç oynamaya bayılırmış."
   },
   {
     "id": "p_naso_lituratus",
@@ -4125,7 +4289,8 @@
     ],
     "habitat": "Mercan yamaçları",
     "diet": "Kahverengi deniz yosunları",
-    "fact": "Alnındaki tek boynuz benzeri çıkıntı nedeniyle 'Tekboynuz Balığı' olarak da bilinir."
+    "fact": "Alnındaki tek boynuz benzeri çıkıntı nedeniyle 'Tekboynuz Balığı' olarak da bilinir.",
+    "story": "Rivayete göre şafak vakti su yüzeyinde halka gören herkes, altında Boynuzlu Cerrah dans ettiğini bilirmiş."
   },
   {
     "id": "p_naso_unicornis",
@@ -4150,7 +4315,8 @@
     ],
     "habitat": "Mercan yamaçları",
     "diet": "Kahverengi deniz yosunları",
-    "fact": "Alnındaki tek boynuz benzeri çıkıntı nedeniyle 'Tekboynuz Balığı' olarak da bilinir."
+    "fact": "Alnındaki tek boynuz benzeri çıkıntı nedeniyle 'Tekboynuz Balığı' olarak da bilinir.",
+    "story": "Koleksiyoncu Leyla'nın eski defterinde Boynuzlu Cerrah için 'suyun altındaki saklı mücevher' diye not düşülmüş."
   },
   {
     "id": "p_notemigonus_crysoleucas",
@@ -4175,7 +4341,8 @@
     ],
     "habitat": "Derin göl ve abis kayalıkları",
     "diet": "Derin su balıkları ve kafadanbacaklılar",
-    "fact": "Notemigonus crysoleucas, karanlık derinliklerde hassas yan çizgi organıyla avının titreşimini metrelerce öteden algılar."
+    "fact": "Notemigonus crysoleucas, karanlık derinliklerde hassas yan çizgi organıyla avının titreşimini metrelerce öteden algılar.",
+    "story": "Fırtınadan sonra göl durulduğunda Notemigonus Balığı ilk kez su üstüne göz kırpar, balıkçılara havanın açtığını müjdelermiş."
   },
   {
     "id": "p_oblada_melanurus",
@@ -4200,7 +4367,8 @@
     ],
     "habitat": "Berrak sığ kıyılar ve yosun yatakları",
     "diet": "Plankton, yosun ve küçük kabuklular",
-    "fact": "Oblada melanurus, çevik hareketleri ve parlak pullarıyla sığ sularda sürüler halinde beslenen nadir bir türdür."
+    "fact": "Oblada melanurus, çevik hareketleri ve parlak pullarıyla sığ sularda sürüler halinde beslenen nadir bir türdür.",
+    "story": "Eski bir göl masalına göre Oblada Balığı, batık hazine sandıklarının yerini bilen en zeki rehberlerden biriymiş."
   },
   {
     "id": "p_ocyurus_chrysurus",
@@ -4225,7 +4393,8 @@
     ],
     "habitat": "Berrak resif üstleri",
     "diet": "Karides ve küçük balıklar",
-    "fact": "Gövdesinden kuyruğuna uzanan parlak altın şeridiyle su içinde ışık gibi parlar."
+    "fact": "Gövdesinden kuyruğuna uzanan parlak altın şeridiyle su içinde ışık gibi parlar.",
+    "story": "Kaptan Osman gençliğinde Sarı Kuyruk peşinde tam üç gün kürek çekmiş ama sonunda ona hayran kalıp serbest bırakmış."
   },
   {
     "id": "p_odonus_niger",
@@ -4250,7 +4419,8 @@
     ],
     "habitat": "Alacakaranlık derin resif yamaçları",
     "diet": "Küçük sürü balıkları ve yengeçler",
-    "fact": "Odonus niger, orta ve derin sular arasındaki geçiş kuşağında yaşayan güçlü yüzücü bir avcıdır."
+    "fact": "Odonus niger, orta ve derin sular arasındaki geçiş kuşağında yaşayan güçlü yüzücü bir avcıdır.",
+    "story": "Ay ışığı suya vurduğunda Odonus Balığı pullarıyla gümüş izler bırakır, gölün sessizliğini masalsı bir tabloya çevirirmiş."
   },
   {
     "id": "p_oligocottus_maculosus",
@@ -4275,7 +4445,8 @@
     ],
     "habitat": "Kayalık gelgit havuzları",
     "diet": "Küçük kabuklular",
-    "fact": "Kendi gelgit havuzunu kilometrelerce uzaktan bile geri bulabilen şaşırtıcı bir yön duygusu vardır."
+    "fact": "Kendi gelgit havuzunu kilometrelerce uzaktan bile geri bulabilen şaşırtıcı bir yön duygusu vardır.",
+    "story": "Yaşlı balıkçılar Gelgit İskorpitçiği yakalandığı gün gölde huzurun ve bereketin hiç eksik olmayacağına inanırmış."
   },
   {
     "id": "p_oncorhynchus_gorbuscha",
@@ -4300,7 +4471,8 @@
     ],
     "habitat": "Serin ve oksijenli derin sular",
     "diet": "Böcekler ve küçük balıklar",
-    "fact": "Üremek için doğduğu akarsuya binlerce kilometre yüzüp şelalelerden atlayarak geri döner!"
+    "fact": "Üremek için doğduğu akarsuya binlerce kilometre yüzüp şelalelerden atlayarak geri döner!",
+    "story": "Bir zamanlar serin ve oksijenli derin sular boyunca yolunu arayan bir kaşif, parıltısı sayesinde yolunu Alabalık / Somon ile bulmuş."
   },
   {
     "id": "p_oncorhynchus_kisutch",
@@ -4325,7 +4497,8 @@
     ],
     "habitat": "Serin ve oksijenli derin sular",
     "diet": "Böcekler ve küçük balıklar",
-    "fact": "Üremek için doğduğu akarsuya binlerce kilometre yüzüp şelalelerden atlayarak geri döner!"
+    "fact": "Üremek için doğduğu akarsuya binlerce kilometre yüzüp şelalelerden atlayarak geri döner!",
+    "story": "Pazar tezgahındaki Şef Hüseyin, Alabalık / Somon gördüğünde gözleri parlar ve hemen en gizli baharat kutusunu çıkarırmış."
   },
   {
     "id": "p_oncorhynchus_mykiss",
@@ -4350,7 +4523,8 @@
     ],
     "habitat": "Serin ve oksijenli derin sular",
     "diet": "Böcekler ve küçük balıklar",
-    "fact": "Üremek için doğduğu akarsuya binlerce kilometre yüzüp şelalelerden atlayarak geri döner!"
+    "fact": "Üremek için doğduğu akarsuya binlerce kilometre yüzüp şelalelerden atlayarak geri döner!",
+    "story": "Kedi Minnoş iskelenin ucunda patisini suya uzatıp saatlerce Alabalık / Somon ile saklambaç oynamaya bayılırmış."
   },
   {
     "id": "p_oncorhynchus_nerka",
@@ -4375,7 +4549,8 @@
     ],
     "habitat": "Serin ve oksijenli derin sular",
     "diet": "Böcekler ve küçük balıklar",
-    "fact": "Üremek için doğduğu akarsuya binlerce kilometre yüzüp şelalelerden atlayarak geri döner!"
+    "fact": "Üremek için doğduğu akarsuya binlerce kilometre yüzüp şelalelerden atlayarak geri döner!",
+    "story": "Rivayete göre şafak vakti su yüzeyinde halka gören herkes, altında Alabalık / Somon dans ettiğini bilirmiş."
   },
   {
     "id": "p_oncorhynchus_tshawytscha",
@@ -4400,7 +4575,8 @@
     ],
     "habitat": "Serin ve oksijenli derin sular",
     "diet": "Böcekler ve küçük balıklar",
-    "fact": "Üremek için doğduğu akarsuya binlerce kilometre yüzüp şelalelerden atlayarak geri döner!"
+    "fact": "Üremek için doğduğu akarsuya binlerce kilometre yüzüp şelalelerden atlayarak geri döner!",
+    "story": "Koleksiyoncu Leyla'nın eski defterinde Alabalık / Somon için 'suyun altındaki saklı mücevher' diye not düşülmüş."
   },
   {
     "id": "p_oreochromis_mossambicus",
@@ -4425,7 +4601,8 @@
     ],
     "habitat": "Orta derinlikteki kayalık resifler",
     "diet": "Karides, küçük yumuşakçalar ve böcekler",
-    "fact": "Oreochromis mossambicus, kayalık oyukları ustalıkla kullanarak avcılardan saklanır ve yeme hızla hamle yapar."
+    "fact": "Oreochromis mossambicus, kayalık oyukları ustalıkla kullanarak avcılardan saklanır ve yeme hızla hamle yapar.",
+    "story": "Fırtınadan sonra göl durulduğunda Oreochromis Balığı ilk kez su üstüne göz kırpar, balıkçılara havanın açtığını müjdelermiş."
   },
   {
     "id": "p_oreochromis_niloticus",
@@ -4450,7 +4627,8 @@
     ],
     "habitat": "Alacakaranlık derin resif yamaçları",
     "diet": "Küçük sürü balıkları ve yengeçler",
-    "fact": "Oreochromis niloticus, orta ve derin sular arasındaki geçiş kuşağında yaşayan güçlü yüzücü bir avcıdır."
+    "fact": "Oreochromis niloticus, orta ve derin sular arasındaki geçiş kuşağında yaşayan güçlü yüzücü bir avcıdır.",
+    "story": "Eski bir göl masalına göre Oreochromis Balığı, batık hazine sandıklarının yerini bilen en zeki rehberlerden biriymiş."
   },
   {
     "id": "p_ostracion_cubicum",
@@ -4475,7 +4653,8 @@
     ],
     "habitat": "Sığ mercan resifleri",
     "diet": "Süngerler ve küçük omurgasızlar",
-    "fact": "Vücudu kemikten altıgen bir zırhla kaplıdır; kutu gibi görünmesine rağmen çok çeviktir!"
+    "fact": "Vücudu kemikten altıgen bir zırhla kaplıdır; kutu gibi görünmesine rağmen çok çeviktir!",
+    "story": "Kaptan Osman gençliğinde Sandık Balığı peşinde tam üç gün kürek çekmiş ama sonunda ona hayran kalıp serbest bırakmış."
   },
   {
     "id": "p_ostracion_meleagris",
@@ -4500,7 +4679,8 @@
     ],
     "habitat": "Sığ mercan resifleri",
     "diet": "Süngerler ve küçük omurgasızlar",
-    "fact": "Vücudu kemikten altıgen bir zırhla kaplıdır; kutu gibi görünmesine rağmen çok çeviktir!"
+    "fact": "Vücudu kemikten altıgen bir zırhla kaplıdır; kutu gibi görünmesine rağmen çok çeviktir!",
+    "story": "Ay ışığı suya vurduğunda Sandık Balığı pullarıyla gümüş izler bırakır, gölün sessizliğini masalsı bir tabloya çevirirmiş."
   },
   {
     "id": "boss_lake",
@@ -4528,7 +4708,8 @@
     "boss": true,
     "habitat": "Huzur Gölü'nün en derin kovukları",
     "diet": "Büyük göl balıkları",
-    "fact": "Yüzyıllardır Huzur Gölü'nde yaşadığı söylenen altın pullu efsanevi yayın balığı. Oltaya vurduğunda tüm göl sarsılır!"
+    "fact": "Yüzyıllardır Huzur Gölü'nde yaşadığı söylenen altın pullu efsanevi yayın balığı. Oltaya vurduğunda tüm göl sarsılır!",
+    "story": "Gölün ilk iskelesi kurulduğu günden beri orada yaşadığı, oltasına vurduğu her balıkçıya unutulmaz bir anı bıraktığı söylenir."
   },
   {
     "id": "boss_coral",
@@ -4556,7 +4737,8 @@
     "boss": true,
     "habitat": "Mercan Koyu'nun dış resif duvarı",
     "diet": "Büyük resif avları",
-    "fact": "Turkuaz parıltılı yüzgeçleriyle Mercan Koyu'nun tartışmasız hükümdarı. Sadece en cesur balıkçılar onu yüzeye çekebilir."
+    "fact": "Turkuaz parıltılı yüzgeçleriyle Mercan Koyu'nun tartışmasız hükümdarı. Sadece en cesur balıkçılar onu yüzeye çekebilir.",
+    "story": "Mercan Koyu'nun en eski kaptanı şapkasını fırtınada suya düşürmüş; o günden beri Mercan Kralı o koyun tek hakimi sayılır."
   },
   {
     "id": "boss_fjord",
@@ -4584,7 +4766,8 @@
     "boss": true,
     "habitat": "Karanlık Fiyort'un buzlu dipleri",
     "diet": "Derin kuzey balıkları",
-    "fact": "Kuzey ışıklarının altında beliren buz mavisi dev yılan. Pulları buzul kristalleri gibi parlar."
+    "fact": "Kuzey ışıklarının altında beliren buz mavisi dev yılan. Pulları buzul kristalleri gibi parlar.",
+    "story": "Kuzey ışıkları gökyüzünde dans etmeye başladığında Fiyort Leviathanı uyanır, buzlu sulara masalsı bir parıltı bırakırmış."
   },
   {
     "id": "boss_volcano",
@@ -4612,6 +4795,2015 @@
     "boss": true,
     "habitat": "Volkanik Çukur'un lav yarıkları",
     "diet": "Derin deniz canavarları",
-    "fact": "Lav yarıklarının ısısıyla beslenen kızıl abis ejderi. Olta Gölü evrenindeki en büyük ve en değerli avdır!"
+    "fact": "Lav yarıklarının ısısıyla beslenen kızıl abis ejderi. Olta Gölü evrenindeki en büyük ve en değerli avdır!",
+    "story": "Volkanik çukurun en sıcak yarığında doğan Magma Ejderi, efsaneye göre lav taşlarından dövülmüş pullarıyla hiçbir ağa sığmazmış."
+  },
+  {
+    "id": "p_paracirrhites_forsteri",
+    "name": "Paracirrhites Balığı (Forsteri)",
+    "latin": "Paracirrhites forsteri",
+    "spr": "fish_px_paracirrhites_forsteri",
+    "d": [
+      38,
+      115
+    ],
+    "kg": [
+      2.2,
+      9.5
+    ],
+    "str": 3.35,
+    "val": 43,
+    "r": 2,
+    "sc": 0.65,
+    "spd": [
+      40,
+      72
+    ],
+    "habitat": "Serin orta derinlik geçitleri",
+    "diet": "Küçük sürü balıkları ve yengeçler",
+    "fact": "Paracirrhites forsteri, serin su katmanları arasında göç eden güçlü bir yüzücüdür.",
+    "story": "Rivayete göre şafak vakti su yüzeyinde halka gören herkes, altında Paracirrhites Balığı dans ettiğini bilirmiş."
+  },
+  {
+    "id": "p_parupeneus_multifasciatus",
+    "name": "Parupeneus Balığı (Multifasciatus)",
+    "latin": "Parupeneus multifasciatus",
+    "spr": "fish_px_parupeneus_multifasciatus",
+    "d": [
+      72,
+      154
+    ],
+    "kg": [
+      5.5,
+      24.0
+    ],
+    "str": 4.5,
+    "val": 54,
+    "r": 3,
+    "sc": 0.65,
+    "spd": [
+      48,
+      82
+    ],
+    "habitat": "Karanlık derin vadi ve mağara ağızları",
+    "diet": "Derin su balıkları ve kafadanbacaklılar",
+    "fact": "Parupeneus multifasciatus, derin suların sessizliğinde keskin duyularıyla avlanan nadir bir türdür.",
+    "story": "Koleksiyoncu Leyla'nın eski defterinde Parupeneus Balığı için 'suyun altındaki saklı mücevher' diye not düşülmüş."
+  },
+  {
+    "id": "p_perca_flavescens",
+    "name": "Perca Balığı (Flavescens)",
+    "latin": "Perca flavescens",
+    "spr": "fish_px_perca_flavescens",
+    "d": [
+      7,
+      44
+    ],
+    "kg": [
+      0.25,
+      1.6
+    ],
+    "str": 1.65,
+    "val": 29,
+    "r": 0,
+    "sc": 0.55,
+    "spd": [
+      56,
+      92
+    ],
+    "habitat": "Nilüferli sığ göletler ve berrak kıyılar",
+    "diet": "Yosunlar, su pireleri ve küçük larvalar",
+    "fact": "Perca flavescens, berrak sığ sularda ışıkla dans eden pullarıyla doğaseverlerin favorisidir.",
+    "story": "Fırtınadan sonra göl durulduğunda Perca Balığı ilk kez su üstüne göz kırpar, balıkçılara havanın açtığını müjdelermiş."
+  },
+  {
+    "id": "p_perca_fluviatilis",
+    "name": "Perca Balığı (Fluviatilis)",
+    "latin": "Perca fluviatilis",
+    "spr": "fish_px_perca_fluviatilis",
+    "d": [
+      21,
+      74
+    ],
+    "kg": [
+      0.9,
+      4.2
+    ],
+    "str": 2.35,
+    "val": 32,
+    "r": 1,
+    "sc": 0.55,
+    "spd": [
+      32,
+      62
+    ],
+    "habitat": "Güneşli kayalık resifler ve sazlıklar",
+    "diet": "Karidesler, kabuklular ve küçük omurgasızlar",
+    "fact": "Perca fluviatilis, kayalık oyukları ev bellemiş meraklı ve çevik bir türdür.",
+    "story": "Eski bir göl masalına göre Perca Balığı, batık hazine sandıklarının yerini bilen en zeki rehberlerden biriymiş."
+  },
+  {
+    "id": "p_percina_carbonaria",
+    "name": "Percina Balığı (Carbonaria)",
+    "latin": "Percina carbonaria",
+    "spr": "fish_px_percina_carbonaria",
+    "d": [
+      46,
+      123
+    ],
+    "kg": [
+      2.2,
+      9.5
+    ],
+    "str": 3.5,
+    "val": 43,
+    "r": 2,
+    "sc": 0.65,
+    "spd": [
+      40,
+      72
+    ],
+    "habitat": "Serin orta derinlik geçitleri",
+    "diet": "Küçük sürü balıkları ve yengeçler",
+    "fact": "Percina carbonaria, serin su katmanları arasında göç eden güçlü bir yüzücüdür.",
+    "story": "Kaptan Osman gençliğinde Percina Balığı peşinde tam üç gün kürek çekmiş ama sonunda ona hayran kalıp serbest bırakmış."
+  },
+  {
+    "id": "p_periophthalmus_argentilineatus",
+    "name": "Periophthalmus Balığı (Argentilineatus)",
+    "latin": "Periophthalmus argentilineatus",
+    "spr": "fish_px_periophthalmus_argentilineatus",
+    "d": [
+      70,
+      152
+    ],
+    "kg": [
+      5.5,
+      24.0
+    ],
+    "str": 4.65,
+    "val": 54,
+    "r": 3,
+    "sc": 0.65,
+    "spd": [
+      48,
+      82
+    ],
+    "habitat": "Karanlık derin vadi ve mağara ağızları",
+    "diet": "Derin su balıkları ve kafadanbacaklılar",
+    "fact": "Periophthalmus argentilineatus, derin suların sessizliğinde keskin duyularıyla avlanan nadir bir türdür.",
+    "story": "Ay ışığı suya vurduğunda Periophthalmus Balığı pullarıyla gümüş izler bırakır, gölün sessizliğini masalsı bir tabloya çevirirmiş."
+  },
+  {
+    "id": "p_periophthalmus_modestus",
+    "name": "Periophthalmus Balığı (Modestus)",
+    "latin": "Periophthalmus modestus",
+    "spr": "fish_px_periophthalmus_modestus",
+    "d": [
+      5,
+      42
+    ],
+    "kg": [
+      0.25,
+      1.6
+    ],
+    "str": 1.35,
+    "val": 29,
+    "r": 0,
+    "sc": 0.55,
+    "spd": [
+      56,
+      92
+    ],
+    "habitat": "Nilüferli sığ göletler ve berrak kıyılar",
+    "diet": "Yosunlar, su pireleri ve küçük larvalar",
+    "fact": "Periophthalmus modestus, berrak sığ sularda ışıkla dans eden pullarıyla doğaseverlerin favorisidir.",
+    "story": "Yaşlı balıkçılar Periophthalmus Balığı yakalandığı gün gölde huzurun ve bereketin hiç eksik olmayacağına inanırmış."
+  },
+  {
+    "id": "p_phoxinus_phoxinus",
+    "name": "Phoxinus Balığı (Phoxinus)",
+    "latin": "Phoxinus phoxinus",
+    "spr": "fish_px_phoxinus_phoxinus",
+    "d": [
+      19,
+      72
+    ],
+    "kg": [
+      0.9,
+      4.2
+    ],
+    "str": 2.5,
+    "val": 32,
+    "r": 1,
+    "sc": 0.55,
+    "spd": [
+      32,
+      62
+    ],
+    "habitat": "Güneşli kayalık resifler ve sazlıklar",
+    "diet": "Karidesler, kabuklular ve küçük omurgasızlar",
+    "fact": "Phoxinus phoxinus, kayalık oyukları ev bellemiş meraklı ve çevik bir türdür.",
+    "story": "Bir zamanlar güneşli kayalık resifler ve sazlıklar boyunca yolunu arayan bir kaşif, parıltısı sayesinde yolunu Phoxinus Balığı ile bulmuş."
+  },
+  {
+    "id": "p_pimephales_notatus",
+    "name": "Pimephales Balığı (Notatus)",
+    "latin": "Pimephales notatus",
+    "spr": "fish_px_pimephales_notatus",
+    "d": [
+      44,
+      121
+    ],
+    "kg": [
+      2.2,
+      9.5
+    ],
+    "str": 3.65,
+    "val": 43,
+    "r": 2,
+    "sc": 0.65,
+    "spd": [
+      40,
+      72
+    ],
+    "habitat": "Serin orta derinlik geçitleri",
+    "diet": "Küçük sürü balıkları ve yengeçler",
+    "fact": "Pimephales notatus, serin su katmanları arasında göç eden güçlü bir yüzücüdür.",
+    "story": "Pazar tezgahındaki Şef Hüseyin, Pimephales Balığı gördüğünde gözleri parlar ve hemen en gizli baharat kutusunu çıkarırmış."
+  },
+  {
+    "id": "p_pimephales_promelas",
+    "name": "Pimephales Balığı (Promelas)",
+    "latin": "Pimephales promelas",
+    "spr": "fish_px_pimephales_promelas",
+    "d": [
+      78,
+      160
+    ],
+    "kg": [
+      5.5,
+      24.0
+    ],
+    "str": 4.35,
+    "val": 54,
+    "r": 3,
+    "sc": 0.65,
+    "spd": [
+      48,
+      82
+    ],
+    "habitat": "Karanlık derin vadi ve mağara ağızları",
+    "diet": "Derin su balıkları ve kafadanbacaklılar",
+    "fact": "Pimephales promelas, derin suların sessizliğinde keskin duyularıyla avlanan nadir bir türdür.",
+    "story": "Kedi Minnoş iskelenin ucunda patisini suya uzatıp saatlerce Pimephales Balığı ile saklambaç oynamaya bayılırmış."
+  },
+  {
+    "id": "p_platax_boersii",
+    "name": "Platax Balığı (Boersii)",
+    "latin": "Platax boersii",
+    "spr": "fish_px_platax_boersii",
+    "d": [
+      3,
+      40
+    ],
+    "kg": [
+      0.25,
+      1.6
+    ],
+    "str": 1.5,
+    "val": 29,
+    "r": 0,
+    "sc": 0.55,
+    "spd": [
+      56,
+      92
+    ],
+    "habitat": "Nilüferli sığ göletler ve berrak kıyılar",
+    "diet": "Yosunlar, su pireleri ve küçük larvalar",
+    "fact": "Platax boersii, berrak sığ sularda ışıkla dans eden pullarıyla doğaseverlerin favorisidir.",
+    "story": "Rivayete göre şafak vakti su yüzeyinde halka gören herkes, altında Platax Balığı dans ettiğini bilirmiş."
+  },
+  {
+    "id": "p_platichthys_flesus",
+    "name": "Platichthys Balığı (Flesus)",
+    "latin": "Platichthys flesus",
+    "spr": "fish_px_platichthys_flesus",
+    "d": [
+      17,
+      70
+    ],
+    "kg": [
+      0.9,
+      4.2
+    ],
+    "str": 2.65,
+    "val": 32,
+    "r": 1,
+    "sc": 0.55,
+    "spd": [
+      32,
+      62
+    ],
+    "habitat": "Güneşli kayalık resifler ve sazlıklar",
+    "diet": "Karidesler, kabuklular ve küçük omurgasızlar",
+    "fact": "Platichthys flesus, kayalık oyukları ev bellemiş meraklı ve çevik bir türdür.",
+    "story": "Koleksiyoncu Leyla'nın eski defterinde Platichthys Balığı için 'suyun altındaki saklı mücevher' diye not düşülmüş."
+  },
+  {
+    "id": "p_poecilia_latipinna",
+    "name": "Poecilia Balığı (Latipinna)",
+    "latin": "Poecilia latipinna",
+    "spr": "fish_px_poecilia_latipinna",
+    "d": [
+      42,
+      119
+    ],
+    "kg": [
+      2.2,
+      9.5
+    ],
+    "str": 3.35,
+    "val": 43,
+    "r": 2,
+    "sc": 0.65,
+    "spd": [
+      40,
+      72
+    ],
+    "habitat": "Serin orta derinlik geçitleri",
+    "diet": "Küçük sürü balıkları ve yengeçler",
+    "fact": "Poecilia latipinna, serin su katmanları arasında göç eden güçlü bir yüzücüdür.",
+    "story": "Fırtınadan sonra göl durulduğunda Poecilia Balığı ilk kez su üstüne göz kırpar, balıkçılara havanın açtığını müjdelermiş."
+  },
+  {
+    "id": "p_poecilia_reticulata",
+    "name": "Poecilia Balığı (Reticulata)",
+    "latin": "Poecilia reticulata",
+    "spr": "fish_px_poecilia_reticulata",
+    "d": [
+      76,
+      158
+    ],
+    "kg": [
+      5.5,
+      24.0
+    ],
+    "str": 4.5,
+    "val": 54,
+    "r": 3,
+    "sc": 0.65,
+    "spd": [
+      48,
+      82
+    ],
+    "habitat": "Karanlık derin vadi ve mağara ağızları",
+    "diet": "Derin su balıkları ve kafadanbacaklılar",
+    "fact": "Poecilia reticulata, derin suların sessizliğinde keskin duyularıyla avlanan nadir bir türdür.",
+    "story": "Eski bir göl masalına göre Poecilia Balığı, batık hazine sandıklarının yerini bilen en zeki rehberlerden biriymiş."
+  },
+  {
+    "id": "p_pomacanthus_imperator",
+    "name": "İmparator Melek Balığı (Imperator)",
+    "latin": "Pomacanthus imperator",
+    "spr": "fish_px_pomacanthus_imperator",
+    "d": [
+      34,
+      106
+    ],
+    "kg": [
+      1.5,
+      6.2
+    ],
+    "str": 3.3,
+    "val": 56,
+    "r": 3,
+    "sc": 0.65,
+    "spd": [
+      56,
+      92
+    ],
+    "habitat": "Derin mercan duvarları",
+    "diet": "Süngerler ve deniz algleri",
+    "fact": "Yavruyken siyah-beyaz halkalı, büyüyünce mavi-sarı çizgili bambaşka bir görünüme bürünür.",
+    "story": "Kaptan Osman gençliğinde İmparator Melek Balığı peşinde tam üç gün kürek çekmiş ama sonunda ona hayran kalıp serbest bırakmış."
+  },
+  {
+    "id": "p_pomacanthus_paru",
+    "name": "İmparator Melek Balığı (Paru)",
+    "latin": "Pomacanthus paru",
+    "spr": "fish_px_pomacanthus_paru",
+    "d": [
+      26,
+      98
+    ],
+    "kg": [
+      1.5,
+      6.2
+    ],
+    "str": 3.0,
+    "val": 50,
+    "r": 3,
+    "sc": 0.65,
+    "spd": [
+      32,
+      62
+    ],
+    "habitat": "Derin mercan duvarları",
+    "diet": "Süngerler ve deniz algleri",
+    "fact": "Yavruyken siyah-beyaz halkalı, büyüyünce mavi-sarı çizgili bambaşka bir görünüme bürünür.",
+    "story": "Ay ışığı suya vurduğunda İmparator Melek Balığı pullarıyla gümüş izler bırakır, gölün sessizliğini masalsı bir tabloya çevirirmiş."
+  },
+  {
+    "id": "p_pomacanthus_sexstriatus",
+    "name": "İmparator Melek Balığı (Sexstriatus)",
+    "latin": "Pomacanthus sexstriatus",
+    "spr": "fish_px_pomacanthus_sexstriatus",
+    "d": [
+      28,
+      100
+    ],
+    "kg": [
+      1.5,
+      6.2
+    ],
+    "str": 3.15,
+    "val": 52,
+    "r": 3,
+    "sc": 0.65,
+    "spd": [
+      40,
+      72
+    ],
+    "habitat": "Derin mercan duvarları",
+    "diet": "Süngerler ve deniz algleri",
+    "fact": "Yavruyken siyah-beyaz halkalı, büyüyünce mavi-sarı çizgili bambaşka bir görünüme bürünür.",
+    "story": "Yaşlı balıkçılar İmparator Melek Balığı yakalandığı gün gölde huzurun ve bereketin hiç eksik olmayacağına inanırmış."
+  },
+  {
+    "id": "p_pomacentrus_moluccensis",
+    "name": "Pomacentrus Balığı (Moluccensis)",
+    "latin": "Pomacentrus moluccensis",
+    "spr": "fish_px_pomacentrus_moluccensis",
+    "d": [
+      74,
+      156
+    ],
+    "kg": [
+      5.5,
+      24.0
+    ],
+    "str": 4.65,
+    "val": 54,
+    "r": 3,
+    "sc": 0.65,
+    "spd": [
+      48,
+      82
+    ],
+    "habitat": "Karanlık derin vadi ve mağara ağızları",
+    "diet": "Derin su balıkları ve kafadanbacaklılar",
+    "fact": "Pomacentrus moluccensis, derin suların sessizliğinde keskin duyularıyla avlanan nadir bir türdür.",
+    "story": "Bir zamanlar karanlık derin vadi ve mağara ağızları boyunca yolunu arayan bir kaşif, parıltısı sayesinde yolunu Pomacentrus Balığı ile bulmuş."
+  },
+  {
+    "id": "p_pomoxis_nigromaculatus",
+    "name": "Benekli Göl Levreği (Nigromaculatus)",
+    "latin": "Pomoxis nigromaculatus",
+    "spr": "fish_px_pomoxis_nigromaculatus",
+    "d": [
+      12,
+      56
+    ],
+    "kg": [
+      0.5,
+      2.2
+    ],
+    "str": 1.6,
+    "val": 32,
+    "r": 1,
+    "sc": 0.55,
+    "spd": [
+      56,
+      92
+    ],
+    "habitat": "Göl sazlıkları ve gölgeli kıyılar",
+    "diet": "Küçük balıklar ve su pireleri",
+    "fact": "Gümüşi gövdesindeki koyu beneklerle tanınır; şafak ve günbatımında çok aktiftir.",
+    "story": "Pazar tezgahındaki Şef Hüseyin, Benekli Göl Levreği gördüğünde gözleri parlar ve hemen en gizli baharat kutusunu çıkarırmış."
+  },
+  {
+    "id": "p_prionurus_laticlavius",
+    "name": "Prionurus Balığı (Laticlavius)",
+    "latin": "Prionurus laticlavius",
+    "spr": "fish_px_prionurus_laticlavius",
+    "d": [
+      23,
+      76
+    ],
+    "kg": [
+      0.9,
+      4.2
+    ],
+    "str": 2.5,
+    "val": 32,
+    "r": 1,
+    "sc": 0.55,
+    "spd": [
+      32,
+      62
+    ],
+    "habitat": "Güneşli kayalık resifler ve sazlıklar",
+    "diet": "Karidesler, kabuklular ve küçük omurgasızlar",
+    "fact": "Prionurus laticlavius, kayalık oyukları ev bellemiş meraklı ve çevik bir türdür.",
+    "story": "Kedi Minnoş iskelenin ucunda patisini suya uzatıp saatlerce Prionurus Balığı ile saklambaç oynamaya bayılırmış."
+  },
+  {
+    "id": "p_prochilodus_lineatus",
+    "name": "Prochilodus Balığı (Lineatus)",
+    "latin": "Prochilodus lineatus",
+    "spr": "fish_px_prochilodus_lineatus",
+    "d": [
+      38,
+      115
+    ],
+    "kg": [
+      2.2,
+      9.5
+    ],
+    "str": 3.65,
+    "val": 43,
+    "r": 2,
+    "sc": 0.65,
+    "spd": [
+      40,
+      72
+    ],
+    "habitat": "Serin orta derinlik geçitleri",
+    "diet": "Küçük sürü balıkları ve yengeçler",
+    "fact": "Prochilodus lineatus, serin su katmanları arasında göç eden güçlü bir yüzücüdür.",
+    "story": "Rivayete göre şafak vakti su yüzeyinde halka gören herkes, altında Prochilodus Balığı dans ettiğini bilirmiş."
+  },
+  {
+    "id": "p_pseudanthias_squamipinnis",
+    "name": "Mercan Perisi (Squamipinnis)",
+    "latin": "Pseudanthias squamipinnis",
+    "spr": "fish_px_pseudanthias_squamipinnis",
+    "d": [
+      8,
+      48
+    ],
+    "kg": [
+      0.15,
+      0.6
+    ],
+    "str": 1.2,
+    "val": 38,
+    "r": 1,
+    "sc": 0.55,
+    "spd": [
+      48,
+      82
+    ],
+    "habitat": "Güneşli resif yamaçları",
+    "diet": "Zooplankton",
+    "fact": "Turuncu-pembe bulutlar halinde mercanların üstünde dans ederek yüzer.",
+    "story": "Koleksiyoncu Leyla'nın eski defterinde Mercan Perisi için 'suyun altındaki saklı mücevher' diye not düşülmüş."
+  },
+  {
+    "id": "p_pterois_miles",
+    "name": "Aslan Balığı (Miles)",
+    "latin": "Pterois miles",
+    "spr": "fish_px_pterois_miles",
+    "d": [
+      32,
+      102
+    ],
+    "kg": [
+      0.8,
+      3.2
+    ],
+    "str": 2.85,
+    "val": 58,
+    "r": 3,
+    "sc": 0.65,
+    "spd": [
+      56,
+      92
+    ],
+    "habitat": "Mercan oyukları ve gölgeli duvarlar",
+    "diet": "Küçük balıklar ve karidesler",
+    "fact": "Yelpaze gibi açılan muhteşem yüzgeçleriyle avını köşeye sıkıştırır.",
+    "story": "Fırtınadan sonra göl durulduğunda Aslan Balığı ilk kez su üstüne göz kırpar, balıkçılara havanın açtığını müjdelermiş."
+  },
+  {
+    "id": "p_pterois_volitans",
+    "name": "Aslan Balığı (Volitans)",
+    "latin": "Pterois volitans",
+    "spr": "fish_px_pterois_volitans",
+    "d": [
+      34,
+      104
+    ],
+    "kg": [
+      0.8,
+      3.2
+    ],
+    "str": 3.0,
+    "val": 52,
+    "r": 3,
+    "sc": 0.65,
+    "spd": [
+      32,
+      62
+    ],
+    "habitat": "Mercan oyukları ve gölgeli duvarlar",
+    "diet": "Küçük balıklar ve karidesler",
+    "fact": "Yelpaze gibi açılan muhteşem yüzgeçleriyle avını köşeye sıkıştırır.",
+    "story": "Eski bir göl masalına göre Aslan Balığı, batık hazine sandıklarının yerini bilen en zeki rehberlerden biriymiş."
+  },
+  {
+    "id": "p_pygocentrus_nattereri",
+    "name": "Kırmızı Karınlı Pirana (Nattereri)",
+    "latin": "Pygocentrus nattereri",
+    "spr": "fish_px_pygocentrus_nattereri",
+    "d": [
+      22,
+      76
+    ],
+    "kg": [
+      0.8,
+      3.5
+    ],
+    "str": 2.9,
+    "val": 42,
+    "r": 2,
+    "sc": 0.65,
+    "spd": [
+      40,
+      72
+    ],
+    "habitat": "Bitkili sıcak göl suları",
+    "diet": "Etçil avcı",
+    "fact": "Üçgen dişleriyle ünlüdür; aslında oldukça temkinli sürü balıklarıdır.",
+    "story": "Kaptan Osman gençliğinde Kırmızı Karınlı Pirana peşinde tam üç gün kürek çekmiş ama sonunda ona hayran kalıp serbest bırakmış."
+  },
+  {
+    "id": "p_pygoplites_diacanthus",
+    "name": "Pygoplites Balığı (Diacanthus)",
+    "latin": "Pygoplites diacanthus",
+    "spr": "fish_px_pygoplites_diacanthus",
+    "d": [
+      70,
+      152
+    ],
+    "kg": [
+      5.5,
+      24.0
+    ],
+    "str": 4.5,
+    "val": 54,
+    "r": 3,
+    "sc": 0.65,
+    "spd": [
+      48,
+      82
+    ],
+    "habitat": "Karanlık derin vadi ve mağara ağızları",
+    "diet": "Derin su balıkları ve kafadanbacaklılar",
+    "fact": "Pygoplites diacanthus, derin suların sessizliğinde keskin duyularıyla avlanan nadir bir türdür.",
+    "story": "Ay ışığı suya vurduğunda Pygoplites Balığı pullarıyla gümüş izler bırakır, gölün sessizliğini masalsı bir tabloya çevirirmiş."
+  },
+  {
+    "id": "p_pylodictis_olivaris",
+    "name": "Pylodictis Balığı (Olivaris)",
+    "latin": "Pylodictis olivaris",
+    "spr": "fish_px_pylodictis_olivaris",
+    "d": [
+      5,
+      42
+    ],
+    "kg": [
+      0.25,
+      1.6
+    ],
+    "str": 1.65,
+    "val": 29,
+    "r": 0,
+    "sc": 0.55,
+    "spd": [
+      56,
+      92
+    ],
+    "habitat": "Nilüferli sığ göletler ve berrak kıyılar",
+    "diet": "Yosunlar, su pireleri ve küçük larvalar",
+    "fact": "Pylodictis olivaris, berrak sığ sularda ışıkla dans eden pullarıyla doğaseverlerin favorisidir.",
+    "story": "Yaşlı balıkçılar Pylodictis Balığı yakalandığı gün gölde huzurun ve bereketin hiç eksik olmayacağına inanırmış."
+  },
+  {
+    "id": "p_raja_clavata",
+    "name": "Raja Balığı (Clavata)",
+    "latin": "Raja clavata",
+    "spr": "fish_px_raja_clavata",
+    "d": [
+      19,
+      72
+    ],
+    "kg": [
+      0.9,
+      4.2
+    ],
+    "str": 2.35,
+    "val": 32,
+    "r": 1,
+    "sc": 0.55,
+    "spd": [
+      32,
+      62
+    ],
+    "habitat": "Güneşli kayalık resifler ve sazlıklar",
+    "diet": "Karidesler, kabuklular ve küçük omurgasızlar",
+    "fact": "Raja clavata, kayalık oyukları ev bellemiş meraklı ve çevik bir türdür.",
+    "story": "Bir zamanlar güneşli kayalık resifler ve sazlıklar boyunca yolunu arayan bir kaşif, parıltısı sayesinde yolunu Raja Balığı ile bulmuş."
+  },
+  {
+    "id": "p_rhinecanthus_aculeatus",
+    "name": "Pikasso Tetik Balığı (Aculeatus)",
+    "latin": "Rhinecanthus aculeatus",
+    "spr": "fish_px_rhinecanthus_aculeatus",
+    "d": [
+      14,
+      60
+    ],
+    "kg": [
+      0.6,
+      2.5
+    ],
+    "str": 2.25,
+    "val": 44,
+    "r": 2,
+    "sc": 0.65,
+    "spd": [
+      40,
+      72
+    ],
+    "habitat": "Sığ lagünler ve resifler",
+    "diet": "Kabuklular ve deniz kestaneleri",
+    "fact": "Soyut bir tabloyu andıran geometrik renk desenleriyle ünlüdür.",
+    "story": "Pazar tezgahındaki Şef Hüseyin, Pikasso Tetik Balığı gördüğünde gözleri parlar ve hemen en gizli baharat kutusunu çıkarırmış."
+  },
+  {
+    "id": "p_rhinecanthus_rectangulus",
+    "name": "Pikasso Tetik Balığı (Rectangulus)",
+    "latin": "Rhinecanthus rectangulus",
+    "spr": "fish_px_rhinecanthus_rectangulus",
+    "d": [
+      16,
+      62
+    ],
+    "kg": [
+      0.6,
+      2.5
+    ],
+    "str": 2.4,
+    "val": 46,
+    "r": 2,
+    "sc": 0.65,
+    "spd": [
+      48,
+      82
+    ],
+    "habitat": "Sığ lagünler ve resifler",
+    "diet": "Kabuklular ve deniz kestaneleri",
+    "fact": "Soyut bir tabloyu andıran geometrik renk desenleriyle ünlüdür.",
+    "story": "Kedi Minnoş iskelenin ucunda patisini suya uzatıp saatlerce Pikasso Tetik Balığı ile saklambaç oynamaya bayılırmış."
+  },
+  {
+    "id": "p_rhinichthys_obtusus",
+    "name": "Rhinichthys Balığı (Obtusus)",
+    "latin": "Rhinichthys obtusus",
+    "spr": "fish_px_rhinichthys_obtusus",
+    "d": [
+      3,
+      40
+    ],
+    "kg": [
+      0.25,
+      1.6
+    ],
+    "str": 1.35,
+    "val": 29,
+    "r": 0,
+    "sc": 0.55,
+    "spd": [
+      56,
+      92
+    ],
+    "habitat": "Nilüferli sığ göletler ve berrak kıyılar",
+    "diet": "Yosunlar, su pireleri ve küçük larvalar",
+    "fact": "Rhinichthys obtusus, berrak sığ sularda ışıkla dans eden pullarıyla doğaseverlerin favorisidir.",
+    "story": "Rivayete göre şafak vakti su yüzeyinde halka gören herkes, altında Rhinichthys Balığı dans ettiğini bilirmiş."
+  },
+  {
+    "id": "p_rhinicthys_cataractae",
+    "name": "Şelale Sazancığı (Cataractae)",
+    "latin": "Rhinicthys cataractae",
+    "spr": "fish_px_rhinicthys_cataractae",
+    "d": [
+      4,
+      34
+    ],
+    "kg": [
+      0.1,
+      0.5
+    ],
+    "str": 1.25,
+    "val": 19,
+    "r": 0,
+    "sc": 0.55,
+    "spd": [
+      32,
+      62
+    ],
+    "habitat": "Hızlı akan serin sular",
+    "diet": "Su böcekleri",
+    "fact": "Kuvvetli akıntılarda kayaların arkasına saklanarak enerji tasarrufu yapar.",
+    "story": "Koleksiyoncu Leyla'nın eski defterinde Şelale Sazancığı için 'suyun altındaki saklı mücevher' diye not düşülmüş."
+  },
+  {
+    "id": "p_rostroraja_eglanteria",
+    "name": "Rostroraja Balığı (Eglanteria)",
+    "latin": "Rostroraja eglanteria",
+    "spr": "fish_px_rostroraja_eglanteria",
+    "d": [
+      42,
+      119
+    ],
+    "kg": [
+      2.2,
+      9.5
+    ],
+    "str": 3.65,
+    "val": 43,
+    "r": 2,
+    "sc": 0.65,
+    "spd": [
+      40,
+      72
+    ],
+    "habitat": "Serin orta derinlik geçitleri",
+    "diet": "Küçük sürü balıkları ve yengeçler",
+    "fact": "Rostroraja eglanteria, serin su katmanları arasında göç eden güçlü bir yüzücüdür.",
+    "story": "Fırtınadan sonra göl durulduğunda Rostroraja Balığı ilk kez su üstüne göz kırpar, balıkçılara havanın açtığını müjdelermiş."
+  },
+  {
+    "id": "p_rutilus_rutilus",
+    "name": "Rutilus Balığı (Rutilus)",
+    "latin": "Rutilus rutilus",
+    "spr": "fish_px_rutilus_rutilus",
+    "d": [
+      76,
+      158
+    ],
+    "kg": [
+      5.5,
+      24.0
+    ],
+    "str": 4.35,
+    "val": 54,
+    "r": 3,
+    "sc": 0.65,
+    "spd": [
+      48,
+      82
+    ],
+    "habitat": "Karanlık derin vadi ve mağara ağızları",
+    "diet": "Derin su balıkları ve kafadanbacaklılar",
+    "fact": "Rutilus rutilus, derin suların sessizliğinde keskin duyularıyla avlanan nadir bir türdür.",
+    "story": "Eski bir göl masalına göre Rutilus Balığı, batık hazine sandıklarının yerini bilen en zeki rehberlerden biriymiş."
+  },
+  {
+    "id": "p_salmo_trutta",
+    "name": "Göl Alabalığı (Trutta)",
+    "latin": "Salmo trutta",
+    "spr": "fish_px_salmo_trutta",
+    "d": [
+      26,
+      96
+    ],
+    "kg": [
+      1.5,
+      9.0
+    ],
+    "str": 3.25,
+    "val": 42,
+    "r": 2,
+    "sc": 0.65,
+    "spd": [
+      56,
+      92
+    ],
+    "habitat": "Serin ve berrak derin sular",
+    "diet": "Böcekler, karides ve küçük balıklar",
+    "fact": "Kırmızı ve siyah benekli pullarıyla serin dağ göllerinin gözdesidir.",
+    "story": "Kaptan Osman gençliğinde Göl Alabalığı peşinde tam üç gün kürek çekmiş ama sonunda ona hayran kalıp serbest bırakmış."
+  },
+  {
+    "id": "p_salvelinus_fontinalis",
+    "name": "Kaynak Alabalığı (Fontinalis)",
+    "latin": "Salvelinus fontinalis",
+    "spr": "fish_px_salvelinus_fontinalis",
+    "d": [
+      22,
+      94
+    ],
+    "kg": [
+      1.4,
+      8.0
+    ],
+    "str": 3.3,
+    "val": 38,
+    "r": 2,
+    "sc": 0.65,
+    "spd": [
+      32,
+      62
+    ],
+    "habitat": "Buz gibi berrak sular",
+    "diet": "Su böcekleri ve küçük balıklar",
+    "fact": "Sırtındaki mermer desenli çizgilerle kolayca ayırt edilen soğuk su aşığıdır.",
+    "story": "Ay ışığı suya vurduğunda Kaynak Alabalığı pullarıyla gümüş izler bırakır, gölün sessizliğini masalsı bir tabloya çevirirmiş."
+  },
+  {
+    "id": "p_salvelinus_namaycush",
+    "name": "Kaynak Alabalığı (Namaycush)",
+    "latin": "Salvelinus namaycush",
+    "spr": "fish_px_salvelinus_namaycush",
+    "d": [
+      24,
+      96
+    ],
+    "kg": [
+      1.4,
+      8.0
+    ],
+    "str": 3.0,
+    "val": 40,
+    "r": 2,
+    "sc": 0.65,
+    "spd": [
+      40,
+      72
+    ],
+    "habitat": "Buz gibi berrak sular",
+    "diet": "Su böcekleri ve küçük balıklar",
+    "fact": "Sırtındaki mermer desenli çizgilerle kolayca ayırt edilen soğuk su aşığıdır.",
+    "story": "Yaşlı balıkçılar Kaynak Alabalığı yakalandığı gün gölde huzurun ve bereketin hiç eksik olmayacağına inanırmış."
+  },
+  {
+    "id": "p_sander_vitreus",
+    "name": "Sudak (Vitreus)",
+    "latin": "Sander vitreus",
+    "spr": "fish_px_sander_vitreus",
+    "d": [
+      32,
+      106
+    ],
+    "kg": [
+      2.2,
+      11.0
+    ],
+    "str": 3.55,
+    "val": 38,
+    "r": 2,
+    "sc": 0.65,
+    "spd": [
+      48,
+      82
+    ],
+    "habitat": "Derin ve loş göl tabanları",
+    "diet": "Küçük balıklar",
+    "fact": "Karanlıkta parlayan özel göz tabakası sayesinde gece avlanmada rakipsizdir.",
+    "story": "Bir zamanlar derin ve loş göl tabanları boyunca yolunu arayan bir kaşif, parıltısı sayesinde yolunu Sudak ile bulmuş."
+  },
+  {
+    "id": "p_sarpa_salpa",
+    "name": "Sarpa Balığı (Salpa)",
+    "latin": "Sarpa salpa",
+    "spr": "fish_px_sarpa_salpa",
+    "d": [
+      9,
+      46
+    ],
+    "kg": [
+      0.25,
+      1.6
+    ],
+    "str": 1.65,
+    "val": 29,
+    "r": 0,
+    "sc": 0.55,
+    "spd": [
+      56,
+      92
+    ],
+    "habitat": "Nilüferli sığ göletler ve berrak kıyılar",
+    "diet": "Yosunlar, su pireleri ve küçük larvalar",
+    "fact": "Sarpa salpa, berrak sığ sularda ışıkla dans eden pullarıyla doğaseverlerin favorisidir.",
+    "story": "Pazar tezgahındaki Şef Hüseyin, Sarpa Balığı gördüğünde gözleri parlar ve hemen en gizli baharat kutusunu çıkarırmış."
+  },
+  {
+    "id": "p_scardinius_erythrophthalmus",
+    "name": "Scardinius Balığı (Erythrophthalmus)",
+    "latin": "Scardinius erythrophthalmus",
+    "spr": "fish_px_scardinius_erythrophthalmus",
+    "d": [
+      23,
+      76
+    ],
+    "kg": [
+      0.9,
+      4.2
+    ],
+    "str": 2.35,
+    "val": 32,
+    "r": 1,
+    "sc": 0.55,
+    "spd": [
+      32,
+      62
+    ],
+    "habitat": "Güneşli kayalık resifler ve sazlıklar",
+    "diet": "Karidesler, kabuklular ve küçük omurgasızlar",
+    "fact": "Scardinius erythrophthalmus, kayalık oyukları ev bellemiş meraklı ve çevik bir türdür.",
+    "story": "Kedi Minnoş iskelenin ucunda patisini suya uzatıp saatlerce Scardinius Balığı ile saklambaç oynamaya bayılırmış."
+  },
+  {
+    "id": "p_scarus_ghobban",
+    "name": "Renkli Papağan Balığı (Ghobban)",
+    "latin": "Scarus ghobban",
+    "spr": "fish_px_scarus_ghobban",
+    "d": [
+      12,
+      66
+    ],
+    "kg": [
+      1.4,
+      6.2
+    ],
+    "str": 2.75,
+    "val": 38,
+    "r": 2,
+    "sc": 0.65,
+    "spd": [
+      40,
+      72
+    ],
+    "habitat": "Mercan resifleri",
+    "diet": "Mercan yosunları",
+    "fact": "Geceleri yırtıcılardan kokusunu gizlemek için etrafına şeffaf bir uyku kozası örer.",
+    "story": "Rivayete göre şafak vakti su yüzeyinde halka gören herkes, altında Renkli Papağan Balığı dans ettiğini bilirmiş."
+  },
+  {
+    "id": "p_scarus_iseri",
+    "name": "Renkli Papağan Balığı (Iseri)",
+    "latin": "Scarus iseri",
+    "spr": "fish_px_scarus_iseri",
+    "d": [
+      14,
+      68
+    ],
+    "kg": [
+      1.4,
+      6.2
+    ],
+    "str": 2.9,
+    "val": 40,
+    "r": 2,
+    "sc": 0.65,
+    "spd": [
+      48,
+      82
+    ],
+    "habitat": "Mercan resifleri",
+    "diet": "Mercan yosunları",
+    "fact": "Geceleri yırtıcılardan kokusunu gizlemek için etrafına şeffaf bir uyku kozası örer.",
+    "story": "Koleksiyoncu Leyla'nın eski defterinde Renkli Papağan Balığı için 'suyun altındaki saklı mücevher' diye not düşülmüş."
+  },
+  {
+    "id": "p_scarus_niger",
+    "name": "Renkli Papağan Balığı (Niger)",
+    "latin": "Scarus niger",
+    "spr": "fish_px_scarus_niger",
+    "d": [
+      16,
+      70
+    ],
+    "kg": [
+      1.4,
+      6.2
+    ],
+    "str": 2.6,
+    "val": 42,
+    "r": 2,
+    "sc": 0.65,
+    "spd": [
+      56,
+      92
+    ],
+    "habitat": "Mercan resifleri",
+    "diet": "Mercan yosunları",
+    "fact": "Geceleri yırtıcılardan kokusunu gizlemek için etrafına şeffaf bir uyku kozası örer.",
+    "story": "Fırtınadan sonra göl durulduğunda Renkli Papağan Balığı ilk kez su üstüne göz kırpar, balıkçılara havanın açtığını müjdelermiş."
+  },
+  {
+    "id": "p_scarus_psittacus",
+    "name": "Renkli Papağan Balığı (Psittacus)",
+    "latin": "Scarus psittacus",
+    "spr": "fish_px_scarus_psittacus",
+    "d": [
+      18,
+      72
+    ],
+    "kg": [
+      1.4,
+      6.2
+    ],
+    "str": 2.75,
+    "val": 36,
+    "r": 2,
+    "sc": 0.65,
+    "spd": [
+      32,
+      62
+    ],
+    "habitat": "Mercan resifleri",
+    "diet": "Mercan yosunları",
+    "fact": "Geceleri yırtıcılardan kokusunu gizlemek için etrafına şeffaf bir uyku kozası örer.",
+    "story": "Eski bir göl masalına göre Renkli Papağan Balığı, batık hazine sandıklarının yerini bilen en zeki rehberlerden biriymiş."
+  },
+  {
+    "id": "p_scarus_rivulatus",
+    "name": "Renkli Papağan Balığı (Rivulatus)",
+    "latin": "Scarus rivulatus",
+    "spr": "fish_px_scarus_rivulatus",
+    "d": [
+      20,
+      74
+    ],
+    "kg": [
+      1.4,
+      6.2
+    ],
+    "str": 2.9,
+    "val": 38,
+    "r": 2,
+    "sc": 0.65,
+    "spd": [
+      40,
+      72
+    ],
+    "habitat": "Mercan resifleri",
+    "diet": "Mercan yosunları",
+    "fact": "Geceleri yırtıcılardan kokusunu gizlemek için etrafına şeffaf bir uyku kozası örer.",
+    "story": "Kaptan Osman gençliğinde Renkli Papağan Balığı peşinde tam üç gün kürek çekmiş ama sonunda ona hayran kalıp serbest bırakmış."
+  },
+  {
+    "id": "p_scarus_rubroviolaceous",
+    "name": "Renkli Papağan Balığı (Rubroviolaceous)",
+    "latin": "Scarus rubroviolaceous",
+    "spr": "fish_px_scarus_rubroviolaceous",
+    "d": [
+      12,
+      66
+    ],
+    "kg": [
+      1.4,
+      6.2
+    ],
+    "str": 2.6,
+    "val": 40,
+    "r": 2,
+    "sc": 0.65,
+    "spd": [
+      48,
+      82
+    ],
+    "habitat": "Mercan resifleri",
+    "diet": "Mercan yosunları",
+    "fact": "Geceleri yırtıcılardan kokusunu gizlemek için etrafına şeffaf bir uyku kozası örer.",
+    "story": "Ay ışığı suya vurduğunda Renkli Papağan Balığı pullarıyla gümüş izler bırakır, gölün sessizliğini masalsı bir tabloya çevirirmiş."
+  },
+  {
+    "id": "p_scolopis_bilineata",
+    "name": "Scolopis Balığı (Bilineata)",
+    "latin": "Scolopis bilineata",
+    "spr": "fish_px_scolopis_bilineata",
+    "d": [
+      5,
+      42
+    ],
+    "kg": [
+      0.25,
+      1.6
+    ],
+    "str": 1.5,
+    "val": 29,
+    "r": 0,
+    "sc": 0.55,
+    "spd": [
+      56,
+      92
+    ],
+    "habitat": "Nilüferli sığ göletler ve berrak kıyılar",
+    "diet": "Yosunlar, su pireleri ve küçük larvalar",
+    "fact": "Scolopis bilineata, berrak sığ sularda ışıkla dans eden pullarıyla doğaseverlerin favorisidir.",
+    "story": "Yaşlı balıkçılar Scolopis Balığı yakalandığı gün gölde huzurun ve bereketin hiç eksik olmayacağına inanırmış."
+  },
+  {
+    "id": "p_scorpaenopsis_oxycephala",
+    "name": "Scorpaenopsis Balığı (Oxycephala)",
+    "latin": "Scorpaenopsis oxycephala",
+    "spr": "fish_px_scorpaenopsis_oxycephala",
+    "d": [
+      19,
+      72
+    ],
+    "kg": [
+      0.9,
+      4.2
+    ],
+    "str": 2.65,
+    "val": 32,
+    "r": 1,
+    "sc": 0.55,
+    "spd": [
+      32,
+      62
+    ],
+    "habitat": "Güneşli kayalık resifler ve sazlıklar",
+    "diet": "Karidesler, kabuklular ve küçük omurgasızlar",
+    "fact": "Scorpaenopsis oxycephala, kayalık oyukları ev bellemiş meraklı ve çevik bir türdür.",
+    "story": "Bir zamanlar güneşli kayalık resifler ve sazlıklar boyunca yolunu arayan bir kaşif, parıltısı sayesinde yolunu Scorpaenopsis Balığı ile bulmuş."
+  },
+  {
+    "id": "p_scyliorhinus_canicula",
+    "name": "Scyliorhinus Balığı (Canicula)",
+    "latin": "Scyliorhinus canicula",
+    "spr": "fish_px_scyliorhinus_canicula",
+    "d": [
+      44,
+      121
+    ],
+    "kg": [
+      2.2,
+      9.5
+    ],
+    "str": 3.35,
+    "val": 43,
+    "r": 2,
+    "sc": 0.65,
+    "spd": [
+      40,
+      72
+    ],
+    "habitat": "Serin orta derinlik geçitleri",
+    "diet": "Küçük sürü balıkları ve yengeçler",
+    "fact": "Scyliorhinus canicula, serin su katmanları arasında göç eden güçlü bir yüzücüdür.",
+    "story": "Pazar tezgahındaki Şef Hüseyin, Scyliorhinus Balığı gördüğünde gözleri parlar ve hemen en gizli baharat kutusunu çıkarırmış."
+  },
+  {
+    "id": "p_semotilus_atromaculatus",
+    "name": "Dere Kefali (Atromaculatus)",
+    "latin": "Semotilus atromaculatus",
+    "spr": "fish_px_semotilus_atromaculatus",
+    "d": [
+      10,
+      42
+    ],
+    "kg": [
+      0.2,
+      0.9
+    ],
+    "str": 1.35,
+    "val": 24,
+    "r": 0,
+    "sc": 0.55,
+    "spd": [
+      48,
+      82
+    ],
+    "habitat": "Berrak orman dereleri ve göl ağızları",
+    "diet": "Böcekler ve küçük omurgasızlar",
+    "fact": "Erkekleri taşları ağızlarıyla taşıyıp yuva tepeleri inşa eder.",
+    "story": "Kedi Minnoş iskelenin ucunda patisini suya uzatıp saatlerce Dere Kefali ile saklambaç oynamaya bayılırmış."
+  },
+  {
+    "id": "p_serranus_scriba",
+    "name": "Hani Balığı (Scriba)",
+    "latin": "Serranus scriba",
+    "spr": "fish_px_serranus_scriba",
+    "d": [
+      8,
+      52
+    ],
+    "kg": [
+      0.3,
+      1.4
+    ],
+    "str": 1.8,
+    "val": 34,
+    "r": 1,
+    "sc": 0.55,
+    "spd": [
+      56,
+      92
+    ],
+    "habitat": "Kayalık sığ ve orta sular",
+    "diet": "Küçük karidesler ve balıklar",
+    "fact": "Meraklı bakışlarıyla dalgıçların ve oltaların etrafında dönüp durur.",
+    "story": "Rivayete göre şafak vakti su yüzeyinde halka gören herkes, altında Hani Balığı dans ettiğini bilirmiş."
+  },
+  {
+    "id": "p_sparisoma_aurofrenatum",
+    "name": "Kızıl Papağan Balığı (Aurofrenatum)",
+    "latin": "Sparisoma aurofrenatum",
+    "spr": "fish_px_sparisoma_aurofrenatum",
+    "d": [
+      14,
+      66
+    ],
+    "kg": [
+      1.2,
+      4.8
+    ],
+    "str": 2.4,
+    "val": 35,
+    "r": 2,
+    "sc": 0.65,
+    "spd": [
+      32,
+      62
+    ],
+    "habitat": "Mercan resifleri",
+    "diet": "Mercan algleri",
+    "fact": "Büyüdükçe renk değiştiren ve resiflere ince beyaz kum kazandıran zarif bir türdür.",
+    "story": "Koleksiyoncu Leyla'nın eski defterinde Kızıl Papağan Balığı için 'suyun altındaki saklı mücevher' diye not düşülmüş."
+  },
+  {
+    "id": "p_sparisoma_cretense",
+    "name": "Kızıl Papağan Balığı (Cretense)",
+    "latin": "Sparisoma cretense",
+    "spr": "fish_px_sparisoma_cretense",
+    "d": [
+      16,
+      68
+    ],
+    "kg": [
+      1.2,
+      4.8
+    ],
+    "str": 2.55,
+    "val": 37,
+    "r": 2,
+    "sc": 0.65,
+    "spd": [
+      40,
+      72
+    ],
+    "habitat": "Mercan resifleri",
+    "diet": "Mercan algleri",
+    "fact": "Büyüdükçe renk değiştiren ve resiflere ince beyaz kum kazandıran zarif bir türdür.",
+    "story": "Fırtınadan sonra göl durulduğunda Kızıl Papağan Balığı ilk kez su üstüne göz kırpar, balıkçılara havanın açtığını müjdelermiş."
+  },
+  {
+    "id": "p_sparisoma_rubripinne",
+    "name": "Kızıl Papağan Balığı (Rubripinne)",
+    "latin": "Sparisoma rubripinne",
+    "spr": "fish_px_sparisoma_rubripinne",
+    "d": [
+      18,
+      70
+    ],
+    "kg": [
+      1.2,
+      4.8
+    ],
+    "str": 2.7,
+    "val": 39,
+    "r": 2,
+    "sc": 0.65,
+    "spd": [
+      48,
+      82
+    ],
+    "habitat": "Mercan resifleri",
+    "diet": "Mercan algleri",
+    "fact": "Büyüdükçe renk değiştiren ve resiflere ince beyaz kum kazandıran zarif bir türdür.",
+    "story": "Eski bir göl masalına göre Kızıl Papağan Balığı, batık hazine sandıklarının yerini bilen en zeki rehberlerden biriymiş."
+  },
+  {
+    "id": "p_sparisoma_viride",
+    "name": "Kızıl Papağan Balığı (Viride)",
+    "latin": "Sparisoma viride",
+    "spr": "fish_px_sparisoma_viride",
+    "d": [
+      20,
+      72
+    ],
+    "kg": [
+      1.2,
+      4.8
+    ],
+    "str": 2.4,
+    "val": 41,
+    "r": 2,
+    "sc": 0.65,
+    "spd": [
+      56,
+      92
+    ],
+    "habitat": "Mercan resifleri",
+    "diet": "Mercan algleri",
+    "fact": "Büyüdükçe renk değiştiren ve resiflere ince beyaz kum kazandıran zarif bir türdür.",
+    "story": "Kaptan Osman gençliğinde Kızıl Papağan Balığı peşinde tam üç gün kürek çekmiş ama sonunda ona hayran kalıp serbest bırakmış."
+  },
+  {
+    "id": "p_sphyraena_barracuda",
+    "name": "Barakuda (Barracuda)",
+    "latin": "Sphyraena barracuda",
+    "spr": "fish_px_sphyraena_barracuda",
+    "d": [
+      30,
+      98
+    ],
+    "kg": [
+      2.5,
+      9.5
+    ],
+    "str": 3.65,
+    "val": 32,
+    "r": 2,
+    "sc": 0.65,
+    "spd": [
+      32,
+      62
+    ],
+    "habitat": "Açık orta sular",
+    "diet": "Hızlı yüzen balıklar",
+    "fact": "Gümüşi ok gibi vücuduyla ani hızlanmalar yapar; parlak yemlere dayanamaz.",
+    "story": "Ay ışığı suya vurduğunda Barakuda pullarıyla gümüş izler bırakır, gölün sessizliğini masalsı bir tabloya çevirirmiş."
+  },
+  {
+    "id": "p_sphyraena_obtusata",
+    "name": "Barakuda (Obtusata)",
+    "latin": "Sphyraena obtusata",
+    "spr": "fish_px_sphyraena_obtusata",
+    "d": [
+      32,
+      100
+    ],
+    "kg": [
+      2.5,
+      9.5
+    ],
+    "str": 3.8,
+    "val": 34,
+    "r": 2,
+    "sc": 0.65,
+    "spd": [
+      40,
+      72
+    ],
+    "habitat": "Açık orta sular",
+    "diet": "Hızlı yüzen balıklar",
+    "fact": "Gümüşi ok gibi vücuduyla ani hızlanmalar yapar; parlak yemlere dayanamaz.",
+    "story": "Yaşlı balıkçılar Barakuda yakalandığı gün gölde huzurun ve bereketin hiç eksik olmayacağına inanırmış."
+  },
+  {
+    "id": "p_squalius_cephalus",
+    "name": "Squalius Balığı (Cephalus)",
+    "latin": "Squalius cephalus",
+    "spr": "fish_px_squalius_cephalus",
+    "d": [
+      74,
+      156
+    ],
+    "kg": [
+      5.5,
+      24.0
+    ],
+    "str": 4.35,
+    "val": 54,
+    "r": 3,
+    "sc": 0.65,
+    "spd": [
+      48,
+      82
+    ],
+    "habitat": "Karanlık derin vadi ve mağara ağızları",
+    "diet": "Derin su balıkları ve kafadanbacaklılar",
+    "fact": "Squalius cephalus, derin suların sessizliğinde keskin duyularıyla avlanan nadir bir türdür.",
+    "story": "Bir zamanlar karanlık derin vadi ve mağara ağızları boyunca yolunu arayan bir kaşif, parıltısı sayesinde yolunu Squalius Balığı ile bulmuş."
+  },
+  {
+    "id": "p_symphodus_tinca",
+    "name": "Çırçır Balığı (Tinca)",
+    "latin": "Symphodus tinca",
+    "spr": "fish_px_symphodus_tinca",
+    "d": [
+      8,
+      42
+    ],
+    "kg": [
+      0.2,
+      0.9
+    ],
+    "str": 1.35,
+    "val": 28,
+    "r": 0,
+    "sc": 0.55,
+    "spd": [
+      56,
+      92
+    ],
+    "habitat": "Sığ yosunluklar ve kayalar",
+    "diet": "Küçük salyangozlar ve solucanlar",
+    "fact": "Erkekleri yosunlardan yumuşak yuvalar örüp yumurtaları kanat gibi yüzgeçleriyle havalandırır.",
+    "story": "Pazar tezgahındaki Şef Hüseyin, Çırçır Balığı gördüğünde gözleri parlar ve hemen en gizli baharat kutusunu çıkarırmış."
+  },
+  {
+    "id": "p_taeniura_lymma",
+    "name": "Taeniura Balığı (Lymma)",
+    "latin": "Taeniura lymma",
+    "spr": "fish_px_taeniura_lymma",
+    "d": [
+      23,
+      76
+    ],
+    "kg": [
+      0.9,
+      4.2
+    ],
+    "str": 2.65,
+    "val": 32,
+    "r": 1,
+    "sc": 0.55,
+    "spd": [
+      32,
+      62
+    ],
+    "habitat": "Güneşli kayalık resifler ve sazlıklar",
+    "diet": "Karidesler, kabuklular ve küçük omurgasızlar",
+    "fact": "Taeniura lymma, kayalık oyukları ev bellemiş meraklı ve çevik bir türdür.",
+    "story": "Kedi Minnoş iskelenin ucunda patisini suya uzatıp saatlerce Taeniura Balığı ile saklambaç oynamaya bayılırmış."
+  },
+  {
+    "id": "p_thalassoma_bifasciatum",
+    "name": "Ay Kuyruklu Lapin (Bifasciatum)",
+    "latin": "Thalassoma bifasciatum",
+    "spr": "fish_px_thalassoma_bifasciatum",
+    "d": [
+      6,
+      48
+    ],
+    "kg": [
+      0.3,
+      1.5
+    ],
+    "str": 1.6,
+    "val": 32,
+    "r": 1,
+    "sc": 0.55,
+    "spd": [
+      40,
+      72
+    ],
+    "habitat": "Berrak mercan resifleri",
+    "diet": "Küçük kabuklular ve yumurtalar",
+    "fact": "Parlak yeşil-mavi gövdesiyle durmaksızın hareket eden enerjik bir resif balığıdır.",
+    "story": "Rivayete göre şafak vakti su yüzeyinde halka gören herkes, altında Ay Kuyruklu Lapin dans ettiğini bilirmiş."
+  },
+  {
+    "id": "p_thalassoma_duperry",
+    "name": "Ay Kuyruklu Lapin (Duperry)",
+    "latin": "Thalassoma duperry",
+    "spr": "fish_px_thalassoma_duperry",
+    "d": [
+      8,
+      50
+    ],
+    "kg": [
+      0.3,
+      1.5
+    ],
+    "str": 1.75,
+    "val": 34,
+    "r": 1,
+    "sc": 0.55,
+    "spd": [
+      48,
+      82
+    ],
+    "habitat": "Berrak mercan resifleri",
+    "diet": "Küçük kabuklular ve yumurtalar",
+    "fact": "Parlak yeşil-mavi gövdesiyle durmaksızın hareket eden enerjik bir resif balığıdır.",
+    "story": "Koleksiyoncu Leyla'nın eski defterinde Ay Kuyruklu Lapin için 'suyun altındaki saklı mücevher' diye not düşülmüş."
+  },
+  {
+    "id": "p_thalassoma_hardwicke",
+    "name": "Ay Kuyruklu Lapin (Hardwicke)",
+    "latin": "Thalassoma hardwicke",
+    "spr": "fish_px_thalassoma_hardwicke",
+    "d": [
+      10,
+      52
+    ],
+    "kg": [
+      0.3,
+      1.5
+    ],
+    "str": 1.9,
+    "val": 36,
+    "r": 1,
+    "sc": 0.55,
+    "spd": [
+      56,
+      92
+    ],
+    "habitat": "Berrak mercan resifleri",
+    "diet": "Küçük kabuklular ve yumurtalar",
+    "fact": "Parlak yeşil-mavi gövdesiyle durmaksızın hareket eden enerjik bir resif balığıdır.",
+    "story": "Fırtınadan sonra göl durulduğunda Ay Kuyruklu Lapin ilk kez su üstüne göz kırpar, balıkçılara havanın açtığını müjdelermiş."
+  },
+  {
+    "id": "p_thalassoma_lucasanum",
+    "name": "Ay Kuyruklu Lapin (Lucasanum)",
+    "latin": "Thalassoma lucasanum",
+    "spr": "fish_px_thalassoma_lucasanum",
+    "d": [
+      12,
+      54
+    ],
+    "kg": [
+      0.3,
+      1.5
+    ],
+    "str": 1.6,
+    "val": 30,
+    "r": 1,
+    "sc": 0.55,
+    "spd": [
+      32,
+      62
+    ],
+    "habitat": "Berrak mercan resifleri",
+    "diet": "Küçük kabuklular ve yumurtalar",
+    "fact": "Parlak yeşil-mavi gövdesiyle durmaksızın hareket eden enerjik bir resif balığıdır.",
+    "story": "Eski bir göl masalına göre Ay Kuyruklu Lapin, batık hazine sandıklarının yerini bilen en zeki rehberlerden biriymiş."
+  },
+  {
+    "id": "p_thalassoma_lunare",
+    "name": "Ay Kuyruklu Lapin (Lunare)",
+    "latin": "Thalassoma lunare",
+    "spr": "fish_px_thalassoma_lunare",
+    "d": [
+      14,
+      56
+    ],
+    "kg": [
+      0.3,
+      1.5
+    ],
+    "str": 1.75,
+    "val": 32,
+    "r": 1,
+    "sc": 0.55,
+    "spd": [
+      40,
+      72
+    ],
+    "habitat": "Berrak mercan resifleri",
+    "diet": "Küçük kabuklular ve yumurtalar",
+    "fact": "Parlak yeşil-mavi gövdesiyle durmaksızın hareket eden enerjik bir resif balığıdır.",
+    "story": "Kaptan Osman gençliğinde Ay Kuyruklu Lapin peşinde tam üç gün kürek çekmiş ama sonunda ona hayran kalıp serbest bırakmış."
+  },
+  {
+    "id": "p_thalassoma_pavo",
+    "name": "Ay Kuyruklu Lapin (Pavo)",
+    "latin": "Thalassoma pavo",
+    "spr": "fish_px_thalassoma_pavo",
+    "d": [
+      6,
+      48
+    ],
+    "kg": [
+      0.3,
+      1.5
+    ],
+    "str": 1.9,
+    "val": 34,
+    "r": 1,
+    "sc": 0.55,
+    "spd": [
+      48,
+      82
+    ],
+    "habitat": "Berrak mercan resifleri",
+    "diet": "Küçük kabuklular ve yumurtalar",
+    "fact": "Parlak yeşil-mavi gövdesiyle durmaksızın hareket eden enerjik bir resif balığıdır.",
+    "story": "Ay ışığı suya vurduğunda Ay Kuyruklu Lapin pullarıyla gümüş izler bırakır, gölün sessizliğini masalsı bir tabloya çevirirmiş."
+  },
+  {
+    "id": "p_thalassoma_trilobatum",
+    "name": "Ay Kuyruklu Lapin (Trilobatum)",
+    "latin": "Thalassoma trilobatum",
+    "spr": "fish_px_thalassoma_trilobatum",
+    "d": [
+      8,
+      50
+    ],
+    "kg": [
+      0.3,
+      1.5
+    ],
+    "str": 1.6,
+    "val": 36,
+    "r": 1,
+    "sc": 0.55,
+    "spd": [
+      56,
+      92
+    ],
+    "habitat": "Berrak mercan resifleri",
+    "diet": "Küçük kabuklular ve yumurtalar",
+    "fact": "Parlak yeşil-mavi gövdesiyle durmaksızın hareket eden enerjik bir resif balığıdır.",
+    "story": "Yaşlı balıkçılar Ay Kuyruklu Lapin yakalandığı gün gölde huzurun ve bereketin hiç eksik olmayacağına inanırmış."
+  },
+  {
+    "id": "p_triaenodon_obesus",
+    "name": "Triaenodon Balığı (Obesus)",
+    "latin": "Triaenodon obesus",
+    "spr": "fish_px_triaenodon_obesus",
+    "d": [
+      19,
+      72
+    ],
+    "kg": [
+      0.9,
+      4.2
+    ],
+    "str": 2.5,
+    "val": 32,
+    "r": 1,
+    "sc": 0.55,
+    "spd": [
+      32,
+      62
+    ],
+    "habitat": "Güneşli kayalık resifler ve sazlıklar",
+    "diet": "Karidesler, kabuklular ve küçük omurgasızlar",
+    "fact": "Triaenodon obesus, kayalık oyukları ev bellemiş meraklı ve çevik bir türdür.",
+    "story": "Bir zamanlar güneşli kayalık resifler ve sazlıklar boyunca yolunu arayan bir kaşif, parıltısı sayesinde yolunu Triaenodon Balığı ile bulmuş."
+  },
+  {
+    "id": "p_triakis_semifasciata",
+    "name": "Triakis Balığı (Semifasciata)",
+    "latin": "Triakis semifasciata",
+    "spr": "fish_px_triakis_semifasciata",
+    "d": [
+      44,
+      121
+    ],
+    "kg": [
+      2.2,
+      9.5
+    ],
+    "str": 3.65,
+    "val": 43,
+    "r": 2,
+    "sc": 0.65,
+    "spd": [
+      40,
+      72
+    ],
+    "habitat": "Serin orta derinlik geçitleri",
+    "diet": "Küçük sürü balıkları ve yengeçler",
+    "fact": "Triakis semifasciata, serin su katmanları arasında göç eden güçlü bir yüzücüdür.",
+    "story": "Pazar tezgahındaki Şef Hüseyin, Triakis Balığı gördüğünde gözleri parlar ve hemen en gizli baharat kutusunu çıkarırmış."
+  },
+  {
+    "id": "p_tylosurus_crocodilus",
+    "name": "Tylosurus Balığı (Crocodilus)",
+    "latin": "Tylosurus crocodilus",
+    "spr": "fish_px_tylosurus_crocodilus",
+    "d": [
+      78,
+      160
+    ],
+    "kg": [
+      5.5,
+      24.0
+    ],
+    "str": 4.35,
+    "val": 54,
+    "r": 3,
+    "sc": 0.65,
+    "spd": [
+      48,
+      82
+    ],
+    "habitat": "Karanlık derin vadi ve mağara ağızları",
+    "diet": "Derin su balıkları ve kafadanbacaklılar",
+    "fact": "Tylosurus crocodilus, derin suların sessizliğinde keskin duyularıyla avlanan nadir bir türdür.",
+    "story": "Kedi Minnoş iskelenin ucunda patisini suya uzatıp saatlerce Tylosurus Balığı ile saklambaç oynamaya bayılırmış."
+  },
+  {
+    "id": "p_umbra_limi",
+    "name": "Umbra Balığı (Limi)",
+    "latin": "Umbra limi",
+    "spr": "fish_px_umbra_limi",
+    "d": [
+      3,
+      40
+    ],
+    "kg": [
+      0.25,
+      1.6
+    ],
+    "str": 1.5,
+    "val": 29,
+    "r": 0,
+    "sc": 0.55,
+    "spd": [
+      56,
+      92
+    ],
+    "habitat": "Nilüferli sığ göletler ve berrak kıyılar",
+    "diet": "Yosunlar, su pireleri ve küçük larvalar",
+    "fact": "Umbra limi, berrak sığ sularda ışıkla dans eden pullarıyla doğaseverlerin favorisidir.",
+    "story": "Rivayete göre şafak vakti su yüzeyinde halka gören herkes, altında Umbra Balığı dans ettiğini bilirmiş."
+  },
+  {
+    "id": "p_zanclus_cornutus",
+    "name": "Moorish Idol (Cornutus)",
+    "latin": "Zanclus cornutus",
+    "spr": "fish_px_zanclus_cornutus",
+    "d": [
+      12,
+      60
+    ],
+    "kg": [
+      0.4,
+      1.8
+    ],
+    "str": 2.2,
+    "val": 44,
+    "r": 2,
+    "sc": 0.65,
+    "spd": [
+      32,
+      62
+    ],
+    "habitat": "Güneşli mercan resifleri",
+    "diet": "Süngerler ve mercan algleri",
+    "fact": "Uzun beyaz sırt yüzgeci ve siyah-sarı şeritleriyle tropikal resiflerin simgesidir.",
+    "story": "Koleksiyoncu Leyla'nın eski defterinde Moorish Idol için 'suyun altındaki saklı mücevher' diye not düşülmüş."
+  },
+  {
+    "id": "p_zebrasoma_flavescens",
+    "name": "Sarı Cerrah Balığı (Flavescens)",
+    "latin": "Zebrasoma flavescens",
+    "spr": "fish_px_zebrasoma_flavescens",
+    "d": [
+      12,
+      56
+    ],
+    "kg": [
+      0.4,
+      1.8
+    ],
+    "str": 1.7,
+    "val": 44,
+    "r": 2,
+    "sc": 0.65,
+    "spd": [
+      40,
+      72
+    ],
+    "habitat": "Mercan bahçeleri",
+    "diet": "İnce deniz yosunları",
+    "fact": "Güneş sarısı rengiyle resiflerin en sevilen bahçıvanıdır; mercanları yosunlardan korur.",
+    "story": "Fırtınadan sonra göl durulduğunda Sarı Cerrah Balığı ilk kez su üstüne göz kırpar, balıkçılara havanın açtığını müjdelermiş."
+  },
+  {
+    "id": "p_zebrasoma_scopas",
+    "name": "Sarı Cerrah Balığı (Scopas)",
+    "latin": "Zebrasoma scopas",
+    "spr": "fish_px_zebrasoma_scopas",
+    "d": [
+      14,
+      58
+    ],
+    "kg": [
+      0.4,
+      1.8
+    ],
+    "str": 1.85,
+    "val": 46,
+    "r": 2,
+    "sc": 0.65,
+    "spd": [
+      48,
+      82
+    ],
+    "habitat": "Mercan bahçeleri",
+    "diet": "İnce deniz yosunları",
+    "fact": "Güneş sarısı rengiyle resiflerin en sevilen bahçıvanıdır; mercanları yosunlardan korur.",
+    "story": "Eski bir göl masalına göre Sarı Cerrah Balığı, batık hazine sandıklarının yerini bilen en zeki rehberlerden biriymiş."
+  },
+  {
+    "id": "p_zebrasoma_velifer",
+    "name": "Sarı Cerrah Balığı (Velifer)",
+    "latin": "Zebrasoma velifer",
+    "spr": "fish_px_zebrasoma_velifer",
+    "d": [
+      16,
+      60
+    ],
+    "kg": [
+      0.4,
+      1.8
+    ],
+    "str": 2.0,
+    "val": 48,
+    "r": 2,
+    "sc": 0.65,
+    "spd": [
+      56,
+      92
+    ],
+    "habitat": "Mercan bahçeleri",
+    "diet": "İnce deniz yosunları",
+    "fact": "Güneş sarısı rengiyle resiflerin en sevilen bahçıvanıdır; mercanları yosunlardan korur.",
+    "story": "Kaptan Osman gençliğinde Sarı Cerrah Balığı peşinde tam üç gün kürek çekmiş ama sonunda ona hayran kalıp serbest bırakmış."
+  },
+  {
+    "id": "boss_sakura",
+    "biome": "sakura",
+    "name": "👑 İmparator Altın Koi (Sakura Ruhu)",
+    "latin": "Cyprinus sakurae",
+    "spr": "fish_px_cyprinus_rubrofuscus",
+    "d": [
+      20,
+      140
+    ],
+    "kg": [
+      42.0,
+      88.0
+    ],
+    "str": 5.0,
+    "val": 28,
+    "r": 4,
+    "sc": 1.6,
+    "spd": [
+      28,
+      44
+    ],
+    "tint": "#ff99cc",
+    "boss": true,
+    "habitat": "Kiraz Çiçeği Göleti'nin nilüfer altı derinlikleri",
+    "diet": "Kiraz çiçeği yaprakları ve altın böcekler",
+    "fact": "Bahar rüzgarıyla düşen kiraz yapraklarının altında süzülen efsanevi pembe-altın dev koi.",
+    "story": "Rivayete göre yüz yıl önce bahar şenliğinde gölete bırakılan küçük bir koi, her bahar düşen kiraz çiçeklerinden güç alarak göletin koruyucu ruhuna dönüşmüş!"
+  },
+  {
+    "id": "boss_emerald",
+    "biome": "emerald",
+    "name": "👑 Orman Bekçisi (Dev Zümrüt Mersin)",
+    "latin": "Acipenser smaragdus",
+    "spr": "fish_px_esox_lucius",
+    "d": [
+      40,
+      168
+    ],
+    "kg": [
+      75.0,
+      145.0
+    ],
+    "str": 5.5,
+    "val": 30,
+    "r": 4,
+    "sc": 1.5,
+    "spd": [
+      30,
+      48
+    ],
+    "tint": "#40f99b",
+    "boss": true,
+    "habitat": "Zümrüt Orman Gölü'nün batık çam kökleri",
+    "diet": "Büyük göl balıkları ve kerevitler",
+    "fact": "Zümrüt yeşili pulları ay ışığında parlayan, orman gölünün kadim bekçisi.",
+    "story": "Orman kulübesindeki yaşlı marangoz, sisli sabahlarda gölün ortasında zümrüt gibi parlayan bir sırt gördüğünde oltasını saygıyla suya indirirmiş."
   }
 ]

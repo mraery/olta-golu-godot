@@ -927,12 +927,15 @@ func _update_particles(dt: float) -> void:
 		lightning_alpha = maxf(0.0, lightning_alpha - dt * 2.4)
 
 	var biome := SaveManager.current_biome()
-	if str(biome["ambient"]) == "snow" and randf() < dt * 10.0:
+	var amb := str(biome["ambient"])
+	if amb == "snow" and randf() < dt * 10.0:
 		ambient_parts.append({"kind": "snow", "x": randf_range(0.0, W), "y": cam_y - 10.0, "vx": randf_range(-18.0, 18.0), "vy": randf_range(35.0, 65.0), "r": randf_range(1.5, 3.2), "life": 6.0})
-	elif str(biome["ambient"]) == "embers" and randf() < dt * 12.0:
+	elif amb == "sakura" and cam_y < SURF + 30.0 and randf() < dt * 11.0:
+		ambient_parts.append({"kind": "sakura", "x": randf_range(0.0, W + 40.0), "y": -10.0, "vx": randf_range(-38.0, -14.0), "vy": randf_range(24.0, 44.0), "r": randf_range(2.6, 4.4), "life": 6.5})
+	elif amb == "embers" and randf() < dt * 12.0:
 		ambient_parts.append({"kind": "ember", "x": randf_range(0.0, W), "y": bottom_y() - randf_range(0.0, 60.0), "vx": randf_range(-14.0, 14.0), "vy": randf_range(-55.0, -25.0), "r": randf_range(1.5, 3.5), "life": 5.0})
-	elif SaveManager.is_night() and cam_y < 100.0 and randf() < dt * 3.0:
-		ambient_parts.append({"kind": "firefly", "x": randf_range(20.0, W - 20.0), "y": randf_range(35.0, SURF - 25.0), "vx": randf_range(-15.0, 15.0), "vy": randf_range(-8.0, 8.0), "r": randf_range(1.8, 3.0), "life": 4.0})
+	elif (amb == "fireflies" or SaveManager.is_night()) and cam_y < 100.0 and randf() < dt * 4.0:
+		ambient_parts.append({"kind": "firefly", "x": randf_range(20.0, W - 20.0), "y": randf_range(35.0, SURF - 25.0), "vx": randf_range(-15.0, 15.0), "vy": randf_range(-8.0, 8.0), "r": randf_range(1.8, 3.2), "life": 4.5})
 	for a in ambient_parts:
 		a["x"] = float(a["x"]) + float(a["vx"]) * dt
 		a["y"] = float(a["y"]) + float(a["vy"]) * dt
@@ -1068,10 +1071,18 @@ func _draw() -> void:
 		_draw_hills(off, SURF - 6.0, 56.0 if str(biome["id"]) == "fjord" else 34.0, 0.012 if str(biome["id"]) == "fjord" else 0.006, 1.0, hill_cols[0])
 		_draw_hills(off, SURF - 2.0, 42.0 if str(biome["id"]) == "volcano" else 20.0, 0.011, 2.0, hill_cols[1])
 
-		if str(biome["id"]) == "volcano":
+		var bid := str(biome["id"])
+		if bid == "volcano":
 			draw_circle(off + Vector2(W * 0.72, SURF - 44.0), 58.0, Color(1.0, 0.42, 0.12, 0.24))
-		elif str(biome["id"]) == "coral":
+		elif bid == "coral":
 			_draw_palm(off + Vector2(W - 85.0, SURF - 4.0), night)
+			_draw_palm(off + Vector2(W - 155.0, SURF - 2.0), night)
+		elif bid == "sakura":
+			_draw_sakura_shore(off, night)
+		elif bid == "emerald":
+			_draw_emerald_shore(off, night)
+		elif bid == "lake":
+			_draw_lake_reeds(off, night)
 
 	# Su gövdesi (katmanlı gradyan)
 	var pal: Array = biome["water_night"] if night else biome["water_day"]
@@ -1243,6 +1254,9 @@ func _draw() -> void:
 		wave_pts.append(off + Vector2(float(x_i), SURF + sin(float(x_i) * 0.03 + t * 2.0) * 2.5))
 	draw_polyline(wave_pts, Color(0.47, 0.67, 0.9, 0.45) if night else Color(1, 1, 1, 0.65), 4.0)
 
+	# Tatlı göl yüzeyi detayları (Nilüferler, minik ördek, yüzen sakura çiçekleri!)
+	_draw_cute_surface_props(off, biome)
+
 	# Su yüzeyi Balık Sürüleri (Hotspots ✨)
 	for hs in hotspots:
 		var pulse := 1.0 + sin(float(hs["ph"])) * 0.16
@@ -1263,7 +1277,11 @@ func _draw() -> void:
 		draw_circle(off + Vector2(float(p["x"]), float(p["y"])), float(p["r"]), Color(0.86, 0.96, 1.0, 1.0 - float(p["t"])))
 
 	for a in ambient_parts:
-		var ac := Color(0.94, 0.98, 1.0, 0.75) if str(a["kind"]) == "snow" else (Color(1.0, 0.48, 0.12, minf(1.0, float(a["life"]))) if str(a["kind"]) == "ember" else Color(1.0, 0.96, 0.5, 0.45 + 0.45 * sin(t * 6.0 + float(a["x"]))))
+		var ak := str(a["kind"])
+		var ac := Color(0.94, 0.98, 1.0, 0.75) if ak == "snow" else (
+			Color(1.0, 0.72, 0.85, 0.88) if ak == "sakura" else (
+			Color(1.0, 0.48, 0.12, minf(1.0, float(a["life"]))) if ak == "ember" else
+			Color(1.0, 0.96, 0.5, 0.45 + 0.45 * sin(t * 6.0 + float(a["x"])))))
 		draw_circle(off + Vector2(float(a["x"]), float(a["y"])), float(a["r"]), ac)
 
 	# İskele, Tekne, Balıkçı, Misina
@@ -1340,6 +1358,68 @@ func _draw_palm(base: Vector2, night: bool) -> void:
 		var dir := Vector2(cos(ang), sin(ang)) * 34.0
 		draw_line(top, top + dir, leaf_c, 6.0)
 
+func _draw_lake_reeds(off: Vector2, night: bool) -> void:
+	var col := Color("#1f4232") if night else Color("#40916c")
+	var tip_c := Color("#4a301e") if night else Color("#7f4f24")
+	for rx in [420.0, 434.0, 446.0, 815.0, 828.0, 842.0]:
+		var sw := sin(t * 1.8 + rx * 0.1) * 4.0
+		draw_line(off + Vector2(rx, SURF + 2.0), off + Vector2(rx + sw, SURF - 26.0), col, 3.0)
+		draw_circle(off + Vector2(rx + sw, SURF - 26.0), 3.5, tip_c)
+
+func _draw_sakura_shore(off: Vector2, night: bool) -> void:
+	# Kırmızı kemerli ahşap Japon köprüsü
+	var br_c := Color("#6e1d28") if night else Color("#c1121f")
+	draw_arc(off + Vector2(610.0, SURF + 32.0), 68.0, PI + 0.35, TAU - 0.35, 20, br_c, 8.0)
+	draw_arc(off + Vector2(610.0, SURF + 20.0), 68.0, PI + 0.35, TAU - 0.35, 20, br_c, 3.0)
+	# Pembe Kiraz Çiçeği Ağacı
+	var tx := W - 110.0
+	draw_line(off + Vector2(tx, SURF), off + Vector2(tx - 10.0, SURF - 66.0), Color("#3b2229") if night else Color("#5c3a21"), 9.0)
+	var bl_c := Color("#7a3e58") if night else Color("#ff8fab")
+	var bl_c2 := Color("#994f6e") if night else Color("#ffb3c6")
+	for p in [Vector2(-24, -72), Vector2(4, -84), Vector2(26, -70), Vector2(-6, -64), Vector2(18, -58)]:
+		draw_circle(off + Vector2(tx, SURF) + p, 22.0, bl_c)
+	for p in [Vector2(-14, -78), Vector2(14, -78), Vector2(0, -68)]:
+		draw_circle(off + Vector2(tx, SURF) + p, 14.0, bl_c2)
+
+func _draw_emerald_shore(off: Vector2, night: bool) -> void:
+	# Çam ağaçları
+	var pine_c := Color("#123026") if night else Color("#1b4332")
+	for px in [460.0, 505.0, 548.0, 810.0, 865.0, 910.0]:
+		var h := 46.0 + fmod(px * 13.0, 26.0)
+		draw_colored_polygon(PackedVector2Array([off + Vector2(px, SURF - h), off + Vector2(px - 18.0, SURF), off + Vector2(px + 18.0, SURF)]), pine_c)
+	# Sıcak orman kulübesi + tüten baca dumanı
+	var cx := 680.0
+	draw_rect(Rect2(off + Vector2(cx - 28.0, SURF - 34.0), Vector2(56.0, 34.0)), Color("#4a2c18") if night else Color("#7f4f24"))
+	draw_colored_polygon(PackedVector2Array([off + Vector2(cx - 34.0, SURF - 34.0), off + Vector2(cx, SURF - 58.0), off + Vector2(cx + 34.0, SURF - 34.0)]), Color("#2b1c12") if night else Color("#582f0e"))
+	# Sıcak parlayan pencere
+	draw_rect(Rect2(off + Vector2(cx - 10.0, SURF - 24.0), Vector2(14.0, 14.0)), Color("#ffd166"))
+	if night:
+		draw_circle(off + Vector2(cx - 3.0, SURF - 17.0), 22.0, Color(1.0, 0.85, 0.4, 0.22))
+	# Baca & duman halkaları
+	draw_rect(Rect2(off + Vector2(cx + 14.0, SURF - 56.0), Vector2(8.0, 18.0)), Color("#444"))
+	for i in range(3):
+		var st := fmod(t * 0.7 + float(i) * 0.33, 1.0)
+		draw_circle(off + Vector2(cx + 18.0 + sin(t * 2.0 + float(i)) * 5.0, SURF - 60.0 - st * 34.0), 4.0 + st * 5.0, Color(0.92, 0.94, 0.96, 0.45 * (1.0 - st)))
+
+func _draw_cute_surface_props(off: Vector2, biome: Dictionary) -> void:
+	var bid := str(biome["id"])
+	if bid in ["lake", "sakura", "emerald"]:
+		# Nilüfer yaprakları & pembe lotus çiçekleri
+		for lx in [480.0, 620.0, 775.0]:
+			var bob := sin(t * 2.2 + lx * 0.05) * 1.8
+			var lp := off + Vector2(lx, SURF + 4.0 + bob)
+			draw_circle(lp, 11.0, Color("#40916c"))
+			draw_circle(lp + Vector2(0, -3.0), 4.5, Color("#ff8fab") if bid != "emerald" else Color("#ffe066"))
+	if bid == "lake":
+		# Tatlı yüzen sarı ördek!
+		var dx := 560.0 + sin(t * 0.35) * 110.0
+		var facing := 1.0 if cos(t * 0.35) >= 0.0 else -1.0
+		var dp := off + Vector2(dx, SURF - 3.0 + sin(t * 3.0) * 1.5)
+		draw_circle(dp, 8.0, Color("#ffd43b"))
+		draw_circle(dp + Vector2(facing * 6.0, -7.0), 5.5, Color("#ffd43b"))
+		draw_circle(dp + Vector2(facing * 11.0, -7.0), 2.5, Color("#ff6b35"))
+		draw_circle(dp + Vector2(facing * 7.5, -8.5), 1.3, Color("#222"))
+
 func _draw_landmarks(off: Vector2, biome: Dictionary, bot: float) -> void:
 	var bid := str(biome["id"])
 	if bid == "lake":
@@ -1349,6 +1429,20 @@ func _draw_landmarks(off: Vector2, biome: Dictionary, bot: float) -> void:
 			draw_line(off + Vector2(740, ay - 55), off + Vector2(740, ay + 35), col, 9.0)
 			draw_line(off + Vector2(714, ay - 34), off + Vector2(766, ay - 34), col, 7.0)
 			draw_arc(off + Vector2(740, ay + 12), 34.0, 0.0, PI, 16, col, 8.0)
+	elif bid == "sakura":
+		# Batık Torii kapısı silüeti
+		var ty := SURF + 78.0 * PPM
+		if ty > cam_y - 160.0 and ty < cam_y + H + 160.0:
+			var col := Color(0.45, 0.08, 0.16, 0.28)
+			draw_rect(Rect2(off + Vector2(410, ty - 70), Vector2(14, 110)), col)
+			draw_rect(Rect2(off + Vector2(536, ty - 70), Vector2(14, 110)), col)
+			draw_rect(Rect2(off + Vector2(390, ty - 76), Vector2(180, 14)), col)
+			draw_rect(Rect2(off + Vector2(404, ty - 48), Vector2(152, 10)), col)
+	elif bid == "emerald":
+		# Batık yosunlu kütük silüeti
+		var ey := SURF + 95.0 * PPM
+		if ey > cam_y - 160.0 and ey < cam_y + H + 160.0:
+			draw_line(off + Vector2(220, ey + 20), off + Vector2(460, ey - 24), Color(0.03, 0.18, 0.14, 0.3), 24.0)
 	elif bid == "coral":
 		var cy := SURF + 72.0 * PPM
 		if cy > cam_y - 180.0 and cy < cam_y + H + 180.0:

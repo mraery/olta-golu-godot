@@ -38,7 +38,7 @@ func default_save() -> Dictionary:
 		"stats": {
 			"max_combo": 0, "perfect_casts": 0, "heaviest": 0.0, "treasures": 0,
 			"night_catches": 0, "rain_catches": 0, "deepest": 0, "legendaries": 0,
-			"bosses": 0, "tourney_wins": 0
+			"bosses": 0, "tourney_wins": 0, "haggles": 0
 		},
 		"tourney_best": {},
 		"market_day": -1,
@@ -161,6 +161,30 @@ func is_hot_demand(sp: Dictionary) -> bool:
 		if h["kind"] == "species" and str(h["id"]) == str(sp["id"]):
 			return true
 	return false
+
+func get_market_customer() -> Dictionary:
+	var day := int(int(data["minutes"]) / (12 * 60))
+	return GameData.MARKET_CUSTOMERS[day % GameData.MARKET_CUSTOMERS.size()]
+
+func matches_customer_order(item: Dictionary, customer: Dictionary) -> bool:
+	var sp := GameData.get_species(str(item.get("sp_id", "")))
+	var kind := str(customer.get("want_kind", ""))
+	match kind:
+		"rare":    return int(sp.get("r", 0)) >= 2
+		"shallow": return int(item.get("depth_m", 0)) <= 35
+		"heavy":   return float(item.get("kg", 0.0)) >= 3.0
+		"deep":    return int(item.get("depth_m", 0)) >= 40
+	return false
+
+func calc_market_price(item: Dictionary, haggle_mul: float = 1.0) -> int:
+	var sp := GameData.get_species(str(item.get("sp_id", "")))
+	var cust := get_market_customer()
+	var mult := haggle_mul
+	if is_hot_demand(sp):
+		mult *= 1.5
+	if matches_customer_order(item, cust):
+		mult *= float(cust.get("bonus", 1.5))
+	return maxi(2, int(round(float(item.get("base_val", 10)) * mult)))
 
 func calc_fish_value(sp: Dictionary, kg: float, depth_m: int, combo: int, frenzy: bool, include_hot: bool = true) -> int:
 	var w := get_weather()
@@ -296,11 +320,12 @@ func _check_ach_condition(ach_id: String) -> bool:
 		"deep_100":    return int(st.get("deepest", 0)) >= 100
 		"legendary_1": return int(st.get("legendaries", 0)) >= 1
 		"rich_5000":   return int(data["total"]) >= 5000
-		"biome_all":   return (data["biomes"] as Array).size() >= 4
-		"boat_owner":  return int(data["lv"].get("boat", 0)) >= 1
-		"aqua_3":      return (data["aquarium"] as Array).size() >= 3
-		"boss_1":      return int(st.get("bosses", 0)) >= 1
-		"tourney_1":   return int(st.get("tourney_wins", 0)) >= 1
+		"biome_all":     return (data["biomes"] as Array).size() >= 6
+		"boat_owner":    return int(data["lv"].get("boat", 0)) >= 1
+		"aqua_3":        return (data["aquarium"] as Array).size() >= 3
+		"boss_1":        return int(st.get("bosses", 0)) >= 1
+		"tourney_1":     return int(st.get("tourney_wins", 0)) >= 1
+		"market_haggle": return int(st.get("haggles", 0)) >= 1
 	return false
 
 func check_achievements() -> Array[Dictionary]:

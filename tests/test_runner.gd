@@ -32,17 +32,21 @@ func _run_all() -> void:
 	if gd == null or sm == null:
 		return
 
-	# 1. Balık veritabanı & 150+ tür & tüm görsellerin yüklenmesi
-	check(gd.species.size() >= 150, "species_count_150_plus", "got %d" % gd.species.size())
+	# 1. Balık veritabanı & 261 tür & tüm hikayeler & tüm görsellerin yüklenmesi
+	check(gd.species.size() >= 250, "species_count_250_plus", "got %d" % gd.species.size())
 	var missing_tex := 0
 	var missing_info := 0
+	var missing_story := 0
 	for sp in gd.species:
 		if str(sp.get("fact", "")).is_empty() or str(sp.get("habitat", "")).is_empty() or str(sp.get("diet", "")).is_empty() or str(sp.get("latin", "")).is_empty():
 			missing_info += 1
+		if str(sp.get("story", "")).is_empty():
+			missing_story += 1
 		var tex: Texture2D = gd.get_fish_texture(str(sp["spr"]))
 		if tex == null:
 			missing_tex += 1
 	check(missing_info == 0, "all_species_have_encyclopedia_info", "missing=%d" % missing_info)
+	check(missing_story == 0, "all_species_have_short_story", "missing=%d" % missing_story)
 	check(missing_tex == 0, "all_species_textures_load", "missing=%d" % missing_tex)
 
 	# Tehlike ve ortam görselleri
@@ -51,27 +55,33 @@ func _run_all() -> void:
 	for e_spr in ["bubble_a", "seaweed_green_a", "rock_a", "terrain_sand_top_a", "terrain_dirt_a"]:
 		check(gd.get_env_texture(e_spr) != null, "env_tex_" + e_spr)
 
-	# 4 Bölge Bossu
-	check(gd.boss_species.size() == 4, "four_biome_bosses", "got %d" % gd.boss_species.size())
+	# 6 Göl/Bölge & 6 Bölge Bossu
+	check(gd.BIOMES.size() == 6, "six_cute_2d_lakes", "got %d" % gd.BIOMES.size())
+	check(gd.boss_species.size() == 6, "six_biome_bosses", "got %d" % gd.boss_species.size())
 	for b in gd.BIOMES:
 		var boss: Dictionary = gd.get_boss_for_biome(str(b["id"]))
 		check(not boss.is_empty() and str(boss.get("biome", "")) == str(b["id"]), "boss_for_" + str(b["id"]))
 
-	# 2. SaveManager & Ekonomi & Pazar & Görevler & Akvaryum
+	# 2. SaveManager & Ekonomi & 2D Balık Pazarı & Görevler & Akvaryum
 	sm.reset_save()
 	check(int(sm.data["money"]) == 0, "reset_money_zero")
 	check((sm.data["missions"] as Array).size() == 3, "three_initial_missions")
 	check((sm.data["market_hot"] as Array).size() == 3, "three_market_hot_items")
+	check(not sm.get_market_customer().is_empty(), "market_customer_present")
+	var sample_item := {"sp_id": "king", "kg": 15.0, "depth_m": 130, "base_val": 100}
+	check(sm.calc_market_price(sample_item, 1.25) > 100, "market_price_with_haggle_bonus")
 
-	sm.data["money"] = 12000
+	sm.data["money"] = 20000
 	check(sm.buy_upgrade("rod"), "buy_rod_upgrade")
 	check(sm.buy_upgrade("boat"), "buy_boat_upgrade")
 	check(sm.buy_upgrade("aquarium"), "buy_aquarium_upgrade")
 	check(sm.buy_bait("golden"), "buy_golden_bait")
+	check(sm.switch_biome("sakura"), "unlock_sakura_lake")
 	check(sm.switch_biome("coral"), "unlock_coral_biome")
+	check(sm.switch_biome("emerald"), "unlock_emerald_lake")
 	check(sm.switch_biome("fjord"), "unlock_fjord_biome")
 	check(sm.switch_biome("volcano"), "unlock_volcano_biome")
-	check((sm.data["biomes"] as Array).size() == 4, "all_4_biomes_unlocked")
+	check((sm.data["biomes"] as Array).size() == 6, "all_6_lakes_unlocked")
 	check(sm.data["achievements"].has("biome_all"), "ach_biome_all_unlocked")
 	check(sm.data["achievements"].has("boat_owner"), "ach_boat_owner_unlocked")
 

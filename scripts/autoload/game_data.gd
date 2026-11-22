@@ -24,8 +24,8 @@ const BIOMES: Array[Dictionary] = [
 	{
 		"id": "lake", "name": "Huzur Gölü", "icon": "🏞️", "cost": 0, "max_depth": 150,
 		"val_mul": 1.0, "rare_mul": 1.0, "weight_mul": 1.0,
-		"desc": "Sakin sular, yemyeşil tepeler ve klasik ahşap iskele. Başlamak için ideal.",
-		"bonus_text": "Dengeli balık dağılımı",
+		"desc": "Nilüfer yaprakları, minik ördek ve yemyeşil tepelerle dolu huzurlu başlangıç gölü.",
+		"bonus_text": "Dengeli balık dağılımı • Nilüfer & Ördek",
 		"water_day":   [Color("#38a6e0"), Color("#1f7cc0"), Color("#124f8c"), Color("#0a2c55")],
 		"water_night": [Color("#1b4f7a"), Color("#123a62"), Color("#0b2547"), Color("#050f22")],
 		"hills_day":   [Color("#6aa874"), Color("#4f9463")],
@@ -34,10 +34,22 @@ const BIOMES: Array[Dictionary] = [
 		"ambient": "leaves",
 	},
 	{
-		"id": "coral", "name": "Mercan Koyu", "icon": "🏝️", "cost": 800, "max_depth": 165,
-		"val_mul": 1.25, "rare_mul": 1.35, "weight_mul": 1.05,
-		"desc": "Turkuaz tropikal sular, palmiye ağaçları ve renkli mercan resifleri.",
-		"bonus_text": "+%25 altın • +%35 nadir balık",
+		"id": "sakura", "name": "Kiraz Çiçeği Göleti", "icon": "🌸", "cost": 450, "max_depth": 155,
+		"val_mul": 1.2, "rare_mul": 1.25, "weight_mul": 1.05,
+		"desc": "Uçuşan pembe kiraz yaprakları, kırmızı kemerli köprü ve parlayan fenerlerle masalsı gölet.",
+		"bonus_text": "+%20 altın • +%25 nadir • Uçuşan Sakura",
+		"water_day":   [Color("#56cfe1"), Color("#38a3b8"), Color("#247ba0"), Color("#134074")],
+		"water_night": [Color("#2b4570"), Color("#1e3159"), Color("#152242"), Color("#0b132b")],
+		"hills_day":   [Color("#f2a6c2"), Color("#c97b9e")],
+		"hills_night": [Color("#3b2847"), Color("#281a36")],
+		"pier":        [Color("#b83b4a"), Color("#cf4a5a"), Color("#6e1d28"), Color("#8c2836")],
+		"ambient": "sakura",
+	},
+	{
+		"id": "coral", "name": "Mercan Koyu", "icon": "🏝️", "cost": 950, "max_depth": 165,
+		"val_mul": 1.28, "rare_mul": 1.38, "weight_mul": 1.08,
+		"desc": "Turkuaz tropikal sular, salınan palmiyeler, plaj şemsiyesi ve renkli mercan resifleri.",
+		"bonus_text": "+%28 altın • +%38 nadir balık",
 		"water_day":   [Color("#29d4c6"), Color("#149eb8"), Color("#0c658a"), Color("#073452")],
 		"water_night": [Color("#14687a"), Color("#0d4961"), Color("#072c42"), Color("#041426")],
 		"hills_day":   [Color("#d9b977"), Color("#6fb365")],
@@ -46,10 +58,22 @@ const BIOMES: Array[Dictionary] = [
 		"ambient": "tropical",
 	},
 	{
-		"id": "fjord", "name": "Karanlık Fiyort", "icon": "🏔️", "cost": 2400, "max_depth": 190,
-		"val_mul": 1.45, "rare_mul": 1.55, "weight_mul": 1.35,
-		"desc": "Buz gibi kuzey suları, çam ormanları ve geceleri dans eden kuzey ışıkları.",
-		"bonus_text": "+%45 altın • +%35 dev ağırlık • Kuzey Işıkları",
+		"id": "emerald", "name": "Zümrüt Orman Gölü", "icon": "🌲", "cost": 1700, "max_depth": 180,
+		"val_mul": 1.38, "rare_mul": 1.45, "weight_mul": 1.4,
+		"desc": "Sık çam ağaçları, bacasından duman tüten sıcak orman kulübesi ve zümrüt yeşili sular.",
+		"bonus_text": "+%38 altın • +%40 dev ağırlık • Orman Kulübesi",
+		"water_day":   [Color("#2ec4b6"), Color("#1b998b"), Color("#116466"), Color("#08333a")],
+		"water_night": [Color("#14454a"), Color("#0d3136"), Color("#082024"), Color("#041114")],
+		"hills_day":   [Color("#3b7a57"), Color("#23533a")],
+		"hills_night": [Color("#122620"), Color("#0b1a16")],
+		"pier":        [Color("#7f5539"), Color("#9c6644"), Color("#4a2e1d"), Color("#613d26")],
+		"ambient": "fireflies",
+	},
+	{
+		"id": "fjord", "name": "Karanlık Fiyort", "icon": "🏔️", "cost": 3200, "max_depth": 195,
+		"val_mul": 1.5, "rare_mul": 1.65, "weight_mul": 1.42,
+		"desc": "Buz gibi kuzey suları, karlı dağlar ve geceleri dans eden kuzey ışıkları.",
+		"bonus_text": "+%50 altın • +%42 dev ağırlık • Kuzey Işıkları",
 		"water_day":   [Color("#3e7a9e"), Color("#265578"), Color("#163552"), Color("#091829")],
 		"water_night": [Color("#1b3852"), Color("#10243b"), Color("#091526"), Color("#040914")],
 		"hills_day":   [Color("#5f758a"), Color("#38524d")],
@@ -58,16 +82,39 @@ const BIOMES: Array[Dictionary] = [
 		"ambient": "snow",
 	},
 	{
-		"id": "volcano", "name": "Volkanik Çukur", "icon": "🌋", "cost": 6000, "max_depth": 220,
-		"val_mul": 1.75, "rare_mul": 2.1, "weight_mul": 1.5,
+		"id": "volcano", "name": "Volkanik Çukur", "icon": "🌋", "cost": 6500, "max_depth": 225,
+		"val_mul": 1.8, "rare_mul": 2.2, "weight_mul": 1.55,
 		"desc": "Kızgın lav yarıklarıyla aydınlanan efsanevi abis. En büyük canavarlar burada yaşar.",
-		"bonus_text": "+%75 altın • x2.1 nadir/efsanevi • 220m derinlik",
+		"bonus_text": "+%80 altın • x2.2 nadir/efsanevi • 225m derinlik",
 		"water_day":   [Color("#4b6b8a"), Color("#364466"), Color("#2b2042"), Color("#260d1c")],
 		"water_night": [Color("#2d2c4a"), Color("#211a36"), Color("#1a0e26"), Color("#17050c")],
 		"hills_day":   [Color("#5c4347"), Color("#3d292d")],
 		"hills_night": [Color("#26171c"), Color("#170c10")],
 		"pier":        [Color("#4d4346"), Color("#5e5256"), Color("#2b2326"), Color("#3b3034")],
 		"ambient": "embers",
+	},
+]
+
+const MARKET_CUSTOMERS: Array[Dictionary] = [
+	{
+		"id": "chef", "name": "Şef Hüseyin", "icon": "👨‍🍳", "shirt": Color("#ffffff"), "hat": Color("#fff8e7"),
+		"want_kind": "rare", "bonus": 1.8, "bonus_lbl": "+%80",
+		"quote": "Bugün lokantada ızgara şöleni var! Nadir veya üstü balıklara +%80 öderim!"
+	},
+	{
+		"id": "cat", "name": "Kedi Minnoş", "icon": "🐱", "shirt": Color("#ff9f43"), "hat": Color("#ffd166"),
+		"want_kind": "shallow", "bonus": 1.65, "bonus_lbl": "+%65",
+		"quote": "Miyav! Sığ sulardan (0–35m) tazecik balık getir, +%65 altın benden!"
+	},
+	{
+		"id": "collector", "name": "Koleksiyoncu Leyla", "icon": "🧐", "shirt": Color("#7950f2"), "hat": Color("#e599f7"),
+		"want_kind": "heavy", "bonus": 1.9, "bonus_lbl": "+%90",
+		"quote": "3 kg ve üzeri iri bir balık arıyorum! Getirene tam +%90 bonus!"
+	},
+	{
+		"id": "captain", "name": "Kaptan Osman", "icon": "⚓", "shirt": Color("#1971c2"), "hat": Color("#ffe066"),
+		"want_kind": "deep", "bonus": 1.75, "bonus_lbl": "+%75",
+		"quote": "Derin sulardan (40m+) çıkan her balığa +%75 altın veririm evlat!"
 	},
 ]
 
@@ -155,11 +202,12 @@ const ACHIEVEMENTS: Array[Dictionary] = [
 	{"id": "deep_100",    "ic": "🌊", "name": "Derin Dalgıç",       "desc": "100m veya daha derinden balık yakala",   "reward": 400},
 	{"id": "legendary_1", "ic": "👑", "name": "Efsanevi An",        "desc": "Efsanevi bir balık yakala",              "reward": 1000},
 	{"id": "rich_5000",   "ic": "💰", "name": "Zengin Balıkçı",     "desc": "Toplam 5.000 altın kazan",               "reward": 500},
-	{"id": "biome_all",   "ic": "🗺️", "name": "Dünya Gezgini",      "desc": "Tüm 4 balıkçılık bölgesini aç",          "reward": 1500},
+	{"id": "biome_all",   "ic": "🗺️", "name": "Dünya Gezgini",      "desc": "Tüm 6 göl ve bölgeyi aç",                "reward": 2000},
 	{"id": "boat_owner",  "ic": "🚤", "name": "Tekne Kaptanı",      "desc": "İlk tekneni satın al ve göle açıl",      "reward": 200},
 	{"id": "aqua_3",      "ic": "🐠", "name": "Akvaryum Ustası",    "desc": "Akvaryumuna en az 3 balık yerleştir",    "reward": 220},
 	{"id": "boss_1",      "ic": "🐉", "name": "Efsane Avcısı",      "desc": "Bir Bölge Boss balığını yakala",         "reward": 1200},
 	{"id": "tourney_1",   "ic": "🏆", "name": "Turnuva Şampiyonu",  "desc": "Bir Balıkçılık Turnuvası kazan",         "reward": 450},
+	{"id": "market_haggle","ic": "🤝", "name": "Pazarlık Ustası",   "desc": "Balık Pazarı'nda başarılı pazarlık yap", "reward": 250},
 ]
 
 const MISSION_POOL: Array[Dictionary] = [
