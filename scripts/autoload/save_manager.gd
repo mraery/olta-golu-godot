@@ -52,6 +52,8 @@ func default_save() -> Dictionary:
 		"sound": true,
 		"last_seen": 0,
 		"daily": {"last_date": "", "streak": 0},
+		"tips": {},
+		"collections": {},
 	}
 
 func load_save() -> void:
@@ -62,12 +64,37 @@ func load_save() -> void:
 			var parsed = JSON.parse_string(f.get_as_text())
 			if typeof(parsed) == TYPE_DICTIONARY:
 				for k in parsed.keys():
-					if k in ["lv", "baits", "stats", "daily"] and typeof(parsed[k]) == TYPE_DICTIONARY:
+					if k in ["lv", "baits", "stats", "daily", "tips", "collections"] and typeof(parsed[k]) == TYPE_DICTIONARY:
 						for sub_k in parsed[k].keys():
 							def[k][sub_k] = parsed[k][sub_k]
 					else:
 						def[k] = parsed[k]
 	data = def
+	migrate_species_ids()
+
+## Birleştirilen çift türlerin eski id'lerini asıl id'ye taşır (günlük kayıtları birleştirilir).
+func migrate_species_ids() -> void:
+	if GameData.aliases.is_empty():
+		return
+	var book: Dictionary = data["book"]
+	for old_id in book.keys():
+		var new_id := GameData.canonical_id(str(old_id))
+		if new_id == str(old_id):
+			continue
+		var a: Dictionary = book[old_id]
+		var b: Dictionary = book.get(new_id, {})
+		book[new_id] = {
+			"n": int(a.get("n", 0)) + int(b.get("n", 0)),
+			"max": maxf(float(a.get("max", 0.0)), float(b.get("max", 0.0))),
+			"deep": maxi(int(a.get("deep", 0)), int(b.get("deep", 0))),
+		}
+		book.erase(old_id)
+	for key in ["aquarium", "basket"]:
+		for item in data[key]:
+			item["sp_id"] = GameData.canonical_id(str(item.get("sp_id", "")))
+	for h in data["market_hot"]:
+		if h.has("id"):
+			h["id"] = GameData.canonical_id(str(h["id"]))
 
 func save_game() -> void:
 	data["last_seen"] = int(Time.get_unix_time_from_system())
@@ -427,7 +454,49 @@ func _check_ach_condition(ach_id: String) -> bool:
 		"streak_7":      return int(st.get("best_streak", 0)) >= 7
 	return false
 
+# ---------------- Bölge Koleksiyonu ----------------
+const COLLECTION_STEPS: Array[int] = [25, 50, 75, 100]
+
+## [yakalanan, toplam] — o bölgeyi yuva edinen türler
+func biome_collection(biome_id: String) -> Array:
+	var total := 0
+	var got := 0
+	var book: Dictionary = data["book"]
+	for sp in GameData.species:
+		if sp.has("home") and (sp["home"] as Array).has(biome_id):
+			total += 1
+			if book.has(str(sp["id"])):
+				got += 1
+	return [got, total]
+
+func collection_reward(biome_id: String, step: int) -> int:
+	var b := GameData.get_biome(biome_id)
+	return int(round((250.0 + float(b["cost"]) * 0.2) * float(step) / 25.0))
+
+## Yeni ulaşılan kilometre taşlarını öder; ödenenleri döndürür
+func check_collections() -> Array:
+	var paid: Array = []
+	var ms: Dictionary = data.get("collections", {})
+	for b in GameData.BIOMES:
+		var bid := str(b["id"])
+		var gt := biome_collection(bid)
+		if int(gt[1]) <= 0:
+			continue
+		var pct := float(gt[0]) * 100.0 / float(gt[1])
+		for step in COLLECTION_STEPS:
+			if pct >= float(step) and int(ms.get(bid, 0)) < step:
+				ms[bid] = step
+				var rew := collection_reward(bid, step)
+				data["money"] = int(data["money"]) + rew
+				data["total"] = int(data["total"]) + rew
+				add_xp(30 + step)
+				paid.append({"biome": bid, "step": step, "gold": rew})
+				toast_requested.emit("🗺️ %s %s koleksiyonu %%%d! (+%d altın)" % [str(b["icon"]), str(b["name"]), step, rew])
+	data["collections"] = ms
+	return paid
+
 func check_achievements() -> Array[Dictionary]:
+	check_collections()
 	var unlocked: Array[Dictionary] = []
 	var achs: Dictionary = data["achievements"]
 	for a in GameData.ACHIEVEMENTS:

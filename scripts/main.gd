@@ -48,6 +48,9 @@ var _fight_prog: ProgressBar
 var _fight_stamina: ProgressBar
 var _lbl_fight_pull: Label
 var _lbl_hookset: Label
+var _tip_box: PanelContainer
+var _tip_lbl: Label
+var _tip_timer: float = 0.0
 
 var _menu_overlay: ColorRect
 var _catch_overlay: ColorRect
@@ -62,6 +65,9 @@ var _panel_extra: Label
 var _current_panel: String = ""
 var _shop_tab: String = "upgrades"
 var _book_filter: String = "all"
+var _book_query: String = ""
+var _book_page: int = 0
+const BOOK_PAGE_SIZE := 32
 var _last_catch: Dictionary = {}
 var _last_treasure: Dictionary = {}
 var _aqua_view: AquariumView = null
@@ -78,6 +84,10 @@ func _ready() -> void:
 	_menu_overlay.visible = true
 
 func _process(delta: float) -> void:
+	if _tip_timer > 0.0:
+		_tip_timer -= delta
+		if _tip_timer <= 0.0:
+			_tip_box.visible = false
 	if world.state == "menu":
 		return
 	_autosave_t += delta
@@ -113,6 +123,16 @@ func _connect_signals() -> void:
 		_lbl_fight_warn.visible = warn
 	)
 	world.fight_state.connect(func(d: Dictionary):
+		if str(d["phase"]) == "hook":
+			_tip("hook")
+		elif int(d["pull"]) != 0:
+			_tip("pull")
+		elif float(d["stamina"]) < 25.0:
+			_tip("tired")
+		elif bool(d["surging"]) and str(d["beh"]) == "ziplayan":
+			_tip("jump")
+		elif float(d["stamina"]) < 92.0:
+			_tip("zone")
 		_fight_zone.position.x = float(d["zone_lo"]) / 100.0 * 380.0
 		_fight_zone.size.x = (float(d["zone_hi"]) - float(d["zone_lo"])) / 100.0 * 380.0
 		_fight_stamina.value = float(d["stamina"])
@@ -407,6 +427,15 @@ func _build_ui() -> void:
 	_fight_prog = ProgressBar.new()
 	_fight_prog.custom_minimum_size = Vector2(380, 12)
 	_fight_prog.show_percentage = false
+	var pr_bg := StyleBoxFlat.new()
+	pr_bg.bg_color = Color(1, 1, 1, 0.12)
+	pr_bg.set_corner_radius_all(5)
+	var pr_fill := StyleBoxFlat.new()
+	pr_fill.bg_color = Color("#4dabf7")
+	pr_fill.set_corner_radius_all(5)
+	_fight_prog.add_theme_stylebox_override("background", pr_bg)
+	_fight_prog.add_theme_stylebox_override("fill", pr_fill)
+	_fight_prog.tooltip_text = "Balığı yüzeye çekme ilerlemesi"
 	var shb := HBoxContainer.new()
 	var slbl := Label.new()
 	slbl.text = "💪 Balık gücü"
@@ -453,7 +482,40 @@ func _build_ui() -> void:
 	_lbl_hookset.visible = false
 	ui.add_child(_lbl_hookset)
 
+	# Bir kerelik öğretici ipuçları
+	_tip_box = PanelContainer.new()
+	_tip_box.add_theme_stylebox_override("panel", _style_box(Color("#fff7e2"), Color("#e6a400"), 14, 3, 10))
+	_tip_box.position = Vector2(GameData.W - 292, 210)
+	_tip_box.custom_minimum_size = Vector2(280, 0)
+	_tip_box.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	_tip_box.visible = false
+	_tip_lbl = Label.new()
+	_tip_lbl.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	_tip_lbl.custom_minimum_size = Vector2(260, 0)
+	_tip_lbl.add_theme_font_size_override("font_size", 13)
+	_tip_lbl.add_theme_color_override("font_color", Color("#5b3a00"))
+	_tip_box.add_child(_tip_lbl)
+	ui.add_child(_tip_box)
+
 	_build_overlays()
+
+const TIPS := {
+	"hook": "💡 İPUCU: Balık vurunca ekranda ❗ çıkar. HEMEN bas (Boşluk / tık) — ne kadar hızlı, o kadar iyi: Kusursuz Kanca!",
+	"zone": "💡 İPUCU: Beyaz iğneyi YEŞİL bölgede tut. Bölge balığın karakterine göre kayar; basılı tut = gerginlik artar, bırak = azalır.",
+	"pull": "💡 İPUCU: Balık bir yana kaçıyor! TERS yöne bas (A/D, ←/→ ya da fareyi sürükle). Doğru yön gerginliği düşürür.",
+	"tired": "💡 İPUCU: Balık yoruldu — yeşil bölge genişledi ve sarardı. Şimdi sar!",
+	"jump": "💡 İPUCU: Zıplayan balık havadayken makarayı BIRAK, yoksa misina kopar!",
+}
+
+func _tip(key: String) -> void:
+	var seen: Dictionary = SaveManager.data.get("tips", {})
+	if seen.has(key) or not TIPS.has(key):
+		return
+	seen[key] = true
+	SaveManager.data["tips"] = seen
+	_tip_lbl.text = str(TIPS[key])
+	_tip_box.visible = true
+	_tip_timer = 5.5
 
 func _fight_pull_hide() -> void:
 	if _lbl_fight_pull:
@@ -1143,7 +1205,8 @@ func _render_shop() -> void:
 			hdr.text = "%s %s" % [str(b["icon"]), str(b["name"])]
 			hdr.add_theme_color_override("font_color", Color("#0d5c8f"))
 			var bon := Label.new()
-			bon.text = str(b["bonus_text"])
+			var col := SaveManager.biome_collection(bid)
+			bon.text = "%s\n📖 Koleksiyon: %d/%d tür" % [str(b["bonus_text"]), int(col[0]), int(col[1])]
 			bon.add_theme_font_size_override("font_size", 12)
 			bon.add_theme_color_override("font_color", Color("#217a43"))
 			var desc := Label.new()
@@ -1309,6 +1372,8 @@ func _render_basket() -> void:
 			tr.texture = GameData.get_fish_texture(str(sp["spr"]))
 			tr.custom_minimum_size = Vector2(76, 34)
 			tr.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+			tr.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+			tr.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
 			var nl := Label.new()
 			nl.text = str(sp["name"])
 			nl.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
@@ -1449,10 +1514,10 @@ func _render_book() -> void:
 
 	var tabs := HBoxContainer.new()
 	tabs.add_theme_constant_override("separation", 4)
-	for pair in [["all", "Tümü"], ["caught", "Yakalanan (%d)" % got], ["shallow", "Sığ"], ["mid", "Orta"], ["deep", "Derin"], ["rare", "Nadir+"], ["trophies", "🏆 Kupa"], ["ach", "🎖️ Başarım"], ["stats", "📊 İstatistik"]]:
+	for pair in [["all", "Tümü"], ["caught", "Yakalanan (%d)" % got], ["here", "🗺️ Bu Bölge"], ["shallow", "Sığ"], ["mid", "Orta"], ["deep", "Derin"], ["rare", "Nadir+"], ["trophies", "🏆 Kupa"], ["ach", "🎖️"], ["stats", "📊"]]:
 		var tb := _make_btn(pair[1], _book_filter == pair[0])
 		tb.add_theme_font_size_override("font_size", 12)
-		tb.pressed.connect(func(): _book_filter = pair[0]; _render_current_panel())
+		tb.pressed.connect(func(): _book_filter = pair[0]; _book_page = 0; _render_current_panel())
 		tabs.add_child(tb)
 	_panel_body.add_child(tabs)
 
@@ -1493,16 +1558,79 @@ func _render_book() -> void:
 				btn.pressed.connect(func(): _open_fish_detail(str(sp["id"])))
 				grid.add_child(btn)
 	else:
-		var grid: GridContainer = _make_scroll_grid(4)[1]
+		# Arama + sayfalama
+		var cur_biome := str(SaveManager.data["biome"])
+		var q := _book_query.strip_edges().to_lower()
+		var list: Array = []
 		for sp in GameData.species:
-			var sid := str(sp["id"])
-			var rec: Dictionary = book.get(sid, {})
-			var has_it := not rec.is_empty()
-			if _book_filter == "caught" and not has_it: continue
+			var rec0: Dictionary = book.get(str(sp["id"]), {})
+			var has0 := not rec0.is_empty()
+			if _book_filter == "caught" and not has0: continue
+			if _book_filter == "here" and not (sp.has("home") and (sp["home"] as Array).has(cur_biome)): continue
 			if _book_filter == "shallow" and int(sp["d"][0]) >= 40: continue
 			if _book_filter == "mid" and (int(sp["d"][0]) < 35 or int(sp["d"][0]) >= 90): continue
 			if _book_filter == "deep" and int(sp["d"][1]) < 90: continue
 			if _book_filter == "rare" and int(sp["r"]) < 2: continue
+			if not q.is_empty():
+				# Yakalanmamış türlerin adı gizli; onlarda yalnızca Latince ad aranır
+				var hay := (str(sp["latin"]) + " " + (str(sp["name"]) if has0 else "")).to_lower()
+				if not hay.contains(q): continue
+			list.append(sp)
+		if _book_filter == "here":
+			var col := SaveManager.biome_collection(cur_biome)
+			var b := SaveManager.current_biome()
+			var claimed := int((SaveManager.data.get("collections", {}) as Dictionary).get(cur_biome, 0))
+			var nxt_step := 0
+			for st in SaveManager.COLLECTION_STEPS:
+				if st > claimed:
+					nxt_step = st
+					break
+			var cl := Label.new()
+			var pct := float(col[0]) * 100.0 / maxf(1.0, float(col[1]))
+			cl.text = "%s %s koleksiyonu: %d/%d tür (%%%d)" % [str(b["icon"]), str(b["name"]), int(col[0]), int(col[1]), int(pct)]
+			if nxt_step > 0:
+				cl.text += "  •  Sonraki ödül %%%d: +%d altın" % [nxt_step, SaveManager.collection_reward(cur_biome, nxt_step)]
+			else:
+				cl.text += "  •  ✔ Tamamlandı!"
+			cl.add_theme_font_size_override("font_size", 12)
+			cl.add_theme_color_override("font_color", Color("#6e4500"))
+			cl.add_theme_stylebox_override("normal", _style_box(Color("#fff2c6"), Color("#e6bc53"), 10, 2, 6))
+			_panel_body.add_child(cl)
+		var pages := maxi(1, int(ceil(float(list.size()) / float(BOOK_PAGE_SIZE))))
+		_book_page = clampi(_book_page, 0, pages - 1)
+		var bar := HBoxContainer.new()
+		bar.add_theme_constant_override("separation", 6)
+		var search := LineEdit.new()
+		search.placeholder_text = "🔍 Tür ara (ad veya Latince)…"
+		search.text = _book_query
+		search.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		search.add_theme_font_size_override("font_size", 13)
+		search.text_changed.connect(func(txt: String):
+			_book_query = txt
+			_book_page = 0
+			_render_current_panel()
+		)
+		var prev := _make_btn("◀", false, 34)
+		prev.disabled = _book_page <= 0
+		prev.pressed.connect(func(): _book_page -= 1; _render_current_panel())
+		var pl := Label.new()
+		pl.text = "%d/%d • %d tür" % [_book_page + 1, pages, list.size()]
+		pl.add_theme_font_size_override("font_size", 12)
+		pl.add_theme_color_override("font_color", Color("#7a623f"))
+		var nxt := _make_btn("▶", false, 34)
+		nxt.disabled = _book_page >= pages - 1
+		nxt.pressed.connect(func(): _book_page += 1; _render_current_panel())
+		for c in [search, prev, pl, nxt]: bar.add_child(c)
+		_panel_body.add_child(bar)
+		if not _book_query.is_empty():
+			search.call_deferred("grab_focus")
+			search.call_deferred("set_caret_column", _book_query.length())
+
+		var grid: GridContainer = _make_scroll_grid(4)[1]
+		for sp in list.slice(_book_page * BOOK_PAGE_SIZE, (_book_page + 1) * BOOK_PAGE_SIZE):
+			var sid := str(sp["id"])
+			var rec: Dictionary = book.get(sid, {})
+			var has_it := not rec.is_empty()
 
 			var card := PanelContainer.new()
 			card.size_flags_horizontal = Control.SIZE_EXPAND_FILL
@@ -1512,6 +1640,8 @@ func _render_book() -> void:
 			tr.texture = GameData.get_fish_texture(str(sp["spr"]))
 			tr.custom_minimum_size = Vector2(84, 40)
 			tr.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+			tr.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+			tr.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
 			if not has_it:
 				tr.modulate = Color(0.1, 0.1, 0.1, 0.35)
 			elif sp.has("tint"):

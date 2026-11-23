@@ -249,7 +249,15 @@ var tex_cache: Dictionary = {}
 func _ready() -> void:
 	_load_species_db()
 
+func _load_aliases() -> void:
+	var f := FileAccess.open("res://data/fish_aliases.json", FileAccess.READ)
+	if f != null:
+		var parsed = JSON.parse_string(f.get_as_text())
+		if typeof(parsed) == TYPE_DICTIONARY:
+			aliases = parsed
+
 func _load_species_db() -> void:
+	_load_aliases()
 	species.clear()
 	species_by_id.clear()
 	boss_species.clear()
@@ -268,8 +276,14 @@ func _load_species_db() -> void:
 			if item.get("boss", false):
 				boss_species.append(item)
 
+## Birleştirilmiş çift kayıtlar: eski id → asıl id (eski kayıt dosyaları için)
+var aliases: Dictionary = {}
+
+func canonical_id(id: String) -> String:
+	return str(aliases.get(id, id))
+
 func get_species(id: String) -> Dictionary:
-	return species_by_id.get(id, species[0] if species.size() > 0 else {})
+	return species_by_id.get(canonical_id(id), species[0] if species.size() > 0 else {})
 
 func get_boss_for_biome(biome_id: String) -> Dictionary:
 	for b in boss_species:

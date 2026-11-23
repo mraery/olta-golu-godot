@@ -1,14 +1,18 @@
 # 🎣 Olta Gölü (Godot 4.7)
 
-**376 benzersiz balık türü (her birinin kendi 2D pixel-art görseli ve kısa hikayesiyle!)**, **6 tatlı 2D göl ve bölge**, **çizgili tenteli 2D Balık Pazarı & NPC müşteri siparişleri**, **canlı kişisel akvaryum**, **3 kademeli tekne sistemi**, **6 bölge bossu** ve **90 saniyelik turnuvalar** içeren 2D balık tutma oyunu.
+**367 benzersiz balık türü (her birinin kendi 2D pixel-art görseli ve kısa hikayesiyle!)**, **6 tatlı 2D göl ve bölge**, **çizgili tenteli 2D Balık Pazarı & NPC müşteri siparişleri**, **canlı kişisel akvaryum**, **3 kademeli tekne sistemi**, **6 bölge bossu** ve **90 saniyelik turnuvalar** içeren 2D balık tutma oyunu.
 
 ## ✨ Özellikler
 
-- **🐟 376 Balık Türü, Kısa Hikayeler & Tam Ansiklopedi**: Her balık türü için Latince ad, yaşam alanı, beslenme, zorluk yıldızı, biyolojik bilgi ve kısa bir **balıkçı hikayesi**.
+- **🐟 367 Balık Türü, Kısa Hikayeler & Tam Ansiklopedi**: Her balık türü için Latince ad, yaşam alanı, beslenme, zorluk yıldızı, biyolojik bilgi ve kısa bir **balıkçı hikayesi**.
 - **🇹🇷 +115 Yeni Gerçek Tür**: Lüfer, palamut, hamsi, kalkan, barbunya, inci kefali, Abant alabalığı, mersin morinası, doktor balığı… ayrıca kılıç, orkinos, köpekbalıkları, derin deniz canavarları (engerek, fener, goblin köpekbalığı, selakant) ve egzotik nehir balıkları (arapaima, elektrikli yılan balığı). Her biri `tools/fishgen.py` ile üretilmiş kendine özgü pixel-art sprite'a sahip ve en sık görüldüğü bölgelerde daha çok çıkar.
 - **🪪 Balık Kimlik Kartı**: Yakalama ekranında ve Günlük'te gerçek boy (ve tuttuğun balığın tahmini boyu), ömür, Türkiye'de nerede görüldüğü, IUCN koruma durumu, çekişme karakteri, derinlik/zaman ve boy sınıfı (Yavru → Efsanevi Boy).
 - **🎣 Yeni Yakalama Mekaniği**: Balık vurunca **❗ hemen bas** (Kusursuz Kanca = +%18 ilerleme, +%15 XP); türün karakterine göre (Sakin, Kaçak, Zıplayan, Dalgıç, İnatçı) **hareket eden yeşil bölge**; balık sağa/sola kaçınca **ters yöne bas** (A/D veya fareyle sürükle); yorulunca kolaylaşan **balık gücü** barı; zıplayan balıklarda havadayken makarayı bırak!
 - **👀 Görünür Balıklar**: Tüm sprite'lar türün gerçek boyuna göre ölçeklenir; 16 px'lik minik pixel balıklar artık nokta gibi değil.
+- **🪪 Tüm Türlerde Kimlik**: İlk sürümden gelen 246 türe de Türkçe ad (Levrek, Çipura, Orfoz, Has Kefal, Karagöz, Iskaroz…), gerçek boy, ömür, Türkiye bilgisi ve yuva bölgesi eklendi; aynı türün çift kayıtları birleştirildi (eski kayıtlar otomatik taşınır).
+- **🗺️ Bölge Koleksiyonu**: Her bölgenin yuva türlerinin %25 / %50 / %75 / %100'ünü yakala, altın ödül kazan (`K` → 🗺️ Bu Bölge).
+- **🔍 Günlük'te Arama & Sayfalama**: Ad veya Latince ile ara; 32'lik sayfalar.
+- **💡 İlk Seferlik İpuçları**: Kanca atma, yeşil bölge, yan çekiş, yorgunluk ve zıplama ilk karşılaşıldığında bir kez anlatılır.
 - **🏪 Tatlı 2D Balık Pazarı (`B`)**: Kırmızı-beyaz çizgili tenteli ahşap tezgah, buz kasalarında sergilenen balıkların, animasyonlu 4 NPC müşteri (**Şef Hüseyin**, **Kedi Minnoş**, **Koleksiyoncu Leyla**, **Kaptan Osman**) ve özel sipariş bonusları (`+%65`–`+%90`), günlük talep (`+%50`) ve **🤝 Pazarlık Et** mekaniği!
 - **🗺️ 6 Tatlı 2D Göl & Bölge**:
   - 🏞️ **Huzur Gölü** (0–150m): Nilüfer yaprakları, lotus çiçekleri, gölde yüzen minik sarı ördek, sazlıklar ve batık çapa.
@@ -52,7 +56,7 @@
 # Godot 4.7 ile çalıştır
 godot --path .
 
-# Headless otomatik test paketini çalıştır (102/102 test — oyuncu kaydı yedeklenip geri yüklenir)
+# Headless otomatik test paketini çalıştır (112/112 test — oyuncu kaydı yedeklenip geri yüklenir)
 godot --headless --path . --import
 godot --headless --path . --script res://tests/test_runner.gd
 ```
@@ -64,6 +68,7 @@ godot --headless --path . --script res://tests/test_runner.gd
 ## 🧰 Yeni Tür Ekleme
 ```bash
 # tools/new_species.py içine F(...) satırı ekle, sonra:
-python3 tools/build_species.py          # sprite üretir + data/fish_db.json'u günceller
+python3 tools/build_species.py          # yeni türlerin sprite'ları + data/fish_db.json
+python3 tools/apply_legacy.py           # eski türlerin kimlik bilgisi, çift kayıt birleştirme
 godot --headless --path . --import      # yeni PNG'leri içe aktar
 ```

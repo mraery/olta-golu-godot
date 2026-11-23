@@ -168,7 +168,7 @@ func _run_all() -> void:
 	sm.data["book"].erase("test_sp")
 
 	# Yeni türler: kimlik bilgisi, karakter, ekran boyu
-	check(gd.species.size() >= 370, "species_count_370_plus", "got %d" % gd.species.size())
+	check(gd.species.size() >= 360, "species_count_360_plus", "got %d" % gd.species.size())
 	var gen_n := 0
 	var gen_missing := 0
 	var bad_beh := 0
@@ -190,10 +190,47 @@ func _run_all() -> void:
 	check(bad_beh == 0, "all_species_have_behavior")
 	check(bad_px == 0, "all_species_visible_on_screen_size", "bad=%d" % bad_px)
 	check(dup == 0, "species_ids_unique", "dup=%d" % dup)
+	var no_info := 0
+	var latins := {}
+	var dup_lat := 0
+	for sp in gd.species:
+		if not sp.get("boss", false) and not (sp.has("len") and sp.has("tr") and sp.has("home")): no_info += 1
+		if latins.has(sp["latin"]): dup_lat += 1
+		latins[sp["latin"]] = true
+	check(no_info == 0, "all_species_have_identity", "missing=%d" % no_info)
+	check(dup_lat == 0, "no_duplicate_latin_species", "dup=%d" % dup_lat)
+	check(str(gd.get_species("p_esox_lucius")["id"]) == "grey", "alias_resolves_to_canonical")
 	var lufer: Dictionary = gd.get_species("lufer")
 	check(str(lufer.get("latin", "")) == "Pomatomus saltatrix", "lufer_present")
 	check(str(gd.size_class(0.1)[0]).contains("Yavru") and str(gd.size_class(1.2)[0]).contains("Efsanevi"), "size_classes")
 	check(gd.est_length_cm(lufer, float(lufer["kg"][1])) > gd.est_length_cm(lufer, float(lufer["kg"][0])), "est_length_grows_with_kg")
+
+	# Eski kayıt göçü: birleştirilen türlerin günlük kayıtları birleşmeli
+	sm.data["book"]["p_esox_lucius"] = {"n": 2, "max": 9.0, "deep": 40}
+	sm.data["book"]["grey"] = {"n": 1, "max": 4.0, "deep": 60}
+	sm.data["aquarium"].append({"uid": "mig", "sp_id": "p_anguilla_anguilla", "kg": 1.0, "base_val": 10})
+	sm.migrate_species_ids()
+	check(not sm.data["book"].has("p_esox_lucius") and int(sm.data["book"]["grey"]["n"]) == 3 and float(sm.data["book"]["grey"]["max"]) == 9.0, "save_migration_merges_book")
+	check(str(sm.data["aquarium"][sm.data["aquarium"].size() - 1]["sp_id"]) == "eel", "save_migration_aquarium")
+	sm.data["book"].erase("grey")
+	sm.data["aquarium"].pop_back()
+
+	# Bölge koleksiyonu kilometre taşları
+	var col0: Array = sm.biome_collection("coral")
+	check(int(col0[1]) > 50, "coral_collection_has_many_species", str(col0))
+	var m_before := int(sm.data["money"])
+	var need := int(ceil(float(col0[1]) * 0.25)) + 1
+	var added: Array = []
+	for sp in gd.species:
+		if added.size() >= need: break
+		if sp.has("home") and (sp["home"] as Array).has("coral") and not sm.data["book"].has(sp["id"]):
+			sm.data["book"][sp["id"]] = {"n": 1, "max": 1.0, "deep": 5}
+			added.append(sp["id"])
+	var paid: Array = sm.check_collections()
+	check(paid.size() >= 1 and int(sm.data["collections"]["coral"]) >= 25, "collection_milestone_paid")
+	check(int(sm.data["money"]) > m_before, "collection_reward_gold")
+	check(sm.check_collections().is_empty(), "collection_not_paid_twice")
+	for sid in added: sm.data["book"].erase(sid)
 
 	# 3. Main sahnesi kurulumu & canlı simülasyon testi
 	var packed := load("res://scenes/main.tscn") as PackedScene
@@ -307,6 +344,12 @@ func _run_all() -> void:
 	main_node.open_panel("book")
 	await process_frame
 	check(main_node._panel_body.get_child_count() >= 2, "book_stats_tab_render")
+	main_node._book_filter = "here"
+	main_node._book_query = "salmo"
+	main_node.open_panel("book")
+	await process_frame
+	check(main_node._panel_body.get_child_count() >= 3, "book_here_search_render")
+	main_node._book_query = ""
 	main_node._book_filter = "all"
 	check(float(sm.data["stats"]["play_secs"]) > 0.0, "play_time_tracked")
 	# Ansiklopedi detay kartını aç

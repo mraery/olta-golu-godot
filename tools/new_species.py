@@ -767,7 +767,7 @@ F("doktor", "Doktor Balığı", "Garra rufa",
   "Sıcak kaplıca suları ve Dicle-Fırat havzası dereleri", "Algler ve ölü deri hücreleri",
   "Kangal'daki 35 °C'lik kaplıca suyunda yaşar; suya giren insanların ölü derisini kemirerek 'balık terapisi' yapar.",
   "Kangal'da bir çoban, kuzusunu yıkarken balıkların ayağını gıdıkladığını fark etmiş; kaplıcanın ünü böyle başlamış derler.", beh="sakin")
-F("kizil_aslan", "Kızıl Aslan Balığı", "Pterois radiata",
+F("kizil_aslan", "Beyaz Yüzgeçli Aslan Balığı", "Pterois radiata",
   A("scorpion", L=28, H=8, body="#a8302a", pattern="bars", n=7, bw=1, pcol="#f8f0e8", pect=9, dorsal_h=10, fin="#e8d0c0", dens=0.0),
   (5, 80), (0.2, 1.0), 3, 2.4, 52, (15, 30), ["volcano", "coral"], 24, "15 yıl", "Kızıldeniz'de; akrabası Akdeniz'e yerleşti", "LC",
   "Resif mağaraları", "Karides, küçük balıklar",
