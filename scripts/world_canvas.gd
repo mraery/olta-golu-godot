@@ -15,6 +15,9 @@ signal boss_changed(active: bool, label: String)
 signal frenzy_changed(seconds_left: float)
 signal tourney_changed(active: bool, title: String, prog_text: String, pct: float, secs_left: int)
 signal hud_dirty()
+## Çekişmenin anlık durumu: phase, zone_lo, zone_hi, stamina, pull, hook_left, beh
+signal fight_state(d: Dictionary)
+signal hookset_result(quality: String)
 
 const W := GameData.W
 const H := GameData.H
@@ -48,6 +51,7 @@ var hook: Dictionary = {
 	"tip": ROD_TIP, "fish": {}, "treasure": {}, "bait": true, "at_max": false
 }
 var fight: Dictionary = {}
+var last_fight: Dictionary = {}
 
 var input_left: bool = false
 var input_right: bool = false
@@ -164,6 +168,8 @@ func pick_species(depth_m: float) -> Dictionary:
 			wt *= float(s["night"])
 		if depth_m > 150.0 and r_idx >= 2:
 			wt *= 1.6
+		if s.has("home"):
+			wt *= GameData.BIOME_HOME_MUL if (s["home"] as Array).has(str(biome["id"])) else GameData.BIOME_AWAY_MUL
 		weights.append(wt)
 		total_w += wt
 
@@ -183,7 +189,7 @@ func spawn_fish(initial: bool = false) -> void:
 	var kg_t := pow(randf(), 1.55)
 	var weight_mul := float(SaveManager.current_biome()["weight_mul"]) * float(SaveManager.active_bait()["weight_mul"])
 	var kg := lerpf(float(sp["kg"][0]), float(sp["kg"][1]), kg_t) * weight_mul
-	var sc := float(sp["sc"]) * (0.8 + kg_t * 0.45)
+	var sc := GameData.fish_draw_scale(sp, kg_t)
 	fishes.append({
 		"sp": sp, "kg": kg, "scale": sc, "dir": dir,
 		"base_y": SURF + dm * PPM, "y": SURF + dm * PPM,
@@ -204,7 +210,7 @@ func spawn_boss() -> void:
 	var dir := 1.0 if randf() < 0.5 else -1.0
 	var kg := lerpf(float(sp["kg"][0]), float(sp["kg"][1]), randf())
 	var boss := {
-		"sp": sp, "kg": kg, "scale": float(sp["sc"]), "dir": dir,
+		"sp": sp, "kg": kg, "scale": GameData.fish_draw_scale(sp, 1.0), "dir": dir,
 		"base_y": SURF + dm * PPM, "y": SURF + dm * PPM,
 		"x": -90.0 if dir > 0.0 else W + 90.0,
 		"vx": randf_range(float(sp["spd"][0]), float(sp["spd"][1])) * dir,
@@ -329,24 +335,82 @@ func start_fight(f: Dictionary) -> void:
 	set_game_state("fight")
 	f["hooked"] = true
 	hook["fish"] = f
-	var tol := float(SaveManager.up("line")) / 100.0
-	var hi := minf(93.0, 72.0 + tol * 38.0)
-	var lo := 18.0
-	fight = {
-		"f": f, "tension": 42.0, "progress": 0.0, "slack": 0.0,
-		"surge": 0.0, "warn_t": 0.0, "surge_t": randf_range(1.1, 2.2),
-		"hi": hi, "lo": lo, "shake": 0.0,
-	}
 	var sp: Dictionary = f["sp"]
+	var beh_id := GameData.fish_behavior(sp)
+	var beh: Dictionary = GameData.BEHAVIORS[beh_id]
+	var tol := float(SaveManager.up("line")) / 100.0
+	var width := (40.0 + tol * 30.0) * float(beh["width"])
+	var center := 48.0 + float(beh["bias"])
+	fight = {
+		"f": f, "beh": beh_id, "tension": 34.0, "progress": 0.0, "slack": 0.0,
+		"surge": 0.0, "warn_t": 0.0, "surge_t": randf_range(1.5, 2.6),
+		"width": width, "center": center, "lo": center - width * 0.5, "hi": center + width * 0.5,
+		"shake": 0.0, "phase": "hook", "hook_t": 0.0, "hook_win": 0.62 if beh_id == "kacak" else 0.8,
+		"stamina": 100.0, "pull": 0, "pull_t": randf_range(2.2, 4.0), "pull_left": 0.0,
+		"time": 0.0, "zone_time": 0.0, "slack_lim": 2.5, "hook_q": "", "tired_said": false,
+		"seed": randf() * 10.0,
+	}
 	var r_idx := int(sp["r"])
 	var title := "👑 EFSANEVİ CANAVAR!" if r_idx >= 4 else ("⚡ Güçlü bir şey vurdu!" if r_idx >= 3 else "🐟 Balık vurdu!")
+	title += "  %s %s" % [str(beh["icon"]), str(beh["name"])]
 	hint_changed.emit("")
-	fight_started.emit(title, lo, hi)
+	fight_started.emit(title, float(fight["lo"]), float(fight["hi"]))
+	_emit_fight_state()
 	AudioManager.play("bite")
+	screen_shake = maxf(screen_shake, 4.0)
+
+## Oyuncu çekişme sırasında tuşa/fareye BASTIĞI an (kanca atma için)
+func on_fight_press() -> void:
+	if state == "fight" and not fight.is_empty() and str(fight["phase"]) == "hook":
+		var ht := float(fight["hook_t"])
+		_resolve_hookset("perfect" if ht <= 0.28 else "good")
+
+func _resolve_hookset(q: String) -> void:
+	fight["phase"] = "fight"
+	fight["hook_q"] = q
+	var f: Dictionary = fight["f"]
+	var fx := float(f["x"])
+	var fy := float(f["y"]) - 26.0
+	match q:
+		"perfect":
+			fight["progress"] = 0.18
+			fight["stamina"] = 88.0
+			fight["tension"] = 46.0
+			var st: Dictionary = SaveManager.data["stats"]
+			st["perfect_hooks"] = int(st.get("perfect_hooks", 0)) + 1
+			add_float_text(fx, fy, "🎯 KUSURSUZ KANCA!", Color("#7dffb0"), 18)
+			AudioManager.play("perfect")
+		"good":
+			fight["progress"] = 0.07
+			fight["tension"] = 42.0
+			add_float_text(fx, fy, "👍 Kanca oturdu", Color("#e8f6ff"), 16)
+		_:
+			fight["progress"] = 0.0
+			fight["tension"] = 24.0
+			fight["slack_lim"] = 1.6
+			fight["surge_t"] = 0.35
+			add_float_text(fx, fy, "😬 Kanca zayıf tuttu!", Color("#ffb4a2"), 16)
+			AudioManager.play("warn")
+	hookset_result.emit(q)
+
+func _emit_fight_state() -> void:
+	if fight.is_empty():
+		return
+	fight_state.emit({
+		"phase": str(fight["phase"]), "zone_lo": float(fight["lo"]), "zone_hi": float(fight["hi"]),
+		"stamina": float(fight["stamina"]), "pull": int(fight["pull"]),
+		"hook_left": maxf(0.0, float(fight["hook_win"]) - float(fight["hook_t"])), "beh": str(fight["beh"]),
+		"surging": float(fight["surge"]) > 0.0,
+	})
 
 func end_fight(ok: bool, why: String = "") -> void:
 	fight_ended.emit()
 	var f: Dictionary = fight["f"]
+	last_fight = {
+		"hook_q": str(fight.get("hook_q", "")), "secs": float(fight.get("time", 0.0)),
+		"zone_pct": float(fight.get("zone_time", 0.0)) / maxf(0.01, float(fight.get("time", 0.0))),
+		"beh": str(fight.get("beh", "")),
+	}
 	fight = {}
 	if ok:
 		set_game_state("rising")
@@ -387,6 +451,8 @@ func land_catch() -> void:
 	var value := SaveManager.calc_fish_value(sp, kg, depth_m, combo, frenzy_left > 0.0, true)
 	var base_val := SaveManager.calc_fish_value(sp, kg, depth_m, combo, frenzy_left > 0.0, false)
 	var xp_gain := int(round(14.0 + float(sp["r"]) * 16.0 + float(depth_m) * 0.25 + kg * 2.0))
+	if str(last_fight.get("hook_q", "")) == "perfect":
+		xp_gain = int(round(float(xp_gain) * 1.15))
 
 	var book: Dictionary = SaveManager.data["book"]
 	var sp_id := str(sp["id"])
@@ -456,8 +522,9 @@ func land_catch() -> void:
 	fish_landed.emit({
 		"sp": sp, "kg": kg, "depth_m": depth_m, "value": value, "base_val": base_val,
 		"xp_gain": xp_gain, "is_new": is_new, "is_record": is_record, "hot": hot,
-		"combo_snap": combo, "frenzy_snap": frenzy_left > 0.0,
+		"combo_snap": combo, "frenzy_snap": frenzy_left > 0.0, "fight": last_fight.duplicate(),
 	})
+	last_fight = {}
 
 func land_treasure() -> void:
 	var tr: Dictionary = hook["treasure"]
@@ -766,67 +833,13 @@ func _update_gameplay(dt: float) -> void:
 				var iw := (float(tex.get_width()) if tex != null else 100.0) * float(f["scale"])
 				var ih := (float(tex.get_height()) if tex != null else 50.0) * float(f["scale"])
 				var nx := float(f["x"]) + float(f["dir"]) * iw * 0.36
-				if absf(nx - float(hook["x"])) < 18.0 + iw * 0.14 and absf(float(f["y"]) - float(hook["y"])) < ih * 0.42 + 9.0:
+				if absf(nx - float(hook["x"])) < 12.0 + iw * 0.14 and absf(float(f["y"]) - float(hook["y"])) < ih * 0.42 + 9.0:
 					start_fight(f)
 					break
 
 	# Çekme mini-oyunu
 	if state == "fight" and not fight.is_empty():
-		var f: Dictionary = fight["f"]
-		var sp: Dictionary = f["sp"]
-		var str_val := float(sp["str"]) * (0.85 + (float(f["kg"]) - float(sp["kg"][0])) / (float(sp["kg"][1]) - float(sp["kg"][0]) + 0.001) * 0.35)
-
-		if float(fight["warn_t"]) > 0.0:
-			fight["warn_t"] = float(fight["warn_t"]) - dt
-			if float(fight["warn_t"]) <= 0.0:
-				fight["surge"] = randf_range(0.45, 0.85)
-		elif float(fight["surge"]) <= 0.0:
-			fight["surge_t"] = float(fight["surge_t"]) - dt
-			if float(fight["surge_t"]) <= 0.0:
-				fight["warn_t"] = 0.45
-				fight["surge_t"] = randf_range(1.2, 2.7) / (0.62 + str_val * 0.14)
-				AudioManager.play("warn")
-
-		var surging := float(fight["surge"]) > 0.0
-		fight["surge"] = maxf(0.0, float(fight["surge"]) - dt)
-		var reel_mul := 1.0 + float(SaveManager.up("reel")) / 100.0
-
-		if input_hold:
-			fight["tension"] = float(fight["tension"]) + (25.0 + str_val * 7.8) * dt
-			var in_zone := float(fight["tension"]) >= float(fight["lo"]) and float(fight["tension"]) <= float(fight["hi"])
-			fight["progress"] = float(fight["progress"]) + (0.21 if in_zone else 0.075) * reel_mul / (0.55 + str_val * 0.17) * dt
-			if randf() < dt * 13.0:
-				AudioManager.play("click")
-		else:
-			fight["tension"] = float(fight["tension"]) - 42.0 * dt
-			fight["progress"] = float(fight["progress"]) - 0.014 * str_val * dt
-
-		if surging:
-			fight["tension"] = float(fight["tension"]) + str_val * 21.0 * dt
-			fight["progress"] = float(fight["progress"]) - 0.025 * str_val * dt
-			fight["shake"] = 1.0
-			screen_shake = maxf(screen_shake, 6.0 if int(sp["r"]) >= 3 else 3.0)
-
-		fight["tension"] = clampf(float(fight["tension"]), 0.0, 110.0)
-		fight["progress"] = clampf(float(fight["progress"]), 0.0, 1.0)
-		fight["shake"] = maxf(0.0, float(fight["shake"]) - dt * 3.0)
-		if float(fight["tension"]) < float(fight["lo"]):
-			fight["slack"] = float(fight["slack"]) + dt
-		else:
-			fight["slack"] = maxf(0.0, float(fight["slack"]) - dt * 2.0)
-
-		f["dir"] = 1.0 if sin(t * 3.0) > 0.0 else -1.0
-		f["x"] = float(hook["x"]) + sin(t * (15.0 if surging else 5.0)) * (15.0 if surging else 6.0)
-		f["y"] = float(hook["y"]) + 10.0
-		hook["y"] = clampf(float(hook["y"]) - (14.0 * reel_mul if input_hold else -4.0) * dt, SURF + 20.0, max_y)
-
-		fight_updated.emit(float(fight["tension"]), float(fight["progress"]), float(fight["warn_t"]) > 0.0)
-		if float(fight["tension"]) >= 100.0:
-			end_fight(false, "snap")
-		elif float(fight["slack"]) > 2.5:
-			end_fight(false, "escape")
-		elif float(fight["progress"]) >= 1.0:
-			end_fight(true)
+		_update_fight(dt, max_y)
 
 	if not (hook["fish"] as Dictionary).is_empty() and state == "rising":
 		var f: Dictionary = hook["fish"]
@@ -841,6 +854,148 @@ func _update_gameplay(dt: float) -> void:
 	cam_y = lerpf(cam_y, clampf(want, 0.0, bottom_y() + 70.0 - H), minf(1.0, dt * 5.0))
 
 	_update_particles(dt)
+
+func _update_fight(dt: float, max_y: float) -> void:
+	var f: Dictionary = fight["f"]
+	var sp: Dictionary = f["sp"]
+	var beh: Dictionary = GameData.BEHAVIORS[str(fight["beh"])]
+	var str_val := float(sp["str"]) * (0.85 + clampf(GameData.size_ratio(sp, float(f["kg"])), 0.0, 1.4) * 0.35)
+
+	# 1) Kanca atma anı: balık vurdu, oyuncunun hemen basması gerekir
+	if str(fight["phase"]) == "hook":
+		fight["hook_t"] = float(fight["hook_t"]) + dt
+		f["x"] = float(hook["x"]) + sin(t * 30.0) * 5.0
+		f["y"] = float(hook["y"]) + 10.0
+		fight["shake"] = 1.0
+		if float(fight["hook_t"]) >= float(fight["hook_win"]):
+			_resolve_hookset("miss")
+		_emit_fight_state()
+		fight_updated.emit(float(fight["tension"]), float(fight["progress"]), false)
+		return
+
+	fight["time"] = float(fight["time"]) + dt
+	var stamina := float(fight["stamina"])
+	var tired := stamina < 25.0
+	if tired and not bool(fight["tired_said"]):
+		fight["tired_said"] = true
+		add_float_text(float(f["x"]), float(f["y"]) - 28.0, "😮‍💨 Balık yoruldu!", Color("#ffe066"), 16)
+
+	# 2) Hareketli yeşil bölge (balığın karakterine göre)
+	var tm := float(fight["time"]) * float(beh["freq"])
+	var sd := float(fight["seed"])
+	var amp := float(beh["amp"]) * (0.5 if tired else 1.0)
+	var width := float(fight["width"]) * (1.25 if tired else 1.0)
+	var center := 48.0 + float(beh["bias"]) + amp * (0.7 * sin(tm * 2.1 + sd) + 0.3 * sin(tm * 5.3 + sd * 1.7))
+	if int(fight["pull"]) != 0:
+		center += 6.0
+	center = clampf(center, width * 0.5 + 6.0, 91.0 - width * 0.5)
+	fight["center"] = center
+	fight["lo"] = center - width * 0.5
+	fight["hi"] = center + width * 0.5
+
+	# 3) Hamle (surge) — zıplayan balık sudan fırlar, dalgıç dibe çeker
+	if float(fight["warn_t"]) > 0.0:
+		fight["warn_t"] = float(fight["warn_t"]) - dt
+		if float(fight["warn_t"]) <= 0.0:
+			fight["surge"] = randf_range(0.45, 0.85)
+			if str(fight["beh"]) == "ziplayan":
+				splash_particles(float(f["x"]), 10)
+	elif float(fight["surge"]) <= 0.0:
+		fight["surge_t"] = float(fight["surge_t"]) - dt
+		if float(fight["surge_t"]) <= 0.0:
+			fight["warn_t"] = 0.5
+			fight["surge_t"] = randf_range(1.4, 2.9) / (0.62 + str_val * 0.14) * (1.6 if tired else 1.0)
+			AudioManager.play("warn")
+	var surging := float(fight["surge"]) > 0.0
+	fight["surge"] = maxf(0.0, float(fight["surge"]) - dt)
+
+	# 4) Yan çekiş: balık sağa/sola kaçar, ters yöne bas!
+	if int(fight["pull"]) == 0:
+		fight["pull_t"] = float(fight["pull_t"]) - dt
+		if float(fight["pull_t"]) <= 0.0 and not surging:
+			if randf() < float(beh["pull"]) + 0.15:
+				fight["pull"] = -1 if randf() < 0.5 else 1
+				fight["pull_left"] = randf_range(1.3, 2.1)
+				AudioManager.play("warn")
+			fight["pull_t"] = randf_range(2.4, 4.6)
+	else:
+		fight["pull_left"] = float(fight["pull_left"]) - dt
+		if float(fight["pull_left"]) <= 0.0:
+			fight["pull"] = 0
+	var pull := int(fight["pull"])
+	var drag := (pointer_x - pointer_down_x) if (input_hold and pointer_x >= 0.0) else 0.0
+	var go_right := (input_right and not input_left) or drag > 30.0
+	var go_left := (input_left and not input_right) or drag < -30.0
+	var countering := (pull < 0 and go_right) or (pull > 0 and go_left)
+
+	var reel_mul := 1.0 + float(SaveManager.up("reel")) / 100.0
+	var in_zone := float(fight["tension"]) >= float(fight["lo"]) and float(fight["tension"]) <= float(fight["hi"])
+
+	if input_hold:
+		fight["tension"] = float(fight["tension"]) + (25.0 + str_val * 7.8) * dt
+		var gain := (0.21 if in_zone else 0.07) * reel_mul / (0.55 + str_val * 0.17)
+		if tired:
+			gain *= 1.35
+		fight["progress"] = float(fight["progress"]) + gain * dt
+		if randf() < dt * 13.0:
+			AudioManager.play("click")
+	else:
+		fight["tension"] = float(fight["tension"]) - 42.0 * dt
+		fight["progress"] = float(fight["progress"]) - 0.014 * str_val * dt
+
+	if in_zone:
+		fight["zone_time"] = float(fight["zone_time"]) + dt
+		stamina -= 7.0 / (0.6 + str_val * 0.12) * dt
+	else:
+		stamina -= 1.2 * dt
+
+	if pull != 0:
+		if countering:
+			fight["tension"] = float(fight["tension"]) - 9.0 * dt
+			fight["progress"] = float(fight["progress"]) + 0.045 * dt
+			stamina -= 6.0 * dt
+		else:
+			fight["tension"] = float(fight["tension"]) + (8.0 + str_val * 3.0) * dt
+			fight["progress"] = float(fight["progress"]) - 0.02 * dt
+		hook["x"] = clampf(float(hook["x"]) + float(pull) * (8.0 if countering else 38.0) * dt, 30.0, W - 30.0)
+
+	if surging:
+		var power := str_val * 21.0 * float(beh["surge_mul"]) * (0.45 + 0.55 * clampf(stamina / 100.0, 0.0, 1.0))
+		fight["tension"] = float(fight["tension"]) + power * dt
+		fight["progress"] = float(fight["progress"]) - 0.025 * str_val * dt
+		if str(fight["beh"]) == "ziplayan" and input_hold:
+			fight["tension"] = float(fight["tension"]) + 32.0 * dt
+		if str(fight["beh"]) == "dalgic":
+			hook["y"] = minf(max_y, float(hook["y"]) + 26.0 * dt)
+			fight["progress"] = float(fight["progress"]) - 0.015 * dt
+		fight["shake"] = 1.0
+		screen_shake = maxf(screen_shake, 6.0 if int(sp["r"]) >= 3 else 3.0)
+
+	fight["stamina"] = clampf(stamina, 0.0, 100.0)
+	fight["tension"] = clampf(float(fight["tension"]), 0.0, 110.0)
+	fight["progress"] = clampf(float(fight["progress"]), 0.0, 1.0)
+	fight["shake"] = maxf(0.0, float(fight["shake"]) - dt * 3.0)
+	if float(fight["tension"]) < 15.0:
+		fight["slack"] = float(fight["slack"]) + dt
+	else:
+		fight["slack"] = maxf(0.0, float(fight["slack"]) - dt * 2.0)
+
+	f["dir"] = float(pull) if pull != 0 else (1.0 if sin(t * 3.0) > 0.0 else -1.0)
+	var jump := 0.0
+	if surging and str(fight["beh"]) == "ziplayan":
+		jump = -sin(clampf(float(fight["surge"]) / 0.85, 0.0, 1.0) * PI) * 34.0
+	f["x"] = float(hook["x"]) + sin(t * (15.0 if surging else 5.0)) * (15.0 if surging else 6.0)
+	f["y"] = float(hook["y"]) + 10.0 + jump
+	hook["y"] = clampf(float(hook["y"]) - (14.0 * reel_mul if input_hold else -4.0) * dt, SURF + 20.0, max_y)
+
+	_emit_fight_state()
+	fight_updated.emit(float(fight["tension"]), float(fight["progress"]), float(fight["warn_t"]) > 0.0)
+	if float(fight["tension"]) >= 100.0:
+		end_fight(false, "snap")
+	elif float(fight["slack"]) > float(fight["slack_lim"]):
+		end_fight(false, "escape")
+	elif float(fight["progress"]) >= 1.0:
+		end_fight(true)
 
 func _update_particles(dt: float) -> void:
 	for b in birds:
@@ -1268,7 +1423,7 @@ func _draw() -> void:
 	# Zıplayan yüzey balıkları
 	for j in jumpers:
 		var ang := atan2(float(j["vy"]), float(j["vx"]))
-		_draw_tex(GameData.get_fish_texture(str(j["spr"])), off + Vector2(float(j["x"]), float(j["y"])), 0.35, float(j["vx"]) < 0.0, Color(1, 1, 1, 0.95), ang)
+		_draw_tex(GameData.get_fish_texture(str(j["spr"])), off + Vector2(float(j["x"]), float(j["y"])), 34.0 / GameData.fish_used_width(str(j["spr"])), float(j["vx"]) < 0.0, Color(1, 1, 1, 0.95), ang)
 
 	for r in ripples:
 		var rt := float(r["t"])

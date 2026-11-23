@@ -209,6 +209,8 @@ const ACHIEVEMENTS: Array[Dictionary] = [
 	{"id": "tourney_1",   "ic": "🏆", "name": "Turnuva Şampiyonu",  "desc": "Bir Balıkçılık Turnuvası kazan",         "reward": 450},
 	{"id": "market_haggle","ic": "🤝", "name": "Pazarlık Ustası",   "desc": "Balık Pazarı'nda başarılı pazarlık yap", "reward": 250},
 	{"id": "catch_100",   "ic": "🪣", "name": "Yüzlük Balıkçı",     "desc": "Toplam 100 balık yakala",                "reward": 600},
+	{"id": "hook_10",     "ic": "🎯", "name": "Kanca Ustası",       "desc": "10 kez Kusursuz Kanca at",               "reward": 400},
+	{"id": "species_300", "ic": "🏛️", "name": "Yaşayan Müze",       "desc": "300 farklı balık türü keşfet",           "reward": 8000},
 	{"id": "streak_7",    "ic": "📅", "name": "Sadık Balıkçı",      "desc": "7 gün üst üste giriş ödülü topla",       "reward": 700},
 ]
 
@@ -340,6 +342,94 @@ func get_fish_texture(spr_name: String) -> Texture2D:
 			tex = ImageTexture.create_from_image(img)
 	tex_cache[spr_name] = tex
 	return tex
+
+## Çekişme karakterleri: yeşil bölgenin hareketi, yan çekişler ve hamle gücü
+const BEHAVIORS: Dictionary = {
+	"sakin":    {"name": "Sakin",    "icon": "🐢", "desc": "Yavaş ve öngörülebilir; yeşil bölge az kıpırdar.",                  "amp": 5.0,  "freq": 0.55, "width": 1.05, "pull": 0.12, "surge_mul": 0.8,  "bias": 0.0},
+	"kacak":    {"name": "Kaçak",    "icon": "💨", "desc": "Yeşil bölge hızla kayar, sık sık sağa sola kaçar.",                 "amp": 15.0, "freq": 1.45, "width": 0.9,  "pull": 0.55, "surge_mul": 1.0,  "bias": 0.0},
+	"ziplayan": {"name": "Zıplayan", "icon": "🐬", "desc": "Sudan fırlar! Zıplarken makarayı bırak yoksa misina kopar.",         "amp": 10.0, "freq": 1.0,  "width": 0.95, "pull": 0.3,  "surge_mul": 1.3,  "bias": 0.0},
+	"dalgic":   {"name": "Dalgıç",   "icon": "⚓", "desc": "Dibe dalar; yeşil bölge yüksek gerginliğe kayar.",                  "amp": 8.0,  "freq": 0.7,  "width": 0.9,  "pull": 0.25, "surge_mul": 1.1,  "bias": 9.0},
+	"inatci":   {"name": "İnatçı",   "icon": "🪨", "desc": "Ağır ve dirençli; dar bölge, uzun mücadele.",                       "amp": 6.0,  "freq": 0.45, "width": 0.75, "pull": 0.35, "surge_mul": 1.2,  "bias": 4.0},
+}
+
+const IUCN: Dictionary = {
+	"LC": ["Düşük Risk", Color("#2f9e44")], "NT": ["Tehdide Yakın", Color("#94a314")],
+	"VU": ["Hassas", Color("#e8a400")], "EN": ["Tehlikede", Color("#e8590c")],
+	"CR": ["Kritik Tehlikede", Color("#e03131")], "DD": ["Yetersiz Veri", Color("#868e96")],
+}
+
+const BIOME_HOME_MUL: float = 2.2
+const BIOME_AWAY_MUL: float = 0.45
+
+func fish_behavior(sp: Dictionary) -> String:
+	if sp.has("beh") and BEHAVIORS.has(str(sp["beh"])):
+		return str(sp["beh"])
+	if sp.get("boss", false):
+		return "inatci"
+	var h := absi(hash(str(sp.get("id", "")))) % 100
+	var st := float(sp.get("str", 1.5))
+	if st < 1.6:
+		return "sakin" if h < 70 else "kacak"
+	if st < 3.0:
+		return ["sakin", "kacak", "dalgic", "ziplayan"][h % 4]
+	if st < 4.5:
+		return ["kacak", "dalgic", "ziplayan", "inatci"][h % 4]
+	return ["dalgic", "inatci", "ziplayan"][h % 3]
+
+## Bu bireyin kendi türü içindeki boy oranı (0 = en küçük, 1 = en büyük; bonuslarla 1'i aşabilir)
+func size_ratio(sp: Dictionary, kg: float) -> float:
+	var lo := float(sp["kg"][0])
+	var hi := float(sp["kg"][1])
+	return (kg - lo) / maxf(0.0001, hi - lo)
+
+func size_class(ratio: float) -> Array:
+	if ratio >= 1.0: return ["👑 Efsanevi Boy", Color("#b8860b")]
+	if ratio >= 0.8: return ["🐋 Dev", Color("#c2255c")]
+	if ratio >= 0.5: return ["💪 İri", Color("#1971c2")]
+	if ratio >= 0.2: return ["🐟 Orta Boy", Color("#2f9e44")]
+	return ["🐣 Yavru", Color("#868e96")]
+
+## Gerçek boy bilgisi olan türlerde bu bireyin tahmini boyu (cm); yoksa 0
+func est_length_cm(sp: Dictionary, kg: float) -> int:
+	if not sp.has("len"):
+		return 0
+	var r := clampf(size_ratio(sp, kg), 0.0, 1.3)
+	return int(round(float(sp["len"]) * (0.4 + 0.45 * pow(r, 0.6))))
+
+## Sprite'ın görünür (saydam olmayan) genişliği — 16px pixel balıklar ile 128px çizimler aynı ölçekte görünsün diye.
+var _used_w_cache: Dictionary = {}
+func fish_used_width(spr_name: String) -> float:
+	if _used_w_cache.has(spr_name):
+		return _used_w_cache[spr_name]
+	var w := 32.0
+	var tex := get_fish_texture(spr_name)
+	if tex != null:
+		w = float(tex.get_width())
+		var img := tex.get_image()
+		if img != null:
+			if img.is_compressed():
+				img.decompress()
+			var r := img.get_used_rect()
+			if r.size.x > 0:
+				w = float(r.size.x)
+	_used_w_cache[spr_name] = maxf(4.0, w)
+	return _used_w_cache[spr_name]
+
+## Türün ekranda kaplayacağı hedef genişlik (px). Gerçek boy (len, cm) varsa ondan, yoksa max kg'dan.
+func fish_target_px(sp: Dictionary) -> float:
+	var px := 0.0
+	if sp.has("len"):
+		px = 24.0 + 19.0 * log(1.0 + float(sp["len"]) / 10.0)
+	else:
+		px = 30.0 + 17.0 * log(1.0 + float(sp["kg"][1]))
+	px = clampf(px, 30.0, 128.0)
+	if sp.get("boss", false):
+		px = maxf(px * 1.25, 120.0)
+	return px
+
+## kg_t: 0 (türün en küçüğü) .. 1 (en büyüğü)
+func fish_draw_scale(sp: Dictionary, kg_t: float = 0.5) -> float:
+	return fish_target_px(sp) / fish_used_width(str(sp["spr"])) * (0.82 + clampf(kg_t, 0.0, 1.0) * 0.36)
 
 func get_env_texture(spr_name: String) -> Texture2D:
 	var key := "env_" + spr_name

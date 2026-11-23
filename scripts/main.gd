@@ -45,6 +45,9 @@ var _lbl_fight_warn: Label
 var _fight_zone: ColorRect
 var _fight_needle: ColorRect
 var _fight_prog: ProgressBar
+var _fight_stamina: ProgressBar
+var _lbl_fight_pull: Label
+var _lbl_hookset: Label
 
 var _menu_overlay: ColorRect
 var _catch_overlay: ColorRect
@@ -109,7 +112,34 @@ func _connect_signals() -> void:
 		_fight_prog.value = prog * 100.0
 		_lbl_fight_warn.visible = warn
 	)
+	world.fight_state.connect(func(d: Dictionary):
+		_fight_zone.position.x = float(d["zone_lo"]) / 100.0 * 380.0
+		_fight_zone.size.x = (float(d["zone_hi"]) - float(d["zone_lo"])) / 100.0 * 380.0
+		_fight_stamina.value = float(d["stamina"])
+		var hooking := str(d["phase"]) == "hook"
+		_lbl_hookset.visible = hooking
+		if hooking:
+			var pulse := 1.0 + 0.12 * sin(Time.get_ticks_msec() / 45.0)
+			_lbl_hookset.scale = Vector2(pulse, pulse)
+			_lbl_hookset.pivot_offset = _lbl_hookset.size * 0.5
+		var pull := int(d["pull"])
+		_lbl_fight_pull.visible = pull != 0 and not hooking
+		if pull < 0:
+			_lbl_fight_pull.text = " ⬅ Balık SOLA kaçıyor!  ➡ D / → bas "
+		elif pull > 0:
+			_lbl_fight_pull.text = " Balık SAĞA kaçıyor! ➡   ⬅ A / ← bas "
+		_fight_zone.color = Color("#ffd43b") if float(d["stamina"]) < 25.0 else Color("#36d97a")
+	)
+	world.hookset_result.connect(func(q: String):
+		_lbl_hookset.visible = false
+		if q == "perfect":
+			_show_toast("🎯 Kusursuz Kanca! (+%18 ilerleme, +%15 XP)")
+		elif q == "miss":
+			_show_toast("😬 Geç kaldın — kanca zayıf, balık kolay kaçabilir!")
+	)
 	world.fight_ended.connect(func():
+		_lbl_hookset.visible = false
+		_fight_pull_hide()
 		_fight_panel.visible = false
 		_bait_bar.visible = world.state != "menu"
 	)
@@ -345,7 +375,7 @@ func _build_ui() -> void:
 	# Çekme Mini-Oyunu Paneli
 	_fight_panel = PanelContainer.new()
 	_fight_panel.add_theme_stylebox_override("panel", _style_box(Color(0.02, 0.1, 0.2, 0.86), Color(1, 1, 1, 0.25), 16, 2, 12))
-	_fight_panel.position = Vector2(270, GameData.H - 122)
+	_fight_panel.position = Vector2(270, GameData.H - 168)
 	_fight_panel.visible = false
 	var fvb := VBoxContainer.new()
 	var fhb := HBoxContainer.new()
@@ -377,18 +407,57 @@ func _build_ui() -> void:
 	_fight_prog = ProgressBar.new()
 	_fight_prog.custom_minimum_size = Vector2(380, 12)
 	_fight_prog.show_percentage = false
+	var shb := HBoxContainer.new()
+	var slbl := Label.new()
+	slbl.text = "💪 Balık gücü"
+	slbl.add_theme_font_size_override("font_size", 12)
+	_fight_stamina = ProgressBar.new()
+	_fight_stamina.custom_minimum_size = Vector2(280, 10)
+	_fight_stamina.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	_fight_stamina.size_flags_vertical = Control.SIZE_SHRINK_CENTER
+	_fight_stamina.show_percentage = false
+	var st_fill := StyleBoxFlat.new()
+	st_fill.bg_color = Color("#ff922b")
+	st_fill.set_corner_radius_all(4)
+	_fight_stamina.add_theme_stylebox_override("fill", st_fill)
+	shb.add_child(slbl)
+	shb.add_child(_fight_stamina)
+	_lbl_fight_pull = Label.new()
+	_lbl_fight_pull.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	_lbl_fight_pull.add_theme_color_override("font_color", Color("#fff3bf"))
+	_lbl_fight_pull.add_theme_stylebox_override("normal", _style_box(Color("#c2410c"), Color("#ffe066"), 10, 1, 4))
+	_lbl_fight_pull.visible = false
 	var fhint := Label.new()
-	fhint.text = "Basılı tut: makarayı sar • Bırak: gerginliği düşür"
+	fhint.text = "Basılı tut: sar • Bırak: gevşet • Balık kaçarsa TERS yöne bas (A/D, ←/→)"
 	fhint.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	fhint.add_theme_font_size_override("font_size", 12)
 	fvb.add_child(fhb)
 	fvb.add_child(ftrack)
 	fvb.add_child(_fight_prog)
+	fvb.add_child(shb)
+	fvb.add_child(_lbl_fight_pull)
 	fvb.add_child(fhint)
 	_fight_panel.add_child(fvb)
 	ui.add_child(_fight_panel)
 
+	_lbl_hookset = Label.new()
+	_lbl_hookset.text = "❗ VURDU! HEMEN BAS! ❗"
+	_lbl_hookset.add_theme_font_size_override("font_size", 30)
+	_lbl_hookset.add_theme_color_override("font_color", Color("#fff3bf"))
+	_lbl_hookset.add_theme_color_override("font_outline_color", Color("#7a1f00"))
+	_lbl_hookset.add_theme_constant_override("outline_size", 8)
+	_lbl_hookset.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	_lbl_hookset.position = Vector2(0, 150)
+	_lbl_hookset.size = Vector2(GameData.W, 44)
+	_lbl_hookset.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	_lbl_hookset.visible = false
+	ui.add_child(_lbl_hookset)
+
 	_build_overlays()
+
+func _fight_pull_hide() -> void:
+	if _lbl_fight_pull:
+		_lbl_fight_pull.visible = false
 
 func _make_overlay() -> ColorRect:
 	var ov := ColorRect.new()
@@ -422,7 +491,7 @@ func _build_overlays() -> void:
 	title.add_theme_font_size_override("font_size", 44)
 	title.add_theme_color_override("font_color", Color("#0d5c8f"))
 	var sub := Label.new()
-	sub.text = "261 balık türü (hepsinin kısa hikayesiyle!), 6 tatlı 2D göl,\n2D Balık Pazarı, canlı akvaryum, tekne sistemi ve 6 bölge bossu!"
+	sub.text = "%d balık türü (her birinin kimlik kartı ve hikayesiyle!), 6 tatlı 2D göl,\n2D Balık Pazarı, canlı akvaryum, tekne sistemi ve 6 bölge bossu!" % GameData.species.size()
 	sub.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	sub.add_theme_color_override("font_color", Color("#5b4320"))
 	_menu_box = VBoxContainer.new()
@@ -605,14 +674,135 @@ func _clear_overlay(ov: ColorRect) -> void:
 	for c in ov.get_children():
 		c.queue_free()
 
+## Ortak "Balık Kimliği" bloğu: gerçek boy, ömür, Türkiye, koruma, karakter, yaşam alanı…
+func _fmt_len(cm: float) -> String:
+	if cm >= 200.0:
+		return ("%.1f m" % (cm / 100.0)).replace(".", ",")
+	return "%d cm" % int(round(cm))
+
+func _build_identity(sp: Dictionary, kg: float = -1.0) -> VBoxContainer:
+	var box := VBoxContainer.new()
+	box.add_theme_constant_override("separation", 6)
+	var head := Label.new()
+	head.text = "🪪 Balık Kimliği"
+	head.add_theme_font_size_override("font_size", 16)
+	head.add_theme_color_override("font_color", Color("#0d5c8f"))
+	box.add_child(head)
+
+	var rows: Array = []
+	if sp.has("len"):
+		var t := "en fazla " + _fmt_len(float(sp["len"]))
+		if kg > 0.0:
+			t = "≈ %s (türün en büyüğü %s)" % [_fmt_len(float(GameData.est_length_cm(sp, kg))), _fmt_len(float(sp["len"]))]
+		rows.append(["📏 Boy", t, Color("#3b2a12")])
+	if sp.has("life"):
+		rows.append(["⏳ Ömür", str(sp["life"]), Color("#3b2a12")])
+	if sp.has("tr"):
+		rows.append(["🇹🇷 Türkiye", str(sp["tr"]), Color("#3b2a12")])
+	if sp.has("iucn") and GameData.IUCN.has(str(sp["iucn"])):
+		var iu: Array = GameData.IUCN[str(sp["iucn"])]
+		rows.append(["🛡️ Koruma", "%s (%s)" % [str(iu[0]), str(sp["iucn"])], iu[1]])
+	rows.append(["🌊 Yaşam alanı", str(sp.get("habitat", "")), Color("#3b2a12")])
+	rows.append(["🍽️ Beslenme", str(sp.get("diet", "")), Color("#3b2a12")])
+	var stars := GameData.fish_difficulty_stars(sp)
+	var beh: Dictionary = GameData.BEHAVIORS[GameData.fish_behavior(sp)]
+	rows.append(["⚡ Zorluk", "%s %s" % ["★".repeat(stars) + "☆".repeat(5 - stars), GameData.fish_difficulty_label(stars)], Color("#b8860b")])
+	rows.append(["🎭 Karakter", "%s %s — %s" % [str(beh["icon"]), str(beh["name"]), str(beh["desc"])], Color("#3b2a12")])
+	var when := "Özellikle gece 🌙" if sp.has("night") else "Gündüz ve gece"
+	rows.append(["🎣 Nerede", "%d–%d m • %s" % [int(sp["d"][0]), int(sp["d"][1]), when], Color("#3b2a12")])
+	if sp.has("home"):
+		var names: Array[String] = []
+		for bid in sp["home"]:
+			var b := GameData.get_biome(str(bid))
+			if str(b["id"]) == str(bid):
+				names.append("%s %s" % [str(b["icon"]), str(b["name"])])
+		if not names.is_empty():
+			rows.append(["🗺️ En sık", ", ".join(names), Color("#3b2a12")])
+
+	var grid := GridContainer.new()
+	grid.columns = 2
+	grid.add_theme_constant_override("h_separation", 8)
+	grid.add_theme_constant_override("v_separation", 3)
+	for r in rows:
+		var k := Label.new()
+		k.text = str(r[0])
+		k.add_theme_font_size_override("font_size", 12)
+		k.add_theme_color_override("font_color", Color("#8a7350"))
+		k.custom_minimum_size.x = 96
+		var v := Label.new()
+		v.text = str(r[1])
+		v.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+		v.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		v.custom_minimum_size.x = 300
+		v.add_theme_font_size_override("font_size", 12)
+		v.add_theme_color_override("font_color", r[2])
+		grid.add_child(k)
+		grid.add_child(v)
+	box.add_child(grid)
+
+	var fact := Label.new()
+	fact.text = "📖 " + str(sp.get("fact", ""))
+	fact.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	fact.add_theme_font_size_override("font_size", 12)
+	fact.add_theme_color_override("font_color", Color("#3b2a12"))
+	fact.add_theme_stylebox_override("normal", _style_box(Color.WHITE, Color("#ead7a6"), 12, 2, 8))
+	box.add_child(fact)
+	if not str(sp.get("story", "")).is_empty():
+		var story := Label.new()
+		story.text = "💬 " + str(sp.get("story", ""))
+		story.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+		story.add_theme_font_size_override("font_size", 12)
+		story.add_theme_color_override("font_color", Color("#6e3b10"))
+		story.add_theme_stylebox_override("normal", _style_box(Color("#fff4d6"), Color("#e6bc53"), 12, 2, 8))
+		box.add_child(story)
+	return box
+
+func _wrap_scroll(content: Control, h: float) -> ScrollContainer:
+	var sc := ScrollContainer.new()
+	sc.custom_minimum_size = Vector2(0, h)
+	sc.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
+	content.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	sc.add_child(content)
+	return sc
+
+static func _fmt_kg(kg: float) -> String:
+	if kg < 1.0:
+		return "%d g" % maxi(1, int(round(kg * 1000.0)))
+	return ("%.1f kg" % kg).replace(".0 kg", " kg")
+
+func _size_meter(sp: Dictionary, kg: float) -> VBoxContainer:
+	var vb := VBoxContainer.new()
+	var ratio := GameData.size_ratio(sp, kg)
+	var cls: Array = GameData.size_class(ratio)
+	var lbl := Label.new()
+	lbl.text = "%s  •  %s (tür: %s – %s)" % [str(cls[0]), _fmt_kg(kg), _fmt_kg(float(sp["kg"][0])), _fmt_kg(float(sp["kg"][1]))]
+	lbl.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	lbl.add_theme_font_size_override("font_size", 12)
+	lbl.add_theme_color_override("font_color", cls[1])
+	var bar := ProgressBar.new()
+	bar.custom_minimum_size = Vector2(0, 8)
+	bar.show_percentage = false
+	bar.value = clampf(ratio, 0.0, 1.0) * 100.0
+	var fill := StyleBoxFlat.new()
+	fill.bg_color = cls[1]
+	fill.set_corner_radius_all(4)
+	bar.add_theme_stylebox_override("fill", fill)
+	vb.add_child(lbl)
+	vb.add_child(bar)
+	return vb
+
 func _show_catch_modal(info: Dictionary) -> void:
 	_last_catch = info
 	_clear_overlay(_catch_overlay)
 	var sp: Dictionary = info["sp"]
 	var r_info: Dictionary = GameData.RARITIES[int(sp["r"])]
-	var card := _make_card(_catch_overlay, 480, 0)
+	var card := _make_card(_catch_overlay, 860, 0)
+	var row := HBoxContainer.new()
+	row.add_theme_constant_override("separation", 14)
+
 	var vb := VBoxContainer.new()
-	vb.add_theme_constant_override("separation", 6)
+	vb.custom_minimum_size.x = 340
+	vb.add_theme_constant_override("separation", 5)
 
 	var r_lbl := Label.new()
 	r_lbl.text = "  %s  " % str(r_info["name"]).to_upper()
@@ -622,8 +812,10 @@ func _show_catch_modal(info: Dictionary) -> void:
 
 	var tex_rect := TextureRect.new()
 	tex_rect.texture = GameData.get_fish_texture(str(sp["spr"]))
-	tex_rect.custom_minimum_size = Vector2(180, 82)
+	tex_rect.custom_minimum_size = Vector2(300, 120)
+	tex_rect.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
 	tex_rect.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+	tex_rect.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
 	tex_rect.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
 	if sp.has("tint"):
 		tex_rect.modulate = Color(str(sp["tint"]))
@@ -631,6 +823,7 @@ func _show_catch_modal(info: Dictionary) -> void:
 	var name_lbl := Label.new()
 	name_lbl.text = str(sp["name"])
 	name_lbl.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	name_lbl.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	name_lbl.add_theme_font_size_override("font_size", 22)
 	name_lbl.add_theme_color_override("font_color", Color("#0d5c8f"))
 
@@ -640,39 +833,36 @@ func _show_catch_modal(info: Dictionary) -> void:
 	lat_lbl.add_theme_font_size_override("font_size", 12)
 	lat_lbl.add_theme_color_override("font_color", Color("#8a7350"))
 
+	var stats_lbl := Label.new()
+	stats_lbl.text = "⬇ %d m   •   🪙 +%d altın" % [int(info["depth_m"]), int(info["value"])]
+	stats_lbl.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	stats_lbl.add_theme_font_size_override("font_size", 16)
+	stats_lbl.add_theme_color_override("font_color", Color("#3b2a12"))
+
 	var tags: Array[String] = ["+%d XP" % int(info["xp_gain"])]
+	var fs: Dictionary = info.get("fight", {})
+	match str(fs.get("hook_q", "")):
+		"perfect": tags.append("🎯 Kusursuz Kanca")
+		"good": tags.append("👍 İyi Kanca")
+		"miss": tags.append("😬 Zayıf Kanca")
+	if float(fs.get("secs", 0.0)) > 0.0:
+		tags.append("⏱️ %.1f sn" % float(fs["secs"]))
 	if int(info["combo_snap"]) >= 2: tags.append("🔥 Kombo x%d" % int(info["combo_snap"]))
 	if bool(info["frenzy_snap"]): tags.append("✨ Akın 2x")
 	if bool(info["hot"]): tags.append("📈 Pazar +%50")
 	var tag_lbl := Label.new()
 	tag_lbl.text = "  •  ".join(tags)
+	tag_lbl.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	tag_lbl.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	tag_lbl.add_theme_font_size_override("font_size", 12)
 	tag_lbl.add_theme_color_override("font_color", Color("#116b52"))
 
-	var stats_lbl := Label.new()
-	stats_lbl.text = "⚖️ %.2f kg   •   ⬇ %d m   •   🪙 +%d altın" % [float(info["kg"]), int(info["depth_m"]), int(info["value"])]
-	stats_lbl.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	stats_lbl.add_theme_font_size_override("font_size", 16)
-	stats_lbl.add_theme_color_override("font_color", Color("#3b2a12"))
-
-	# Balık Ansiklopedisi & Kısa Hikaye Kutusu
-	var stars := GameData.fish_difficulty_stars(sp)
-	var star_txt := "★".repeat(stars) + "☆".repeat(5 - stars)
-	var bio_box := Label.new()
-	bio_box.text = "📖 %s\n💬 Hikaye: %s\n🌊 %s • 🍽️ %s • ⚡ %s" % [
-		str(sp.get("fact", "")), str(sp.get("story", "")), str(sp.get("habitat", "")), str(sp.get("diet", "")), star_txt
-	]
-	bio_box.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-	bio_box.add_theme_font_size_override("font_size", 12)
-	bio_box.add_theme_color_override("font_color", Color("#4d381a"))
-	bio_box.add_theme_stylebox_override("normal", _style_box(Color.WHITE, Color("#ead7a6"), 12, 2, 8))
-
-	for c in [r_lbl, tex_rect, name_lbl, lat_lbl, tag_lbl, stats_lbl, bio_box]:
+	for c in [r_lbl, tex_rect, name_lbl, lat_lbl, _size_meter(sp, float(info["kg"])), stats_lbl, tag_lbl]:
 		vb.add_child(c)
 
 	if bool(info["is_new"]):
 		var nb := Label.new()
-		nb.text = "✨ Yeni tür! Koleksiyona eklendi"
+		nb.text = "✨ Yeni tür! Koleksiyona eklendi (%d/%d)" % [(SaveManager.data["book"] as Dictionary).size(), GameData.species.size()]
 		nb.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 		nb.add_theme_color_override("font_color", Color("#217a43"))
 		vb.add_child(nb)
@@ -685,25 +875,31 @@ func _show_catch_modal(info: Dictionary) -> void:
 
 	var acts := HBoxContainer.new()
 	acts.alignment = BoxContainer.ALIGNMENT_CENTER
-	acts.add_theme_constant_override("separation", 8)
-	var btn_sell := _make_btn("💰 Sat (+%d)" % int(info["value"]), true, 130)
+	acts.add_theme_constant_override("separation", 6)
+	var btn_sell := _make_btn("💰 Sat (+%d)" % int(info["value"]), true)
 	btn_sell.pressed.connect(func(): _close_catch("sell"))
 	var b_cap := int(SaveManager.up("basket"))
 	var b_len := (SaveManager.data["basket"] as Array).size()
-	var btn_keep := _make_btn("🧺 Sepet (%d/%d)" % [b_len, b_cap], false, 130)
+	var btn_keep := _make_btn("🧺 Sepet %d/%d" % [b_len, b_cap], false)
 	btn_keep.disabled = b_len >= b_cap
 	btn_keep.pressed.connect(func(): _close_catch("basket"))
 	var a_cap := int(SaveManager.up("aquarium"))
 	var a_len := (SaveManager.data["aquarium"] as Array).size()
-	var btn_aq := _make_btn("🐠 Akvaryum (%d/%d)" % [a_len, a_cap], false, 145)
+	var btn_aq := _make_btn("🐠 %d/%d" % [a_len, a_cap], false)
+	btn_aq.tooltip_text = "Akvaryuma koy"
 	btn_aq.disabled = a_len >= a_cap
 	btn_aq.pressed.connect(func(): _close_catch("aquarium"))
-	acts.add_child(btn_sell)
-	acts.add_child(btn_keep)
-	acts.add_child(btn_aq)
+	for b in [btn_sell, btn_keep, btn_aq]:
+		b.add_theme_font_size_override("font_size", 13)
+		acts.add_child(b)
 	vb.add_child(acts)
 
-	card.add_child(vb)
+	var right := _build_identity(sp, float(info["kg"]))
+	var sc := _wrap_scroll(right, 440)
+	sc.custom_minimum_size.x = 470
+	row.add_child(vb)
+	row.add_child(sc)
+	card.add_child(row)
 	_catch_overlay.visible = true
 
 func _close_catch(mode: String) -> void:
@@ -1473,8 +1669,11 @@ func _open_fish_detail(sp_id: String) -> void:
 	if sp.is_empty() or rec.is_empty():
 		return
 	_clear_overlay(_detail_overlay)
-	var card := _make_card(_detail_overlay, 470, 0)
+	var card := _make_card(_detail_overlay, 860, 0)
+	var row := HBoxContainer.new()
+	row.add_theme_constant_override("separation", 14)
 	var vb := VBoxContainer.new()
+	vb.custom_minimum_size.x = 330
 	vb.add_theme_constant_override("separation", 6)
 
 	var hdr := HBoxContainer.new()
@@ -1493,14 +1692,17 @@ func _open_fish_detail(sp_id: String) -> void:
 
 	var tr := TextureRect.new()
 	tr.texture = GameData.get_fish_texture(str(sp["spr"]))
-	tr.custom_minimum_size = Vector2(200, 92)
+	tr.custom_minimum_size = Vector2(300, 130)
+	tr.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
 	tr.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+	tr.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
 	if sp.has("tint"):
 		tr.modulate = Color(str(sp["tint"]))
 
 	var nm := Label.new()
 	nm.text = str(sp["name"])
 	nm.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	nm.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	nm.add_theme_font_size_override("font_size", 22)
 	nm.add_theme_color_override("font_color", Color("#0d5c8f"))
 
@@ -1510,40 +1712,19 @@ func _open_fish_detail(sp_id: String) -> void:
 	lat.add_theme_font_size_override("font_size", 12)
 	lat.add_theme_color_override("font_color", Color("#8a7350"))
 
-	var fact := Label.new()
-	fact.text = "📖 " + str(sp.get("fact", ""))
-	fact.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-	fact.add_theme_color_override("font_color", Color("#3b2a12"))
-	fact.add_theme_stylebox_override("normal", _style_box(Color.WHITE, Color("#ead7a6"), 12, 2, 8))
-
-	var story := Label.new()
-	story.text = "💬 Balıkçı Hikayesi: " + str(sp.get("story", ""))
-	story.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-	story.add_theme_font_size_override("font_size", 12)
-	story.add_theme_color_override("font_color", Color("#6e3b10"))
-	story.add_theme_stylebox_override("normal", _style_box(Color("#fff4d6"), Color("#e6bc53"), 12, 2, 8))
-
-	var stars := GameData.fish_difficulty_stars(sp)
-	var meta := Label.new()
-	meta.text = "🌊 Yaşam Alanı: %s\n🍽️ Beslenme: %s\n📏 Derinlik & Ağırlık: %d–%dm • %.1f–%.1f kg\n⚡ Zorluk: %s (%s) • %s" % [
-		str(sp.get("habitat", "")), str(sp.get("diet", "")),
-		int(sp["d"][0]), int(sp["d"][1]), float(sp["kg"][0]), float(sp["kg"][1]),
-		"★".repeat(stars) + "☆".repeat(5 - stars), GameData.fish_difficulty_label(stars),
-		"Özellikle Gece 🌙" if sp.has("night") else "Gündüz & Gece ☀️🌙"
-	]
-	meta.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-	meta.add_theme_font_size_override("font_size", 12)
-	meta.add_theme_color_override("font_color", Color("#4d381a"))
-
 	var rec_lbl := Label.new()
-	rec_lbl.text = "🏆 Rekorun: %.2f kg • En Derin: %dm • Toplam: %d adet" % [float(rec["max"]), int(rec["deep"]), int(rec["n"])]
+	rec_lbl.text = "🏆 Rekorun: %.2f kg\n⬇ En derin: %d m • 🐟 Toplam: %d adet" % [float(rec["max"]), int(rec["deep"]), int(rec["n"])]
 	rec_lbl.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	rec_lbl.add_theme_color_override("font_color", Color("#124c78"))
 	rec_lbl.add_theme_stylebox_override("normal", _style_box(Color("#e8f5ff"), Color("#b5daf5"), 10, 2, 6))
 
-	for c in [hdr, tr, nm, lat, fact, story, meta, rec_lbl]:
+	for c in [hdr, tr, nm, lat, _size_meter(sp, float(rec["max"])), rec_lbl]:
 		vb.add_child(c)
-	card.add_child(vb)
+	var sc := _wrap_scroll(_build_identity(sp, -1.0), 440)
+	sc.custom_minimum_size.x = 480
+	row.add_child(vb)
+	row.add_child(sc)
+	card.add_child(row)
 	_detail_overlay.visible = true
 	AudioManager.play("click")
 
@@ -1562,6 +1743,7 @@ func _unhandled_input(event: InputEvent) -> void:
 				elif world.state == "treasure": _close_treasure()
 				elif world.state == "idle": world.input_hold = true; world.start_charge()
 				elif world.state == "sinking": world.input_hold = true; world.action()
+				elif world.state == "fight": world.input_hold = true; world.on_fight_press()
 				else: world.input_hold = true
 			elif not k.pressed:
 				world.input_hold = false
@@ -1596,6 +1778,8 @@ func _unhandled_input(event: InputEvent) -> void:
 				world.start_charge()
 			elif world.state == "sinking":
 				world.pending_tap = true
+			elif world.state == "fight":
+				world.on_fight_press()
 		else:
 			if world.state == "charging":
 				world.release_charge()

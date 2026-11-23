@@ -35,7 +35,7 @@ func sync_entities() -> void:
 			"uid": uid, "item": item, "sp": sp,
 			"x": randf_range(60.0, cw - 60.0), "y": randf_range(40.0, ch - 50.0),
 			"vx": randf_range(28.0, 56.0) * dir, "vy": randf_range(-8.0, 8.0),
-			"dir": dir, "sc": clampf(float(sp.get("sc", 0.55)) * 0.9, 0.42, 0.95),
+			"dir": dir, "sc": clampf(GameData.fish_target_px(sp) * 0.8, 28.0, 90.0) / GameData.fish_used_width(str(sp["spr"])),
 			"ph": randf_range(0.0, TAU),
 		})
 

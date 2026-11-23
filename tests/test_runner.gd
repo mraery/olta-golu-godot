@@ -167,6 +167,34 @@ func _run_all() -> void:
 	check(sm.data["achievements"].has("catch_100"), "ach_catch_100_unlocked")
 	sm.data["book"].erase("test_sp")
 
+	# Yeni türler: kimlik bilgisi, karakter, ekran boyu
+	check(gd.species.size() >= 370, "species_count_370_plus", "got %d" % gd.species.size())
+	var gen_n := 0
+	var gen_missing := 0
+	var bad_beh := 0
+	var bad_px := 0
+	var ids := {}
+	var dup := 0
+	for sp in gd.species:
+		if ids.has(sp["id"]): dup += 1
+		ids[sp["id"]] = true
+		if str(sp["spr"]).begins_with("fish_gen_"):
+			gen_n += 1
+			if not (sp.has("len") and sp.has("life") and sp.has("tr") and sp.has("home")):
+				gen_missing += 1
+		if not gd.BEHAVIORS.has(gd.fish_behavior(sp)): bad_beh += 1
+		var px: float = gd.fish_used_width(str(sp["spr"])) * gd.fish_draw_scale(sp, 0.5)
+		if px < 24.0 or px > 170.0: bad_px += 1
+	check(gen_n >= 110, "generated_species_110_plus", "got %d" % gen_n)
+	check(gen_missing == 0, "generated_species_have_identity", "missing=%d" % gen_missing)
+	check(bad_beh == 0, "all_species_have_behavior")
+	check(bad_px == 0, "all_species_visible_on_screen_size", "bad=%d" % bad_px)
+	check(dup == 0, "species_ids_unique", "dup=%d" % dup)
+	var lufer: Dictionary = gd.get_species("lufer")
+	check(str(lufer.get("latin", "")) == "Pomatomus saltatrix", "lufer_present")
+	check(str(gd.size_class(0.1)[0]).contains("Yavru") and str(gd.size_class(1.2)[0]).contains("Efsanevi"), "size_classes")
+	check(gd.est_length_cm(lufer, float(lufer["kg"][1])) > gd.est_length_cm(lufer, float(lufer["kg"][0])), "est_length_grows_with_kg")
+
 	# 3. Main sahnesi kurulumu & canlı simülasyon testi
 	var packed := load("res://scenes/main.tscn") as PackedScene
 	check(packed != null, "load_main_tscn")
@@ -202,6 +230,57 @@ func _run_all() -> void:
 	check(world.state == "catch", "state_catch_modal")
 	main_node._close_catch("basket")
 	check((sm.data["basket"] as Array).size() == 1, "fish_added_to_basket")
+
+	# Yeni çekişme: kanca atma, hareketli bölge, yan çekiş, dayanıklılık
+	var f2: Dictionary = world.fishes[1]
+	world.start_fight(f2)
+	check(world.fight["phase"] == "hook", "fight_starts_with_hookset")
+	world.on_fight_press()
+	check(world.fight["phase"] == "fight" and world.fight["hook_q"] == "perfect", "perfect_hookset")
+	check(float(world.fight["progress"]) > 0.15, "perfect_hook_progress_bonus")
+	var lo0 := float(world.fight["lo"])
+	var moved := false
+	world.input_hold = false
+	for _k in range(40):
+		world._update_fight(0.05, 2000.0)
+		if world.state != "fight": break
+		if absf(float(world.fight["lo"]) - lo0) > 0.5: moved = true
+	check(moved, "fight_zone_moves")
+	if world.state == "fight":
+		world.fight["pull"] = -1
+		world.fight["pull_left"] = 5.0
+		world.fight["surge"] = 0.0
+		world.fight["warn_t"] = 0.0
+		world.fight["surge_t"] = 99.0
+		world.fight["tension"] = 50.0
+		world.input_right = true
+		world._update_fight(0.1, 2000.0)
+		var t_counter := float(world.fight["tension"])
+		world.input_right = false
+		world.fight["tension"] = 50.0
+		world._update_fight(0.1, 2000.0)
+		var t_wrong := float(world.fight["tension"])
+		check(t_counter < t_wrong, "counter_pull_lowers_tension", "%f vs %f" % [t_counter, t_wrong])
+		var st0 := float(world.fight["stamina"])
+		world.fight["pull"] = 0
+		world.fight["tension"] = (float(world.fight["lo"]) + float(world.fight["hi"])) * 0.5
+		world.input_hold = true
+		world._update_fight(0.1, 2000.0)
+		world.input_hold = false
+		check(float(world.fight["stamina"]) < st0, "stamina_drains_in_zone")
+		world.end_fight(true)
+	world.land_catch()
+	check(world.state == "catch", "catch_after_new_fight")
+	main_node._close_catch("sell")
+	var f3: Dictionary = world.fishes[2]
+	world.start_fight(f3)
+	world._update_fight(1.0, 2000.0)
+	check(world.fight["hook_q"] == "miss", "late_hookset_is_weak")
+	world.end_fight(false, "escape")
+	for _k in range(200):
+		await process_frame
+		if world.state == "idle": break
+	world.set_game_state("idle")
 
 	# Hazine yakalama
 	world.hook["treasure"] = world.treasures[0]

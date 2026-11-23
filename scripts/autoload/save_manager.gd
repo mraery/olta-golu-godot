@@ -41,7 +41,7 @@ func default_save() -> Dictionary:
 		"stats": {
 			"max_combo": 0, "perfect_casts": 0, "heaviest": 0.0, "treasures": 0,
 			"night_catches": 0, "rain_catches": 0, "deepest": 0, "legendaries": 0,
-			"bosses": 0, "tourney_wins": 0, "haggles": 0, "play_secs": 0.0, "best_streak": 0
+			"bosses": 0, "tourney_wins": 0, "haggles": 0, "play_secs": 0.0, "best_streak": 0, "perfect_hooks": 0
 		},
 		"tourney_best": {},
 		"market_day": -1,
@@ -422,6 +422,8 @@ func _check_ach_condition(ach_id: String) -> bool:
 		"tourney_1":     return int(st.get("tourney_wins", 0)) >= 1
 		"market_haggle": return int(st.get("haggles", 0)) >= 1
 		"catch_100":     return total_catches() >= 100
+		"hook_10":       return int(st.get("perfect_hooks", 0)) >= 10
+		"species_300":   return book_n >= 300
 		"streak_7":      return int(st.get("best_streak", 0)) >= 7
 	return false
 

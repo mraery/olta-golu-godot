@@ -2604,7 +2604,7 @@
   },
   {
     "id": "p_gadus_morhua",
-    "name": "Mezgit (Morhua)",
+    "name": "Morina (Morhua)",
     "latin": "Gadus morhua",
     "spr": "fish_px_gadus_morhua",
     "d": [
@@ -6805,5 +6805,4008 @@
     "diet": "Büyük göl balıkları ve kerevitler",
     "fact": "Zümrüt yeşili pulları ay ışığında parlayan, orman gölünün kadim bekçisi.",
     "story": "Orman kulübesindeki yaşlı marangoz, sisli sabahlarda gölün ortasında zümrüt gibi parlayan bir sırt gördüğünde oltasını saygıyla suya indirirmiş."
+  },
+  {
+    "id": "lufer",
+    "name": "Lüfer",
+    "latin": "Pomatomus saltatrix",
+    "spr": "fish_gen_lufer",
+    "d": [
+      4,
+      60
+    ],
+    "kg": [
+      0.6,
+      6.5
+    ],
+    "str": 3.4,
+    "val": 40,
+    "r": 2,
+    "sc": 0.6,
+    "spd": [
+      60,
+      96
+    ],
+    "home": [
+      "coral",
+      "lake"
+    ],
+    "len": 130,
+    "life": "9 yıla kadar",
+    "tr": "Boğaz ve Marmara'nın simgesi; sonbaharda göç eder",
+    "iucn": "VU",
+    "habitat": "Kıyıya yakın açık sular, akıntılı boğazlar",
+    "diet": "Hamsi, istavrit ve küçük balık sürüleri",
+    "fact": "Keskin dişleriyle bilinen, sürü halinde avlanan doymak bilmez bir yırtıcıdır. Boyuna göre çinakop, sarıkanat, lüfer ve kofana diye adlandırılır.",
+    "story": "İstanbul'da yaşlı balıkçılar 'Lüfer gelince Boğaz bayram yapar' derdi; ilk kofanayı tutan, kahvede bir hafta çay ısmarlarmış.",
+    "beh": "kacak"
+  },
+  {
+    "id": "palamut",
+    "name": "Palamut",
+    "latin": "Sarda sarda",
+    "spr": "fish_gen_palamut",
+    "d": [
+      3,
+      70
+    ],
+    "kg": [
+      0.8,
+      7.0
+    ],
+    "str": 3.3,
+    "val": 38,
+    "r": 2,
+    "sc": 0.6,
+    "spd": [
+      70,
+      105
+    ],
+    "home": [
+      "coral",
+      "lake"
+    ],
+    "len": 90,
+    "life": "5 yıl",
+    "tr": "Karadeniz'den Ege'ye göç eder, sonbahar avı ünlüdür",
+    "iucn": "LC",
+    "habitat": "Açık kıyı suları, göç yolları",
+    "diet": "Hamsi, sardalya, kalamar",
+    "fact": "Sırtındaki eğik koyu çizgilerle tanınır. Karadeniz'de yumurtlar, sonbaharda büyük sürüler halinde Boğaz'dan Marmara'ya iner.",
+    "story": "Ekim ayında Boğaz'da martılar bir yere toplandıysa, balıkçılar kayığa koşar: 'Palamut sürüsü altında!'",
+    "beh": "kacak"
+  },
+  {
+    "id": "hamsi",
+    "name": "Hamsi",
+    "latin": "Engraulis encrasicolus",
+    "spr": "fish_gen_hamsi",
+    "d": [
+      1,
+      40
+    ],
+    "kg": [
+      0.01,
+      0.06
+    ],
+    "str": 1.0,
+    "val": 16,
+    "r": 0,
+    "sc": 0.6,
+    "spd": [
+      60,
+      95
+    ],
+    "home": [
+      "coral",
+      "lake"
+    ],
+    "len": 20,
+    "life": "3 yıl",
+    "tr": "Karadeniz'in en önemli balığı; kışın bolca tutulur",
+    "iucn": "LC",
+    "habitat": "Kıyıya yakın yüzey suları",
+    "diet": "Plankton",
+    "fact": "Karadeniz mutfağının vazgeçilmezidir. Milyonlarca bireylik sürüler halinde yaşar; yunusların ve palamutun ana besinidir.",
+    "story": "Rize'de bir teyze, hamsiyle kırk çeşit yemek yaptığını söyler; kırk birincisini de 'hamsili tatlı' diye anlatırmış.",
+    "beh": "sakin"
+  },
+  {
+    "id": "istavrit",
+    "name": "İstavrit",
+    "latin": "Trachurus mediterraneus",
+    "spr": "fish_gen_istavrit",
+    "d": [
+      2,
+      60
+    ],
+    "kg": [
+      0.08,
+      0.5
+    ],
+    "str": 1.4,
+    "val": 19,
+    "r": 0,
+    "sc": 0.6,
+    "spd": [
+      55,
+      90
+    ],
+    "home": [
+      "coral",
+      "lake"
+    ],
+    "len": 60,
+    "life": "9 yıl",
+    "tr": "Tüm denizlerimizde bol; çapariyle avlanır",
+    "iucn": "LC",
+    "habitat": "Kıyı ve açık sular, sürüler halinde",
+    "diet": "Küçük balıklar ve kabuklular",
+    "fact": "Yan çizgisi boyunca dizilmiş sert kemik pulları vardır. İskeleden çapariyle en çok tutulan balıklardan biridir.",
+    "story": "Çocukluğunda ilk balığını iskeleden çapariyle tutan herkes, o günü istavritle hatırlar.",
+    "beh": "kacak"
+  },
+  {
+    "id": "kalkan",
+    "name": "Kalkan",
+    "latin": "Scophthalmus maximus",
+    "spr": "fish_gen_kalkan",
+    "d": [
+      15,
+      80
+    ],
+    "kg": [
+      1.5,
+      14.0
+    ],
+    "str": 4.0,
+    "val": 50,
+    "r": 3,
+    "sc": 0.6,
+    "spd": [
+      25,
+      45
+    ],
+    "home": [
+      "coral",
+      "fjord"
+    ],
+    "len": 100,
+    "life": "25 yıl",
+    "tr": "Karadeniz'in değerli balığı; av yasakları vardır",
+    "iucn": "LC",
+    "habitat": "Kumlu ve çakıllı dipler",
+    "diet": "Dip balıkları, kalamar, kabuklular",
+    "fact": "Yassı gövdesinin iki gözü de sol taraftadır. Derisinde küçük kemik düğmeler bulunur; kumla renk değiştirerek kamufle olur.",
+    "story": "Sinop'ta kalkan ağını çeken balıkçılar, yakaladıkları ilk büyük kalkanı limandaki kediye değil, imama hediye edermiş.",
+    "beh": "dalgic"
+  },
+  {
+    "id": "barbunya",
+    "name": "Barbunya",
+    "latin": "Mullus barbatus",
+    "spr": "fish_gen_barbunya",
+    "d": [
+      5,
+      70
+    ],
+    "kg": [
+      0.05,
+      0.3
+    ],
+    "str": 1.6,
+    "val": 30,
+    "r": 1,
+    "sc": 0.6,
+    "spd": [
+      35,
+      60
+    ],
+    "home": [
+      "coral",
+      "lake"
+    ],
+    "len": 30,
+    "life": "11 yıl",
+    "tr": "Ege ve Akdeniz'de çok sevilen lezzet balığı",
+    "iucn": "LC",
+    "habitat": "Çamurlu ve kumlu dipler",
+    "diet": "Kumda gömülü küçük canlılar",
+    "fact": "Çenesinin altındaki iki bıyıkla kumu yoklar. Heyecanlandığında rengi koyu kırmızıya döner.",
+    "story": "Bodrum'da bir aşçı, barbunyayı ancak bıyıkları dimdikse taze sayarmış.",
+    "beh": "sakin"
+  },
+  {
+    "id": "tekir",
+    "name": "Tekir",
+    "latin": "Mullus surmuletus",
+    "spr": "fish_gen_tekir",
+    "d": [
+      3,
+      60
+    ],
+    "kg": [
+      0.08,
+      0.5
+    ],
+    "str": 1.7,
+    "val": 31,
+    "r": 1,
+    "sc": 0.6,
+    "spd": [
+      35,
+      60
+    ],
+    "home": [
+      "coral",
+      "lake"
+    ],
+    "len": 40,
+    "life": "10 yıl",
+    "tr": "Kayalık kıyılarda; sarı çizgilerle barbunyadan ayrılır",
+    "iucn": "LC",
+    "habitat": "Kayalık ve çayırlık dipler",
+    "diet": "Solucanlar, kabuklular",
+    "fact": "Barbunyanın kuzenidir; yanlarında sarı şeritler ve ilk sırt yüzgecinde koyu çizgiler bulunur.",
+    "story": "Dalgıçlar tekirin bıyıklarıyla kumu karıştırdığını görünce, peşinden gelen küçük balıklara 'tekirin dilencileri' derlermiş.",
+    "beh": "sakin"
+  },
+  {
+    "id": "sardalya",
+    "name": "Sardalya",
+    "latin": "Sardina pilchardus",
+    "spr": "fish_gen_sardalya",
+    "d": [
+      1,
+      50
+    ],
+    "kg": [
+      0.03,
+      0.12
+    ],
+    "str": 1.0,
+    "val": 16,
+    "r": 0,
+    "sc": 0.6,
+    "spd": [
+      60,
+      95
+    ],
+    "home": [
+      "coral"
+    ],
+    "len": 27,
+    "life": "15 yıl",
+    "tr": "Ege'de, özellikle Gelibolu ve Ayvalık'ta ünlü",
+    "iucn": "LC",
+    "habitat": "Kıyı ve açık yüzey suları",
+    "diet": "Plankton",
+    "fact": "Yan tarafındaki koyu benek sırasıyla tanınır. Gece ışığa gelir; balıkçılar lamba ile avlar.",
+    "story": "Ayvalık'ta sardalya mevsimi açıldığında, rüzgar bile tuzlu ve kızarmış balık kokarmış.",
+    "beh": "sakin",
+    "night": 1.6
+  },
+  {
+    "id": "uskumru",
+    "name": "Uskumru",
+    "latin": "Scomber scombrus",
+    "spr": "fish_gen_uskumru",
+    "d": [
+      2,
+      60
+    ],
+    "kg": [
+      0.2,
+      1.4
+    ],
+    "str": 2.2,
+    "val": 26,
+    "r": 1,
+    "sc": 0.6,
+    "spd": [
+      65,
+      100
+    ],
+    "home": [
+      "coral",
+      "fjord"
+    ],
+    "len": 60,
+    "life": "17 yıl",
+    "tr": "Eskiden Karadeniz'de bol; bugün azaldı",
+    "iucn": "LC",
+    "habitat": "Açık deniz yüzey suları",
+    "diet": "Küçük balıklar, kabuklular",
+    "fact": "Sırtındaki zebra benzeri dalgalı koyu çizgilerle tanınır. Yüzme kesesi yoktur, durmadan yüzmek zorundadır.",
+    "story": "Eski İstanbul'da 'uskumru dolması' ancak usta aşçıların işiydi; balığın derisi yırtılmadan iç pilavla doldurulurmuş.",
+    "beh": "kacak"
+  },
+  {
+    "id": "kolyoz",
+    "name": "Kolyoz",
+    "latin": "Scomber colias",
+    "spr": "fish_gen_kolyoz",
+    "d": [
+      2,
+      60
+    ],
+    "kg": [
+      0.15,
+      1.0
+    ],
+    "str": 2.0,
+    "val": 22,
+    "r": 0,
+    "sc": 0.6,
+    "spd": [
+      65,
+      100
+    ],
+    "home": [
+      "coral",
+      "lake"
+    ],
+    "len": 50,
+    "life": "13 yıl",
+    "tr": "Ege ve Akdeniz'de bol",
+    "iucn": "LC",
+    "habitat": "Açık deniz kıyı suları",
+    "diet": "Küçük balıklar, plankton",
+    "fact": "Uskumruya çok benzer; karnındaki küçük koyu beneklerle ayrılır. Çapari ile kolayca avlanır.",
+    "story": "Çanakkale'de 'kolyozu uskumru diye satan, ertesi gün kayığını boş bulur' diye bir söz varmış.",
+    "beh": "kacak"
+  },
+  {
+    "id": "lagos",
+    "name": "Lagos",
+    "latin": "Epinephelus costae",
+    "spr": "fish_gen_lagos",
+    "d": [
+      20,
+      100
+    ],
+    "kg": [
+      2.0,
+      15.0
+    ],
+    "str": 4.2,
+    "val": 48,
+    "r": 3,
+    "sc": 0.6,
+    "spd": [
+      30,
+      55
+    ],
+    "home": [
+      "coral",
+      "volcano"
+    ],
+    "len": 140,
+    "life": "20+ yıl",
+    "tr": "Ege ve Akdeniz kayalıklarında",
+    "iucn": "DD",
+    "habitat": "Derin kayalık resifler",
+    "diet": "Balık, ahtapot, kabuklular",
+    "fact": "Yanlarındaki koyu boyuna şeritlerle orfozdan ayrılır. Hayatına dişi olarak başlar, büyüdükçe erkeğe dönüşür.",
+    "story": "Kaşlı bir zıpkıncı, lagosun mağarasına üç kez dalıp üçünde de balığın ona göz kırptığına yemin edermiş.",
+    "beh": "dalgic"
+  },
+  {
+    "id": "sinarit",
+    "name": "Sinarit",
+    "latin": "Dentex dentex",
+    "spr": "fish_gen_sinarit",
+    "d": [
+      15,
+      110
+    ],
+    "kg": [
+      1.5,
+      12.0
+    ],
+    "str": 4.0,
+    "val": 47,
+    "r": 3,
+    "sc": 0.6,
+    "spd": [
+      40,
+      70
+    ],
+    "home": [
+      "coral",
+      "lake"
+    ],
+    "len": 100,
+    "life": "36 yıl",
+    "tr": "Ege ve Akdeniz'de değerli av balığı",
+    "iucn": "VU",
+    "habitat": "Kayalık ve çayırlık derin dipler",
+    "diet": "Balık, kalamar, ahtapot",
+    "fact": "Güçlü köpek dişleriyle avını yakalayan iri bir mercan türüdür. Yaşlandıkça alnı belirginleşir.",
+    "story": "Gökova'da bir balıkçı, sinaritle yarım saat boğuştuktan sonra misinayı kesip 'Bu kadar inatçıya saygı lazım' demiş.",
+    "beh": "inatci"
+  },
+  {
+    "id": "fangri",
+    "name": "Fangri",
+    "latin": "Pagrus pagrus",
+    "spr": "fish_gen_fangri",
+    "d": [
+      10,
+      90
+    ],
+    "kg": [
+      0.5,
+      6.0
+    ],
+    "str": 3.2,
+    "val": 40,
+    "r": 2,
+    "sc": 0.6,
+    "spd": [
+      40,
+      70
+    ],
+    "home": [
+      "coral",
+      "lake"
+    ],
+    "len": 91,
+    "life": "20 yıl",
+    "tr": "Tüm kıyılarımızda; kayalıklarda",
+    "iucn": "LC",
+    "habitat": "Kayalık ve kumlu dipler",
+    "diet": "Kabuklular, yumuşakçalar, küçük balıklar",
+    "fact": "Pembe-kırmızı gövdesinde küçük mavi benekler vardır. Mercan balıklarının en irisidir.",
+    "story": "Kaş'ta 'fangri tutan gün denize bir ekmek atılır' diye bir gelenek varmış.",
+    "beh": "dalgic"
+  },
+  {
+    "id": "eskina",
+    "name": "Eşkina",
+    "latin": "Sciaena umbra",
+    "spr": "fish_gen_eskina",
+    "d": [
+      3,
+      40
+    ],
+    "kg": [
+      0.3,
+      3.0
+    ],
+    "str": 2.4,
+    "val": 36,
+    "r": 2,
+    "sc": 0.6,
+    "spd": [
+      30,
+      50
+    ],
+    "home": [
+      "coral",
+      "lake"
+    ],
+    "len": 70,
+    "life": "21 yıl",
+    "tr": "Kayalık kıyılarda; av baskısı yüzünden azalıyor",
+    "iucn": "VU",
+    "habitat": "Kayalık mağaralar ve oyuklar",
+    "diet": "Kabuklular, küçük balıklar",
+    "fact": "Gündüz mağaralarda saklanır, gece avlanır. Yüzme kesesiyle 'gak gak' sesler çıkarabilir.",
+    "story": "Dalgıçlar eşkinanın mağarada çıkardığı sesi duyunca 'Kayalar konuşuyor' derlermiş.",
+    "beh": "dalgic",
+    "night": 1.8
+  },
+  {
+    "id": "minakop",
+    "name": "Minakop",
+    "latin": "Umbrina cirrosa",
+    "spr": "fish_gen_minakop",
+    "d": [
+      3,
+      50
+    ],
+    "kg": [
+      0.5,
+      4.5
+    ],
+    "str": 2.6,
+    "val": 37,
+    "r": 2,
+    "sc": 0.6,
+    "spd": [
+      35,
+      60
+    ],
+    "home": [
+      "coral",
+      "lake"
+    ],
+    "len": 100,
+    "life": "20 yıl",
+    "tr": "Kumsallara yakın sularda",
+    "iucn": "VU",
+    "habitat": "Kumlu sığ kıyılar, nehir ağızları",
+    "diet": "Solucanlar, kabuklular",
+    "fact": "Çenesinin altında tek bir kısa bıyık vardır. Yanlarında eğik dalgalı çizgiler bulunur.",
+    "story": "Kumsaldan surf olta atan balıkçıların sabrının ödülü minakoptur; 'Dalga kırılınca minakop vurur' derler.",
+    "beh": "sakin"
+  },
+  {
+    "id": "iskorpit",
+    "name": "İskorpit",
+    "latin": "Scorpaena porcus",
+    "spr": "fish_gen_iskorpit",
+    "d": [
+      2,
+      60
+    ],
+    "kg": [
+      0.1,
+      0.8
+    ],
+    "str": 2.0,
+    "val": 30,
+    "r": 1,
+    "sc": 0.6,
+    "spd": [
+      20,
+      40
+    ],
+    "home": [
+      "coral",
+      "lake"
+    ],
+    "len": 37,
+    "life": "10 yıl",
+    "tr": "Tüm kayalık kıyılarımızda",
+    "iucn": "LC",
+    "habitat": "Kayalık ve yosunlu dipler",
+    "diet": "Küçük balıklar, karides",
+    "fact": "Sırt yüzgecindeki zehirli dikenleri acı veren bir sokma yapar. Çorbası çok meşhurdur.",
+    "story": "Kumkapı'da balıkçılar iskorpiti eldivenle tutar; 'Çorbası tatlı, iğnesi acı' derler.",
+    "beh": "dalgic"
+  },
+  {
+    "id": "lipsoz",
+    "name": "Lipsoz",
+    "latin": "Scorpaena scrofa",
+    "spr": "fish_gen_lipsoz",
+    "d": [
+      20,
+      110
+    ],
+    "kg": [
+      0.5,
+      3.0
+    ],
+    "str": 2.8,
+    "val": 40,
+    "r": 2,
+    "sc": 0.6,
+    "spd": [
+      20,
+      40
+    ],
+    "home": [
+      "coral",
+      "lake"
+    ],
+    "len": 50,
+    "life": "15 yıl",
+    "tr": "Derin kayalıklarda",
+    "iucn": "LC",
+    "habitat": "Derin kayalık ve çakıllı dipler",
+    "diet": "Balık, kabuklular",
+    "fact": "İskorpitin iri ve kırmızı akrabasıdır. Kamuflajı o kadar iyidir ki dalgıçlar üstüne basana kadar fark etmez.",
+    "story": "Yaşlı bir dalgıç, lipsozun 'kayanın kızarmış hali' olduğunu söylermiş.",
+    "beh": "dalgic"
+  },
+  {
+    "id": "kirlangic",
+    "name": "Kırlangıç",
+    "latin": "Chelidonichthys lucerna",
+    "spr": "fish_gen_kirlangic",
+    "d": [
+      10,
+      120
+    ],
+    "kg": [
+      0.3,
+      3.5
+    ],
+    "str": 2.6,
+    "val": 38,
+    "r": 2,
+    "sc": 0.6,
+    "spd": [
+      30,
+      55
+    ],
+    "home": [
+      "coral",
+      "lake"
+    ],
+    "len": 75,
+    "life": "15 yıl",
+    "tr": "Ege ve Marmara'da yaygın",
+    "iucn": "LC",
+    "habitat": "Kumlu ve çamurlu dipler",
+    "diet": "Kabuklular, küçük balıklar",
+    "fact": "Mavi kanat gibi göğüs yüzgeçleri vardır; ayak gibi kullandığı ışınlarla dipte 'yürür' ve horlama sesi çıkarır.",
+    "story": "Çocuklar ilk kırlangıcı görünce 'Kanatlı balık!' diye bağırır; ses çıkarınca da şaşkınlıkla oltayı bırakırmış.",
+    "beh": "sakin"
+  },
+  {
+    "id": "dil",
+    "name": "Dil Balığı",
+    "latin": "Solea solea",
+    "spr": "fish_gen_dil",
+    "d": [
+      5,
+      80
+    ],
+    "kg": [
+      0.2,
+      2.5
+    ],
+    "str": 2.2,
+    "val": 34,
+    "r": 1,
+    "sc": 0.6,
+    "spd": [
+      20,
+      40
+    ],
+    "home": [
+      "coral",
+      "lake"
+    ],
+    "len": 70,
+    "life": "30 yıl",
+    "tr": "Marmara ve Ege'de; lezzetli bir yassı balık",
+    "iucn": "DD",
+    "habitat": "Kumlu ve çamurlu dipler",
+    "diet": "Solucanlar, küçük yumuşakçalar",
+    "fact": "Uzun oval yassı bir balıktır; gündüz kuma gömülür, gece avlanır. Gözleri sağ taraftadır.",
+    "story": "Eski bir aşçı, dil balığının 'tavaya ancak iki kez dokunmasını' isterdi; üçüncüde lezzetin kaçtığını söylerdi.",
+    "beh": "dalgic",
+    "night": 1.7
+  },
+  {
+    "id": "zargana",
+    "name": "Zargana",
+    "latin": "Belone belone",
+    "spr": "fish_gen_zargana",
+    "d": [
+      1,
+      30
+    ],
+    "kg": [
+      0.1,
+      1.2
+    ],
+    "str": 1.8,
+    "val": 28,
+    "r": 1,
+    "sc": 0.6,
+    "spd": [
+      70,
+      105
+    ],
+    "home": [
+      "coral",
+      "lake"
+    ],
+    "len": 94,
+    "life": "18 yıl",
+    "tr": "Tüm kıyılarımızda; yüzeyde gezer",
+    "iucn": "LC",
+    "habitat": "Yüzey suları",
+    "diet": "Küçük balıklar",
+    "fact": "Gaga gibi uzun ince çeneleri vardır. Kılçıkları pişince yeşilimsi renge döner; bu yüzden bazıları yemekten çekinir.",
+    "story": "Oltaya takılan zargana suyun üstünde dans eder; çocuklar ona 'denizin kalemi' derlermiş.",
+    "beh": "ziplayan"
+  },
+  {
+    "id": "kilic",
+    "name": "Kılıç Balığı",
+    "latin": "Xiphias gladius",
+    "spr": "fish_gen_kilic",
+    "d": [
+      30,
+      150
+    ],
+    "kg": [
+      25.0,
+      70.0
+    ],
+    "str": 5.2,
+    "val": 50,
+    "r": 3,
+    "sc": 0.6,
+    "spd": [
+      70,
+      110
+    ],
+    "home": [
+      "coral",
+      "volcano"
+    ],
+    "len": 455,
+    "life": "9 yıl",
+    "tr": "Ege ve Akdeniz'de; avı kotaya tabidir",
+    "iucn": "LC",
+    "habitat": "Açık okyanus, gündüz derin, gece yüzey",
+    "diet": "Kalamar ve balıklar",
+    "fact": "Yassı kılıcıyla avını yaralar. Gözlerini ve beynini ısıtan özel bir dokusu sayesinde soğuk derinliklerde keskin görür.",
+    "story": "Eski Akdeniz balıkçıları kılıç balığı avlarken şarkı söylemezmiş; balığın Rumca bildiğine inanırlarmış.",
+    "beh": "ziplayan"
+  },
+  {
+    "id": "orkinos",
+    "name": "Mavi Yüzgeçli Orkinos",
+    "latin": "Thunnus thynnus",
+    "spr": "fish_gen_orkinos",
+    "d": [
+      10,
+      140
+    ],
+    "kg": [
+      30.0,
+      80.0
+    ],
+    "str": 5.4,
+    "val": 52,
+    "r": 3,
+    "sc": 0.6,
+    "spd": [
+      70,
+      110
+    ],
+    "home": [
+      "coral",
+      "fjord"
+    ],
+    "len": 458,
+    "life": "40 yıl",
+    "tr": "Akdeniz'de; geçmişte Boğaz'da da avlanırdı",
+    "iucn": "LC",
+    "habitat": "Açık okyanus, göç yolları",
+    "diet": "Uskumru, ringa, kalamar",
+    "fact": "Saatte 70 km'ye kadar yüzebilir ve vücut sıcaklığını suyun üstünde tutabilen ender balıklardandır.",
+    "story": "1950'lerde İstanbul Boğazı'nda dev orkinoslar tutulurmuş; yaşlılar 'bir orkinos bir köyü doyururdu' der.",
+    "beh": "dalgic"
+  },
+  {
+    "id": "akya2",
+    "name": "Akya (Lichia)",
+    "latin": "Lichia amia",
+    "spr": "fish_gen_akya2",
+    "d": [
+      3,
+      60
+    ],
+    "kg": [
+      2.0,
+      20.0
+    ],
+    "str": 4.4,
+    "val": 46,
+    "r": 3,
+    "sc": 0.6,
+    "spd": [
+      70,
+      105
+    ],
+    "home": [
+      "coral",
+      "lake"
+    ],
+    "len": 200,
+    "life": "10 yıl",
+    "tr": "Ege ve Akdeniz; sportif avcıların gözdesi",
+    "iucn": "LC",
+    "habitat": "Kıyıya yakın açık sular",
+    "diet": "Kefal, istavrit, sardalya",
+    "fact": "Yan çizgisi S şeklinde kıvrılır. Yemi yakaladığı anda büyük bir hızla kaçar.",
+    "story": "Akya vurduğunda makara öyle çığlık atar ki, balıkçılar sesi duyar duymaz 'Akya!' diye bağırır.",
+    "beh": "kacak"
+  },
+  {
+    "id": "sariagiz",
+    "name": "Sarıağız",
+    "latin": "Argyrosomus regius",
+    "spr": "fish_gen_sariagiz",
+    "d": [
+      5,
+      80
+    ],
+    "kg": [
+      3.0,
+      30.0
+    ],
+    "str": 4.6,
+    "val": 46,
+    "r": 3,
+    "sc": 0.6,
+    "spd": [
+      35,
+      60
+    ],
+    "home": [
+      "coral",
+      "lake"
+    ],
+    "len": 200,
+    "life": "40 yıl",
+    "tr": "Ege ve Akdeniz nehir ağızlarında",
+    "iucn": "LC",
+    "habitat": "Kumlu kıyılar ve nehir ağızları",
+    "diet": "Balık, kalamar, karides",
+    "fact": "Ağzının içi altın sarısıdır. Yüzme kesesiyle 'davul' sesi çıkararak sürüsüyle haberleşir.",
+    "story": "Dalyan bekçileri gece suyun altından gelen davul seslerini duyunca 'Sarıağız sürüsü geldi' derlermiş.",
+    "beh": "inatci",
+    "night": 1.5
+  },
+  {
+    "id": "mirmir",
+    "name": "Mırmır",
+    "latin": "Lithognathus mormyrus",
+    "spr": "fish_gen_mirmir",
+    "d": [
+      1,
+      40
+    ],
+    "kg": [
+      0.15,
+      1.0
+    ],
+    "str": 1.8,
+    "val": 28,
+    "r": 1,
+    "sc": 0.6,
+    "spd": [
+      40,
+      70
+    ],
+    "home": [
+      "coral",
+      "lake"
+    ],
+    "len": 55,
+    "life": "12 yıl",
+    "tr": "Kumsal kıyılarımızda yaygın",
+    "iucn": "LC",
+    "habitat": "Kumlu sığ kıyılar",
+    "diet": "Kumdaki solucanlar ve kabuklular",
+    "fact": "Gümüşi gövdesinde ince dikey çizgiler vardır. Kumu hortum gibi ağzıyla süzerek beslenir.",
+    "story": "Kumsalda çocukların ayak bileğine sürtünen merak dolu küçük balık genellikle bir mırmırdır.",
+    "beh": "sakin"
+  },
+  {
+    "id": "isparoz",
+    "name": "İsparoz",
+    "latin": "Diplodus annularis",
+    "spr": "fish_gen_isparoz",
+    "d": [
+      1,
+      40
+    ],
+    "kg": [
+      0.05,
+      0.25
+    ],
+    "str": 1.3,
+    "val": 18,
+    "r": 0,
+    "sc": 0.6,
+    "spd": [
+      40,
+      70
+    ],
+    "home": [
+      "coral",
+      "lake"
+    ],
+    "len": 24,
+    "life": "8 yıl",
+    "tr": "Tüm kıyılarımızda çok yaygın",
+    "iucn": "LC",
+    "habitat": "Deniz çayırları ve kayalık kıyılar",
+    "diet": "Solucanlar, kabuklular",
+    "fact": "Kuyruk sapındaki siyah halkayla tanınır. Yemi çok hızlı çalan bir 'yem hırsızı'dır.",
+    "story": "İskeledeki her balıkçının bir isparoz hikâyesi vardır: 'Yemimi yedi, iğneye dokunmadı!'",
+    "beh": "kacak"
+  },
+  {
+    "id": "kupes",
+    "name": "Kupes",
+    "latin": "Boops boops",
+    "spr": "fish_gen_kupes",
+    "d": [
+      1,
+      60
+    ],
+    "kg": [
+      0.05,
+      0.3
+    ],
+    "str": 1.2,
+    "val": 17,
+    "r": 0,
+    "sc": 0.6,
+    "spd": [
+      50,
+      80
+    ],
+    "home": [
+      "coral",
+      "lake"
+    ],
+    "len": 36,
+    "life": "9 yıl",
+    "tr": "Tüm denizlerimizde bol",
+    "iucn": "LC",
+    "habitat": "Kıyı suları, sürüler halinde",
+    "diet": "Plankton, algler",
+    "fact": "Gövdesine göre iri gözleri vardır; Latince adı da 'öküz gözlü' anlamına gelir.",
+    "story": "Kupes sürüsü iskelenin altına girdiğinde su sarı ışıltılarla dolarmış.",
+    "beh": "sakin"
+  },
+  {
+    "id": "izmarit",
+    "name": "İzmarit",
+    "latin": "Spicara smaris",
+    "spr": "fish_gen_izmarit",
+    "d": [
+      5,
+      80
+    ],
+    "kg": [
+      0.03,
+      0.15
+    ],
+    "str": 1.1,
+    "val": 16,
+    "r": 0,
+    "sc": 0.6,
+    "spd": [
+      45,
+      75
+    ],
+    "home": [
+      "coral",
+      "lake"
+    ],
+    "len": 20,
+    "life": "8 yıl",
+    "tr": "Ege ve Akdeniz'de",
+    "iucn": "LC",
+    "habitat": "Deniz çayırları",
+    "diet": "Plankton",
+    "fact": "Yanında koyu bir leke vardır. Üreme döneminde erkekler mavi-turuncu renklere bürünür.",
+    "story": "Yunan adalarında izmarit kurutup kışa saklarlar; Türk kıyılarında da eskiden böyle yapılırmış.",
+    "beh": "sakin"
+  },
+  {
+    "id": "gumus",
+    "name": "Gümüş Balığı",
+    "latin": "Atherina boyeri",
+    "spr": "fish_gen_gumus",
+    "d": [
+      0,
+      20
+    ],
+    "kg": [
+      0.005,
+      0.02
+    ],
+    "str": 0.9,
+    "val": 15,
+    "r": 0,
+    "sc": 0.6,
+    "spd": [
+      55,
+      85
+    ],
+    "home": [
+      "lake",
+      "sakura",
+      "coral"
+    ],
+    "len": 9,
+    "life": "3 yıl",
+    "tr": "Hem denizde hem lagün ve göllerde",
+    "iucn": "LC",
+    "habitat": "Lagünler, göller ve kıyı suları",
+    "diet": "Zooplankton",
+    "fact": "Yanında gümüş bir şerit taşıyan, tuzlu ve tatlı suya uyum sağlayabilen minik bir balıktır.",
+    "story": "Eğirdir Gölü'nde gümüş balığı tavası, köyün düğün sofralarının baş tacıymış.",
+    "beh": "sakin"
+  },
+  {
+    "id": "mezgit2",
+    "name": "Mezgit",
+    "latin": "Merlangius merlangus",
+    "spr": "fish_gen_mezgit2",
+    "d": [
+      10,
+      120
+    ],
+    "kg": [
+      0.1,
+      1.5
+    ],
+    "str": 1.6,
+    "val": 26,
+    "r": 1,
+    "sc": 0.6,
+    "spd": [
+      35,
+      60
+    ],
+    "home": [
+      "coral",
+      "fjord"
+    ],
+    "len": 70,
+    "life": "20 yıl",
+    "tr": "Karadeniz'in kış balığı",
+    "iucn": "LC",
+    "habitat": "Soğuk kıyı suları, çamurlu dipler",
+    "diet": "Karides, küçük balıklar",
+    "fact": "Morina ailesindendir; üç sırt yüzgeci ve iki anal yüzgeci vardır. Eti yumuşak ve beyazdır.",
+    "story": "Karadeniz'de 'Mezgit tavası yemeyen kışı yaşamamış' derler.",
+    "beh": "sakin"
+  },
+  {
+    "id": "berlam",
+    "name": "Berlam",
+    "latin": "Merluccius merluccius",
+    "spr": "fish_gen_berlam",
+    "d": [
+      40,
+      150
+    ],
+    "kg": [
+      0.5,
+      8.0
+    ],
+    "str": 2.8,
+    "val": 36,
+    "r": 2,
+    "sc": 0.6,
+    "spd": [
+      35,
+      60
+    ],
+    "home": [
+      "coral",
+      "fjord"
+    ],
+    "len": 140,
+    "life": "20 yıl",
+    "tr": "Marmara, Ege ve Akdeniz'in derin sularında",
+    "iucn": "LC",
+    "habitat": "Derin çamurlu dipler",
+    "diet": "Balık ve kalamar",
+    "fact": "Gündüz dipte durur, gece yüzeye yaklaşarak avlanır. Ağzının içi koyu renklidir.",
+    "story": "Marmara balıkçıları 'Berlam gece kalkar, sabah iner' der, ağlarını ona göre atarlar.",
+    "beh": "dalgic",
+    "night": 1.8
+  },
+  {
+    "id": "fener",
+    "name": "Fener Balığı",
+    "latin": "Lophius piscatorius",
+    "spr": "fish_gen_fener",
+    "d": [
+      30,
+      150
+    ],
+    "kg": [
+      2.0,
+      30.0
+    ],
+    "str": 4.0,
+    "val": 46,
+    "r": 3,
+    "sc": 0.6,
+    "spd": [
+      15,
+      30
+    ],
+    "home": [
+      "coral",
+      "fjord",
+      "volcano"
+    ],
+    "len": 200,
+    "life": "24 yıl",
+    "tr": "Tüm denizlerimizin derin diplerinde",
+    "iucn": "LC",
+    "habitat": "Derin kumlu ve çamurlu dipler",
+    "diet": "Pusuya düşürdüğü balıklar",
+    "fact": "Başındaki olta benzeri uzantıyı sallayarak avını çeker; dev ağzı neredeyse kendi boyuna yakın balıkları yutabilir.",
+    "story": "Balıkçılar fener balığını ilk görünce korkar ama tadına bakınca 'Çirkin ama çok tatlı' derler.",
+    "beh": "inatci"
+  },
+  {
+    "id": "trakonya",
+    "name": "Trakonya",
+    "latin": "Trachinus draco",
+    "spr": "fish_gen_trakonya",
+    "d": [
+      1,
+      60
+    ],
+    "kg": [
+      0.1,
+      1.0
+    ],
+    "str": 1.9,
+    "val": 30,
+    "r": 1,
+    "sc": 0.6,
+    "spd": [
+      30,
+      50
+    ],
+    "home": [
+      "coral",
+      "lake"
+    ],
+    "len": 53,
+    "life": "15 yıl",
+    "tr": "Kumsallarda; zehirli dikenlerine dikkat!",
+    "iucn": "LC",
+    "habitat": "Kumlu sığ kıyılar (kuma gömülür)",
+    "diet": "Küçük balıklar, karides",
+    "fact": "Kuma gömülü bekler; sırt ve solungaç dikenlerindeki zehir çok acı verir. Plajda basan kişinin ayağına sıcak su iyi gelir.",
+    "story": "Kumsal cankurtaranları trakonya sokmasını 'denizin arı iğnesi' diye anlatırmış.",
+    "beh": "dalgic"
+  },
+  {
+    "id": "lahoz",
+    "name": "Lahoz",
+    "latin": "Epinephelus aeneus",
+    "spr": "fish_gen_lahoz",
+    "d": [
+      20,
+      110
+    ],
+    "kg": [
+      2.0,
+      25.0
+    ],
+    "str": 4.4,
+    "val": 47,
+    "r": 3,
+    "sc": 0.6,
+    "spd": [
+      30,
+      55
+    ],
+    "home": [
+      "coral"
+    ],
+    "len": 120,
+    "life": "20+ yıl",
+    "tr": "Akdeniz kıyılarımızda",
+    "iucn": "NT",
+    "habitat": "Kumlu ve kayalık derin dipler",
+    "diet": "Balık, kalamar, kabuklular",
+    "fact": "Başının yanlarındaki açık renkli çapraz çizgilerle diğer orfozlardan ayrılır.",
+    "story": "Mersin'de bir dalgıç, lahozun kendisini mağarasının kapısında bekleyip izlediğini anlatırmış.",
+    "beh": "dalgic"
+  },
+  {
+    "id": "kayabaligi",
+    "name": "Kaya Balığı",
+    "latin": "Gobius niger",
+    "spr": "fish_gen_kayabaligi",
+    "d": [
+      0,
+      25
+    ],
+    "kg": [
+      0.01,
+      0.06
+    ],
+    "str": 1.0,
+    "val": 15,
+    "r": 0,
+    "sc": 0.6,
+    "spd": [
+      25,
+      45
+    ],
+    "home": [
+      "lake",
+      "coral"
+    ],
+    "len": 18,
+    "life": "5 yıl",
+    "tr": "Tüm kıyılarımızda en yaygın küçük balık",
+    "iucn": "LC",
+    "habitat": "Taşlık sığ kıyılar",
+    "diet": "Küçük kabuklular, solucanlar",
+    "fact": "Karın yüzgeçleri birleşerek vantuz oluşturur; böylece dalgalarda kayalara tutunur.",
+    "story": "Çocukların iskeleden yakaladığı ilk balık çoğu zaman bir kaya balığıdır; ona herkes 'kaya' der geçer.",
+    "beh": "sakin"
+  },
+  {
+    "id": "dulger",
+    "name": "Dülger Balığı",
+    "latin": "Zeus faber",
+    "spr": "fish_gen_dulger",
+    "d": [
+      30,
+      150
+    ],
+    "kg": [
+      0.5,
+      3.0
+    ],
+    "str": 2.4,
+    "val": 42,
+    "r": 2,
+    "sc": 0.6,
+    "spd": [
+      20,
+      35
+    ],
+    "home": [
+      "coral",
+      "lake"
+    ],
+    "len": 90,
+    "life": "12 yıl",
+    "tr": "Ege ve Akdeniz; nadir ama değerli",
+    "habitat": "Kıyıya yakın derin sular",
+    "diet": "Küçük balıklar",
+    "fact": "İnce gövdesinin ortasında sarı halkalı siyah bir leke vardır. Önden çok ince göründüğü için avına sezdirmeden yaklaşır.",
+    "story": "Efsaneye göre o kara leke, balığı tutan bir azizin parmak iziymiş; bu yüzden ona 'Aziz Petrus balığı' da derler.",
+    "beh": "sakin"
+  },
+  {
+    "id": "gelincik",
+    "name": "Gelincik",
+    "latin": "Phycis phycis",
+    "spr": "fish_gen_gelincik",
+    "d": [
+      20,
+      150
+    ],
+    "kg": [
+      0.3,
+      3.0
+    ],
+    "str": 2.4,
+    "val": 36,
+    "r": 2,
+    "sc": 0.6,
+    "spd": [
+      25,
+      45
+    ],
+    "home": [
+      "coral",
+      "lake"
+    ],
+    "len": 65,
+    "life": "10 yıl",
+    "tr": "Kayalık derin sularda",
+    "iucn": "LC",
+    "habitat": "Kayalık mağaralar",
+    "diet": "Kabuklular, küçük balıklar",
+    "fact": "Morina ailesindendir; gündüz mağarada saklanır, karın yüzgeçlerindeki ince ışınlarla çevresini hisseder.",
+    "story": "Gece balıkçıları 'Gelincik ay ışığında mağaradan çıkar' derler.",
+    "beh": "dalgic",
+    "night": 2.0
+  },
+  {
+    "id": "mersin",
+    "name": "Mersin Morinası",
+    "latin": "Huso huso",
+    "spr": "fish_gen_mersin",
+    "d": [
+      20,
+      140
+    ],
+    "kg": [
+      25.0,
+      80.0
+    ],
+    "str": 5.6,
+    "val": 58,
+    "r": 4,
+    "sc": 0.6,
+    "spd": [
+      25,
+      45
+    ],
+    "home": [
+      "fjord",
+      "lake"
+    ],
+    "len": 800,
+    "life": "100+ yıl",
+    "tr": "Karadeniz ve Kızılırmak; nesli kritik, avı yasak!",
+    "iucn": "CR",
+    "habitat": "Karadeniz ve büyük nehirler",
+    "diet": "Balıklar, yumuşakçalar",
+    "fact": "Dünyanın en büyük tatlısu balıklarından biridir; dinozor çağından beri neredeyse değişmeden yaşar. Havyarı yüzünden neredeyse tükenmiştir.",
+    "story": "Kızılırmak kıyısındaki köylerde, mersinin 'nehrin dedesi' olduğuna ve görenin uzun yaşayacağına inanılırmış.",
+    "beh": "inatci"
+  },
+  {
+    "id": "deniz_ati",
+    "name": "Deniz Atı",
+    "latin": "Hippocampus guttulatus",
+    "spr": "fish_gen_deniz_ati",
+    "d": [
+      1,
+      25
+    ],
+    "kg": [
+      0.01,
+      0.03
+    ],
+    "str": 1.0,
+    "val": 50,
+    "r": 3,
+    "sc": 0.6,
+    "spd": [
+      8,
+      18
+    ],
+    "home": [
+      "coral",
+      "lake"
+    ],
+    "len": 18,
+    "life": "5 yıl",
+    "tr": "Ege, Marmara ve Akdeniz çayırlarında; korunur",
+    "habitat": "Deniz çayırları (Posidonia)",
+    "diet": "Minik kabuklular",
+    "fact": "Yavruları erkek taşır! Kuyruğuyla bitkilere tutunur, gözlerini birbirinden bağımsız oynatabilir.",
+    "story": "Balıkçılar ağdan çıkan deniz atını hemen suya geri bırakır; 'Uğur getirir, kızdırmayın' derler.",
+    "beh": "sakin"
+  },
+  {
+    "id": "deniz_igne",
+    "name": "Deniz İğnesi",
+    "latin": "Syngnathus acus",
+    "spr": "fish_gen_deniz_igne",
+    "d": [
+      1,
+      30
+    ],
+    "kg": [
+      0.01,
+      0.05
+    ],
+    "str": 1.0,
+    "val": 38,
+    "r": 2,
+    "sc": 0.6,
+    "spd": [
+      10,
+      22
+    ],
+    "home": [
+      "coral",
+      "lake"
+    ],
+    "len": 50,
+    "life": "4 yıl",
+    "tr": "Kıyı çayırlarında",
+    "iucn": "LC",
+    "habitat": "Deniz çayırları",
+    "diet": "Minik kabuklular",
+    "fact": "Deniz atının düz akrabasıdır. Çayır yaprakları arasında dik durarak kendini gizler.",
+    "story": "Ağa takılan deniz iğnesine çocuklar 'kalemtıraş balığı' derlermiş.",
+    "beh": "sakin"
+  },
+  {
+    "id": "torpil",
+    "name": "Torpil Balığı",
+    "latin": "Torpedo marmorata",
+    "spr": "fish_gen_torpil",
+    "d": [
+      5,
+      100
+    ],
+    "kg": [
+      1.0,
+      12.0
+    ],
+    "str": 3.0,
+    "val": 40,
+    "r": 2,
+    "sc": 0.6,
+    "spd": [
+      20,
+      38
+    ],
+    "home": [
+      "coral",
+      "lake"
+    ],
+    "len": 100,
+    "life": "15 yıl",
+    "tr": "Kumlu kıyılarımızda",
+    "habitat": "Kumlu ve çamurlu dipler",
+    "diet": "Dipte yaşayan balıklar",
+    "fact": "Vücudundaki elektrik organlarıyla 200 volta kadar akım üretip avını sersemletir.",
+    "story": "Antik Roma hekimleri baş ağrısı için hastanın alnına canlı torpil balığı koyarmış!",
+    "beh": "dalgic"
+  },
+  {
+    "id": "keman",
+    "name": "Keman Balığı",
+    "latin": "Rhinobatos rhinobatos",
+    "spr": "fish_gen_keman",
+    "d": [
+      5,
+      80
+    ],
+    "kg": [
+      2.0,
+      15.0
+    ],
+    "str": 3.6,
+    "val": 46,
+    "r": 3,
+    "sc": 0.6,
+    "spd": [
+      25,
+      45
+    ],
+    "home": [
+      "coral"
+    ],
+    "len": 100,
+    "life": "24 yıl",
+    "tr": "Doğu Akdeniz kıyılarında; nesli tehlikede",
+    "iucn": "CR",
+    "habitat": "Kumlu sığ dipler",
+    "diet": "Kabuklular, küçük balıklar",
+    "fact": "Gövdesi gitara benzeyen bir vatoz türüdür; önü vatoz, arkası köpekbalığı gibidir.",
+    "story": "İskenderun'da balıkçılar keman balığını görünce 'Denizin müzisyeni' diye gülümser ve geri salarlarmış.",
+    "beh": "dalgic"
+  },
+  {
+    "id": "camgoz",
+    "name": "Camgöz",
+    "latin": "Galeorhinus galeus",
+    "spr": "fish_gen_camgoz",
+    "d": [
+      20,
+      150
+    ],
+    "kg": [
+      5.0,
+      30.0
+    ],
+    "str": 4.6,
+    "val": 46,
+    "r": 3,
+    "sc": 0.6,
+    "spd": [
+      45,
+      75
+    ],
+    "home": [
+      "coral",
+      "fjord"
+    ],
+    "len": 195,
+    "life": "55 yıl",
+    "tr": "Tüm denizlerimizde; azalıyor",
+    "iucn": "CR",
+    "habitat": "Kıta sahanlığı ve kıyı suları",
+    "diet": "Balık ve kalamar",
+    "fact": "Gözleri cam gibi parlak olduğu için bu adı almıştır. 50 yılı aşkın yaşayabilir.",
+    "story": "Eski balıkçılar camgözün gözlerine bakan kişinin geleceği görebileceğine inanırmış.",
+    "beh": "kacak"
+  },
+  {
+    "id": "mahmuzlu",
+    "name": "Mahmuzlu Camgöz",
+    "latin": "Squalus acanthias",
+    "spr": "fish_gen_mahmuzlu",
+    "d": [
+      30,
+      150
+    ],
+    "kg": [
+      2.0,
+      10.0
+    ],
+    "str": 4.0,
+    "val": 44,
+    "r": 3,
+    "sc": 0.6,
+    "spd": [
+      40,
+      70
+    ],
+    "home": [
+      "fjord",
+      "coral"
+    ],
+    "len": 160,
+    "life": "75+ yıl",
+    "tr": "Karadeniz'de en yaygın köpekbalığı",
+    "iucn": "VU",
+    "habitat": "Soğuk kıyı ve açık sular",
+    "diet": "Balık, kalamar, kabuklular",
+    "fact": "Her iki sırt yüzgecinin önünde zehirli birer diken bulunur. Gebeliği iki yıla kadar sürer!",
+    "story": "Karadenizli balıkçılar ona 'köpek balığı' der; hamsi ağlarını delip geçtiğinde söylenmedik söz kalmazmış.",
+    "beh": "kacak"
+  },
+  {
+    "id": "mako",
+    "name": "Mako Köpekbalığı",
+    "latin": "Isurus oxyrinchus",
+    "spr": "fish_gen_mako",
+    "d": [
+      20,
+      150
+    ],
+    "kg": [
+      25.0,
+      75.0
+    ],
+    "str": 5.8,
+    "val": 58,
+    "r": 4,
+    "sc": 0.6,
+    "spd": [
+      80,
+      120
+    ],
+    "home": [
+      "coral",
+      "volcano"
+    ],
+    "len": 400,
+    "life": "30 yıl",
+    "tr": "Akdeniz'de nadir; korunur",
+    "iucn": "EN",
+    "habitat": "Açık okyanus",
+    "diet": "Orkinos, kılıç balığı, kalamar",
+    "fact": "Saatte 70 km'yi aşan hızıyla dünyanın en hızlı köpekbalığıdır; oltaya takılınca sudan metrelerce sıçrayabilir.",
+    "story": "Sportif balıkçılar bir makoyla savaştıktan sonra bir hafta kollarını kaldıramadıklarını anlatır.",
+    "beh": "ziplayan"
+  },
+  {
+    "id": "mavi_kopek",
+    "name": "Mavi Köpekbalığı",
+    "latin": "Prionace glauca",
+    "spr": "fish_gen_mavi_kopek",
+    "d": [
+      10,
+      150
+    ],
+    "kg": [
+      20.0,
+      60.0
+    ],
+    "str": 5.0,
+    "val": 52,
+    "r": 3,
+    "sc": 0.6,
+    "spd": [
+      50,
+      85
+    ],
+    "home": [
+      "coral",
+      "fjord"
+    ],
+    "len": 380,
+    "life": "20 yıl",
+    "tr": "Ege ve Akdeniz açıklarında",
+    "iucn": "NT",
+    "habitat": "Açık okyanus",
+    "diet": "Kalamar ve sürü balıkları",
+    "fact": "Parlak mavi sırtı ve uzun göğüs yüzgeçleriyle okyanusları dolaşır; bir yılda binlerce kilometre göç eder.",
+    "story": "Açık denizde mavi köpekbalığı görenler 'okyanus mavisi canlandı sandım' der.",
+    "beh": "kacak"
+  },
+  {
+    "id": "cekic",
+    "name": "Çekiçbaşlı Köpekbalığı",
+    "latin": "Sphyrna lewini",
+    "spr": "fish_gen_cekic",
+    "d": [
+      30,
+      150
+    ],
+    "kg": [
+      25.0,
+      70.0
+    ],
+    "str": 5.6,
+    "val": 58,
+    "r": 4,
+    "sc": 0.6,
+    "spd": [
+      45,
+      80
+    ],
+    "home": [
+      "coral",
+      "volcano"
+    ],
+    "len": 430,
+    "life": "35 yıl",
+    "tr": "Akdeniz'de çok nadir",
+    "iucn": "CR",
+    "habitat": "Açık deniz ve resif kenarları",
+    "diet": "Vatozlar, kalamar, balık",
+    "fact": "Çekiç biçimli başı, dipteki avlarının elektrik alanlarını algılayan bir dedektör gibi çalışır.",
+    "story": "Dalgıçlar yüzlerce çekiçbaşlının birlikte yüzdüğü 'okullar' görünce nefeslerini tutar.",
+    "beh": "dalgic"
+  },
+  {
+    "id": "yayin",
+    "name": "Yayın Balığı",
+    "latin": "Silurus glanis",
+    "spr": "fish_gen_yayin",
+    "d": [
+      5,
+      90
+    ],
+    "kg": [
+      5.0,
+      60.0
+    ],
+    "str": 5.0,
+    "val": 46,
+    "r": 3,
+    "sc": 0.6,
+    "spd": [
+      25,
+      45
+    ],
+    "home": [
+      "lake",
+      "emerald"
+    ],
+    "len": 280,
+    "life": "50 yıl",
+    "tr": "Sakarya, Kızılırmak ve barajlarda; Avrupa'nın dev balığı",
+    "iucn": "LC",
+    "habitat": "Büyük nehirler, göller ve barajlar",
+    "diet": "Balık, kurbağa, hatta su kuşları",
+    "fact": "Avrupa'nın en büyük tatlısu balığıdır; 2,5 metreyi geçen bireyler kaydedilmiştir. Bıyıklarıyla karanlıkta avını bulur.",
+    "story": "Baraj gölündeki balıkçılar, yayının bir ördeği yuttuğunu gördüklerinde bir daha göle ayaklarını sokmamışlar.",
+    "beh": "inatci",
+    "night": 2.0
+  },
+  {
+    "id": "sudak2",
+    "name": "Sudak",
+    "latin": "Sander lucioperca",
+    "spr": "fish_gen_sudak2",
+    "d": [
+      3,
+      60
+    ],
+    "kg": [
+      1.0,
+      12.0
+    ],
+    "str": 3.6,
+    "val": 40,
+    "r": 2,
+    "sc": 0.6,
+    "spd": [
+      40,
+      70
+    ],
+    "home": [
+      "lake",
+      "emerald"
+    ],
+    "len": 130,
+    "life": "20 yıl",
+    "tr": "Eğirdir, Beyşehir ve barajlarda yaygın",
+    "iucn": "LC",
+    "habitat": "Bulanık göller ve yavaş nehirler",
+    "diet": "Küçük balıklar",
+    "fact": "Gözlerindeki özel yansıtıcı tabaka sayesinde bulanık ve karanlık suda iyi görür; gün batımında avlanır.",
+    "story": "Eğirdir'de sudak avcıları 'Güneş göle değince sudak uyanır' der.",
+    "beh": "kacak",
+    "night": 1.6
+  },
+  {
+    "id": "inci_kefali",
+    "name": "İnci Kefali",
+    "latin": "Alburnus tarichi",
+    "spr": "fish_gen_inci_kefali",
+    "d": [
+      0,
+      30
+    ],
+    "kg": [
+      0.05,
+      0.25
+    ],
+    "str": 1.4,
+    "val": 36,
+    "r": 2,
+    "sc": 0.6,
+    "spd": [
+      55,
+      85
+    ],
+    "home": [
+      "lake",
+      "sakura"
+    ],
+    "len": 25,
+    "life": "8 yıl",
+    "tr": "Yalnızca Van Gölü havzasında yaşar (endemik)!",
+    "habitat": "Van Gölü'nün sodalı suyu ve tatlısu derelerine göç",
+    "diet": "Plankton",
+    "fact": "Dünyada sadece Van Gölü'nde yaşar. Her bahar sodalı gölden tatlı derelere akın ederek yumurtlar; bu göç izlemeye değer bir doğa olayıdır.",
+    "story": "Van'da bahar gelince çocuklar dere kenarına koşar: 'İnci kefalleri şelaleye tırmanıyor!'",
+    "beh": "ziplayan"
+  },
+  {
+    "id": "kadife",
+    "name": "Kadife Balığı",
+    "latin": "Tinca tinca",
+    "spr": "fish_gen_kadife",
+    "d": [
+      1,
+      25
+    ],
+    "kg": [
+      0.3,
+      3.5
+    ],
+    "str": 2.4,
+    "val": 30,
+    "r": 1,
+    "sc": 0.6,
+    "spd": [
+      20,
+      40
+    ],
+    "home": [
+      "lake",
+      "emerald",
+      "sakura"
+    ],
+    "len": 70,
+    "life": "20 yıl",
+    "tr": "Göl ve barajlarımızda",
+    "iucn": "LC",
+    "habitat": "Bitkili, çamurlu durgun sular",
+    "diet": "Dip canlıları, larvalar",
+    "fact": "Derisi kadife gibi yumuşak ve kaygandır. Turuncu-kırmızı gözleri vardır; oksijeni az sularda bile yaşayabilir.",
+    "story": "Eski Avrupa'da kadifenin sümüksü derisinin diğer balıkları iyileştirdiğine inanılır, ona 'doktor balık' denirmiş.",
+    "beh": "sakin"
+  },
+  {
+    "id": "siraz",
+    "name": "Siraz",
+    "latin": "Capoeta capoeta",
+    "spr": "fish_gen_siraz",
+    "d": [
+      1,
+      25
+    ],
+    "kg": [
+      0.2,
+      2.0
+    ],
+    "str": 2.2,
+    "val": 27,
+    "r": 1,
+    "sc": 0.6,
+    "spd": [
+      40,
+      70
+    ],
+    "home": [
+      "lake",
+      "emerald"
+    ],
+    "len": 50,
+    "life": "12 yıl",
+    "tr": "Doğu Anadolu ve Kafkas akarsularında",
+    "iucn": "LC",
+    "habitat": "Hızlı akan taşlı nehirler",
+    "diet": "Taşlardaki yosunlar",
+    "fact": "Alt çenesindeki sert kenarla taşların üzerindeki yosunu kazıyarak beslenir.",
+    "story": "Kars'ta siraz tutup ateşte pişirmek, çocukların yaz tatilinin en güzel anıdır.",
+    "beh": "kacak"
+  },
+  {
+    "id": "abant",
+    "name": "Abant Alabalığı",
+    "latin": "Salmo abanticus",
+    "spr": "fish_gen_abant",
+    "d": [
+      0,
+      40
+    ],
+    "kg": [
+      0.3,
+      3.0
+    ],
+    "str": 2.8,
+    "val": 40,
+    "r": 2,
+    "sc": 0.6,
+    "spd": [
+      50,
+      80
+    ],
+    "home": [
+      "lake",
+      "emerald"
+    ],
+    "len": 60,
+    "life": "8 yıl",
+    "tr": "Yalnızca Abant Gölü'nde yaşar (endemik)",
+    "habitat": "Soğuk ve temiz dağ gölü",
+    "diet": "Böcek larvaları, küçük balıklar",
+    "fact": "Abant Gölü'ne özgü bir alabalıktır; yanlarındaki kırmızı benekler beyaz halkalarla çevrilidir.",
+    "story": "Abant'ta yaşlı bir bekçi, gölün en büyük alabalığının 'kıyıdaki çınarın gölgesinde uyuduğunu' söylermiş.",
+    "beh": "ziplayan"
+  },
+  {
+    "id": "karabalik",
+    "name": "Karabalık",
+    "latin": "Clarias gariepinus",
+    "spr": "fish_gen_karabalik",
+    "d": [
+      1,
+      30
+    ],
+    "kg": [
+      1.0,
+      15.0
+    ],
+    "str": 3.6,
+    "val": 36,
+    "r": 2,
+    "sc": 0.6,
+    "spd": [
+      25,
+      45
+    ],
+    "home": [
+      "lake",
+      "emerald",
+      "volcano"
+    ],
+    "len": 170,
+    "life": "15 yıl",
+    "tr": "Asi Nehri ve Amik Ovası'nda; Hatay'ın simgesi",
+    "iucn": "LC",
+    "habitat": "Bataklıklar, sıcak nehirler",
+    "diet": "Her şeyi yer: balık, böcek, bitki",
+    "fact": "Solungaçlarının yanında hava soluyabildiği özel bir organ vardır; kuruyan su birikintilerinde bile günlerce yaşayabilir.",
+    "story": "Hatay'da 'Karabalık ölmez, sadece çamura dalar' derler.",
+    "beh": "inatci",
+    "night": 1.6
+  },
+  {
+    "id": "atlantik_somon",
+    "name": "Atlantik Somonu",
+    "latin": "Salmo salar",
+    "spr": "fish_gen_atlantik_somon",
+    "d": [
+      0,
+      100
+    ],
+    "kg": [
+      2.0,
+      20.0
+    ],
+    "str": 4.4,
+    "val": 46,
+    "r": 3,
+    "sc": 0.6,
+    "spd": [
+      60,
+      95
+    ],
+    "home": [
+      "fjord",
+      "emerald"
+    ],
+    "len": 150,
+    "life": "13 yıl",
+    "tr": "Türkiye'de doğal olarak yaşamaz",
+    "habitat": "Kuzey Atlantik ve nehirler",
+    "diet": "Balık, karides",
+    "fact": "Denizde büyür, doğduğu nehre kokusunu takip ederek geri dönüp şelalelere tırmanarak yumurtlar.",
+    "story": "Norveçli balıkçılar 'Somon nehrini asla unutmaz' der; bir nehre her yıl aynı somonların döndüğüne inanırlar.",
+    "beh": "ziplayan"
+  },
+  {
+    "id": "arktik_alabalik",
+    "name": "Kutup Alabalığı",
+    "latin": "Salvelinus alpinus",
+    "spr": "fish_gen_arktik_alabalik",
+    "d": [
+      5,
+      120
+    ],
+    "kg": [
+      0.5,
+      8.0
+    ],
+    "str": 3.4,
+    "val": 42,
+    "r": 2,
+    "sc": 0.6,
+    "spd": [
+      45,
+      75
+    ],
+    "home": [
+      "fjord"
+    ],
+    "len": 107,
+    "life": "40 yıl",
+    "tr": "Türkiye'de yaşamaz",
+    "iucn": "LC",
+    "habitat": "Buzul gölleri ve kutup denizleri",
+    "diet": "Böcek larvaları, küçük balıklar",
+    "fact": "Dünyanın en kuzeyinde yaşayan tatlısu balığıdır; üreme döneminde karnı alev turuncusuna döner.",
+    "story": "İzlanda'da buzu delip kutup alabalığı tutan bir çocuk, köyde kahraman ilan edilirmiş.",
+    "beh": "kacak"
+  },
+  {
+    "id": "gronland",
+    "name": "Grönland Köpekbalığı",
+    "latin": "Somniosus microcephalus",
+    "spr": "fish_gen_gronland",
+    "d": [
+      100,
+      150
+    ],
+    "kg": [
+      60.0,
+      95.0
+    ],
+    "str": 6.0,
+    "val": 62,
+    "r": 4,
+    "sc": 0.6,
+    "spd": [
+      12,
+      22
+    ],
+    "home": [
+      "volcano",
+      "fjord"
+    ],
+    "len": 640,
+    "life": "250–500 yıl!",
+    "tr": "Yalnızca Kuzey Buz Denizi'nde",
+    "iucn": "VU",
+    "habitat": "Kuzey Buz Denizi'nin karanlık derinlikleri",
+    "diet": "Balık, fok, leş",
+    "fact": "Bilinen en uzun yaşayan omurgalıdır: bazı bireylerin 400 yaşından büyük olduğu tahmin edilir. Saatte 1 km kadar yavaş yüzer.",
+    "story": "Grönlandlı avcılar onun 'dünyanın başlangıcını görmüş balık' olduğuna inanırmış.",
+    "beh": "inatci"
+  },
+  {
+    "id": "halibut",
+    "name": "Atlantik Halibutu",
+    "latin": "Hippoglossus hippoglossus",
+    "spr": "fish_gen_halibut",
+    "d": [
+      40,
+      150
+    ],
+    "kg": [
+      15.0,
+      70.0
+    ],
+    "str": 5.2,
+    "val": 52,
+    "r": 3,
+    "sc": 0.6,
+    "spd": [
+      25,
+      45
+    ],
+    "home": [
+      "fjord"
+    ],
+    "len": 470,
+    "life": "50 yıl",
+    "tr": "Türkiye'de yaşamaz",
+    "habitat": "Soğuk derin dipler",
+    "diet": "Morina, ringa, yengeç",
+    "fact": "Dünyanın en büyük yassı balığıdır; 300 kilogramı geçen bireyler tutulmuştur.",
+    "story": "Norveç'te bir halibut o kadar büyükmüş ki balıkçılar onu tekneye çekmek için vinç çağırmış.",
+    "beh": "dalgic"
+  },
+  {
+    "id": "mezgit_morina",
+    "name": "Mezgit Morinası (Haddock)",
+    "latin": "Melanogrammus aeglefinus",
+    "spr": "fish_gen_mezgit_morina",
+    "d": [
+      20,
+      150
+    ],
+    "kg": [
+      0.5,
+      5.0
+    ],
+    "str": 2.4,
+    "val": 30,
+    "r": 1,
+    "sc": 0.6,
+    "spd": [
+      35,
+      60
+    ],
+    "home": [
+      "fjord"
+    ],
+    "len": 112,
+    "life": "20 yıl",
+    "tr": "Türkiye'de yaşamaz",
+    "habitat": "Kuzey Atlantik dipleri",
+    "diet": "Dip omurgasızları",
+    "fact": "Göğüs yüzgecinin üstündeki koyu leke 'şeytanın parmak izi' olarak bilinir. İngiliz 'fish and chips'inin klasik balığıdır.",
+    "story": "İskoç balıkçılar o lekeye 'Aziz Petrus'un başparmağı' der.",
+    "beh": "sakin"
+  },
+  {
+    "id": "kurt_baligi",
+    "name": "Kurt Balığı",
+    "latin": "Anarhichas lupus",
+    "spr": "fish_gen_kurt_baligi",
+    "d": [
+      40,
+      150
+    ],
+    "kg": [
+      2.0,
+      18.0
+    ],
+    "str": 4.2,
+    "val": 48,
+    "r": 3,
+    "sc": 0.6,
+    "spd": [
+      20,
+      35
+    ],
+    "home": [
+      "fjord"
+    ],
+    "len": 150,
+    "life": "20 yıl",
+    "tr": "Türkiye'de yaşamaz",
+    "habitat": "Kuzey Atlantik'in kayalık dipleri",
+    "diet": "Midye, deniz kestanesi, yengeç",
+    "fact": "Güçlü köpek dişleri ve öğütücü azı dişleriyle deniz kestanelerini kırarak yer. Kanında doğal antifriz bulunur.",
+    "story": "İzlandalı balıkçılar kurt balığının ısırığının botu delebileceği konusunda yeni gelenleri uyarırmış.",
+    "beh": "inatci"
+  },
+  {
+    "id": "lompa",
+    "name": "Lompa Balığı",
+    "latin": "Cyclopterus lumpus",
+    "spr": "fish_gen_lompa",
+    "d": [
+      5,
+      120
+    ],
+    "kg": [
+      0.5,
+      5.0
+    ],
+    "str": 2.0,
+    "val": 32,
+    "r": 1,
+    "sc": 0.6,
+    "spd": [
+      15,
+      28
+    ],
+    "home": [
+      "fjord"
+    ],
+    "len": 60,
+    "life": "13 yıl",
+    "tr": "Türkiye'de yaşamaz",
+    "iucn": "NT",
+    "habitat": "Soğuk kayalık kıyılar",
+    "diet": "Denizanası, küçük kabuklular",
+    "fact": "Karnındaki vantuzla kayalara yapışır. Erkekler, yumurtaları sert dalgalarda bile haftalarca korur.",
+    "story": "Somon çiftliklerinde lompalar somonların bitlerini temizlemek için 'temizlikçi' olarak çalıştırılır.",
+    "beh": "sakin"
+  },
+  {
+    "id": "capelin",
+    "name": "Kapelin",
+    "latin": "Mallotus villosus",
+    "spr": "fish_gen_capelin",
+    "d": [
+      0,
+      80
+    ],
+    "kg": [
+      0.02,
+      0.06
+    ],
+    "str": 1.0,
+    "val": 15,
+    "r": 0,
+    "sc": 0.6,
+    "spd": [
+      60,
+      95
+    ],
+    "home": [
+      "fjord"
+    ],
+    "len": 25,
+    "life": "6 yıl",
+    "tr": "Türkiye'de yaşamaz",
+    "iucn": "LC",
+    "habitat": "Kuzey kutup denizleri",
+    "diet": "Plankton",
+    "fact": "Kuzey okyanuslarının besin zincirinin temelidir; balinalar, morinalar ve deniz kuşları onunla beslenir.",
+    "story": "Kanada'da 'kapelin dalgası' geldiğinde, milyonlarca balık yumurtlamak için kumsala vurur ve kıyı gümüş renge bürünür.",
+    "beh": "sakin"
+  },
+  {
+    "id": "ringa2",
+    "name": "Atlantik Ringası",
+    "latin": "Clupea harengus",
+    "spr": "fish_gen_ringa2",
+    "d": [
+      0,
+      100
+    ],
+    "kg": [
+      0.1,
+      0.6
+    ],
+    "str": 1.2,
+    "val": 18,
+    "r": 0,
+    "sc": 0.6,
+    "spd": [
+      60,
+      95
+    ],
+    "home": [
+      "fjord"
+    ],
+    "len": 45,
+    "life": "20 yıl",
+    "tr": "Türkiye'de yaşamaz",
+    "iucn": "LC",
+    "habitat": "Kuzey Atlantik, büyük sürüler",
+    "diet": "Plankton",
+    "fact": "Milyarlarca bireylik sürüler oluşturur. Ringalar yüzme keselerinden hava bırakarak 'osuruk' benzeri seslerle haberleşir!",
+    "story": "Hollanda'da yılın ilk taze ringası açık artırmada bir servete satılırmış.",
+    "beh": "sakin"
+  },
+  {
+    "id": "buz_baligi",
+    "name": "Buz Balığı",
+    "latin": "Champsocephalus gunnari",
+    "spr": "fish_gen_buz_baligi",
+    "d": [
+      60,
+      150
+    ],
+    "kg": [
+      0.2,
+      1.5
+    ],
+    "str": 2.4,
+    "val": 52,
+    "r": 3,
+    "sc": 0.6,
+    "spd": [
+      30,
+      50
+    ],
+    "home": [
+      "volcano",
+      "fjord"
+    ],
+    "len": 66,
+    "life": "15 yıl",
+    "tr": "Yalnızca Antarktika sularında",
+    "habitat": "Antarktika'nın buz gibi suları",
+    "diet": "Kril",
+    "fact": "Kanında kırmızı kan hücresi yoktur; kanı neredeyse şeffaftır! Oksijeni doğrudan buz gibi sudan alır.",
+    "story": "Kutup araştırmacıları ilk buz balığını kestiklerinde şeffaf kanı görüp hayalet sanmışlar.",
+    "beh": "sakin"
+  },
+  {
+    "id": "kurekburun",
+    "name": "Kürek Burunlu Mersin",
+    "latin": "Polyodon spathula",
+    "spr": "fish_gen_kurekburun",
+    "d": [
+      10,
+      90
+    ],
+    "kg": [
+      5.0,
+      40.0
+    ],
+    "str": 4.6,
+    "val": 52,
+    "r": 3,
+    "sc": 0.6,
+    "spd": [
+      30,
+      50
+    ],
+    "home": [
+      "emerald",
+      "lake"
+    ],
+    "len": 220,
+    "life": "30 yıl",
+    "tr": "Türkiye'de yaşamaz (Mississippi)",
+    "iucn": "VU",
+    "habitat": "Büyük yavaş nehirler",
+    "diet": "Plankton (ağzını açıp süzer)",
+    "fact": "Kürek biçimli uzun burnu, planktonun elektrik alanlarını algılayan bir anten gibidir.",
+    "story": "Mississippi'deki balıkçılar ona 'kaşık gagalı' der; dinozorlarla aynı dönemde yaşadığını anlatırlar.",
+    "beh": "dalgic"
+  },
+  {
+    "id": "engerek",
+    "name": "Engerek Balığı",
+    "latin": "Chauliodus sloani",
+    "spr": "fish_gen_engerek",
+    "d": [
+      110,
+      150
+    ],
+    "kg": [
+      0.05,
+      0.3
+    ],
+    "str": 2.6,
+    "val": 52,
+    "r": 3,
+    "sc": 0.6,
+    "spd": [
+      30,
+      50
+    ],
+    "home": [
+      "volcano",
+      "fjord"
+    ],
+    "len": 35,
+    "life": "15 yıl",
+    "tr": "Akdeniz'in derinliklerinde de bulunur",
+    "iucn": "LC",
+    "habitat": "1000 m'ye kadar derin sular",
+    "diet": "Küçük balıklar, karides",
+    "fact": "Dişleri o kadar uzundur ki ağzını kapatamaz; dişler kafasının dışına taşar. Karnındaki ışıklarla avını çeker.",
+    "story": "Derin deniz robotunun kamerasına ilk kez bir engerek balığı yakalandığında, bilim insanları onu 'derinlerin ejderhası' diye adlandırmış.",
+    "beh": "kacak",
+    "night": 1.5
+  },
+  {
+    "id": "baltabaligi",
+    "name": "Balta Balığı",
+    "latin": "Argyropelecus hemigymnus",
+    "spr": "fish_gen_baltabaligi",
+    "d": [
+      110,
+      150
+    ],
+    "kg": [
+      0.005,
+      0.02
+    ],
+    "str": 1.0,
+    "val": 44,
+    "r": 2,
+    "sc": 0.6,
+    "spd": [
+      35,
+      55
+    ],
+    "home": [
+      "volcano",
+      "fjord"
+    ],
+    "len": 4,
+    "life": "2 yıl",
+    "tr": "Akdeniz derinliklerinde",
+    "iucn": "LC",
+    "habitat": "Alacakaranlık bölgesi (200–600 m)",
+    "diet": "Zooplankton",
+    "fact": "Balta biçimli ayna gibi gövdesiyle görünmez olur; karnındaki ışıklar gölgesini silerek aşağıdan bakan avcılardan gizlenir.",
+    "story": "Gece ağına balta balığı takılan balıkçı, sudan gümüş bir yaprak çıktığını sanmış.",
+    "beh": "sakin",
+    "night": 1.5
+  },
+  {
+    "id": "fener_derin",
+    "name": "Derin Deniz Fener Balığı",
+    "latin": "Melanocetus johnsonii",
+    "spr": "fish_gen_fener_derin",
+    "d": [
+      120,
+      150
+    ],
+    "kg": [
+      0.05,
+      0.5
+    ],
+    "str": 2.0,
+    "val": 54,
+    "r": 3,
+    "sc": 0.6,
+    "spd": [
+      8,
+      16
+    ],
+    "home": [
+      "volcano",
+      "fjord"
+    ],
+    "len": 18,
+    "life": "bilinmiyor",
+    "tr": "Akdeniz'de kaydı yok",
+    "iucn": "LC",
+    "habitat": "Işık girmeyen abis (1000–4000 m)",
+    "diet": "Işığa yaklaşan her canlı",
+    "fact": "Başındaki ışıklı yemin ışığını içindeki bakteriler üretir. Erkekleri minicik olup dişiye yapışarak yaşar.",
+    "story": "Derin deniz belgeselini izleyen bir çocuk, 'Bu balık feneri kendi taşıyor!' diye bağırmış.",
+    "beh": "inatci"
+  },
+  {
+    "id": "kocadis",
+    "name": "Koca Diş Balığı",
+    "latin": "Anoplogaster cornuta",
+    "spr": "fish_gen_kocadis",
+    "d": [
+      115,
+      150
+    ],
+    "kg": [
+      0.05,
+      0.2
+    ],
+    "str": 2.2,
+    "val": 52,
+    "r": 3,
+    "sc": 0.6,
+    "spd": [
+      20,
+      35
+    ],
+    "home": [
+      "volcano",
+      "fjord"
+    ],
+    "len": 18,
+    "life": "bilinmiyor",
+    "tr": "Akdeniz'de kaydı yok",
+    "iucn": "LC",
+    "habitat": "Abis (500–2000 m)",
+    "diet": "Küçük balıklar, karides",
+    "fact": "Vücuduna oranla dişleri okyanustaki en büyük olan balıktır; ağzını kapatabilmek için beyninin iki yanında yuvalar vardır.",
+    "story": "Bilim insanları onu ilk gördüklerinde 'öcü balığı' adını koymuş.",
+    "beh": "dalgic"
+  },
+  {
+    "id": "ejderbalik",
+    "name": "Derin Deniz Ejder Balığı",
+    "latin": "Stomias boa",
+    "spr": "fish_gen_ejderbalik",
+    "d": [
+      110,
+      150
+    ],
+    "kg": [
+      0.05,
+      0.2
+    ],
+    "str": 2.4,
+    "val": 54,
+    "r": 3,
+    "sc": 0.6,
+    "spd": [
+      30,
+      50
+    ],
+    "home": [
+      "volcano",
+      "fjord"
+    ],
+    "len": 32,
+    "life": "bilinmiyor",
+    "tr": "Akdeniz derinliklerinde bulunur",
+    "iucn": "LC",
+    "habitat": "Derin açık okyanus",
+    "diet": "Küçük balıklar",
+    "fact": "Siyah derisi ışığı neredeyse tamamen emer; çenesindeki bıyığın ucunda ışık saçan bir yem bulunur.",
+    "story": "Gece yarısı ağdan çıkan ışıklı bu yılanı görünce balıkçılar haç çıkarmış.",
+    "beh": "kacak",
+    "night": 1.6
+  },
+  {
+    "id": "kurek_akulu",
+    "name": "Fırfırlı Köpekbalığı",
+    "latin": "Chlamydoselachus anguineus",
+    "spr": "fish_gen_kurek_akulu",
+    "d": [
+      120,
+      150
+    ],
+    "kg": [
+      5.0,
+      15.0
+    ],
+    "str": 4.2,
+    "val": 60,
+    "r": 4,
+    "sc": 0.6,
+    "spd": [
+      20,
+      35
+    ],
+    "home": [
+      "volcano",
+      "fjord"
+    ],
+    "len": 200,
+    "life": "bilinmiyor",
+    "tr": "Akdeniz'de çok nadir kayıtlar",
+    "iucn": "LC",
+    "habitat": "Derin kıta yamaçları",
+    "diet": "Kalamar, balık",
+    "fact": "80 milyon yıldır neredeyse değişmeden yaşayan 'yaşayan fosil'dir. 300 dişi yılan gibi geriye doğru kıvrıktır.",
+    "story": "Japon balıkçılar onu deniz yılanı efsanelerinin kaynağı sayar.",
+    "beh": "inatci"
+  },
+  {
+    "id": "goblin",
+    "name": "Goblin Köpekbalığı",
+    "latin": "Mitsukurina owstoni",
+    "spr": "fish_gen_goblin",
+    "d": [
+      120,
+      150
+    ],
+    "kg": [
+      20.0,
+      60.0
+    ],
+    "str": 5.2,
+    "val": 62,
+    "r": 4,
+    "sc": 0.6,
+    "spd": [
+      20,
+      35
+    ],
+    "home": [
+      "volcano",
+      "fjord"
+    ],
+    "len": 380,
+    "life": "bilinmiyor",
+    "tr": "Yalnızca birkaç ülkede kaydı var",
+    "iucn": "LC",
+    "habitat": "Derin kıta yamaçları (250–1300 m)",
+    "diet": "Kalamar, balık, kabuklular",
+    "fact": "Pembe derili, uzun burunlu bu köpekbalığı avını yakalarken çenesini sapan gibi ileri fırlatır.",
+    "story": "Okyanus biyologları bir goblin köpekbalığı görmenin 'piyango kazanmaktan zor' olduğunu söyler.",
+    "beh": "dalgic"
+  },
+  {
+    "id": "blob",
+    "name": "Damla Balığı",
+    "latin": "Psychrolutes marcidus",
+    "spr": "fish_gen_blob",
+    "d": [
+      120,
+      150
+    ],
+    "kg": [
+      0.5,
+      2.0
+    ],
+    "str": 1.2,
+    "val": 50,
+    "r": 3,
+    "sc": 0.6,
+    "spd": [
+      5,
+      12
+    ],
+    "home": [
+      "volcano",
+      "fjord"
+    ],
+    "len": 30,
+    "life": "bilinmiyor",
+    "tr": "Avustralya ve Yeni Zelanda derinlikleri",
+    "habitat": "Derin deniz dipleri (600–1200 m)",
+    "diet": "Dipte sürüklenen yiyecekler",
+    "fact": "Yoğunluğu sudan biraz azdır; enerji harcamadan dipte süzülür. Yüzeye çıkarıldığında basınç farkından 'eriyen' bir hale gelir.",
+    "story": "2013'te 'dünyanın en çirkin hayvanı' seçildi; o günden beri en sevilen derin deniz maskotudur.",
+    "beh": "sakin"
+  },
+  {
+    "id": "varilgoz",
+    "name": "Fıçı Gözlü Balık",
+    "latin": "Macropinna microstoma",
+    "spr": "fish_gen_varilgoz",
+    "d": [
+      115,
+      150
+    ],
+    "kg": [
+      0.05,
+      0.2
+    ],
+    "str": 1.4,
+    "val": 60,
+    "r": 4,
+    "sc": 0.6,
+    "spd": [
+      15,
+      25
+    ],
+    "home": [
+      "volcano",
+      "fjord"
+    ],
+    "len": 15,
+    "life": "bilinmiyor",
+    "tr": "Pasifik'te",
+    "habitat": "Derin Pasifik (600–800 m)",
+    "diet": "Denizanası tentakülleri, plankton",
+    "fact": "Başı şeffaf bir kubbedir! İçindeki yeşil tüp gözlerini yukarı ya da ileri döndürebilir.",
+    "story": "İlk videosu yayınlandığında insanlar onu uzaylı sanmıştı.",
+    "beh": "sakin"
+  },
+  {
+    "id": "fener_kucuk",
+    "name": "Fener Balıkçığı (Lanternfish)",
+    "latin": "Myctophum punctatum",
+    "spr": "fish_gen_fener_kucuk",
+    "d": [
+      100,
+      150
+    ],
+    "kg": [
+      0.005,
+      0.02
+    ],
+    "str": 1.0,
+    "val": 26,
+    "r": 1,
+    "sc": 0.6,
+    "spd": [
+      50,
+      80
+    ],
+    "home": [
+      "volcano",
+      "fjord"
+    ],
+    "len": 11,
+    "life": "3 yıl",
+    "tr": "Akdeniz derinliklerinde bol",
+    "iucn": "LC",
+    "habitat": "Alacakaranlık bölgesi; gece yüzeye çıkar",
+    "diet": "Zooplankton",
+    "fact": "Okyanustaki balıkların biyokütlesinin büyük kısmını oluşturur. Her gece yüzeye, her sabah derinlere göç eder.",
+    "story": "Denizaltı sonarcıları onların sürülerini 'sahte deniz dibi' sanarmış.",
+    "beh": "kacak",
+    "night": 2.2
+  },
+  {
+    "id": "selakant",
+    "name": "Selakant",
+    "latin": "Latimeria chalumnae",
+    "spr": "fish_gen_selakant",
+    "d": [
+      110,
+      150
+    ],
+    "kg": [
+      25.0,
+      80.0
+    ],
+    "str": 5.4,
+    "val": 62,
+    "r": 4,
+    "sc": 0.6,
+    "spd": [
+      15,
+      28
+    ],
+    "home": [
+      "volcano"
+    ],
+    "len": 200,
+    "life": "100 yıl",
+    "tr": "Hint Okyanusu'nda",
+    "iucn": "CR",
+    "habitat": "Volkanik mağaralar (150–700 m)",
+    "diet": "Balık, kalamar",
+    "fact": "66 milyon yıl önce soyunun tükendiği sanılıyordu; 1938'de canlı yakalandı. Yüzgeçleri bacak gibi kemiklidir.",
+    "story": "Güney Afrikalı müze küratörü Marjorie Courtenay-Latimer, balıkçı teknesinde ilk selakantı görünce 'Bu imkânsız!' diye haykırmış.",
+    "beh": "inatci"
+  },
+  {
+    "id": "yelken",
+    "name": "Yelken Balığı",
+    "latin": "Istiophorus platypterus",
+    "spr": "fish_gen_yelken",
+    "d": [
+      5,
+      120
+    ],
+    "kg": [
+      20.0,
+      60.0
+    ],
+    "str": 5.6,
+    "val": 58,
+    "r": 4,
+    "sc": 0.6,
+    "spd": [
+      90,
+      130
+    ],
+    "home": [
+      "coral"
+    ],
+    "len": 340,
+    "life": "13 yıl",
+    "tr": "Akdeniz'e nadiren Süveyş'ten girer",
+    "iucn": "LC",
+    "habitat": "Tropikal açık okyanus",
+    "diet": "Sardalya, uskumru, kalamar",
+    "fact": "Okyanusun en hızlı balıklarındandır. Dev yelken yüzgecini açarak sürüleri sıkıştırır, kılıcıyla vurarak avlar.",
+    "story": "Kostarika'da bir kaptan, yelken balığı yelkenini açınca 'okyanus mavi bayrak açtı' dermiş.",
+    "beh": "ziplayan"
+  },
+  {
+    "id": "marlin",
+    "name": "Mavi Marlin",
+    "latin": "Makaira nigricans",
+    "spr": "fish_gen_marlin",
+    "d": [
+      20,
+      150
+    ],
+    "kg": [
+      40.0,
+      90.0
+    ],
+    "str": 6.0,
+    "val": 62,
+    "r": 4,
+    "sc": 0.6,
+    "spd": [
+      90,
+      130
+    ],
+    "home": [
+      "coral",
+      "volcano"
+    ],
+    "len": 500,
+    "life": "27 yıl",
+    "tr": "Türkiye'de yaşamaz",
+    "iucn": "VU",
+    "habitat": "Tropikal ve ılık açık okyanus",
+    "diet": "Orkinos, uskumru, kalamar",
+    "fact": "Dişileri 800 kilogramı geçebilir. Avlanırken vücudu parlak mavi çizgilerle 'yanıp söner'.",
+    "story": "Hemingway'in 'Yaşlı Adam ve Deniz' romanındaki Santiago'nun üç gün boğuştuğu dev balık bir marlindir.",
+    "beh": "ziplayan"
+  },
+  {
+    "id": "lambuka",
+    "name": "Lambuka (Mahi-mahi)",
+    "latin": "Coryphaena hippurus",
+    "spr": "fish_gen_lambuka",
+    "d": [
+      0,
+      60
+    ],
+    "kg": [
+      2.0,
+      20.0
+    ],
+    "str": 4.4,
+    "val": 46,
+    "r": 3,
+    "sc": 0.6,
+    "spd": [
+      80,
+      115
+    ],
+    "home": [
+      "coral"
+    ],
+    "len": 210,
+    "life": "5 yıl",
+    "tr": "Akdeniz'de sonbaharda görülür",
+    "iucn": "LC",
+    "habitat": "Yüzer nesnelerin altında, açık deniz",
+    "diet": "Uçan balık, kalamar",
+    "fact": "Yeşil-altın-mavi rengiyle denizin en renkli balıklarındandır; sudan çıkınca renkleri hızla solar.",
+    "story": "Maltalı balıkçılar lambuka için denize hurma yaprağı salar; balıklar gölgesine toplanır.",
+    "beh": "ziplayan"
+  },
+  {
+    "id": "sarikanat_orkinos",
+    "name": "Sarı Yüzgeçli Orkinos",
+    "latin": "Thunnus albacares",
+    "spr": "fish_gen_sarikanat_orkinos",
+    "d": [
+      5,
+      140
+    ],
+    "kg": [
+      15.0,
+      65.0
+    ],
+    "str": 5.2,
+    "val": 52,
+    "r": 3,
+    "sc": 0.6,
+    "spd": [
+      80,
+      120
+    ],
+    "home": [
+      "coral",
+      "volcano"
+    ],
+    "len": 239,
+    "life": "8 yıl",
+    "tr": "Türkiye'de yaşamaz",
+    "iucn": "LC",
+    "habitat": "Tropikal açık okyanus",
+    "diet": "Balık, kalamar, kabuklular",
+    "fact": "Uzun, orak biçimli sarı yüzgeçleriyle tanınır. Yunuslarla birlikte avlandığı sık görülür.",
+    "story": "Hawaii'de ona 'ahi' denir; 'ateş' anlamına gelen bu ad, oltayı çekerken makaranın ısınmasından gelir.",
+    "beh": "kacak"
+  },
+  {
+    "id": "balina_kopek",
+    "name": "Balina Köpekbalığı",
+    "latin": "Rhincodon typus",
+    "spr": "fish_gen_balina_kopek",
+    "d": [
+      5,
+      120
+    ],
+    "kg": [
+      70.0,
+      95.0
+    ],
+    "str": 5.8,
+    "val": 60,
+    "r": 4,
+    "sc": 0.6,
+    "spd": [
+      18,
+      30
+    ],
+    "home": [
+      "coral"
+    ],
+    "len": 1800,
+    "life": "80–130 yıl",
+    "tr": "Türkiye'de yaşamaz",
+    "iucn": "EN",
+    "habitat": "Tropikal okyanuslar",
+    "diet": "Plankton ve küçük balıklar (süzerek)",
+    "fact": "Dünyanın en büyük balığıdır; boyu 18 metreye ulaşabilir. Dev olmasına rağmen yalnızca plankton yer ve insanlara zararsızdır.",
+    "story": "Filipinler'de balıkçılar ona 'butanding' der ve onu görmeyi uğurlu sayar.",
+    "beh": "inatci"
+  },
+  {
+    "id": "mandarin",
+    "name": "Mandarin Balığı",
+    "latin": "Synchiropus splendidus",
+    "spr": "fish_gen_mandarin",
+    "d": [
+      1,
+      20
+    ],
+    "kg": [
+      0.005,
+      0.02
+    ],
+    "str": 1.0,
+    "val": 54,
+    "r": 3,
+    "sc": 0.6,
+    "spd": [
+      8,
+      18
+    ],
+    "home": [
+      "coral"
+    ],
+    "len": 7,
+    "life": "15 yıl",
+    "tr": "Pasifik resiflerinde",
+    "iucn": "LC",
+    "habitat": "Mercan resiflerinin kumlu molozları",
+    "diet": "Minik kabuklular",
+    "fact": "Mavi rengini pigmentten değil hücrelerinden alan nadir hayvanlardandır. Gün batımında çiftler halinde dans eder.",
+    "story": "Dalgıçlar gün batımında mandarin dansını izlemek için saatlerce resifte bekler.",
+    "beh": "sakin"
+  },
+  {
+    "id": "discus",
+    "name": "Diskus",
+    "latin": "Symphysodon aequifasciatus",
+    "spr": "fish_gen_discus",
+    "d": [
+      1,
+      25
+    ],
+    "kg": [
+      0.1,
+      0.5
+    ],
+    "str": 1.4,
+    "val": 42,
+    "r": 2,
+    "sc": 0.6,
+    "spd": [
+      15,
+      30
+    ],
+    "home": [
+      "emerald",
+      "sakura"
+    ],
+    "len": 20,
+    "life": "15 yıl",
+    "tr": "Amazon havzasında",
+    "iucn": "LC",
+    "habitat": "Amazon'un sakin kolları",
+    "diet": "Larvalar, küçük kabuklular",
+    "fact": "Yavrular ilk haftalarında ebeveynlerinin derisinden salgılanan 'sütle' beslenir!",
+    "story": "Akvaryumcular diskusa 'akvaryumların kralı' der.",
+    "beh": "sakin"
+  },
+  {
+    "id": "melek",
+    "name": "Melek Balığı (Skalar)",
+    "latin": "Pterophyllum scalare",
+    "spr": "fish_gen_melek",
+    "d": [
+      1,
+      25
+    ],
+    "kg": [
+      0.02,
+      0.1
+    ],
+    "str": 1.2,
+    "val": 30,
+    "r": 1,
+    "sc": 0.6,
+    "spd": [
+      15,
+      30
+    ],
+    "home": [
+      "emerald",
+      "sakura"
+    ],
+    "len": 15,
+    "life": "10 yıl",
+    "tr": "Amazon havzasında",
+    "iucn": "LC",
+    "habitat": "Bitkili yavaş akan nehirler",
+    "diet": "Küçük böcekler ve larvalar",
+    "fact": "Uzun yüzgeçleriyle bitkiler arasında gizlenir. Eşler yumurtalarını yaprak üzerine yapıştırıp birlikte korur.",
+    "story": "Bir akvaryumcu, melek balığının sabah kendisini cama gelip 'selamladığına' yemin edermiş.",
+    "beh": "sakin"
+  },
+  {
+    "id": "beta",
+    "name": "Beta (Siyam Savaşçısı)",
+    "latin": "Betta splendens",
+    "spr": "fish_gen_beta",
+    "d": [
+      0,
+      15
+    ],
+    "kg": [
+      0.003,
+      0.01
+    ],
+    "str": 1.0,
+    "val": 40,
+    "r": 2,
+    "sc": 0.6,
+    "spd": [
+      15,
+      30
+    ],
+    "home": [
+      "sakura",
+      "emerald"
+    ],
+    "len": 7,
+    "life": "3 yıl",
+    "tr": "Tayland çeltik tarlalarında",
+    "iucn": "VU",
+    "habitat": "Sığ çeltik tarlaları ve bataklıklar",
+    "diet": "Böcek larvaları",
+    "fact": "Labirent organıyla havadan oksijen alır. Erkekler köpükten yuva yapar ve birbirleriyle kavga ederler.",
+    "story": "Tayland'da eskiden beta dövüşleri köy meydanlarında izlenirmiş; bugün renkleri için sevilir.",
+    "beh": "kacak"
+  },
+  {
+    "id": "neon",
+    "name": "Neon Tetra",
+    "latin": "Paracheirodon innesi",
+    "spr": "fish_gen_neon",
+    "d": [
+      0,
+      15
+    ],
+    "kg": [
+      0.001,
+      0.003
+    ],
+    "str": 0.9,
+    "val": 26,
+    "r": 1,
+    "sc": 0.6,
+    "spd": [
+      40,
+      70
+    ],
+    "home": [
+      "emerald",
+      "sakura"
+    ],
+    "len": 4,
+    "life": "5 yıl",
+    "tr": "Amazon kaynak sularında",
+    "iucn": "LC",
+    "habitat": "Karanlık, çay renkli orman dereleri",
+    "diet": "Mikro plankton",
+    "fact": "Parlak mavi şeridi ışığı yansıtarak karanlık sularda sürüyü bir arada tutar.",
+    "story": "Bir akvaryumdaki yüz neon tetra, odayı ışıl ışıl bir şehre çevirir.",
+    "beh": "kacak"
+  },
+  {
+    "id": "tas_baligi",
+    "name": "Taş Balığı",
+    "latin": "Synanceia verrucosa",
+    "spr": "fish_gen_tas_baligi",
+    "d": [
+      1,
+      30
+    ],
+    "kg": [
+      0.3,
+      2.0
+    ],
+    "str": 2.0,
+    "val": 52,
+    "r": 3,
+    "sc": 0.6,
+    "spd": [
+      5,
+      12
+    ],
+    "home": [
+      "coral"
+    ],
+    "len": 40,
+    "life": "10 yıl",
+    "tr": "Kızıldeniz'den Doğu Akdeniz'e yayılma riski var",
+    "iucn": "LC",
+    "habitat": "Resiflerdeki kayalar arasında",
+    "diet": "Pusuya düşürdüğü balıklar",
+    "fact": "Dünyanın en zehirli balığıdır; taşla ayırt edilemeyecek kadar iyi kamufle olur. Sırt dikenlerinin zehri öldürücü olabilir.",
+    "story": "Avustralya plajlarında 'taşa basmadan önce iki kez bak' tabelaları onun yüzündendir.",
+    "beh": "dalgic"
+  },
+  {
+    "id": "kurbagabaligi",
+    "name": "Kurbağa Balığı",
+    "latin": "Antennarius maculatus",
+    "spr": "fish_gen_kurbagabaligi",
+    "d": [
+      1,
+      30
+    ],
+    "kg": [
+      0.05,
+      0.3
+    ],
+    "str": 1.2,
+    "val": 50,
+    "r": 3,
+    "sc": 0.6,
+    "spd": [
+      5,
+      12
+    ],
+    "home": [
+      "coral"
+    ],
+    "len": 15,
+    "life": "bilinmiyor",
+    "tr": "Hint-Pasifik resiflerinde",
+    "iucn": "LC",
+    "habitat": "Mercan ve sünger arası",
+    "diet": "Küçük balıklar",
+    "fact": "Göğüs yüzgeçleriyle dipte yürür; ağzını açarak avını 6 milisaniyede yutar, bu bilinen en hızlı av hareketlerindendir.",
+    "story": "Dalgıçlar onu sünger sanıp yanından geçer; ancak 'süngerin' göz kırptığını fark edince durur.",
+    "beh": "inatci"
+  },
+  {
+    "id": "goliath",
+    "name": "Dev Orfoz (Goliath)",
+    "latin": "Epinephelus itajara",
+    "spr": "fish_gen_goliath",
+    "d": [
+      10,
+      80
+    ],
+    "kg": [
+      40.0,
+      90.0
+    ],
+    "str": 5.6,
+    "val": 58,
+    "r": 4,
+    "sc": 0.6,
+    "spd": [
+      15,
+      30
+    ],
+    "home": [
+      "coral"
+    ],
+    "len": 250,
+    "life": "37+ yıl",
+    "tr": "Türkiye'de yaşamaz (Atlantik)",
+    "iucn": "VU",
+    "habitat": "Batıklar ve mangrovlar",
+    "diet": "Istakoz, vatoz, kaplumbağa",
+    "fact": "360 kiloya ulaşabilen bu dev orfoz, tehdit edildiğinde yüzme kesesiyle gök gürültüsüne benzer bir ses çıkarır.",
+    "story": "Florida dalgıçları batıklarda dev orfozun kendilerini 'büyükanne gibi' süzdüğünü anlatır.",
+    "beh": "inatci"
+  },
+  {
+    "id": "snook",
+    "name": "Snook Balığı",
+    "latin": "Centropomus undecimalis",
+    "spr": "fish_gen_snook",
+    "d": [
+      0,
+      40
+    ],
+    "kg": [
+      1.0,
+      15.0
+    ],
+    "str": 3.6,
+    "val": 40,
+    "r": 2,
+    "sc": 0.6,
+    "spd": [
+      50,
+      80
+    ],
+    "home": [
+      "coral",
+      "emerald"
+    ],
+    "len": 140,
+    "life": "20 yıl",
+    "tr": "Türkiye'de yaşamaz",
+    "iucn": "LC",
+    "habitat": "Mangrovlar ve nehir ağızları",
+    "diet": "Balık, karides",
+    "fact": "Yan çizgisi siyah bir şerit gibi belirgindir. Su ısısı düşerse hemen tatlı su kaynaklarına sığınır.",
+    "story": "Florida'da gece köprülerin ışıkları altında snook avlamak bir gelenektir.",
+    "beh": "kacak",
+    "night": 1.5
+  },
+  {
+    "id": "arapaima",
+    "name": "Arapaima",
+    "latin": "Arapaima gigas",
+    "spr": "fish_gen_arapaima",
+    "d": [
+      0,
+      40
+    ],
+    "kg": [
+      40.0,
+      90.0
+    ],
+    "str": 5.6,
+    "val": 58,
+    "r": 4,
+    "sc": 0.6,
+    "spd": [
+      25,
+      45
+    ],
+    "home": [
+      "emerald",
+      "volcano"
+    ],
+    "len": 300,
+    "life": "20 yıl",
+    "tr": "Amazon'da",
+    "iucn": "DD",
+    "habitat": "Amazon taşkın ormanları",
+    "diet": "Balık, bazen kuşlar",
+    "fact": "Dünyanın en büyük tatlısu balıklarındandır; havadan soluk alması için birkaç dakikada bir yüzeye çıkmak zorundadır. Pulları piranha dişine karşı zırh gibidir.",
+    "story": "Amazon köylerinde arapaimanın soluk alırken çıkardığı 'hıh' sesini duyan avcı, zıpkınını hazırlar.",
+    "beh": "ziplayan"
+  },
+  {
+    "id": "arowana",
+    "name": "Gümüş Arowana",
+    "latin": "Osteoglossum bicirrhosum",
+    "spr": "fish_gen_arowana",
+    "d": [
+      0,
+      25
+    ],
+    "kg": [
+      1.0,
+      6.0
+    ],
+    "str": 3.4,
+    "val": 48,
+    "r": 3,
+    "sc": 0.6,
+    "spd": [
+      40,
+      70
+    ],
+    "home": [
+      "emerald",
+      "volcano"
+    ],
+    "len": 120,
+    "life": "15 yıl",
+    "tr": "Amazon'da",
+    "habitat": "Taşkın ormanları, yüzey",
+    "diet": "Böcekler, kuşlar, küçük balıklar",
+    "fact": "Sudan bir metre yükseğe zıplayarak dallardaki böcekleri ve hatta kuşları yakalar; bu yüzden 'su maymunu' diye de bilinir.",
+    "story": "Asya'da akrabası olan arowananın evlere şans ve zenginlik getirdiğine inanılır.",
+    "beh": "ziplayan"
+  },
+  {
+    "id": "oskar",
+    "name": "Oskar",
+    "latin": "Astronotus ocellatus",
+    "spr": "fish_gen_oskar",
+    "d": [
+      0,
+      25
+    ],
+    "kg": [
+      0.5,
+      1.6
+    ],
+    "str": 2.4,
+    "val": 38,
+    "r": 2,
+    "sc": 0.6,
+    "spd": [
+      25,
+      45
+    ],
+    "home": [
+      "emerald",
+      "volcano"
+    ],
+    "len": 45,
+    "life": "20 yıl",
+    "tr": "Amazon'da",
+    "habitat": "Yavaş akan nehirler",
+    "diet": "Balık, kerevit, böcek",
+    "fact": "Kuyruğundaki göz benzeri leke yırtıcıları şaşırtır. Akvaryumda sahibini tanıyıp el sallamasına tepki verdiği bilinir.",
+    "story": "Bir akvaryumcu, oskarının hayal kırıklığına uğrayınca taşlarını tek tek yerinden oynattığını anlatırmış.",
+    "beh": "inatci"
+  },
+  {
+    "id": "kaplan_baligi",
+    "name": "Kaplan Balığı",
+    "latin": "Hydrocynus vittatus",
+    "spr": "fish_gen_kaplan_baligi",
+    "d": [
+      0,
+      40
+    ],
+    "kg": [
+      2.0,
+      15.0
+    ],
+    "str": 4.6,
+    "val": 50,
+    "r": 3,
+    "sc": 0.6,
+    "spd": [
+      70,
+      105
+    ],
+    "home": [
+      "emerald",
+      "volcano"
+    ],
+    "len": 105,
+    "life": "10 yıl",
+    "tr": "Afrika nehirlerinde",
+    "iucn": "LC",
+    "habitat": "Afrika'nın büyük nehirleri ve gölleri",
+    "diet": "Balık; uçan kırlangıçları bile yakalar",
+    "fact": "Kırmızı yüzgeçleri ve dışarı taşan keskin dişleriyle Afrika'nın en korkulan tatlısu avcısıdır; havadaki kırlangıçları zıplayarak yakaladığı görüntülenmiştir.",
+    "story": "Zambezi'deki avcılar 'Kaplan balığını tuttuysan dişini kolye yap' derler.",
+    "beh": "ziplayan"
+  },
+  {
+    "id": "payara",
+    "name": "Vampir Balığı (Payara)",
+    "latin": "Hydrolycus scomberoides",
+    "spr": "fish_gen_payara",
+    "d": [
+      0,
+      40
+    ],
+    "kg": [
+      1.0,
+      12.0
+    ],
+    "str": 4.4,
+    "val": 50,
+    "r": 3,
+    "sc": 0.6,
+    "spd": [
+      60,
+      95
+    ],
+    "home": [
+      "emerald",
+      "volcano"
+    ],
+    "len": 117,
+    "life": "bilinmiyor",
+    "tr": "Amazon ve Orinoko'da",
+    "habitat": "Hızlı akan nehir bölümleri",
+    "diet": "Diğer balıklar (piranha bile)",
+    "fact": "Alt çenesindeki 15 cm'ye varan iki köpek dişi, üst çenesindeki deliklere yerleşir. Piranhaları bile avlar.",
+    "story": "Venezuela'da şelale altında payara avlamak, en cesur balıkçıların işidir.",
+    "beh": "ziplayan"
+  },
+  {
+    "id": "pavus",
+    "name": "Tavus Levreği",
+    "latin": "Cichla ocellaris",
+    "spr": "fish_gen_pavus",
+    "d": [
+      0,
+      30
+    ],
+    "kg": [
+      1.0,
+      8.0
+    ],
+    "str": 4.2,
+    "val": 46,
+    "r": 3,
+    "sc": 0.6,
+    "spd": [
+      55,
+      90
+    ],
+    "home": [
+      "emerald",
+      "volcano"
+    ],
+    "len": 75,
+    "life": "10 yıl",
+    "tr": "Amazon'da",
+    "habitat": "Sıcak tropikal nehirler",
+    "diet": "Balık",
+    "fact": "Kuyruğundaki göz lekesi tavus kuşunu andırır. Yeme saldırışı sportif balıkçılar arasında efsanedir.",
+    "story": "Brezilyalı rehberler 'Tavus vurunca kalbin değil, makaran durur' der.",
+    "beh": "kacak"
+  },
+  {
+    "id": "yilanbas",
+    "name": "Yılanbaş Balığı",
+    "latin": "Channa argus",
+    "spr": "fish_gen_yilanbas",
+    "d": [
+      0,
+      25
+    ],
+    "kg": [
+      1.0,
+      8.0
+    ],
+    "str": 4.0,
+    "val": 44,
+    "r": 3,
+    "sc": 0.6,
+    "spd": [
+      35,
+      60
+    ],
+    "home": [
+      "emerald",
+      "volcano"
+    ],
+    "len": 85,
+    "life": "8 yıl",
+    "tr": "Doğu Asya'da; istilacı tür",
+    "iucn": "LC",
+    "habitat": "Bataklık ve bitkili sular",
+    "diet": "Balık, kurbağa, kerevit",
+    "fact": "Başı yılana benzer; hava solur ve karada kısa mesafe sürünebilir. Birçok ülkede istilacı olarak yasaklıdır.",
+    "story": "Amerika'da bir yılanbaş bir gölden diğerine sürünerek geçince haberlere çıkmış.",
+    "beh": "inatci"
+  },
+  {
+    "id": "akciger",
+    "name": "Akciğerli Balık",
+    "latin": "Protopterus annectens",
+    "spr": "fish_gen_akciger",
+    "d": [
+      0,
+      15
+    ],
+    "kg": [
+      1.0,
+      5.0
+    ],
+    "str": 3.4,
+    "val": 48,
+    "r": 3,
+    "sc": 0.6,
+    "spd": [
+      15,
+      28
+    ],
+    "home": [
+      "emerald",
+      "volcano"
+    ],
+    "len": 100,
+    "life": "20+ yıl",
+    "tr": "Batı Afrika'da",
+    "iucn": "LC",
+    "habitat": "Kuruyan bataklıklar",
+    "diet": "Salyangoz, balık, bitkiler",
+    "fact": "Akciğerleriyle hava solur. Bataklık kuruyunca çamurda kendine bir koza örer ve yağmuru beklerken yıllarca uyuyabilir.",
+    "story": "Afrikalı çiftçiler, tarlayı sürerken kurumuş çamurdan canlı balık çıktığını görünce şaşkınlıkla kaçarmış.",
+    "beh": "inatci"
+  },
+  {
+    "id": "bisir",
+    "name": "Bişir (Ejder Balığı)",
+    "latin": "Polypterus senegalus",
+    "spr": "fish_gen_bisir",
+    "d": [
+      0,
+      15
+    ],
+    "kg": [
+      0.1,
+      0.5
+    ],
+    "str": 2.0,
+    "val": 40,
+    "r": 2,
+    "sc": 0.6,
+    "spd": [
+      20,
+      35
+    ],
+    "home": [
+      "emerald",
+      "volcano"
+    ],
+    "len": 50,
+    "life": "15 yıl",
+    "tr": "Afrika'da",
+    "iucn": "LC",
+    "habitat": "Bitkili sığ nehirler",
+    "diet": "Larvalar, küçük balıklar",
+    "fact": "Sırtında küçük yelken yüzgeçleri dizisi vardır; ejderha gibi görünür. 360 milyon yıllık bir soydan gelir.",
+    "story": "Akvaryumcular ona 'mini dinozor' der.",
+    "beh": "dalgic"
+  },
+  {
+    "id": "timsah_gar",
+    "name": "Timsah Turnası",
+    "latin": "Atractosteus spatula",
+    "spr": "fish_gen_timsah_gar",
+    "d": [
+      0,
+      40
+    ],
+    "kg": [
+      30.0,
+      85.0
+    ],
+    "str": 5.4,
+    "val": 58,
+    "r": 4,
+    "sc": 0.6,
+    "spd": [
+      25,
+      45
+    ],
+    "home": [
+      "emerald",
+      "volcano"
+    ],
+    "len": 300,
+    "life": "50+ yıl",
+    "tr": "Kuzey Amerika'da",
+    "iucn": "LC",
+    "habitat": "Büyük yavaş nehirler ve bataklıklar",
+    "diet": "Balık, su kuşları",
+    "fact": "Timsah benzeri geniş burnu ve iki sıra dişiyle 100 milyon yıldır yaşar. Yumurtaları zehirlidir.",
+    "story": "Louisiana'da dev bir timsah turnasının tekneye 'merhaba' der gibi burnunu dayadığı anlatılır.",
+    "beh": "inatci"
+  },
+  {
+    "id": "elektrik",
+    "name": "Elektrikli Yılan Balığı",
+    "latin": "Electrophorus electricus",
+    "spr": "fish_gen_elektrik",
+    "d": [
+      0,
+      25
+    ],
+    "kg": [
+      5.0,
+      20.0
+    ],
+    "str": 4.8,
+    "val": 60,
+    "r": 4,
+    "sc": 0.6,
+    "spd": [
+      15,
+      30
+    ],
+    "home": [
+      "emerald",
+      "volcano"
+    ],
+    "len": 250,
+    "life": "15 yıl",
+    "tr": "Amazon'da",
+    "iucn": "LC",
+    "habitat": "Çamurlu, oksijensiz Amazon suları",
+    "diet": "Balık, kurbağa",
+    "fact": "Aslında bir yılan balığı değil, bıçak balığı akrabasıdır. 800 volta varan elektrik şoku üretebilir!",
+    "story": "Alexander von Humboldt, 1800'de Venezuela'da elektrikli yılan balıklarının atları bile sersemlettiğini yazmıştı.",
+    "beh": "dalgic"
+  },
+  {
+    "id": "pirana_siyah",
+    "name": "Kara Piranha",
+    "latin": "Serrasalmus rhombeus",
+    "spr": "fish_gen_pirana_siyah",
+    "d": [
+      0,
+      25
+    ],
+    "kg": [
+      0.5,
+      3.0
+    ],
+    "str": 3.0,
+    "val": 40,
+    "r": 2,
+    "sc": 0.6,
+    "spd": [
+      40,
+      70
+    ],
+    "home": [
+      "emerald",
+      "volcano"
+    ],
+    "len": 45,
+    "life": "10 yıl",
+    "tr": "Amazon'da",
+    "habitat": "Amazon nehirleri",
+    "diet": "Balık, meyve, leş",
+    "fact": "Kırmızı gözlü bu piranha, akrabalarına göre daha yalnız ve güçlü ısırıklıdır; vücuduna oranla ısırma gücü en yüksek balıklardandır.",
+    "story": "Amazonlu çocuklar, piranhanın yalnızca kan kokusu alınca saldırdığını bilir ve nehirde rahatça yüzer.",
+    "beh": "kacak"
+  },
+  {
+    "id": "koi_sanke",
+    "name": "Sanke Koi",
+    "latin": "Cyprinus rubrofuscus 'Sanke'",
+    "spr": "fish_gen_koi_sanke",
+    "d": [
+      0,
+      20
+    ],
+    "kg": [
+      1.0,
+      8.0
+    ],
+    "str": 2.6,
+    "val": 44,
+    "r": 2,
+    "sc": 0.6,
+    "spd": [
+      20,
+      40
+    ],
+    "home": [
+      "sakura"
+    ],
+    "len": 90,
+    "life": "50+ yıl",
+    "tr": "Süs havuzlarında",
+    "habitat": "Bahçe havuzları",
+    "diet": "Bitki, böcek, yem",
+    "fact": "Beyaz zemin üzerinde kırmızı ve siyah lekeleri olan klasik bir koi çeşididir. Japonya'da sanat eseri gibi değerlendirilir.",
+    "story": "Japonya'da 226 yıl yaşadığı söylenen 'Hanako' adlı bir koi efsanesi vardır.",
+    "beh": "sakin"
+  },
+  {
+    "id": "koi_ogon",
+    "name": "Ogon Koi",
+    "latin": "Cyprinus rubrofuscus 'Ogon'",
+    "spr": "fish_gen_koi_ogon",
+    "d": [
+      0,
+      20
+    ],
+    "kg": [
+      1.0,
+      8.0
+    ],
+    "str": 2.6,
+    "val": 52,
+    "r": 3,
+    "sc": 0.6,
+    "spd": [
+      20,
+      40
+    ],
+    "home": [
+      "sakura"
+    ],
+    "len": 90,
+    "life": "50+ yıl",
+    "tr": "Süs havuzlarında",
+    "habitat": "Bahçe havuzları",
+    "diet": "Bitki, böcek, yem",
+    "fact": "Tek renk metalik altın parıltısıyla 'zenginlik balığı' olarak bilinir.",
+    "story": "Bir çay bahçesinin sahibi, ogon koisinin her sabah havuzun kenarına gelip güneşi selamladığını anlatır.",
+    "beh": "sakin"
+  },
+  {
+    "id": "japon_medaka",
+    "name": "Medaka",
+    "latin": "Oryzias latipes",
+    "spr": "fish_gen_japon_medaka",
+    "d": [
+      0,
+      10
+    ],
+    "kg": [
+      0.001,
+      0.003
+    ],
+    "str": 0.9,
+    "val": 15,
+    "r": 0,
+    "sc": 0.6,
+    "spd": [
+      35,
+      60
+    ],
+    "home": [
+      "sakura"
+    ],
+    "len": 4,
+    "life": "2 yıl",
+    "tr": "Doğu Asya'da",
+    "iucn": "LC",
+    "habitat": "Pirinç tarlaları",
+    "diet": "Böcek larvaları",
+    "fact": "Uzaya gönderilip yörüngede yumurtlayan ilk omurgalılardandır (1994)!",
+    "story": "Japon çocukları medaka'yı kavanozda büyütür; 'Pirinç tarlasının küçük balığı' diye şarkısı vardır.",
+    "beh": "sakin"
+  },
+  {
+    "id": "altin_orf",
+    "name": "Altın Orf",
+    "latin": "Leuciscus idus",
+    "spr": "fish_gen_altin_orf",
+    "d": [
+      0,
+      25
+    ],
+    "kg": [
+      0.3,
+      3.0
+    ],
+    "str": 2.2,
+    "val": 32,
+    "r": 1,
+    "sc": 0.6,
+    "spd": [
+      40,
+      70
+    ],
+    "home": [
+      "sakura",
+      "emerald",
+      "lake"
+    ],
+    "len": 80,
+    "life": "20 yıl",
+    "tr": "Kuzey Anadolu nehirlerinde yabani formu var",
+    "iucn": "LC",
+    "habitat": "Büyük nehirler, göller ve havuzlar",
+    "diet": "Böcekler, salyangoz",
+    "fact": "Turuncu formu süs havuzlarında sevilir; sürü halinde yüzeye yakın yüzer.",
+    "story": "Avrupa'da saray havuzlarına altın orf koyulur, misafirler ekmek atarak onları çağırırmış.",
+    "beh": "sakin"
+  },
+  {
+    "id": "dere_alabalik",
+    "name": "Dere Alabalığı",
+    "latin": "Salmo trutta fario",
+    "spr": "fish_gen_dere_alabalik",
+    "d": [
+      0,
+      25
+    ],
+    "kg": [
+      0.1,
+      2.5
+    ],
+    "str": 2.8,
+    "val": 38,
+    "r": 2,
+    "sc": 0.6,
+    "spd": [
+      50,
+      80
+    ],
+    "home": [
+      "emerald",
+      "lake"
+    ],
+    "len": 80,
+    "life": "10 yıl",
+    "tr": "Doğu Karadeniz ve Toroslar'ın soğuk derelerinde",
+    "iucn": "LC",
+    "habitat": "Soğuk, berrak, oksijenli dereler",
+    "diet": "Böcekler, larvalar",
+    "fact": "Kırmızı beneklerle süslenmiş, temiz suyun göstergesi sayılan bir balıktır. Sinekle avı çok zevklidir.",
+    "story": "Rize'de bir dede, derenin en büyük alabalığını 'Paşa' diye çağırır, yakalasa bile geri salarmış.",
+    "beh": "ziplayan"
+  },
+  {
+    "id": "gokkusagi_ciklit",
+    "name": "Mavi Çiklit (Malawi)",
+    "latin": "Maylandia zebra",
+    "spr": "fish_gen_gokkusagi_ciklit",
+    "d": [
+      0,
+      25
+    ],
+    "kg": [
+      0.01,
+      0.05
+    ],
+    "str": 1.4,
+    "val": 28,
+    "r": 1,
+    "sc": 0.6,
+    "spd": [
+      30,
+      55
+    ],
+    "home": [
+      "emerald",
+      "sakura"
+    ],
+    "len": 12,
+    "life": "10 yıl",
+    "tr": "Afrika'da Malawi Gölü'nde",
+    "iucn": "LC",
+    "habitat": "Kayalık göl kıyıları",
+    "diet": "Kayalardaki algler",
+    "fact": "Dişiler yumurtaları ve yavruları ağızlarında taşır; tehlikede yavrular annenin ağzına saklanır.",
+    "story": "Malawi'de gölde şnorkelle yüzenler, kayaların renkli çiklitlerle 'canlı mozaiğe' döndüğünü anlatır.",
+    "beh": "kacak"
+  },
+  {
+    "id": "opah",
+    "name": "Opah",
+    "latin": "Lampris guttatus",
+    "spr": "fish_gen_opah",
+    "d": [
+      60,
+      150
+    ],
+    "kg": [
+      20.0,
+      60.0
+    ],
+    "str": 5.0,
+    "val": 58,
+    "r": 4,
+    "sc": 0.6,
+    "spd": [
+      35,
+      60
+    ],
+    "home": [
+      "volcano",
+      "coral"
+    ],
+    "len": 200,
+    "life": "bilinmiyor",
+    "tr": "Akdeniz'de nadir kayıt",
+    "iucn": "LC",
+    "habitat": "Açık okyanus derinlikleri",
+    "diet": "Kalamar, kril, balık",
+    "fact": "Tüm vücudunu ısıtabilen bilinen tek sıcakkanlı balıktır! Yüzgeçlerini kuş kanadı gibi çırparak yüzer.",
+    "story": "Hawaii'li balıkçılar opahı 'uğur balığı' sayar ve onu satmak yerine iyi niyet hediyesi olarak verirmiş.",
+    "beh": "dalgic"
+  },
+  {
+    "id": "kirmizi_snapper",
+    "name": "Kırmızı Snapper",
+    "latin": "Lutjanus campechanus",
+    "spr": "fish_gen_kirmizi_snapper",
+    "d": [
+      20,
+      120
+    ],
+    "kg": [
+      1.0,
+      12.0
+    ],
+    "str": 3.4,
+    "val": 42,
+    "r": 2,
+    "sc": 0.6,
+    "spd": [
+      35,
+      60
+    ],
+    "home": [
+      "volcano",
+      "coral"
+    ],
+    "len": 100,
+    "life": "57 yıl",
+    "tr": "Türkiye'de yaşamaz",
+    "iucn": "VU",
+    "habitat": "Resif ve batıklar",
+    "diet": "Balık, karides, kalamar",
+    "fact": "Kırmızı gözleri ve gövdesiyle tanınır. 50 yılı aşkın yaşayabilir.",
+    "story": "Meksika Körfezi'nde dedeler torunlarına 'Kızıl lahozu tutan hafta boyunca şanslı olur' der.",
+    "beh": "dalgic"
+  },
+  {
+    "id": "okyanus_levregi",
+    "name": "Okyanus Kızıl Levreği",
+    "latin": "Sebastes norvegicus",
+    "spr": "fish_gen_okyanus_levregi",
+    "d": [
+      80,
+      150
+    ],
+    "kg": [
+      0.5,
+      6.0
+    ],
+    "str": 3.0,
+    "val": 42,
+    "r": 2,
+    "sc": 0.6,
+    "spd": [
+      20,
+      40
+    ],
+    "home": [
+      "volcano",
+      "fjord"
+    ],
+    "len": 100,
+    "life": "75 yıl",
+    "tr": "Türkiye'de yaşamaz",
+    "habitat": "Kuzey Atlantik derinlikleri",
+    "diet": "Kril, balık",
+    "fact": "Yavrularını canlı doğurur. Soğuk derinliklerde yavaş büyür; bu yüzden aşırı avlanmaya karşı çok hassastır.",
+    "story": "Norveçli balıkçılar 'Kaya balığı, dedenin dedesi kadar yaşlı olabilir' der.",
+    "beh": "dalgic"
+  },
+  {
+    "id": "dev_gobi",
+    "name": "Dev Kaya Gobisi",
+    "latin": "Gobius cobitis",
+    "spr": "fish_gen_dev_gobi",
+    "d": [
+      5,
+      60
+    ],
+    "kg": [
+      0.05,
+      0.3
+    ],
+    "str": 1.4,
+    "val": 30,
+    "r": 1,
+    "sc": 0.6,
+    "spd": [
+      20,
+      40
+    ],
+    "home": [
+      "volcano",
+      "coral"
+    ],
+    "len": 27,
+    "life": "10 yıl",
+    "tr": "Ege ve Akdeniz kıyılarında",
+    "iucn": "LC",
+    "habitat": "Gelgit havuzları ve kayalık kıyılar",
+    "diet": "Algler, küçük kabuklular",
+    "fact": "Kayalık gelgit havuzlarının en iri gobisidir; ısınan sığ havuzlara dayanıklıdır.",
+    "story": "Santorini kıyılarında çocuklar volkanik taşların arasında bu gobileri saklambaç oynar gibi kovalar.",
+    "beh": "sakin"
+  },
+  {
+    "id": "kral_uskumru",
+    "name": "Kral Uskumru",
+    "latin": "Scomberomorus cavalla",
+    "spr": "fish_gen_kral_uskumru",
+    "d": [
+      5,
+      120
+    ],
+    "kg": [
+      5.0,
+      35.0
+    ],
+    "str": 4.6,
+    "val": 48,
+    "r": 3,
+    "sc": 0.6,
+    "spd": [
+      85,
+      120
+    ],
+    "home": [
+      "volcano",
+      "coral"
+    ],
+    "len": 184,
+    "life": "14 yıl",
+    "tr": "Türkiye'de yaşamaz",
+    "iucn": "LC",
+    "habitat": "Kıyıya yakın tropikal sular",
+    "diet": "Balık, kalamar",
+    "fact": "Yemi yakalarken sudan metrelerce havaya sıçrayan bu balığa 'smoker' denir; makarayı dumanlandıracak kadar hızlı kaçar.",
+    "story": "Florida'daki turnuvalarda en büyük kral uskumruyu tutan kaptan 'yılın kralı' ilan edilir.",
+    "beh": "ziplayan"
+  },
+  {
+    "id": "doktor",
+    "name": "Doktor Balığı",
+    "latin": "Garra rufa",
+    "spr": "fish_gen_doktor",
+    "d": [
+      0,
+      30
+    ],
+    "kg": [
+      0.005,
+      0.03
+    ],
+    "str": 1.0,
+    "val": 26,
+    "r": 1,
+    "sc": 0.6,
+    "spd": [
+      35,
+      60
+    ],
+    "home": [
+      "volcano",
+      "lake"
+    ],
+    "len": 14,
+    "life": "5 yıl",
+    "tr": "Sivas Kangal Balıklı Kaplıcası'nda ünlüdür",
+    "iucn": "LC",
+    "habitat": "Sıcak kaplıca suları ve Dicle-Fırat havzası dereleri",
+    "diet": "Algler ve ölü deri hücreleri",
+    "fact": "Kangal'daki 35 °C'lik kaplıca suyunda yaşar; suya giren insanların ölü derisini kemirerek 'balık terapisi' yapar.",
+    "story": "Kangal'da bir çoban, kuzusunu yıkarken balıkların ayağını gıdıkladığını fark etmiş; kaplıcanın ünü böyle başlamış derler.",
+    "beh": "sakin"
+  },
+  {
+    "id": "kizil_aslan",
+    "name": "Kızıl Aslan Balığı",
+    "latin": "Pterois radiata",
+    "spr": "fish_gen_kizil_aslan",
+    "d": [
+      5,
+      80
+    ],
+    "kg": [
+      0.2,
+      1.0
+    ],
+    "str": 2.4,
+    "val": 52,
+    "r": 3,
+    "sc": 0.6,
+    "spd": [
+      15,
+      30
+    ],
+    "home": [
+      "volcano",
+      "coral"
+    ],
+    "len": 24,
+    "life": "15 yıl",
+    "tr": "Kızıldeniz'de; akrabası Akdeniz'e yerleşti",
+    "iucn": "LC",
+    "habitat": "Resif mağaraları",
+    "diet": "Karides, küçük balıklar",
+    "fact": "Uzun beyaz yelpaze yüzgeçleriyle avını köşeye sıkıştırır. Dikenlerindeki zehir çok acı verir.",
+    "story": "Akdeniz'e Süveyş'ten giren aslan balıkları için Kaş'ta 'aslan balığı yeme festivali' düzenlenir.",
+    "beh": "dalgic"
   }
 ]
